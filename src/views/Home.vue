@@ -7,7 +7,7 @@
         <!-- 顶部 -->
         <div class="common top">
           <a href="/" class="top-left">
-            <img src="../assets/image/logo.png" alt />
+            <img src="../assets/img/logo.png" alt />
           </a>
 
           <div class="top_right">
