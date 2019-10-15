@@ -10,9 +10,6 @@ import "./assets/css/reset.css";
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
-// 引入全局css
-import './assets/css/base.css'
-
 new Vue({
   router,
   store,
