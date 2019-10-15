@@ -24,21 +24,8 @@ let router= new Router({
       ]
     },
     {
-      path: "/about",
-      name: "about",
-<<<<<<< HEAD
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
-    },
-    {
       path: "/stackroom",
       component: () => import('@/components/stack_room.vue')
-=======
-      component: () => import("./views/About.vue")
->>>>>>> 0a0a9e52f7d8680517c823d36d93a1561f8eb489
     }
   ]
 });
