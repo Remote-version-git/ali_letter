@@ -4,18 +4,29 @@ import Home from "./views/Home.vue";
 
 Vue.use(Router);
 
-export default new Router({
+let router= new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
+      redirect: "/home"
+
+    },
+    {
+      path: "/home",
+      component: Home,
+      children: [
+        {
+          path: "/rankinglist",
+          component: () => import("@/components/Rankinglist.vue")
+        }
+      ]
     },
     {
       path: "/about",
       name: "about",
+<<<<<<< HEAD
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -25,6 +36,10 @@ export default new Router({
     {
       path: "/stackroom",
       component: () => import('@/components/stack_room.vue')
+=======
+      component: () => import("./views/About.vue")
+>>>>>>> 0a0a9e52f7d8680517c823d36d93a1561f8eb489
     }
   ]
 });
+export default router
