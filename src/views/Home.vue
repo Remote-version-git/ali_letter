@@ -2,7 +2,7 @@
   <div class="index">
     <!-- 布局 -->
     <el-container>
-<<<<<<< HEAD
+
       <el-header>
         <!-- 顶部 -->
         <div class="common top">
@@ -53,11 +53,11 @@
       </el-header>
       <!-- <el-main class="common">Main</el-main> -->
       <!-- <el-footer class="common">Footer</el-footer> -->
-=======
+
       <el-header>Header</el-header>
       <el-main><router-view></router-view></el-main>
       <el-footer>Footer</el-footer>
->>>>>>> 0a0a9e52f7d8680517c823d36d93a1561f8eb489
+
     </el-container>
   </div>
 </template>
