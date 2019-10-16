@@ -17,8 +17,16 @@ let router= new Router({
       component: Home,
       children: [
         {
+          path:'/',
+          component:()=>import('@/components/Index.vue')
+        },
+        {
           path: "/rankinglist",
-          component: () => import("@/components/Rankinglist.vue")
+          component: () => import("@/components/Rankinglist.vue"),
+        },
+        {
+          path:"/book",
+          component:()=>import("@/components/Book.vue")
         }
       ]
     },
@@ -34,6 +42,8 @@ let router= new Router({
       path: "/about",
       name: "about",
       component: () => import("./views/About.vue")
+      path: "/stackroom",
+      component: () => import('@/components/stack_room.vue')
     }
   ]
 });
