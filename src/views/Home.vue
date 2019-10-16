@@ -39,7 +39,7 @@
           <div class="nav clear">
             <div class="nav_classification">
               <ul>
-                <li class="active">
+                <li class="class_active">
                   <a href>首页</a>
                 </li>
                 <li>
@@ -82,7 +82,7 @@
 export default {};
 </script>
 
-<style lang="less" scoped>
+<style>
 /* 公共宽度 */
 .common {
   width: 1120px;
@@ -90,11 +90,8 @@ export default {};
   /* background-color: antiquewhite; */
 }
 
-/* 布局css */
-
-
 /* 导航选中样式 */
-.active {
+.class_active {
   width: 110px;
   height: 60px;
   border-bottom: 3px solid darkblue;
@@ -168,7 +165,7 @@ export default {};
   line-height: 60px;
 }
 
-.el-input__inner {
+.el-input__inner{
   border-radius: 50px;
   height: 28px;
 }
