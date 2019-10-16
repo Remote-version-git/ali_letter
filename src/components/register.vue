@@ -1,7 +1,8 @@
 <template>
-  <el-dialog title="账号登录" :visible.sync="centerDialogVisible" width="30%" center>
+  <el-dialog title="欢迎加入阿里文学大家庭" :visible.sync="centerDialogVisible" width="30%" center>
     <input type="text"  placeholder="请输入手机号" v-model="username" clearable></input>
     <input type="password"   placeholder="请输入密码" v-model="password" ></input>
+     <input type="password"   placeholder="请再次输入密码" v-model="password" ></input>
     <p class="protocol ">
       <input type="checkbox" id="ckb">
       登录账号即代表您已阅读过、了解并接受
@@ -21,7 +22,7 @@ export default {
   data() {
     return {
       centerDialogVisible: true
-          };
+    };
   },
   methods: {}
 };
@@ -30,6 +31,9 @@ export default {
 <style>
 
 
+.style {
+    margin-top: 0vh;
+}
 .el-dialog__title {
   margin: 20px 0 38px;
   font-size: 20px;

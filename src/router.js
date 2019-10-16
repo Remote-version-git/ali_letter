@@ -10,8 +10,7 @@ let router= new Router({
   routes: [
     {
       path: "/",
-      redirect: "/home"
-
+      redirect: "/home",
     },
     {
       path: "/home",
@@ -22,6 +21,14 @@ let router= new Router({
           component: () => import("@/components/Rankinglist.vue")
         }
       ]
+    },
+    {
+      path: "/Login",
+      component: () => import("@/components/login.vue")
+    },
+    {
+      path: "/register",
+      component: () => import("@/components/register.vue")
     },
     {
       path: "/about",
