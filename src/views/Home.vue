@@ -94,7 +94,7 @@ export default {};
 
 
 /* 导航选中样式 */
-.class_active {
+.active {
   width: 110px;
   height: 60px;
   border-bottom: 3px solid darkblue;
