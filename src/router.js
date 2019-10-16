@@ -26,7 +26,7 @@ let router= new Router({
         },
         {
           path:"/book",
-          component:()=>import("@/components/Book.vue")
+          component :() => import("@/components/Book.vue")
         }
       ]
     },
@@ -39,9 +39,11 @@ let router= new Router({
       component: () => import("@/components/register.vue")
     },
     {
-      path: "/about",
+      path: "/about", 
       name: "about",
       component: () => import("./views/About.vue")
+    },
+    {
       path: "/stackroom",
       component: () => import('@/components/stack_room.vue')
     }
