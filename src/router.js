@@ -4,7 +4,7 @@ import Home from "./views/Home.vue";
 
 Vue.use(Router);
 
-let router= new Router({
+let router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
@@ -17,16 +17,20 @@ let router= new Router({
       component: Home,
       children: [
         {
-          path:'/',
-          component:()=>import('@/components/Index.vue')
+          path: '/',
+          component: () => import('@/components/Index.vue')
         },
         {
           path: "/rankinglist",
           component: () => import("@/components/Rankinglist.vue"),
         },
         {
-          path:"/book",
-          component:()=>import("@/components/Book.vue")
+          path: "/book",
+          component: () => import("@/components/Book.vue")
+        },
+        {
+          path: "/lightnovel",
+          component: () => import("@/components/Lightnovel.vue")
         }
       ]
     },
