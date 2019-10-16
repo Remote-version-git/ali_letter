@@ -68,18 +68,23 @@
         </div>
       </el-header>
 
+      <!-- 内容 组件 -->
       <el-main style="height:100%">
-        <router-view></router-view>
+        <div class="common">
+          <router-view></router-view>
+        </div>
       </el-main>
+
+      <!-- 底部 -->
       <el-footer style="height:180px">
         <div class="common bottom">
           <p>
             <span class="left">
-              <a href="">联系我们</a>
-              <a href="">关于我们</a>
-              <a href="">投稿声明</a>
-              <a href="">常见问题</a>
-              <a href="">网站微博</a>
+              <a href>联系我们</a>
+              <a href>关于我们</a>
+              <a href>投稿声明</a>
+              <a href>常见问题</a>
+              <a href>网站微博</a>
             </span>
             <span class="right">广州阿里巴巴文学信息技术有限公司版权所有</span>
           </p>
@@ -205,63 +210,62 @@ export default {};
   background-color: #333;
 }
 
-.bottom>p{
+.bottom > p {
   width: 100%;
   height: 45px;
   line-height: 45px;
 }
 
-.bottom span{
+.bottom span {
   display: inline-block;
   color: white;
   font-size: 13px;
   font-weight: 100;
-
 }
 
-.bottom .left{
+.bottom .left {
   float: left;
 }
 
-.bottom .right{
+.bottom .right {
   float: right;
 }
 
-.bottom>p:first-child>span>a{
+.bottom > p:first-child > span > a {
   position: relative;
-  display:inline-block;
+  display: inline-block;
   width: 70px;
   color: white;
 }
 
-.bottom>p:first-child>span>a::after{
-    content: "";
-    position: absolute;
-    right: 11px;
-    top: 16px;
-    height: 14px;
-    width: 1px;
-    background-color: #fff;
+.bottom > p:first-child > span > a::after {
+  content: "";
+  position: absolute;
+  right: 11px;
+  top: 16px;
+  height: 14px;
+  width: 1px;
+  background-color: #fff;
 }
 
-.bottom>p:first-child>span>a:last-child:after{
+.bottom > p:first-child > span > a:last-child:after {
   display: none;
 }
 
-.bottom>p:first-child>span>a:hover{
+.bottom > p:first-child > span > a:hover {
   color: #ff6c17;
 }
 
-.bottom>p:nth-child(2)>span:last-child{
-background-image: url(/img/bottom_icon.16a7034d.png);
-    background-size: 34px 34px;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-    background-position-y: 5px;
-    width: 613px;
+.bottom > p:nth-child(2) > span:last-child {
+  background-image: url(/img/bottom_icon.16a7034d.png);
+  background-size: 34px 34px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  background-position-y: 5px;
+  width: 613px;
 }
 
-.bottom>p:last-child>span:last-child{
+.bottom > p:last-child > span:last-child {
   color: #6c6c6c;
 }
 </style>
