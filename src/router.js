@@ -4,28 +4,47 @@ import Home from "./views/Home.vue";
 
 Vue.use(Router);
 
-let router= new Router({
+let router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
       path: "/",
-      redirect: "/home"
-
+      redirect: "/home",
     },
     {
       path: "/home",
       component: Home,
       children: [
         {
+          path: '/',
+          component: () => import('@/components/Index.vue')
+        },
+        {
           path: "/rankinglist",
-          component: () => import("@/components/Rankinglist.vue")
+          component: () => import("@/components/Rankinglist.vue"),
+        },
+        {
+          path: "/book",
+          component: () => import("@/components/Book.vue")
+        },
+        {
+          path: "/lightnovel",
+          component: () => import("@/components/Lightnovel.vue")
         }
       ]
     },
     {
+      path: "/Login",
+      component: () => import("@/components/login.vue")
+    },
+    {
+      path: "/register",
+      component: () => import("@/components/register.vue")
+    },
+    {
       path: "/stackroom",
-      component: () => import('@/components/stack_room.vue')
+      component: () => import('@/components/stackroom.vue')
     }
   ]
 });
