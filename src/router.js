@@ -18,6 +18,10 @@ let router= new Router({
       component: Home,
       children: [
         {
+          path:'/',
+          component:()=>import('@/components/Index.vue')
+        },
+        {
           path: "/rankinglist",
           component: () => import("@/components/Rankinglist.vue"),
         },

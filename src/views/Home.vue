@@ -70,9 +70,7 @@
 
       <!-- 内容 组件 -->
       <el-main style="height:100%">
-        <div class="common">
           <router-view></router-view>
-        </div>
       </el-main>
 
       <!-- 底部 -->
