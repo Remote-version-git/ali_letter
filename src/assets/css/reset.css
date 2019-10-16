@@ -18,3 +18,7 @@ h1,h2,h3,h4,h5,h6,strong,b{font-weight:bold;}
 del,ins,u,s,a,a:hover{text-decoration:none;}
 a{color: black;}
 body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0;}
+
+.el-main {
+    padding: 0;
+}
