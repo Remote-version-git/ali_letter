@@ -71,7 +71,9 @@
       <el-main style="height:100%">
         <router-view></router-view>
       </el-main>
-      <el-footer style="height:100%"></el-footer>
+      <el-footer style="height:100%">
+
+      </el-footer>
     </el-container>
   </div>
 </template>
@@ -83,7 +85,7 @@ export default {};
 <style>
 /* 公共宽度 */
 .common {
-  width: 1200px;
+  width: 1120px;
   margin: 0 auto;
   /* background-color: antiquewhite; */
 }
