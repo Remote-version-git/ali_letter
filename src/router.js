@@ -19,7 +19,11 @@ let router= new Router({
       children: [
         {
           path: "/rankinglist",
-          component: () => import("@/components/Rankinglist.vue")
+          component: () => import("@/components/Rankinglist.vue"),
+        },
+        {
+          path:"/book",
+          component:()=>import("@/components/Book.vue")
         }
       ]
     },
