@@ -71,8 +71,31 @@
       <el-main style="height:100%">
         <router-view></router-view>
       </el-main>
-      <el-footer style="height:100%">
-
+      <el-footer style="height:180px">
+        <div class="common bottom">
+          <p>
+            <span class="left">
+              <a href="">联系我们</a>
+              <a href="">关于我们</a>
+              <a href="">投稿声明</a>
+              <a href="">常见问题</a>
+              <a href="">网站微博</a>
+            </span>
+            <span class="right">广州阿里巴巴文学信息技术有限公司版权所有</span>
+          </p>
+          <p>
+            <span class="left">阿里文学 书旗网</span>
+            <span class="right">粤ICP备13078413号-6 增值电信业务许可证 粤B2-20130742 网络文化经营许可证 粤网文[2017]3018-499号</span>
+          </p>
+          <p>
+            <span class="left">请使用者仔细阅读阿里文学《阿里文学用户服务协议》、《隐私保护政策》说明</span>
+            <span class="right">地址：广州市天河区黄埔大道西平云路163号广电平云广场B塔13层自编03单元 电话：0571-26883636</span>
+          </p>
+          <p>
+            <span class="left">为保证更好的浏览效果，请使用Chrome或其他主流浏览器访问</span>
+            <span class="right">本站部分作品的封面设计图系由作者自行上传，本站未进行任何人工编辑整理。若有侵犯您的知识产权，请及时通知</span>
+          </p>
+        </div>
       </el-footer>
     </el-container>
   </div>
@@ -165,7 +188,7 @@ export default {};
   line-height: 60px;
 }
 
-.el-input__inner{
+.el-input__inner {
   border-radius: 50px;
   height: 28px;
 }
@@ -173,5 +196,72 @@ export default {};
 .el-input-group__append {
   border-radius: 0px 50px 50px 0;
   background-color: transparent;
+}
+/* 导航结束 */
+
+/* 底部 */
+.el-footer {
+  width: 100%;
+  background-color: #333;
+}
+
+.bottom>p{
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+}
+
+.bottom span{
+  display: inline-block;
+  color: white;
+  font-size: 13px;
+  font-weight: 100;
+
+}
+
+.bottom .left{
+  float: left;
+}
+
+.bottom .right{
+  float: right;
+}
+
+.bottom>p:first-child>span>a{
+  position: relative;
+  display:inline-block;
+  width: 70px;
+  color: white;
+}
+
+.bottom>p:first-child>span>a::after{
+    content: "";
+    position: absolute;
+    right: 11px;
+    top: 16px;
+    height: 14px;
+    width: 1px;
+    background-color: #fff;
+}
+
+.bottom>p:first-child>span>a:last-child:after{
+  display: none;
+}
+
+.bottom>p:first-child>span>a:hover{
+  color: #ff6c17;
+}
+
+.bottom>p:nth-child(2)>span:last-child{
+background-image: url(/img/bottom_icon.16a7034d.png);
+    background-size: 34px 34px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    background-position-y: 5px;
+    width: 613px;
+}
+
+.bottom>p:last-child>span:last-child{
+  color: #6c6c6c;
 }
 </style>
