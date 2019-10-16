@@ -82,7 +82,7 @@
 export default {};
 </script>
 
-<style>
+<style lang="less" scoped>
 /* 公共宽度 */
 .common {
   width: 1120px;
@@ -94,7 +94,7 @@ export default {};
 
 
 /* 导航选中样式 */
-.active {
+.class_active {
   width: 110px;
   height: 60px;
   border-bottom: 3px solid darkblue;
