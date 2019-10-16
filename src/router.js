@@ -29,8 +29,13 @@ let router = new Router({
           component: () => import("@/components/Book.vue")
         },
         {
+<<<<<<< HEAD
           path: "/stackroom",
           component: () => import('@/components/stackroom.vue')
+=======
+          path: "/lightnovel",
+          component: () => import("@/components/Lightnovel.vue")
+>>>>>>> 386ac205874647a20efcac43674ec7bf7e7cfc21
         }
       ]
     },

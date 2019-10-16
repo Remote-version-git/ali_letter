@@ -6,7 +6,7 @@ import router from "./router";
 import store from "./store";
 
 import "./assets/css/reset.css";
-
+import "./assets/css/baes.css"
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
