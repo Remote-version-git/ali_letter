@@ -252,6 +252,101 @@ PS：微信书群可以让群友拉进去。"
             </li>
           </ul>
         </div>
+        <div class="rank-list">
+          <div class="comp-ranks normal js-ranks">
+            <ul class="cp-ranks-navs alone js-ranksNavs">
+              <li class="active">重磅推荐</li>
+            </ul>
+            <ul class="cp-ranks-list js-ranksList">
+              <li>
+                <a target="_blank" href="#">
+                  <p class="title">
+                    <i class="no">1</i>先爱你为敬
+                  </p>
+                  <div class="info">
+                    <img src="http://img-tailor.11222.cn/bcv/big/1124607899686.jpg" class="cover" />
+                    <div class="auth">画早</div>
+                    <div class="desc">
+                      现实的重压，将极度骄傲的周冕，连拖带拽地推进内衣行业里摩擦摩擦。
+                      即便他作为内衣
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="#">
+                  <p class="title">
+                    <i class="no">2</i>私奔后的种田生活
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="#">
+                  <p class="title">
+                    <i class="no">3</i>神医毒妃：病娇王爷请自重
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="#">
+                  <p class="title">
+                    <i class="no">4</i>宠婢
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="#">
+                  <p class="title">
+                    <i class="no">5</i>神探死亡倒计时
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="#">
+                  <p class="title">
+                    <i class="no">6</i>重生之都市修真者
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="#">
+                  <p class="title">
+                    <i class="no">7</i>绝世至尊
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="#" data-clog="a8$$bid=7933656">
+                  <p class="title">
+                    <i class="no">8</i>乡村小邪医
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a target="_blank" href="#" data-clog="a9$$bid=7067742">
+                  <p class="title">
+                    <i class="no">9</i>剑逆诸天
+                  </p>
+                </a>
+              </li>
+            </ul>
+            <div class="page-data js-ranks-data"></div>
+          </div>
+        </div>
+      </div>
+      <!-- 回到顶部 -->
+      <div class="comp-web-backtop hide js-webBackTopView" style="display: block;">
+        <div class="comp-web-bt-width page-width">
+          <div class="backtop-btn js-btn">返回顶部</div>
+        </div>
       </div>
     </div>
   </div>
@@ -671,55 +766,215 @@ a:hover {
 
 /* 右边 */
 .rightarea {
-    width: 220px;
-    float: right;
-    margin-top: 24px;
+  width: 220px;
+  float: right;
+  margin-top: 24px;
 }
 .rightarea .user-orther {
-    overflow: hidden;
-    color: #1c0800;
-    margin-top: 14px;
+  overflow: hidden;
+  color: #1c0800;
+  margin-top: 14px;
 }
 .rightarea .user-orther .header {
-    font-size: 16px;
-    line-height: 22px;
-    height: 22px;
-    overflow: hidden;
-    margin-bottom: 14px;
-    padding-left: 14px;
-    background: url(../assets/img/changkexinimg/title_icon_cate.png) no-repeat 0 0 #fff;
-    background-size: auto 22px;
+  font-size: 16px;
+  line-height: 22px;
+  height: 22px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  padding-left: 14px;
+  background: url(../assets/img/changkexinimg/title_icon_cate.png) no-repeat 0 0
+    #fff;
+  background-size: auto 22px;
 }
 .rightarea .user-orther li {
-    width: 100%;
-    height: 84px;
-    margin-bottom: 14px;
-    box-sizing: border-box;
-    padding-left: 8px;
-    border-left: 4px solid #eee;
-    position: relative;
+  width: 100%;
+  height: 84px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+  padding-left: 8px;
+  border-left: 4px solid #eee;
+  position: relative;
 }
 .rightarea .user-orther li p.auth {
-    color: #999;
-    margin: 7px 0 9px;
+  color: #999;
+  margin: 7px 0 9px;
 }
-.rightarea .user-orther li p.title, .rightarea .user-orther li p.auth {
-    font-size: 14px;
-    line-height: 16px;
-    height: 16px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.rightarea .user-orther li p.title,
+.rightarea .user-orther li p.auth {
+  font-size: 14px;
+  line-height: 16px;
+  height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .rightarea .user-orther li p.desc {
-    font-size: 12px;
-    line-height: 20px;
-    height: 40px;
-    color: #999;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+  font-size: 12px;
+  line-height: 20px;
+  height: 40px;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 重磅推荐 */
+.comp-ranks,
+.comp-ranks.normal {
+  width: 100%;
+}
+.comp-ranks .cp-ranks-navs.alone,
+.comp-ranks.normal .cp-ranks-navs.alone {
+  text-align: left;
+}
+
+.comp-ranks .cp-ranks-navs,
+.comp-ranks.normal .cp-ranks-navs {
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  display: flex;
+  font-size: 14px;
+  border-bottom: 1px solid #d6dbe0;
+  text-align: center;
+  color: #999;
+}
+.comp-ranks .cp-ranks-navs li.active,
+.comp-ranks.normal .cp-ranks-navs li.active {
+  font-weight: bold;
+  color: #1d1e20;
+  position: relative;
+}
+
+.comp-ranks .cp-ranks-navs li,
+.comp-ranks.normal .cp-ranks-navs li {
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+}
+.comp-ranks .cp-ranks-navs li.active:after,
+.comp-ranks.normal .cp-ranks-navs li.active:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 3px;
+  background: #f37315;
+}
+.comp-ranks .cp-ranks-list,
+.comp-ranks.normal .cp-ranks-list {
+  width: 100%;
+  margin-top: 20px;
+}
+.comp-ranks .cp-ranks-list li,
+.comp-ranks.normal .cp-ranks-list li {
+  line-height: 18px;
+  margin-bottom: 16px;
+  color: #1d1e20;
+  font-size: 13px;
+}
+.comp-ranks .cp-ranks-list li .title,
+.comp-ranks.normal .cp-ranks-list li .title {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 24px;
+  height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.comp-ranks .cp-ranks-list li .title i.no,
+.comp-ranks.normal .cp-ranks-list li .title i.no {
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  background-color: #d2d2d2;
+  font-style: normal;
+}
+.comp-ranks .cp-ranks-list li:nth-child(1) i.no,
+.comp-ranks .cp-ranks-list li:nth-child(2) i.no,
+.comp-ranks .cp-ranks-list li:nth-child(3) i.no,
+.comp-ranks.normal .cp-ranks-list li:nth-child(1) i.no,
+.comp-ranks.normal .cp-ranks-list li:nth-child(2) i.no,
+.comp-ranks.normal .cp-ranks-list li:nth-child(3) i.no {
+  background-color: #f37315;
+}
+/* 图 */
+.comp-ranks .cp-ranks-list li .info,
+.comp-ranks.normal .cp-ranks-list li .info {
+  width: 100%;
+  height: 103px;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 92px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.comp-ranks .cp-ranks-list li .info .auth,
+.comp-ranks.normal .cp-ranks-list li .info .auth {
+  width: 100%;
+  overflow: hidden;
+  height: 14px;
+  line-height: 14px;
+  color: #999999;
+  margin-top: 10px;
+}
+.comp-ranks .cp-ranks-list li .info .desc,
+.comp-ranks.normal .cp-ranks-list li .info .desc {
+  height: 66px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #999;
+  text-align: justify;
+  margin-top: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.comp-ranks .cp-ranks-list li .info .cover,
+.comp-ranks.normal .cp-ranks-list li .info .cover {
+  height: 100%;
+  width: 82px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #eee;
+}
+/* 回到顶部 */
+.comp-web-backtop {
+  width: 100%;
+  height: 0px;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  bottom: 224px;
+  font-size: 12px;
+}
+.page-width {
+  width: 1120px;
+  margin: 0 auto;
+}
+.comp-web-backtop .comp-web-bt-width .backtop-btn {
+  cursor: pointer;
+  background: url(../assets/img/changkexinimg/back_top.png) no-repeat center top;
+  background-size: 50px 50px;
+  padding-top: 50px;
+  line-height: 20px;
+  float: right;
+  text-align: center;
+  color: #d6dbe0;
 }
 </style>
