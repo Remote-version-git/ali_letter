@@ -7,7 +7,6 @@
         <span class="title">轻小说推荐</span>
       </el-row>
 
-      <!-- 第二大模块布局 -->
       <!-- 左边立即阅读 -->
       <el-container>
         <el-main class="clear" style="padding: 0px;">
@@ -338,7 +337,100 @@
           </div>
         </div>
         <!-- 右边本周强推 -->
-        
+        <div class="comp-ranks gold js-ranks float_right">
+          <ul class="cp-ranks-navs alone js-ranksNavs">
+            <li class="active">本周强推</li>
+          </ul>
+          <ul class="cp-ranks-list js-ranksList">
+            <li>
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">1</i>我们不教修仙，教魔法！
+                </p>
+                <div class="info">
+                  <img src="../assets/images/1169137823196.jpg" class="cover" />
+                  <div class="auth">菠萝包</div>
+                  <div class="desc">
+                    崇尚修真的少年，阴差阳错之下来到了仙境。
+                    却被告知，我们不修真，我们学魔法吧！
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">2</i>痞子皇探
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">3</i>精灵少女的异世界马戏团生涯
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">4</i>末日到来的我要拯救世界么
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">5</i>修仙界学霸
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">6</i>我！是鸽杀手
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">7</i>诡诞纪元
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">8</i>这个江湖风太大
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">9</i>前进，拯救少女
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">10</i>如果我是Ta
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- 死神的新娘图片 -->
@@ -674,8 +766,12 @@
 .lightnovel {
   width: 100%;
   height: 100%;
+  font-family:"Microsoft YaHei";
 }
-
+a.deem_color {
+  color: #a3a3a3;
+}
+a.deem_color:hover,
 a:hover {
   color: #ffa600;
 }
@@ -951,13 +1047,6 @@ a:hover {
 .thirdrec ul li span {
   color: #a0a1a1;
 }
-.thirdrec ul li a {
-  width: 100%;
-  display: inline-block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
 
 // 本宫腿毛一尺长图片条
 .banner-advert {
@@ -972,13 +1061,13 @@ a:hover {
 }
 
 // 精品热推模块
-.goodrec .lefteare {
-  width: 78.4%;
-  float: left;
-}
 .page-width {
   width: 1120px;
   margin: 0 auto;
+}
+.goodrec .lefteare {
+  width: 78.4%;
+  float: left;
 }
 .goodrec .lefteare .titleline {
   height: 22px;
@@ -1030,9 +1119,7 @@ a:hover {
   color: #1d1e20 !important;
   overflow: hidden;
 }
-.goodrec .lefteare .booklist .item:nth-of-type(3),
-.goodrec .lefteare .booklist .item:nth-of-type(6),
-.goodrec .lefteare .booklist .item:nth-of-type(9) {
+.goodrec .lefteare .booklist .item:nth-of-type(3n) {
   margin-right: 0px !important;
 }
 .goodrec .lefteare .booklist .item .author {
@@ -1059,9 +1146,126 @@ a:hover {
 .goodrec .lefteare .booklist .item .bookname {
   margin-top: 9px;
 }
-.goodrec .lefteare .booklist .item .author {
-  color: #a3a3a3;
-  margin: 8px 0 30px;
+
+// 本周强推
+.goodrec .float_right {
+  width: 218px;
+  height: 492px;
+  float: right;
+}
+.comp-ranks .cp-ranks-navs li {
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+}
+.comp-ranks .cp-ranks-navs li.active {
+  position: relative;
+  font-weight: bold;
+  color: #1d1e20;
+  text-align: left;
+  cursor: pointer;
+}
+.comp-ranks .cp-ranks-navs {
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  display: flex;
+  font-size: 14px;
+  border-bottom: 3px solid #ffd800;
+  text-align: center;
+  color: #999;
+}
+.comp-ranks .cp-ranks-list li,
+.comp-ranks.normal .cp-ranks-list li {
+  line-height: 18px;
+  margin-bottom: 15px;
+  color: #1d1e20;
+  font-size: 13px;
+}
+.comp-ranks .cp-ranks-list li .title,
+.comp-ranks.normal .cp-ranks-list li .title {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 24px;
+  height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.comp-ranks .cp-ranks-list li .info,
+.comp-ranks.normal .cp-ranks-list li .info {
+  width: 100%;
+  height: 103px;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 92px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.comp-ranks.gold .cp-ranks-list li:nth-child(1) i.no,
+.comp-ranks.gold .cp-ranks-list li:nth-child(2) i.no,
+.comp-ranks.gold .cp-ranks-list li:nth-child(3) i.no {
+  background-color: #ffd800;
+}
+.comp-ranks .cp-ranks-list {
+  margin-top: 10px;
+}
+.comp-ranks .cp-ranks-list li .title i.no,
+.comp-ranks.normal .cp-ranks-list li .title i.no {
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  background-color: #d2d2d2;
+  font-style: normal;
+}
+.comp-ranks .cp-ranks-list li .info,
+.comp-ranks.normal .cp-ranks-list li .info {
+  width: 100%;
+  height: 103px;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 92px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.comp-ranks .cp-ranks-list li .info .cover,
+.comp-ranks.normal .cp-ranks-list li .info .cover {
+  height: 100%;
+  width: 82px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #eee;
+}
+.comp-ranks .cp-ranks-list li .info .auth,
+.comp-ranks.normal .cp-ranks-list li .info .auth {
+  width: 100%;
+  overflow: hidden;
+  height: 14px;
+  line-height: 14px;
+  color: #999999;
+  margin-top: 10px;
+}
+.comp-ranks .cp-ranks-list li .info .desc,
+.comp-ranks.normal .cp-ranks-list li .info .desc {
+  height: 66px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #999;
+  text-align: justify;
+  margin-top: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 // 死神的新娘图片
@@ -1223,9 +1427,7 @@ a:hover {
   color: #1d1e20;
   overflow: hidden;
 }
-.newrec .righteare .booklist .item:nth-of-type(3),
-.newrec .righteare .booklist .item:nth-of-type(6),
-.newrec .righteare .booklist .item:nth-of-type(9) {
+.newrec .righteare .booklist .item:nth-of-type(3n) {
   margin-right: 0px !important;
 }
 .newrec .righteare .booklist .item:nth-of-type(7),
@@ -1341,13 +1543,5 @@ a:hover {
   display: block;
   height: 90px;
   overflow: hidden;
-}
-
-a.deem_color {
-  color: #a3a3a3;
-}
-
-a.deem_color:hover {
-  color: #ffa600;
 }
 </style>
