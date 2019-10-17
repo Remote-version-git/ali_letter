@@ -13,7 +13,7 @@
         <el-main class="clear" style="padding: 0px;">
           <div class="main">Main</div>
 
-          <!-- 左下第二个左边模块 -->
+          <!-- 左下第二个左边模块(图书、作者介绍) -->
           <div class="secrec_box">
             <ul class="secrec">
               <li>
@@ -22,7 +22,7 @@
                   <p class="bookname">作者大人们别烦我</p>
                 </a>
                 <p class="author">
-                  <a href="#" class="demo">这只是个包子</a>
+                  <a href="#" class="demo deem_color">这只是个包子</a>
                 </p>
                 <p class="desc">夜风经营着一家专门收集图书的店铺，这一天，他意外地收到了一个莫名其妙的快递，和一封邮件......</p>
               </li>
@@ -33,14 +33,14 @@
                   <p class="bookname">月神攻陷作战！开始！</p>
                 </a>
                 <p class="author">
-                  <a href="#" class="demo">苦味酸</a>
+                  <a href="#" class="demo deem_color">苦味酸</a>
                 </p>
                 <p
                   class="desc"
                 >都已经2050年了，怎么还有人信神的，要唯物，唯物你知道么，但是如果神明本来就是客观的存在，那就没办法了啊，毕竟我是个唯物主义者——被月神的弓箭射穿胸膛的我如是想。</p>
               </li>
             </ul>
-            <!-- 左下第二个右边模块 -->
+            <!-- 左下第二个右边模块(类型、书名) -->
             <div class="thirdrec">
               <ul class="clear">
                 <li class="clear">
@@ -107,10 +107,10 @@
             </div>
           </div>
         </el-main>
-        <!-- 右边大盒子 -->
+        <!-- 右边冒险、搞笑、热门标签... -->
         <el-aside class="clear" style="width:217px">
           <div class="righteare clear">
-            <!-- 第一个 -->
+            <!-- 冒险 -->
             <div class="pos-one clear">
               <a href="#javaScript:;">
                 <h3>冒险</h3>
@@ -121,7 +121,7 @@
                 </div>
               </a>
             </div>
-            <!-- 第二个 -->
+            <!-- 搞笑 -->
             <div class="pos-two clear">
               <h3>
                 <a href="#javaScript:;">搞笑</a>
@@ -141,7 +141,7 @@
                 </li>
               </ul>
             </div>
-            <!-- 第三个 -->
+            <!-- 纯爱 -->
             <ul class="pos-three clear">
               <li style="background: #f0fbed;">
                 <a href="#javaScript:;">纯爱</a>
@@ -156,7 +156,7 @@
                 <a href="#javaScript:;">热血</a>
               </li>
             </ul>
-            <!-- 第四个 -->
+            <!-- 热门标签 -->
             <div class="pos-four">
               <h4>热门标签</h4>
               <ul class="clear">
@@ -193,10 +193,477 @@
         </el-aside>
       </el-container>
 
-      <!-- 第二大模块图片条 -->
+      <!-- 本宫腿毛一尺长图片条 -->
       <div class="banner-advert page-width">
         <a href="#" class="demo">
           <img src="../assets/images/2019070217055008.jpg" />
+        </a>
+      </div>
+
+      <!-- 精品热推模块 -->
+      <div class="goodrec page-width clear">
+        <!-- 左边图书、介绍 -->
+        <div class="lefteare">
+          <div class="titleline">
+            <span class="title">精品热推</span>
+          </div>
+          <div class="booklist">
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1178187787010.jpg" />
+                <p class="bookname">魔晶追猎者</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">刘栋安魂曲</a>
+              </p>
+              <p
+                class="desc"
+              >十六岁的少年成雷是一名普通学生，某天他在学校附近发现了异常现象，有几名学生在充满瘴气的林中失踪。之后那些人再次出现，除了外表与之前一样之外，“灵魂”似乎被替换掉了。随着这些人的归来，学校里开始发生一连串的诡异事件，成雷身边的朋友、学校里的老师也开始接连失踪。成雷发现，这些失踪事件，都与校外那片林子有关……究竟在这林子里发生了什么？成雷能否找到那些失踪的人？只有进入密林，才能找到答案。</p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1132377785773.jpg" />
+                <p class="bookname">男友是只外星傲娇犬</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">黎灼灼</a>
+              </p>
+              <p
+                class="desc"
+              >苏年年听说过天上掉下个林妹妹，可是她——天上掉下一只外星犬是什么鬼？不仅如此，这只外星犬还变成了美少年，还说要改良她，改良就改良吧，还说要收了她做女朋友，苏年年不忍了，但是也只有一个办法，那就是——顺从他，变成一个乖巧良家少女。</p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1132177860674.jpg" />
+                <p class="bookname">逐魂录</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">李寻希</a>
+              </p>
+              <p
+                class="desc"
+              >十年前，他亲手结束了父亲的生命。为了继承父亲生前的使命，他加入了那个父亲曾经引以为傲的组织。然而，他的目的并不在此。父亲的死另有隐情、更大的阴谋正缓缓浮现，他在寻找真相的过程中，却也在逐渐接近死亡……</p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1160817652448.jpg" />
+                <p class="bookname">黑科技肆虐异界</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">列银</a>
+              </p>
+              <p class="desc">
+                枫叶国太子叶枫，遭遇国师陷害，被迫流放。
+                是金子哪里都会发光的，国民挽留、仙人保护，叶枫带着黑科技系统踏足修仙界！
+                自此，整片世界掀起了黑科技狂潮！
+              </p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1109047652547.jpg" />
+                <p class="bookname">我有一具臭皮囊</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">击暗</a>
+              </p>
+              <p class="desc">
+                少年告白失败，将一切归咎于颜值，于是请求上苍赐予他一副盛世臭皮囊。
+                上苍如他所愿，赐予他一副臭皮囊。
+                少年大喜，转身照镜子……
+                “怎么这皮囊给错了性别？喂老天爷！”看着镜子里面的盛世女容颜，少年大惊，而后怒。
+                上苍……嗯，不搭理他。
+              </p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1154767862267.jpg" />
+                <p class="bookname">我家大人是死神</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">摇曳的发发</a>
+              </p>
+              <p class="desc">
+                “你想活下来吗？那么就和我签订契约成为我的仆人吧！”
+                从那天开始，她便成为死神的专属仆人了！
+              </p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1102807843617.jpg" />
+                <p class="bookname">超时空拯救者</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">雪千寻</a>
+              </p>
+              <p
+                class="desc"
+              >洛离拿起剧本的那一刻，忽然发现世界变了，他曾无数次挣扎的黑暗故事变成了现实，然而他发现一切都不仅仅如此，死去的好友居然也重回人世，世界，好像有些不一样了！</p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1151307834462.jpg" />
+                <p class="bookname">本宫腿毛一尺长</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">唐百岁</a>
+              </p>
+              <p
+                class="desc"
+              >前些日子还见那土匪在他那老虎凳上四仰八叉地睡着呢，没想到这些天再见他那满脸地络腮胡都剃的干干净净连根胡茬都看不见，手上涂着丹蔻，脸上抹着胭脂，走路虽然还是那副虎虎生风的样子，但也会低下头来轻声软语地喊一声陛下了。【真的是言情啊，我发誓！】</p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1162927841332.jpg" />
+                <p class="bookname">勇者过去式</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">怀世</a>
+              </p>
+              <p class="desc">
+                公元2077年，异界魔王带着旗下的四大天王君临人间界，在本来全是麻瓜的世界中引入了魔法的概念。
+                四天王之一的罗赛丽亚创造出数千万的魔族，重现了魔族与人类对阵的格局。
+                43年的防御战争，海陆空的全面战争怎一个惨字了得。战火燃遍七大洲四大洋，蚕食着人类的生存空间，也改变了人类的生活方式。
+                2120年，充满神秘勇者小队【皆斩】刺杀魔王成功，轰动一时。镜头前，副队长琉白平静说道：
+                “未生还者……四人。”
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 右边本周强推 -->
+        
+      </div>
+
+      <!-- 死神的新娘图片 -->
+      <div class="banner-advert page-width">
+        <a href="#" class="demo">
+          <img src="../assets/images/2019070217071804.jpg" />
+        </a>
+      </div>
+      <!-- 新书速推 -->
+      <div class="newrec page-width clear">
+        <div class="titleline">
+          <span class="title">新书速推</span>
+        </div>
+        <!-- 左边第四面强 -->
+        <div class="lefteare">
+          <div class="top">
+            <a href="#" class="demo">
+              <p class="bookname">第四面墙</p>
+            </a>
+            <div class="info">
+              <a href="#" class="demo">
+                <img src="http://img-tailor.11222.cn/bcv/big/1120117874697.jpg" />
+              </a>
+              <p class="author">
+                <a href="#" class="demo">陌白</a>
+              </p>
+              <p class="desc">人类舍弃去外太空寻找生命，想要打破‘第四面墙’来探索未知的领域和生物，却忽略了在维度夹缝中的生命体，它们给人类带来的不只是惊喜，还有灾难。</p>
+            </div>
+          </div>
+          <!-- 我家盟主没舅了、怪谈校区 -->
+          <ul class="listrec">
+            <li>
+              <a href="#" class="demo">
+                <p class="title">我家盟主没舅了</p>
+              </a>
+              <p class="auth">
+                <a href="#" class="demo">方片儿柴郡猫</a>
+              </p>
+              <p class="desc">
+                死因成谜，反派魔王。身后事业全凉凉。一朝穿越鸠占鹊，炮灰弟子惊坐床。跑路作恶拆家忙，无奈阴差逢阳错，武林美名身上扛。忙者匆匆欲归去，江湖风雨动弥彰。刀光迸裂寒剑影，四海春秋空苍苍。
+                这是一个死因成谜的反派魔王不幸穿越成炮灰某正派弟子，发誓杀人放火报复社会，结果求锤不得锤的故事。
+              </p>
+            </li>
+            <li>
+              <a href="#" class="demo">
+                <p class="title">怪谈校区</p>
+              </a>
+              <p class="auth">
+                <a href="#" class="demo">千钧三两</a>
+              </p>
+              <p class="desc">
+                校外，与魔鬼做交易的拍卖行，穿梭阴阳的233路公交，恐怖邮差
+                校内，恶灵许愿树，三万层台阶怪谈，阶梯教室百鬼大讲座
+                这片校区镇压这往生门，封印岌岌可危，阴气外泄，校内外诡异之事层出不穷，怪谈不断。
+                这么危险的地方，要不……转学吧？
+                转学？
+                我，陆小白！当代玄学大师，能抓鬼，看风水，安坟，卜卦，怕个锤子！
+              </p>
+            </li>
+          </ul>
+        </div>
+        <!-- 图书、作者、简介 -->
+        <div class="righteare">
+          <div class="booklist">
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1140007801299.jpg" />
+                <p class="bookname">贫穷大王要翻身</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">大尾巴鱼</a>
+              </p>
+              <p class="desc">陈小轩下定决心要建设自己的领土，凭借着从现代带来的知识，开发出石英矿，远销海内外。获得巨额资产……</p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1164387823153.jpg" />
+                <p class="bookname">终末勇者的网游无双</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">不笑喵</a>
+              </p>
+              <p class="desc">
+                异世界冒险者竟硬核穿越到网游世界？
+                爱人失忆，队友变成NPC，他要只身一人面对氪金玩家、强肝玩家，甚至是封测者。
+                虽然是异世界土著，却熟知副本攻略、装备出处。
+                公会大战，世界boss，揭穿游戏制作者的阴谋。
+                他化身终末勇者，开启网游无双！
+              </p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1196557853712.jpg" />
+                <p class="bookname">有人正在谋杀全球</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">千秋清流</a>
+              </p>
+              <p
+                class="desc"
+              >当肉体已经不在成为精神的束缚，网络可以承载人的灵魂的时候，我们应该生活在宛若天堂般的虚拟世界中享受着生活，还是在地狱般的现实中面对残酷的未来。真相是残酷的，美好的是谎言，那么，你愿意接受的，是真相，还是谎言？</p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1152147818620.jpg" />
+                <p class="bookname">单身是病</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">空桑从女</a>
+              </p>
+              <p class="desc">
+                21世纪的大学生艾小爱在年满二十岁的时候忽然穿越到了一个认为单身是病的主题世界。在这个世界中，男生女生到了二十岁都必须要找到互相爱慕的伴侣，否则将会被送去专业的主题医院进行治疗。在主题世界中，单身是一种病，极罕见又难治疗的病征。直到找到愿意跟他一起生活的伴侣这才算是根治了病征。
+                由于“单身”这种病传染性很强（思维传播），所以必须尽快跟正常人隔离开。
+              </p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1135087817543.jpg" />
+                <p class="bookname">我的女儿来自未来</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">白衣乱武</a>
+              </p>
+              <p class="desc">
+                陨石落入地球，陨石上携带者大量不知名辐射，导致地球所有生物发生异变进化。
+                嘤嘤嘤必杀技！
+                你叫嘤嘤嘤！
+              </p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1163367813451.jpg" />
+                <p class="bookname">穿越者救助指南</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">知之</a>
+              </p>
+              <p class="desc">
+                刚刚参加完高考的官歌被5000万奖学金吸引，稀里糊涂成为了穿越者救助大学地球分校的新生，目的就是要救助从地球穿越到其他世界，或从其他世界穿越到地球的悲催穿越者们。
+                不小心附身到了太监身上？放心，我帮你；穿越后抄袭古诗词差点被砍头？赶紧拨打我们的热线；在异世界练习魔法走火入魔了，别怕，我们可以重新再穿一次……
+                哦对了，我们的救助是收费的，这是您的账单！
+              </p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1102487809351.jpg" />
+                <p class="bookname">我的妹妹是阎王</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">柠檬不酸</a>
+              </p>
+              <p
+                class="desc"
+              >马超是一名先天性地中海贫血患者，医生断言他只能活到十八岁，为了根植他的疾病，父母生了二胎配型，出门打工积攒治疗费用，妹妹的出生也是为了救治马超。对此马超并不知情，直到有一天马超考上了高中……</p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1122657801839.jpg" />
+                <p class="bookname">幽灵船</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">火焰</a>
+              </p>
+              <p
+                class="desc"
+              >在潜能开发下，人类基因突变，随着退化基因的越来越强大，人类才发现，这是噩梦的开始，第一批潜能开发的人类，已经成了人类社会的噩梦。主角必须找到人类基因的退化密码，才能杜绝局势的进一步恶化。</p>
+            </div>
+
+            <div class="item">
+              <a href="#" class="demo">
+                <img src="../assets/images/1145427873722.jpg" />
+                <p class="bookname">傲视江湖</p>
+              </a>
+              <p class="author">
+                <a href="#" class="demo deem_color">懒猫打挺</a>
+              </p>
+              <p
+                class="desc"
+              >二十年前，六道门门主，身兼大随镇南王的赫连战，为大随镇守边界功高盖主，被随皇串通众势力联手消灭。二十年后，当年赫连战的余党组建暗组织罗刹门，开始在江湖中兴风作浪，妄图为赫连战报仇。六道门仅剩一支的人道宗宗主眼见罗刹门作乱，于是派遣四名弟子下山，想要阻止这场动乱，可是却没想到所有的事情都开始慢慢随着这四名弟子转动起来，江湖、天下都一起陷入其中。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 恋爱过敏症图片 -->
+      <div class="banner-advert page-width">
+        <a href="#" class="demo">
+          <img src="../assets/images/2019070217083857.jpg" />
+        </a>
+      </div>
+      <!-- 猜你喜欢导航条 -->
+      <div class="linkrec page-width clear">
+        <div class="titleline">
+          <span class="title">猜你喜欢</span>
+        </div>
+        <!-- 图书、作者介绍 -->
+        <div class="booklist">
+          <div class="item">
+            <a href="#" class="demo">
+              <img src="../assets/images/1194617789686.jpg" />
+              <p class="bookname">救命！我变成主角了！</p>
+            </a>
+            <p class="author">
+              <a href="#" class="demo deem_color">莫凡凡</a>
+            </p>
+            <p
+              class="desc"
+            >顶着超长头衔的程晓声，一直想要丢掉所有光环融进城市与校园的生活中，每天都在努力扮演着普通市民A的角色，但终于有一天命运还是没有放过他，突然之间在他眼中的整个世界都变了……为什么？为什么有些人的头顶上会出现一个金灿灿的问号？</p>
+          </div>
+
+          <div class="item">
+            <a href="#" class="demo">
+              <img src="../assets/images/201811271314283236.jpg" />
+              <p class="bookname">我家妖男又饿了</p>
+            </a>
+            <p class="author">
+              <a href="#" class="demo deem_color">奶凶妖姬</a>
+            </p>
+            <p
+              class="desc"
+            >穿越之后发现自己的处境居然好比西游记里唐三藏，是某个牛逼仙女转世之躯体，世间传闻吃了她的肉便可以长生不老得道成仙！于是呼，各路妖男都将她锁定为觅食目标，却一个个反被她捉弄得七零八落。</p>
+          </div>
+
+          <div class="item">
+            <a href="#" class="demo">
+              <img src="../assets/images/1104767699668.jpg" />
+              <p class="bookname">妹妹们是问题偶像！</p>
+            </a>
+            <p class="author">
+              <a href="#" class="demo deem_color">zakuro石榴</a>
+            </p>
+            <p class="desc">
+              “今后，请多多指教。”
+              与从未见面的朋友的双胞胎妹妹如是说道，展开的却是需要经历考验的同居生活。背负着罪恶而许下的诺言，陆尘发誓去照顾自己死去挚友的两个妹妹。
+              “想要成为偶像？”
+              而得知了妹妹们的梦想后，同居开始的偶像养成日记，以不规则的叙写方式混合着悲伤和喜悦、以及和其他女孩的交织展开了。
+              “尘，该吃饭了哦。”
+              “喂！蠢货！本小姐的晚餐呢？！”
+              而性格迥异的姐妹，也很难对付。
+            </p>
+          </div>
+
+          <div class="item">
+            <a href="#" class="demo">
+              <img src="../assets/images/1149667787708.jpg" />
+              <p class="bookname">我在美少女虫娘学院当老师</p>
+            </a>
+            <p class="author">
+              <a href="#" class="demo deem_color">少点辣椒</a>
+            </p>
+            <p class="desc">
+              这是虫娘从古至今就存在的平行世界，姜炎意外穿越成为一名老师。
+              一招降服黑寡妇，两下戳破独角仙。
+              住得了虫娘宿舍，下得了美女澡堂。
+              总之，这是一个男主带领他的虫娘美少女一起快乐地奋斗顺便拯救世界的故事。
+            </p>
+          </div>
+
+          <div class="item">
+            <a href="#" class="demo">
+              <img src="../assets/images/1105377787147.jpg" />
+              <p class="bookname">间谍少爷</p>
+            </a>
+            <p class="author">
+              <a href="#" class="demo deem_color">狮鹫骑士</a>
+            </p>
+            <p
+              class="desc"
+            >赴日留学、过着悠哉生活的少爷在回乡之后惊觉东北成了“满洲国”，天下早已大乱。作为富庶人家的少爷，他开始了表面上是纨绔子弟、暗地里支持反抗组织的生活。</p>
+          </div>
+
+          <div class="item">
+            <a href="#" class="demo">
+              <img src="../assets/images/1137097795044.jpg" />
+              <p class="bookname">恋爱过敏症</p>
+            </a>
+            <p class="author">
+              <a href="#" class="demo deem_color">八月未央</a>
+            </p>
+            <p
+              class="desc"
+            >18岁元气美少女沈慕念有着一个不为人知的秘密，就是自己曾经在高中拼命想要给自己喜欢的人告白时过敏了，并且险些死掉，而后沈慕念发现只要自己一动感情，就会立马呼吸急促，浑身长满红疹子，越想便越严重，所以自那以后只能关闭心扉，做一名清心寡欲的姑娘。并且沈慕念脱敏的治疗方式只有一个，那就是看恋爱向的漫画，越是肉麻，越是玛丽苏，过敏症状就消失的越快。所以男朋友是什么？能吃吗？！</p>
+          </div>
+
+          <div class="item">
+            <a href="#" class="demo">
+              <img src="../assets/images/1130237787143.jpg" />
+              <p class="bookname">人类终结之日</p>
+            </a>
+            <p class="author">
+              <a href="#" class="demo deem_color">会飞的猪人</a>
+            </p>
+            <p
+              class="desc"
+            >科技的发展促使人类毁灭，最后的人类把希望寄托在过去，将唯一的机器人投入时间穿梭机器。而在另一条时间线上，对此毫不知情的洛伦站在雪白的北道，丝毫没意识到自己从一开始就是一个悲剧。好像也只能这样了吧。</p>
+          </div>
+
+          <div class="item">
+            <a href="#" class="demo">
+              <img src="../assets/images/1117477801943.jpg" />
+              <p class="bookname">我家乌龟成精了</p>
+            </a>
+            <p class="author">
+              <a href="#" class="demo deem_color">蚂蚁蛋</a>
+            </p>
+            <p class="desc">
+              方吟水（男）醒来发现自己坑爹的变成了一只龟……在现代还是普遍又廉价的那种！
+              正在他艰难地背着沉重的壳，一步一步地往前爬的时候，他被人翻了个壳儿，四脚朝天地蹬着腿儿。男人淡若琉璃的清冷眸子微含，微微弯起的眼角带着一丝笑意，带有质感的性感嗓音低声问他，“龟儿，你要去哪？”
+              缱绻的声调，茗儿、嫣儿、翠儿、放在别的名字上都是无比动听的称呼，带上了那个字，方吟水只想吐血三升，‘龟儿，你全家都是龟儿。’
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 底部发狂图片导航图 -->
+      <div class="banner-advert page-width">
+        <a href="#" class="demo">
+          <img src="../assets/images/2019070217100551.jpg" />
         </a>
       </div>
     </div>
@@ -220,9 +687,8 @@ a:hover {
   width: 100%;
   position: relative;
   overflow: hidden;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
 }
-
 .titleline:before {
   content: "";
   display: block;
@@ -231,7 +697,6 @@ a:hover {
   background-color: #fff6e5;
   margin-top: 9px;
 }
-
 .titleline .title {
   padding: 0 18px 0 48px;
   background: url("../assets/images/title_icon_cartoon.png") no-repeat 18px 0
@@ -244,20 +709,19 @@ a:hover {
 }
 
 // 左边立即阅读
-
 .main {
   width: 872px;
   height: 212px;
   background-color: pink;
 }
 
-// 右边
+// 右边冒险、搞笑、热门标签...
 .righteare {
   float: right;
   width: 218px;
 }
 
-// 第一个
+// 冒险
 .righteare .pos-one {
   padding: 21px 18px 0;
   color: #1d1e20 !important;
@@ -307,7 +771,7 @@ a:hover {
   z-index: 1;
 }
 
-// 第二个
+// 搞笑
 .righteare .pos-two {
   padding: 20px 22px;
   font-size: 14px;
@@ -315,7 +779,6 @@ a:hover {
   background-color: #fff6e5;
   margin-bottom: 2px;
 }
-
 .righteare .pos-two h3 {
   line-height: 14px;
   font-size: 14px;
@@ -343,7 +806,7 @@ a:hover {
   font-style: normal;
 }
 
-// 第三个
+// 纯爱
 .righteare .pos-three {
   padding: 0;
   margin: 0;
@@ -370,7 +833,7 @@ a:hover {
   height: 100%;
 }
 
-// 第四个
+// 热门标签
 .righteare .pos-four {
   padding: 10px 20px 0;
   background: #fef1f0;
@@ -411,7 +874,8 @@ a:hover {
 .righteare .pos-four ul li > a {
   color: #f47a33;
 }
-// 左下第二个左边模块
+
+// 左下第二个左边模块(图书、作者介绍)
 .secrec_box {
   margin-top: 20px;
 }
@@ -456,13 +920,12 @@ a:hover {
   -webkit-box-orient: vertical;
 }
 
-// 左下第二个右边模块
+// 左下第二个右边模块(类型、书名)
 .thirdrec {
   width: 540px;
   float: right;
   color: #1d1e20;
 }
-
 .thirdrec ul :nth-child(1),
 .thirdrec ul :nth-child(2) {
   margin-top: 0;
@@ -496,16 +959,395 @@ a:hover {
   overflow: hidden;
 }
 
-// 第二大模块
+// 本宫腿毛一尺长图片条
 .banner-advert {
   display: block;
   height: 90px;
   overflow: hidden;
 }
-
 .banner-advert img {
   width: 100%;
   height: 90px;
   float: left;
+}
+
+// 精品热推模块
+.goodrec .lefteare {
+  width: 78.4%;
+  float: left;
+}
+.page-width {
+  width: 1120px;
+  margin: 0 auto;
+}
+.goodrec .lefteare .titleline {
+  height: 22px;
+  line-height: 22px;
+  font-size: 18px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.goodrec .lefteare .titleline .title {
+  padding: 0 18px 0 14px;
+  position: absolute;
+  left: 55px;
+  top: 0;
+  background: url("../assets/images/title_icon_cate.png") no-repeat 0 0 #fff;
+  background-size: auto 22px;
+}
+
+// 精品热推图书、介绍
+.goodrec .lefteare .booklist {
+  width: 100%;
+  text-align: justify;
+  margin-top: 21px;
+  font-size: 0;
+}
+.mainrec .lefteare .secrec li {
+  font-size: 13px;
+  line-height: 13px;
+  height: 120px;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 106px;
+  color: #1d1e20;
+  overflow: hidden;
+}
+.goodrec .lefteare .booklist .item {
+  width: 265px;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 13px;
+  height: 120px;
+  margin-bottom: 20px;
+  margin-right: 40px;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 106px;
+  color: #1d1e20 !important;
+  overflow: hidden;
+}
+.goodrec .lefteare .booklist .item:nth-of-type(3),
+.goodrec .lefteare .booklist .item:nth-of-type(6),
+.goodrec .lefteare .booklist .item:nth-of-type(9) {
+  margin-right: 0px !important;
+}
+.goodrec .lefteare .booklist .item .author {
+  color: #a3a3a3 !important;
+  margin: 8px 0 30px;
+}
+.goodrec .lefteare .booklist .item img {
+  width: 91px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.goodrec .lefteare .booklist .item .desc {
+  color: #a3a3a3;
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.goodrec .lefteare .booklist .item .bookname {
+  margin-top: 9px;
+}
+.goodrec .lefteare .booklist .item .author {
+  color: #a3a3a3;
+  margin: 8px 0 30px;
+}
+
+// 死神的新娘图片
+.banner-advert {
+  margin: 24px auto;
+  display: block;
+  height: 90px;
+  overflow: hidden;
+}
+.banner-advert img {
+  width: 100%;
+  height: 90px;
+  float: left;
+}
+
+// 新书速推导航条
+.newrec .titleline {
+  height: 22px;
+  line-height: 22px;
+  font-size: 18px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.newrec .titleline .title {
+  padding: 0 18px 0 48px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background: url("../assets/images/title_icon_new.png") no-repeat 18px 0 #fff;
+  background-size: 22px 22px;
+}
+
+// 左边第四面墙
+.newrec .lefteare {
+  width: 268px;
+  float: left;
+  padding-bottom: 28px;
+  background: url("../assets/images/new_left_bg_2.png") no-repeat right bottom;
+  background-color: #fff6e5;
+}
+.newrec .lefteare .top {
+  height: 161px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 28px 24px 0;
+  background: url("../assets/images/new_left_bg_1.png") repeat-x;
+  color: #1d1e20;
+  position: relative;
+}
+.newrec .lefteare .top .bookname {
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  overflow: hidden;
+  height: 18px;
+}
+.newrec .lefteare .top .info {
+  height: 94px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 24px;
+  font-size: 14px;
+}
+.newrec .lefteare .top .info img {
+  float: left;
+  height: 100%;
+  width: 82px;
+}
+.newrec .lefteare .top .info .author,
+.newrec .lefteare .top .info .desc {
+  width: 128px;
+  float: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #a9a9a9;
+}
+.newrec .lefteare .top .info .author {
+  height: 14px;
+  line-height: 14px;
+  margin: 17px 0 12px;
+  white-space: nowrap;
+}
+.newrec .lefteare .top .info .desc {
+  line-height: 20px;
+  height: 40px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+// 我家盟主没舅了、怪谈校区
+.newrec .lefteare .listrec {
+  overflow: hidden;
+  color: #1c0800;
+  width: 218px;
+  margin: 0 auto;
+}
+.newrec .lefteare .listrec li {
+  width: 100%;
+  height: 103px;
+  margin-top: 27px;
+  box-sizing: border-box;
+  padding-left: 12px;
+  border-left: 4px solid #e4d2b1;
+  position: relative;
+}
+.newrec .lefteare .listrec li p.title,
+.newrec .lefteare .listrec li p.auth {
+  font-size: 14px;
+  line-height: 16px;
+  height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.newrec .lefteare .listrec li p.auth {
+  color: #757575;
+  margin: 7px 0 7px;
+}
+.newrec .lefteare .listrec li p.desc {
+  font-size: 12px;
+  line-height: 20px;
+  height: 60px;
+  color: #757575;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+// 图书作者简介
+.newrec .righteare {
+  width: 73.04%;
+  float: right;
+}
+.newrec .righteare .booklist {
+  width: 100%;
+  text-align: justify;
+  font-size: 0;
+}
+.newrec .righteare .booklist .item {
+  width: 265px;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 13px;
+  height: 120px;
+  margin-right: 10px;
+  margin-bottom: 46px;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 106px;
+  color: #1d1e20;
+  overflow: hidden;
+}
+.newrec .righteare .booklist .item:nth-of-type(3),
+.newrec .righteare .booklist .item:nth-of-type(6),
+.newrec .righteare .booklist .item:nth-of-type(9) {
+  margin-right: 0px !important;
+}
+.newrec .righteare .booklist .item:nth-of-type(7),
+.newrec .righteare .booklist .item:nth-of-type(8),
+.newrec .righteare .booklist .item:nth-of-type(9) {
+  margin-bottom: 0px !important;
+}
+.newrec .righteare .booklist .item .author {
+  color: #a3a3a3;
+  margin: 8px 0 30px;
+}
+.newrec .righteare .booklist .item .desc {
+  color: #a3a3a3;
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.newrec .righteare .booklist .item img {
+  width: 91px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.newrec .righteare .booklist .item .bookname {
+  margin-top: 9px;
+}
+
+// 恋爱过敏症图片
+.banner-advert {
+  margin: 24px auto;
+  display: block;
+  height: 90px;
+  overflow: hidden;
+}
+.banner-advert img {
+  width: 100%;
+  height: 90px;
+  float: left;
+}
+
+// 猜你喜欢导航条
+.linkrec .titleline {
+  height: 22px;
+  line-height: 22px;
+  font-size: 18px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.linkrec .titleline .title {
+  padding: 0 18px 0 48px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background: url("../assets/images/title_icon_new.png") no-repeat 18px 0 #fff;
+  background-size: 22px 22px;
+}
+
+// 作者、图书介绍
+.linkrec .booklist {
+  width: 100%;
+  text-align: justify;
+  font-size: 0;
+}
+.linkrec .booklist .item {
+  width: 265px;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 13px;
+  height: 120px;
+  margin-bottom: 20px;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 106px;
+  color: #1d1e20;
+  overflow: hidden;
+}
+.linkrec .booklist .item .author {
+  color: #a3a3a3;
+  margin: 8px 0 30px;
+}
+.linkrec .booklist .item .desc {
+  color: #a3a3a3;
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.linkrec .booklist .item img {
+  width: 91px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.linkrec .booklist .item .bookname {
+  margin-top: 9px;
+}
+
+// 底部发狂图片导航图
+.banner-advert {
+  margin: 24px auto;
+  display: block;
+  height: 90px;
+  overflow: hidden;
+}
+
+a.deem_color {
+  color: #a3a3a3;
+}
+
+a.deem_color:hover {
+  color: #ffa600;
 }
 </style>
