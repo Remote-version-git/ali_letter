@@ -128,6 +128,10 @@ export default {};
   clear: both;
 }
 
+.el-main{
+  padding: 0;
+}
+
 /* 顶部 */
 .top-left {
   display: inline-block;
