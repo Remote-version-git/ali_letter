@@ -8,6 +8,8 @@ import store from "./store";
 import "./assets/css/reset.css";
 import "./assets/css/baes.css"
 
+import $ from 'jquery'
+Vue.use($)
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
