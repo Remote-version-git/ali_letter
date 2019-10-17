@@ -2,15 +2,15 @@
   <el-dialog title="账号登录" :visible.sync="centerDialogVisible" width="30%" center>
     <el-form class="login-form" :model="loginForm" :rules="loginFormRules" ref="loginFormRef">
       <!-- 账号/用户名 -->
-      <el-form-item prop="iphone">
-        <el-input v-model="loginForm.phone" placeholder="请输入手机号"></el-input>
+      <el-form-item prop="phone">
+        <el-input type="text" v-model="loginForm.phone" placeholder="请输入手机号"></el-input>
       </el-form-item>
       <!-- 密码 -->
       <el-form-item prop="password">
-        <el-input v-model="loginForm.password" placeholder="请输入密码"></el-input>
+        <el-input type="password" v-model="loginForm.password" placeholder="请输入密码"></el-input>
       </el-form-item>
       <p class="protocol">
-        <input type="checkbox" id="ckb" />
+        <input type="checkbox" v-model="check" />
         登录账号即代表您已阅读过、了解并接受
         <a href>《阿里文学用户服务协议》</a>
         <a href>《隐私保护政策》</a>
@@ -18,7 +18,7 @@
       <div
         class="submit"
         @click="login()"
-        :style="{background: msg == '' ? '#cccccc' : 'yellow'}"
+        :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
       >登录</div>
       <p class="operates">
         <span class="js-toReg">注册账号</span>
@@ -29,20 +29,17 @@
 </template>
 
 <script>
+import qs from "qs";
 export default {
   data() {
     // 验证手机格式
     var checkPhone = (rule, value, callback) => {
-      if (!value) {
-        return callback(new Error("手机号不能为空"));
-      } else {
-        const reg = /^1[3|4|5|7|8][0-9]\d{8}$/;
+      const reg = /^1[3|4|5|7|8][0-9]\d{8}$/;
 
-        if (reg.test(value)) {
-          callback();
-        } else {
-          return callback(new Error("请输入正确的手机号"));
-        }
+      if (reg.test(value)) {
+        callback();
+      } else {
+        return callback(new Error("请输入正确的手机号"));
       }
     };
 
@@ -52,33 +49,43 @@ export default {
         phone: "",
         password: ""
       },
-      msg: "",
+      check: false,
       // 显示dialog
       centerDialogVisible: true,
       // 表单验证规则
       loginFormRules: {
         phone: [{ validator: checkPhone, trigger: "blur" }],
         password: [
-          { required: true, message: "请输入密码", trigger: "blur" },
           { min: 6, max: 16, message: "长度在 6 到 16 个字符", trigger: "blur" }
         ]
       }
     };
   },
   methods: {
+    getBtn() {},
     // 登录功能
     login() {
-      this.$refs.loginFormRef.validate(async volid => {
-        if (!volid) return;
-        const data = await this.$http.post("/login", this.loginForm);
-       console.log(data)
-      });
+      let form = qs.stringify(this.loginForm);
+      if (this.check) {
+        this.$refs.loginFormRef.validate(async volid => {
+          if (!volid) return;
+          const { data: res } = await this.$http.post("/login", form);
+          console.log(res);
+          if (res.state !== 200) {
+            return this.$message.error(res.error);
+          }
+          return this.$message.success("登陆成功！");
+        });
+      }
     }
   }
 };
 </script>
 
 <style>
+element.style {
+  margin-top: 0px !important;
+}
 .el-dialog__title {
   margin: 20px 0 38px;
   font-size: 20px;
