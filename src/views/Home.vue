@@ -38,7 +38,7 @@
           <!-- 导航栏 -->
           <div class="nav clear">
             <div class="nav_classification">
-              <ul>
+              <!-- <ul>
                 <li class="class_active">
                   <a href>首页</a>
                 </li>
@@ -57,7 +57,17 @@
                 <li>
                   <a href>排行榜</a>
                 </li>
-              </ul>
+              </ul>-->
+
+              <el-menu
+                :default-active="activeIndex"
+                class="el-menu-demo"
+                mode="horizontal"
+                @select="handleSelect"
+                :router="true"
+              >
+                <el-menu-item index="1">首页</el-menu-item>
+              </el-menu>
             </div>
             <div class="nav_search">
               <el-input v-model="input" placeholder="请根据书名或者作者" width="20px">
@@ -70,7 +80,7 @@
 
       <!-- 内容 组件 -->
       <el-main style="height:100%">
-          <router-view></router-view>
+        <router-view></router-view>
       </el-main>
 
       <!-- 底部 -->
@@ -105,10 +115,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      
+    }
+  },
+  methods: {
+    
+  },
+};
 </script>
 
-<style>
+<style scoped>
 /* 公共宽度 */
 .common {
   width: 1120px;
@@ -128,7 +147,7 @@ export default {};
   clear: both;
 }
 
-.el-main{
+.el-main {
   padding: 0;
 }
 
@@ -204,6 +223,10 @@ export default {};
   border-radius: 0px 50px 50px 0;
   background-color: transparent;
 }
+
+.el-tabs {
+  width: 100%;
+}
 /* 导航结束 */
 
 /* 底部 */
@@ -259,7 +282,7 @@ export default {};
 }
 
 .bottom > p:nth-child(2) > span:last-child {
-  background-image: url(/img/bottom_icon.16a7034d.png);
+  background-image: url(../assets/img/bottom_icon.png);
   background-size: 34px 34px;
   background-repeat: no-repeat;
   padding-left: 40px;

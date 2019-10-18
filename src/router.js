@@ -17,7 +17,7 @@ let router = new Router({
       component: Home,
       children: [
         {
-          path: '/',
+          path: "/",
           component: () => import('@/components/Index.vue')
         },
         {

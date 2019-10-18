@@ -15,15 +15,15 @@
           <!-- 左下第二个左边模块(图书、作者介绍) -->
           <div class="secrec_box">
             <ul class="secrec">
-              <li>
+              <li v-for="item in localData" key="item.id">
                 <a href="#" class="demo">
-                  <img src="../assets/images/1171307858386.jpg" />
-                  <p class="bookname">作者大人们别烦我</p>
+                  <img :src="item.novel_url" />
+                  <p class="bookname">{{ item.novel_title }}</p>
                 </a>
                 <p class="author">
-                  <a href="#" class="demo deem_color">这只是个包子</a>
+                  <a href="#" class="demo deem_color">{{ item.novel_author }}</a>
                 </p>
-                <p class="desc">夜风经营着一家专门收集图书的店铺，这一天，他意外地收到了一个莫名其妙的快递，和一封邮件......</p>
+                <p class="desc">{{ item.novel_desc }}</p>
               </li>
 
               <li>
@@ -782,7 +782,8 @@ export default {
             "末日到来的我要拯救世界么？当然！我不仅要拯救世界，我还要拯救世界里生存的",
           title: "末日到来的我要拯救世界么"
         }
-      ]
+      ],
+      localData: []
     };
   },
   methods: {
@@ -792,6 +793,14 @@ export default {
       });
       item.currentEnce = true;
     }
+  },
+  async created() {
+    const { data } = await this.$http.get('/novels?per_page=2&sz=2');
+    // data.data.forEach((item) => {
+    //     item.novel_url = '..' + item.novel_url
+    // })
+    // console.log(data.data);
+    this.localData = data.data;
   }
 };
 </script>

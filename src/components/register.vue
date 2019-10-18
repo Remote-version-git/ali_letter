@@ -1,117 +1,206 @@
 <template>
-  <el-dialog title="欢迎加入阿里文学大家庭" :visible.sync="centerDialogVisible" width="30%" center>
-    <input type="text"  placeholder="请输入手机号" v-model="username" clearable></input>
-    <input type="password"   placeholder="请输入密码" v-model="password" ></input>
-     <input type="password"   placeholder="请再次输入密码" v-model="password" ></input>
-    <p class="protocol ">
-      <input type="checkbox" id="ckb">
-      登录账号即代表您已阅读过、了解并接受
-      <a href="">《阿里文学用户服务协议》</a>
-      <a href="">《隐私保护政策》</a>
-    </p>
-      <div class="submit">登录</div>
+  <el-dialog title="账号登录" :visible.sync="centerDialogVisible" width="30%" center top="0">
+    <el-form :model="registerForm" :rules="registerFormRules" ref="registerFormRef">
+      <!-- 账号/用户名 -->
+      <el-form-item prop="phone">
+        <el-input type="text" v-model="registerForm.phone" placeholder="请输入手机号"></el-input>
+      </el-form-item>
+
+      <!-- 密码 -->:
+        ></el-input>
+      </el-form-item>
+      <el-form-item prop="password">
+        <el-input
+          type="password"
+          placeholder="请再次输入密码"
+          v-model="registerForm.password"
+          autocomplete="off"
+        ></el-input>
+      </el-form-item>
+
+      <!-- 协议 -->
+      <p class="inner">
+        <input type="checkbox" v-model="check" class="select" />
+        登录账号即代表您已阅读过、了解并接受
+        <a href>《阿里文学用户服务协议》</a>
+        <a href>《隐私保护政策》</a>
+      </p>
+      <div
+        class="submit"
+        @click="register()"
+        :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
+      >登录</div>
       <p class="operates">
         <span class="js-toReg">注册账号</span>
-        <span class="js-forget" >忘记密码</span>
+        <span class="js-forget">忘记密码</span>
       </p>
+    </el-form>
   </el-dialog>
 </template>
 
 <script>
+import qs from "qs";
 export default {
   data() {
+    // 验证手机格式
+    var checkPhone = (rule, value, callback) => {
+      const reg = /^1[3|4|5|7|8][0-9]\d{8}$/;
+      if (reg.test(value)) {
+        callback();
+      } else {
+        return callback(new Error("请输入正确的手机号"));
+      }
+    };
+
+    // 确认密码
+    
+    var validatePass = (rule, value, callback) => {
+        if (value === '') {
+          callback(new Error('请输入密码'));
+        } else {
+          if (this.registerForm.pass !== '') {
+            this.$refs.registerFormRef.validateField('checkPass');
+          }
+          callback();
+        }
+      };
+      var validatePass2 = (rule, value, callback) => {
+        if (value === '') {
+          callback(new Error('请再次输入密码'));
+        } else if (value !== this.registerForm.pass) {
+          callback(new Error('两次输入密码不一致!'));
+        } else {
+          callback();
+        }
+      };
     return {
-      centerDialogVisible: true
+      // 用户名和密码对象
+      registerForm: {
+        phone: "",
+        pass:"",
+        password: "",
+        
+      },
+      check: false,
+      // 显示dialog
+      centerDialogVisible: true,
+      // 表单验证规则
+      registerFormRules: {
+        phone: [{ validator: checkPhone, trigger: "blur" }],
+        pass: [{ validator: validatePass, trigger: "blur" }],
+        password: [{ validator: validatePass2, trigger: "blur" }]
+      }
     };
   },
-  methods: {}
+  methods: {
+    // 登录功能
+    register() {
+      if (this.check) {
+        let form = qs.stringify(this.registerForm);
+        this.$refs.registerFormRef.validate(async volid => {
+          if (!volid) return;
+          const { data: res } = await this.$http.post("/users", form);
+          console.log(res);
+          if (res.state !== 200) {
+            return this.$message.error(res.error);
+          }
+          return this.$message.success("注册成功！");
+        });
+      }
+    }
+  }
 };
 </script>
 
 <style>
-
-
-.style {
-    margin-top: 0vh;
+element.style {
+  margin-top: 0px !important;
 }
 .el-dialog__title {
   margin: 20px 0 38px;
   font-size: 20px;
   line-height: 20px;
   color: #1d1e20;
-  font-weight: 20;
+  font-weight: bold;
 }
-input {
-    border: 0;
-    padding-left: 20px;
-    border-bottom: 1px solid #ededed;
-    line-height: 36px;
-    height: 36px;
-    font-size: 16px;
-    color: #1d1e20;
-    display: block;
-    width: 100%;
-    margin-bottom: 26px;
+.el-input__inner {
+  border: 0;
+  padding-left: 20px;
+  border-bottom: 1px solid #ededed;
+  line-height: 36px;
+  height: 36px;
+  font-size: 16px;
+  color: #1d1e20;
+  display: block;
+  width: 100%;
+  margin-bottom: 26px;
+  border-radius: 0;
 }
-.protocol{
- line-height: 18px;
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 20px;
-    position: relative;
-    font-size: 12px;
-    margin-bottom: 20px;
-    color: #999;
+.select {
+  zoom: 150%;
+  font-size: 12px;
+  border: 2px solid #ededed;
+  position: absolute;
+  left: 0;
+  top: 1px;
 }
-a{
-    color: #999;
-      text-decoration: none;
+.inner {
+  line-height: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  position: relative;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #999;
 }
-.submit{
-    background: #f36f20;
-    text-align: center;
-    color: #fff;
-    height: 40px;
-    border-radius: 6px;
-    line-height: 40px;
-    cursor: pointer;
-
+a {
+  color: #999;
+  text-decoration: none;
 }
-.operates{
-text-align: center;
-    margin-top: 15px;
+.submit {
+  text-align: center;
+  color: #fff;
+  height: 40px;
+  width: 100%;
+  border-radius: 6px;
+  line-height: 40px;
+  cursor: pointer;
 }
-.js-toReg,.js-forget{
-display: inline-block;
-    width: 72px;
-    height: 18px;
-    color: #f36f20;
-    font-size: 14px;
-    line-height: 18px;
-    cursor: pointer;
+.operates {
+  text-align: center;
+  margin-top: 15px;
 }
-  span:first-child {
-    border-right: 2px solid #f1f1f3;
+.js-toReg,
+.js-forget {
+  display: inline-block;
+  width: 72px;
+  height: 18px;
+  color: #f36f20;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
 }
-.el-dialog{
-      padding: 50px;
-    border-radius: 10px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    width: 300px;
+span:first-child {
+  border-right: 2px solid #f1f1f3;
 }
-#ckb{
-    width: 12px;
-    height: 12px;
-    font-size: 12px;
-    border: 2px solid #ededed;
-    position: absolute;
-    left: 0;
-    top: 1px;
-} 
-
-   
+.el-dialog {
+  padding: 50px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 300px;
+}
+#ckb {
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  border: 2px solid #ededed;
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
 </style>

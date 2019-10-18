@@ -1,5 +1,5 @@
 <template>
-  <el-dialog title="账号登录" :visible.sync="centerDialogVisible" width="30%" center>
+  <el-dialog title="账号登录" :visible.sync="centerDialogVisible" width="30%" center top="0">
     <el-form class="login-form" :model="loginForm" :rules="loginFormRules" ref="loginFormRef">
       <!-- 账号/用户名 -->
       <el-form-item prop="phone">
@@ -9,8 +9,8 @@
       <el-form-item prop="password">
         <el-input type="password" v-model="loginForm.password" placeholder="请输入密码"></el-input>
       </el-form-item>
-      <p class="protocol">
-        <input type="checkbox" v-model="check" />
+      <p class="inner">
+        <input type="checkbox" v-model="check" class="select" />
         登录账号即代表您已阅读过、了解并接受
         <a href>《阿里文学用户服务协议》</a>
         <a href>《隐私保护政策》</a>
@@ -35,7 +35,6 @@ export default {
     // 验证手机格式
     var checkPhone = (rule, value, callback) => {
       const reg = /^1[3|4|5|7|8][0-9]\d{8}$/;
-
       if (reg.test(value)) {
         callback();
       } else {
@@ -91,7 +90,7 @@ element.style {
   font-size: 20px;
   line-height: 20px;
   color: #1d1e20;
-  font-weight: 20;
+  font-weight: bold;
 }
 .el-input__inner {
   border: 0;
@@ -104,8 +103,17 @@ element.style {
   display: block;
   width: 100%;
   margin-bottom: 26px;
+  border-radius: 0;
 }
-.protocol {
+.select {
+  zoom: 150%;
+  font-size: 12px;
+  border: 2px solid #ededed;
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+.inner {
   line-height: 18px;
   width: 100%;
   box-sizing: border-box;
