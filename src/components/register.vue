@@ -52,8 +52,7 @@ export default {
       }
     };
 
-    // 确认密码
-
+    // 第一次输入密码
     var validatePass = (rule, value, callback) => {
         if (value === '') {
           callback(new Error('请输入密码'));
@@ -64,6 +63,7 @@ export default {
           callback();
         }
       };
+      // 确认密码
       var validatePass2 = (rule, value, callback) => {
         if (value === '') {
           callback(new Error('请再次输入密码'));
