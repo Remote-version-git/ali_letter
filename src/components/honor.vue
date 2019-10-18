@@ -48,7 +48,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .honor {
   height: 100%;
 }
@@ -93,7 +93,7 @@ export default {
   margin-top: 5px;
 }
 
-.el-button {
+.el-header>.el-button {
   float: right;
   margin-top: 10px;
 }
