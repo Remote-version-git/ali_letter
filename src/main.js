@@ -16,6 +16,8 @@ axios.defaults.baseURL = "http://127.0.0.1:1314/api/v1";
 import "./assets/css/reset.css";
 import "./assets/css/baes.css"
 
+import $ from 'jquery'
+Vue.use($)
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 

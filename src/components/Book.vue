@@ -84,17 +84,100 @@
             </span>
           </div>
           <!-- <p class="pub-warning hide js-pubWarning">内容正在审核中，请耐心等待...</p> -->
-          <div class="publish js-showPublishArea" data-clog="publish-publish$$bid=6725806">登录才能评论噢~</div>
+          <!-- <div
+            class="publish js-showPublishArea"
+            data-clog="publish-publish$$bid=6725806"
+            type="text"
+            @click="dialogVisible = true"
+          >登录才能评论噢~</div>-->
+
+          <!-- 登录 -->
+          <el-dialog
+            title="账号登录"
+            :visible.sync="dialogVisible"
+            width="30%"
+          
+            style="margin-top: 0px;"
+          >
+            <input type="text" placeholder="请输入手机号" class="iphone js-phone" />
+            <input type="password" placeholder="请输入密码" class="pwd js-pwd" />
+            <p class="inter">
+              登录账号即代表您已阅读过、了解并接受
+              <a href="#">《阿里文学用户服务协议》</a>、
+              <a href="#">《隐私保护政策》</a>
+              <span class="select js-accept"></span>
+            </p>
+            <div class="submit js-entry unable">登录</div>
+            <p class="operates">
+              <span class="js-toReg">注册账号</span>
+              <span class="js-forget">忘记密码</span>
+            </p>
+          </el-dialog>
+
           <!-- 登录后发表评论 -->
-          <!-- <div class="writearea hide js-commentTextarea">
-            <textarea placeholder="发表评论"></textarea>
+          <div @click="commentgd"  ref="aa" :style="conheight"  class="writearea hide js-commentTextarea">
+            <el-input
+              type="textarea"
+              placeholder="发表评论"
+              v-model="textarea"
+              maxlength="1000"
+              show-word-limit
+            ></el-input>
             <div class="textinfo">
-              <span class="wordcount js-words"></span>
-              <span class="notice js-notice"></span>
-              <span class="submit js-sendComment" data-clog="send-send$$bid=6725806">发送</span>
+              <span class="notice js-notice" style="display: block;">不能少于5个字</span>
+              <span class="submit js-sendComment" @click="centerDialogVisible = true">发送</span>
+              <!-- 提示 当没有填写任何内容时弹出 -->
+              <el-dialog title="提示" :visible.sync="centerDialogVisible" width="30%" center>
+                <div class="pw-content">
+                  <div class="pw-textarea js-content center middle">多少也写点内容吧……</div>
+                </div>
+
+                <span slot="footer" class="dialog-footer">
+                  <el-button type="warning" @click="centerDialogVisible = false">确认</el-button>
+                </span>
+              </el-dialog>
+              <span class="abort js-commentAbort"  @click="commentqx" >取消</span>
+            </div>
+          </div>
+
+          <!-- 下拉状态 发表评论 -->
+          <!-- <el-menu
+      default-active="2"
+      class="el-menu-vertical-demo"
+      @open="handleOpen"
+      @close="handleClose">
+      <el-submenu index="1">
+        <template slot="title">
+          <span>发表评论</span>
+        </template>
+        <el-menu-item-group>
+           <div class="writearea hide js-commentTextarea">
+            <el-input
+              type="textarea"
+              placeholder="发表评论"
+              v-model="textarea"
+              maxlength="1000"
+              show-word-limit
+            ></el-input>
+            <div class="textinfo">
+              <span class="notice js-notice" style="display: block;">不能少于5个字</span>
+              <span class="submit js-sendComment" @click="centerDialogVisible = true">发送</span>
+              提示 当没有填写任何内容时弹出
+              <el-dialog title="提示" :visible.sync="centerDialogVisible" width="30%" center>
+                <div class="pw-content">
+                  <div class="pw-textarea js-content center middle">多少也写点内容吧……</div>
+                </div>
+
+                <span slot="footer" class="dialog-footer">
+                  <el-button type="warning" @click="centerDialogVisible = false">确认</el-button>
+                </span>
+              </el-dialog>
               <span class="abort js-commentAbort">取消</span>
             </div>
-          </div>-->
+          </div>
+        </el-menu-item-group>
+      </el-submenu>
+          </el-menu>-->
 
           <ul class="comments js-commentList">
             <li class="clear">
@@ -354,7 +437,40 @@ PS：微信书群可以让群友拉进去。"
 
 
 <script>
-export default {};
+import { METHODS } from "http";
+import { log } from 'util';
+export default {
+  data() {
+    return {
+      // 登录
+      dialogVisible: false,
+      // 评论
+      text: "",
+      textarea: "",
+      centerDialogVisible: false,
+      conheight: {
+        height: ""
+        
+      }
+    };
+  },
+  methods: {
+    commentgd() {
+      // 
+       this.conheight.height = 250+"px";
+      // this.$refs.aa.style.height = 250 + "px";
+      //  this.conheight.height = 250+"px";
+    },
+    commentqx() {
+      // console.log(this.$el);
+      this.$refs.aa.style.height = 40 + "px";
+      // this.conheight.height = 40+"px";
+      // console.log('3ww');
+      
+    },
+    
+  }
+};
 </script>
 
 <style >
@@ -594,6 +710,122 @@ a:hover {
   height: 100%;
   color: #f37315;
 }
+/* 登录 */
+.el-dialog {
+  margin-top: 0px;
+  padding: 50px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 300px;
+}
+.el-dialog input {
+  border: 0;
+  border-bottom: 1px solid #ededed;
+  line-height: 36px;
+  height: 36px;
+  font-size: 16px;
+  color: #1d1e20;
+  display: block;
+  width: 100%;
+  margin-bottom: 26px;
+}
+.el-dialog .inter {
+  line-height: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  position: relative;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #999;
+}
+.el-dialog .select {
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  border: 2px solid #ededed;
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+.el-dialog .submit.unable {
+  background: #cccccc;
+  text-align: center;
+  color: #fff;
+}
+
+.el-dialog .submit {
+  background: #f36f20;
+  text-align: center;
+  color: #fff;
+  height: 40px;
+  border-radius: 6px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.el-dialog .prompt.login .operates {
+  text-align: center;
+  margin-top: 15px;
+}
+.el-dialog__wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  overflow: hidden;
+  margin: 0;
+}
+.el-dialog {
+  margin-top: 0px;
+  padding: 50px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 24%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 300px;
+}
+element.style {
+  /* margin-top: 15vh; */
+  margin-top: 0px;
+  width: 30%;
+}
+
+.el-dialog .operates {
+  text-align: center;
+  margin-top: 15px;
+}
+.el-dialog .operates span:first-child {
+  border-right: 2px solid #f1f1f3;
+}
+.el-dialog .operates span {
+  display: inline-block;
+  width: 72px;
+  height: 18px;
+  color: #f36f20;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.el-textarea .el-input__count {
+  color: #909399;
+  background: #f8f8f8;
+  position: absolute;
+  font-size: 15px;
+  width: 30px;
+  bottom: 5px;
+  top: 200px;
+  left: 0px;
+}
+
 /* 登录才能评论 */
 .leftarea .comment-view .publish {
   height: 42px;
@@ -621,8 +853,67 @@ a:hover {
   background: transparent;
   border: 0;
   resize: none;
+  margin-top: -8px;
 }
 /* 评论 */
+.leftarea .comment-view div.writearea .textinfo {
+  width: 98%;
+  height: 30px;
+  line-height: 30px;
+  margin-top: -2px;
+  margin-left: 25px;
+}
+
+.leftarea .comment-view div.writearea .textinfo .wordcount,
+.leftarea .comment-view div.writearea .textinfo .notice {
+  float: left;
+  height: 100%;
+}
+.leftarea .comment-view div.writearea .textinfo .notice {
+  margin-left: 20px;
+  color: #ff4242;
+}
+.leftarea .comment-view div.writearea .textinfo .submit,
+.leftarea .comment-view div.writearea .textinfo .abort {
+  float: right;
+  width: 110px;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #f36f20;
+  background: #f36f20;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+.leftarea .comment-view div.writearea .textinfo .abort {
+  margin-right: 14px;
+  background: #fff;
+  color: #f36f20;
+}
+.el-textarea .el-input__count {
+  color: #909399;
+  background: #f8f8f8;
+  position: absolute;
+  font-size: 15px;
+  width: 30px;
+  bottom: 5px;
+  left: -6px;
+     top: 197px;
+}
+.leftarea .comment-view div.writearea {
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  background: #f8f8f8;
+  padding: 12px 16px;
+  margin-top: 10px;
+  color: #999;
+  font-size: 14px;
+}
+
 .leftarea .comment-view .comments {
   width: 100%;
 }

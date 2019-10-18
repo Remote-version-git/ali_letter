@@ -200,7 +200,7 @@
       </div>
 
       <!-- 精品热推模块 -->
-      <div class="goodrec page-width clear">
+      <div class="goodrec page-width clear" style="margin-bottom: -16px;">
         <!-- 左边图书、介绍 -->
         <div class="lefteare">
           <div class="titleline">
@@ -342,91 +342,17 @@
             <li class="active">本周强推</li>
           </ul>
           <ul class="cp-ranks-list js-ranksList">
-            <li>
+            <li @mousemove="changeObj(item)" v-for="item in array" :key="item.id">
               <a href="#" class="demo">
                 <p class="title">
-                  <i class="no">1</i>我们不教修仙，教魔法！
+                  <i class="no">{{item.id}}</i>
+                  {{item.title}}
                 </p>
-                <div class="info">
-                  <img src="../assets/images/1169137823196.jpg" class="cover" />
-                  <div class="auth">菠萝包</div>
-                  <div class="desc">
-                    崇尚修真的少年，阴差阳错之下来到了仙境。
-                    却被告知，我们不修真，我们学魔法吧！
-                  </div>
+                <div class="info" v-if="item.currentEnce">
+                  <img :src="item.imgSrc" class="cover" />
+                  <div class="auth">{{item.author}}</div>
+                  <div class="desc">{{item.describe}}</div>
                 </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="demo">
-                <p class="title">
-                  <i class="no">2</i>痞子皇探
-                </p>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="demo">
-                <p class="title">
-                  <i class="no">3</i>精灵少女的异世界马戏团生涯
-                </p>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="demo">
-                <p class="title">
-                  <i class="no">4</i>末日到来的我要拯救世界么
-                </p>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="demo">
-                <p class="title">
-                  <i class="no">5</i>修仙界学霸
-                </p>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="demo">
-                <p class="title">
-                  <i class="no">6</i>我！是鸽杀手
-                </p>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="demo">
-                <p class="title">
-                  <i class="no">7</i>诡诞纪元
-                </p>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="demo">
-                <p class="title">
-                  <i class="no">8</i>这个江湖风太大
-                </p>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="demo">
-                <p class="title">
-                  <i class="no">9</i>前进，拯救少女
-                </p>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="demo">
-                <p class="title">
-                  <i class="no">10</i>如果我是Ta
-                </p>
               </a>
             </li>
           </ul>
@@ -452,10 +378,10 @@
             </a>
             <div class="info">
               <a href="#" class="demo">
-                <img src="http://img-tailor.11222.cn/bcv/big/1120117874697.jpg" />
+                <img src="../assets/images/1120117874697.jpg" />
               </a>
               <p class="author">
-                <a href="#" class="demo">陌白</a>
+                <a href="#" class="demo deem_color">陌白</a>
               </p>
               <p class="desc">人类舍弃去外太空寻找生命，想要打破‘第四面墙’来探索未知的领域和生物，却忽略了在维度夹缝中的生命体，它们给人类带来的不只是惊喜，还有灾难。</p>
             </div>
@@ -467,7 +393,7 @@
                 <p class="title">我家盟主没舅了</p>
               </a>
               <p class="auth">
-                <a href="#" class="demo">方片儿柴郡猫</a>
+                <a href="#" class="demo deem_color">方片儿柴郡猫</a>
               </p>
               <p class="desc">
                 死因成谜，反派魔王。身后事业全凉凉。一朝穿越鸠占鹊，炮灰弟子惊坐床。跑路作恶拆家忙，无奈阴差逢阳错，武林美名身上扛。忙者匆匆欲归去，江湖风雨动弥彰。刀光迸裂寒剑影，四海春秋空苍苍。
@@ -479,7 +405,7 @@
                 <p class="title">怪谈校区</p>
               </a>
               <p class="auth">
-                <a href="#" class="demo">千钧三两</a>
+                <a href="#" class="demo deem_color">千钧三两</a>
               </p>
               <p class="desc">
                 校外，与魔鬼做交易的拍卖行，穿梭阴阳的233路公交，恐怖邮差
@@ -762,11 +688,119 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      array: [
+        {
+          id: 1,
+          imgSrc: require("../assets/images/1145637829226.jpg"),
+          author: "轻舟",
+          currentEnce: true,
+          describe:
+            "来到异世界之后的精灵少女，最犯愁的事情，不是精灵不会魔法，而是精灵手里没有钱。",
+          title: "精灵少女的异世界马戏团生涯"
+        },
+        {
+          id: 2,
+          imgSrc: require("../assets/images/1169137823196.jpg"),
+          author: "菠萝包",
+          currentEnce: false,
+          describe:
+            "崇尚修真的少年，阴差阳错之下来到了仙境。却被告知，我们不修真，我们学魔法吧！",
+          title: "我们不教修仙，教魔法！"
+        },
+        {
+          id: 3,
+          imgSrc: require("../assets/images/1153777825575.jpg"),
+          author: "江左",
+          currentEnce: false,
+          describe: "逗逼、搞笑、一个学霸的成长与守护之路。",
+          title: "修仙界学霸"
+        },
+        {
+          id: 4,
+          imgSrc: require("../assets/images/1137827830393.jpg"),
+          author: "右手染红尘",
+          currentEnce: false,
+          describe:
+            "出身贫民窟的白小白在达到十六岁后成功觉醒了世界上第一个心灵类异能女装，异能的力量",
+          title: "我！是个杀手"
+        },
+        {
+          id: 5,
+          imgSrc: require("../assets/images/1162157829678.jpg"),
+          author: "虫子男爵",
+          currentEnce: false,
+          describe:
+            "公元33世纪，陆青从冰封的洞穴醒来，失去了所有的记忆。洞穴之外的世界沧海桑田，厚",
+          title: "诡诞纪元"
+        },
+        {
+          id: 6,
+          imgSrc: require("../assets/images/1120117874697.jpg"),
+          author: "月有北安",
+          currentEnce: false,
+          describe:
+            "一个人，究竟可以倒霉到什么地步？亲人惨死，家族覆灭，曾经在江湖上赫赫有名的侠二",
+          title: "这个江湖风太大"
+        },
+        {
+          id: 7,
+          imgSrc: require("../assets/images/201809271723143753.jpg"),
+          author: "好玩的饺子",
+          currentEnce: false,
+          describe:
+            "互相羡慕对方生活的男女两人，在开学不久一天早上醒来，发现两人之间互换了身体？在没",
+          title: "如果我是Ta"
+        },
+        {
+          id: 8,
+          imgSrc: require("../assets/images/1137907838187.jpg"),
+          author: "走到天边看海",
+          currentEnce: false,
+          describe:
+            "刘越穿越到这个时代本是胸无大志，只想浪荡的过完这一生，开始为了自己的安危而查案，",
+          title: "痞子黄檀"
+        },
+        {
+          id: 9,
+          imgSrc: require("../assets/images/1169327831495.jpg"),
+          author: "八口",
+          currentEnce: false,
+          describe:
+            "公元2050年，因不明污染，女性不断减少，一款名为拯救少女的游戏风靡全球，玩游戏",
+          title: "前进, 拯救少女"
+        },
+        {
+          id: 10,
+          imgSrc: require("../assets/images/1180837787059.jpg"),
+          author: "小梦大师",
+          currentEnce: false,
+          describe:
+            "末日到来的我要拯救世界么？当然！我不仅要拯救世界，我还要拯救世界里生存的",
+          title: "末日到来的我要拯救世界么"
+        }
+      ]
+    };
+  },
+  methods: {
+    changeObj(item) {
+      this.array.forEach((item, index) => {
+        item.currentEnce = false;
+      });
+      item.currentEnce = true;
+    }
+  }
+};
+</script>
+
 <style lang="less" scoped>
 .lightnovel {
   width: 100%;
   height: 100%;
-  font-family:"Microsoft YaHei";
+  font-family: "Microsoft YaHei";
 }
 a.deem_color {
   color: #a3a3a3;
@@ -1064,6 +1098,7 @@ a:hover {
 .page-width {
   width: 1120px;
   margin: 0 auto;
+  // margin-bottom: -16px;
 }
 .goodrec .lefteare {
   width: 78.4%;
@@ -1266,6 +1301,12 @@ a:hover {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+.info {
+  display: block;
+}
+.infoer {
+  display: none;
 }
 
 // 死神的新娘图片
