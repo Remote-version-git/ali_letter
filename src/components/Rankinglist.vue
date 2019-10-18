@@ -6,165 +6,25 @@
         <el-tab-pane label="男频点击榜" name="second">
           <div class="rigth">
             <ul class="ranklist-ul">
-              <li>
+              <li v-for="item in MensClickList" :key="item.id">
                 <a href>
-                  <img src="../assets/images/1130867089610.jpg" alt class="img" />
+                  <img :src="item.novel_url" alt class="img" />
                 </a>
                 <a href>
-                  <h3>福地甜园：拐个王爷好种田</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon1"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1106997010698.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>冥龙神尊</h3>
+                  <h3>{{item.novel_title}}</h3>
                 </a>
                 <p class="ranklist-autor">
                   <span class="bkuser-icon">
                     <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
+                    <a class="zzm" href>{{item.novel_author}}</a>
                   </span>
                   <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
+                  <span class="bkcate-icon">{{item.novel_classify}}</span>
                 </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
+                <p class="ranklist-des">{{item.novel_desc}}</p>
                 <p class="ranklist-tag">
                   <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon2"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1159127520672.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>零点</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon3"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>末日堡垒</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <!-- <div class="ranklist-top rktop-icon1"></div> -->
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>末日堡垒</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
+                    <a href>{{item.novel_tags}}</a>
                   </span>
                   <span>
                     <a href>全文</a>
@@ -182,11 +42,11 @@
               <el-pagination
                 @size-change="handleSizeChange"
                 @current-change="handleCurrentChange"
-                :current-page="currentPage4"
-                :page-sizes="[100, 200, 300, 400]"
-                :page-size="100"
+                :current-page="queryInfo.pagenum"
+                :page-sizes="[5, 10, 15, 20]"
+                :page-size="5"
                 layout="total, sizes, prev, pager, next, jumper"
-                :total="400"
+                :total="total"
               ></el-pagination>
             </div>
           </div>
@@ -194,165 +54,25 @@
         <el-tab-pane label="女频点击榜">
           <div class="rigth">
             <ul class="ranklist-ul">
-              <li>
+              <li v-for="item2 in WomenClickList" :key="item2.id">
                 <a href>
-                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
+                  <img :src="item2.novel_url" alt class="img" />
                 </a>
                 <a href>
-                  <h3>福地甜园：拐个王爷好种田</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon1"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1106997010698.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>冥龙神尊</h3>
+                  <h3>{{item2.novel_title}}</h3>
                 </a>
                 <p class="ranklist-autor">
                   <span class="bkuser-icon">
                     <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
+                    <a class="zzm" href>{{item2.novel_author}}</a>
                   </span>
                   <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
+                  <span class="bkcate-icon">{{item2.novel_classify}}</span>
                 </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
+                <p class="ranklist-des">{{item2.novel_desc}}</p>
                 <p class="ranklist-tag">
                   <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon2"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1159127520672.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>零点</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon3"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>末日堡垒</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <!-- <div class="ranklist-top rktop-icon1"></div> -->
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>末日堡垒</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
+                    <a href>{{item2.novel_tags}}</a>
                   </span>
                   <span>
                     <a href>全文</a>
@@ -368,179 +88,39 @@
             <div class="fy">
               <!-- <span class="demonstration">完整功能</span> -->
               <el-pagination
-                @size-change="handleSizeChange"
-                @current-change="handleCurrentChange"
-                :current-page="currentPage4"
-                :page-sizes="[100, 200, 300, 400]"
-                :page-size="100"
+                @size-change="handleSizeChangenv"
+                @current-change="handleCurrentChangenv"
+                :current-page="queryInfo.pagenum"
+                :page-sizes="[5, 10, 15, 20]"
+                :page-size="5"
                 layout="total, sizes, prev, pager, next, jumper"
-                :total="400"
+                :total="total"
               ></el-pagination>
             </div>
           </div>
         </el-tab-pane>
         <el-tab-pane label="完结榜">
-           <div class="rigth">
+          <div class="rigth">
             <ul class="ranklist-ul">
-              <li>
+              <li v-for="item3 in EndList" :key="item3.id">
                 <a href>
-                  <img src="../assets/images/201804101519109645.jpg" alt class="img" />
+                  <img :src="item3.novel_url" alt class="img" />
                 </a>
                 <a href>
-                  <h3>福地甜园：拐个王爷好种田</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon1"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1106997010698.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>冥龙神尊</h3>
+                  <h3>{{item3.novel_title}}</h3>
                 </a>
                 <p class="ranklist-autor">
                   <span class="bkuser-icon">
                     <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
+                    <a class="zzm" href>{{item3.novel_author}}</a>
                   </span>
                   <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
+                  <span class="bkcate-icon">{{item3.novel_classify}}</span>
                 </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
+                <p class="ranklist-des">{{item3.novel_desc}}</p>
                 <p class="ranklist-tag">
                   <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon2"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1159127520672.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>零点</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon3"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>末日堡垒</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <!-- <div class="ranklist-top rktop-icon1"></div> -->
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>末日堡垒</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
+                    <a href>{{item3.novel_tags}}</a>
                   </span>
                   <span>
                     <a href>全文</a>
@@ -556,179 +136,39 @@
             <div class="fy">
               <!-- <span class="demonstration">完整功能</span> -->
               <el-pagination
-                @size-change="handleSizeChange"
-                @current-change="handleCurrentChange"
-                :current-page="currentPage4"
-                :page-sizes="[100, 200, 300, 400]"
-                :page-size="100"
+                @size-change="handleSizeChangewj"
+                @current-change="handleCurrentChangewj"
+                :current-page="queryInfo.pagenum"
+                :page-sizes="[5, 10, 15, 20]"
+                :page-size="5"
                 layout="total, sizes, prev, pager, next, jumper"
-                :total="400"
+                :total="total"
               ></el-pagination>
             </div>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="字数榜">
-           <div class="rigth">
+        <el-tab-pane label="人气榜">
+          <div class="rigth">
             <ul class="ranklist-ul">
-              <li>
+              <li v-for="item4 in PopularityList" :key="item4.id">
                 <a href>
-                  <img src="../assets/images/navs_head_bg.png" alt class="img" />
+                  <img :src="item4.novel_url" alt class="img" />
                 </a>
                 <a href>
-                  <h3>福地甜园：拐个王爷好种田</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon1"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1106997010698.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>冥龙神尊</h3>
+                  <h3>{{item4.novel_title}}</h3>
                 </a>
                 <p class="ranklist-autor">
                   <span class="bkuser-icon">
                     <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
+                    <a class="zzm" href>{{item4.novel_author}}</a>
                   </span>
                   <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
+                  <span class="bkcate-icon">{{item4.novel_classify}}</span>
                 </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
+                <p class="ranklist-des">{{item4.novel_desc}}</p>
                 <p class="ranklist-tag">
                   <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon2"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1159127520672.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>零点</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <div class="ranklist-top rktop-icon3"></div>
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>末日堡垒</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
-                  </span>
-                  <span>
-                    <a href>全文</a>
-                  </span>
-                </p>
-                <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
-                  <span class="addshelf js-addShelf">+书架</span>
-                </div>
-                <!-- <div class="ranklist-top rktop-icon1"></div> -->
-              </li>
-              <li>
-                <a href>
-                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
-                </a>
-                <a href>
-                  <h3>末日堡垒</h3>
-                </a>
-                <p class="ranklist-autor">
-                  <span class="bkuser-icon">
-                    <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>幽花山月</a>
-                  </span>
-                  <i class="el-icon-menu"></i>
-                  <span class="bkcate-icon">都市异能</span>
-                </p>
-                <p class="ranklist-des">
-                  一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。
-                  我的生活我做主，管他什么预言？顾家大院麻烦多，看她保护母亲弟妹斗极品，带领家人发家致富奔小康某人，你总往本姑娘身边凑，几个意思？
-                  娘子，你都把我拐到手了，还能啥意思？吹灯耕田呗。
-                </p>
-                <p class="ranklist-tag">
-                  <span>
-                    <a href>穿越</a>
+                    <a href>{{item4.novel_tags}}</a>
                   </span>
                   <span>
                     <a href>全文</a>
@@ -744,13 +184,13 @@
             <div class="fy">
               <!-- <span class="demonstration">完整功能</span> -->
               <el-pagination
-                @size-change="handleSizeChange"
-                @current-change="handleCurrentChange"
-                :current-page="currentPage4"
-                :page-sizes="[100, 200, 300, 400]"
-                :page-size="100"
+                @size-change="handleSizeChangerq"
+                @current-change="handleCurrentChangerq"
+                :current-page="queryInfo.page"
+                :page-sizes="[5, 10, 15, 20]"
+                :page-size="5"
                 layout="total, sizes, prev, pager, next, jumper"
-                :total="400"
+                :total="total"
               ></el-pagination>
             </div>
           </div>
@@ -763,8 +203,115 @@
 export default {
   data() {
     return {
-      activeName: "second"
+      activeName: "second",
+      // 男频渲染
+      MensClickList: [],
+      // 女
+      WomenClickList: [],
+      //完结
+      EndList: [],
+      // 人气
+      PopularityList: [],
+      queryInfo: {
+        query: "",
+        pagenum: 1,
+        pagesize: 5
+      },
+      total: 0
     };
+  },
+  methods: {
+    async MensClick() {
+      // console.log('11')
+      const { data } = await this.$http.get(
+        `/novels?type=4&page=${this.queryInfo.pagenum}&per_page=${this.queryInfo.pagesize}&sz=1`
+      );
+      this.MensClickList = data.data;
+      this.total = data.total;
+      console.log(data);
+      // console.log(this.total);
+      // console.log(this.MensClickList);
+    },
+    // 女
+    async WomenClick() {
+      // console.log('11')
+      const { data } = await this.$http.get(
+        `/novels?type=4&page=${this.queryInfo.pagenum}&per_page=${this.queryInfo.pagesize}&sz=0`
+      );
+      this.WomenClickList = data.data;
+      this.total = data.total;
+      // console.log(this.total);
+      // console.log(this.WomenClickList);
+    },
+    // 完结
+    async EndClick() {
+      // console.log('11')
+      const { data } = await this.$http.get(
+        `/novels?status=1&page=${this.queryInfo.pagenum}&per_page=${this.queryInfo.pagesize}`
+      );
+      this.EndList = data.data;
+      this.total = data.total;
+      // console.log(this.total);
+      // console.log(this.WomenClickList);
+    },
+    // 字数
+    async PopularityClick() {
+      // console.log('11')
+      const { data } = await this.$http.get(
+        `/novels?type=1&page=${this.queryInfo.pagenum}&per_page=${this.queryInfo.pagesize}`
+      );
+      this.PopularityList = data.data;
+      this.total = data.total;
+      
+      // console.log(this.total);
+      // console.log(this.WomenClickList);
+    },
+    //   男分页
+    handleSizeChange(per_page) {
+      this.queryInfo.pagesize = per_page;
+      console.log(per_page);
+      this.MensClick();
+    },
+    handleCurrentChange(page) {
+      this.queryInfo.pagenum = page;
+      this.MensClick();
+    },
+      //   女分页
+    handleSizeChangenv(per_page) {
+      this.queryInfo.pagesize = per_page;
+      console.log(per_page);
+      this.WomenClick();
+    },
+    handleCurrentChangenv(page) {
+      this.queryInfo.pagenum = page;
+      this.WomenClick();
+    },
+    // 完结
+    handleSizeChangewj(per_page) {
+      this.queryInfo.pagesize = per_page;
+      console.log(per_page);
+      this.EndClick();
+    },
+    handleCurrentChangewj(page) {
+      this.queryInfo.pagenum = page;
+     this.EndClick();
+    },
+    // 人气
+      handleSizeChangerq(per_page) {
+      this.queryInfo.pagesize = per_page;
+      console.log(per_page);
+      this.PopularityClick();
+    },
+    handleCurrentChangerq(page) {
+      this.queryInfo.pagenum = page;
+     this.PopularityClick();
+    },
+  },
+  created() {
+    this.MensClick();
+    this.WomenClick();
+    this.EndClick();
+    this.PopularityClick();
   }
 };
 </script>
