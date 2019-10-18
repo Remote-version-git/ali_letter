@@ -10,19 +10,23 @@ let router = new Router({
   routes: [
     {
       path: "/",
-      redirect: "/home",
+      redirect: "/home"
     },
     {
       path: "/home",
       component: Home,
       children: [
         {
-          path: "/",
+          path:'/',
+          redirect:'/index'
+        },
+        {
+          path: "/index",
           component: () => import('@/components/Index.vue')
         },
         {
           path: "/rankinglist",
-          component: () => import("@/components/Rankinglist.vue"),
+          component: () => import("@/components/Rankinglist.vue")
         },
         {
           path: "/book",

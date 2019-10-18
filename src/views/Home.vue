@@ -36,6 +36,13 @@
           </div>
 
           <!-- 导航栏 -->
+        </div>
+      </el-header>
+
+      <!-- 内容 组件 -->
+      <el-main style="height:100%">
+        <div class="common">
+          <!-- 导航栏 -->
           <div class="nav clear">
             <div class="nav_classification">
               <!-- <ul>
@@ -66,7 +73,12 @@
                 @select="handleSelect"
                 :router="true"
               >
-                <el-menu-item index="1">首页</el-menu-item>
+                <el-menu-item index="/index">首页</el-menu-item>
+                <el-menu-item index>男频</el-menu-item>
+                <el-menu-item index>女频</el-menu-item>
+                <el-menu-item index="/lightnovel">轻小说</el-menu-item>
+                <el-menu-item index="/stackroom">书库</el-menu-item>
+                <el-menu-item index="/rankinglist">排行榜</el-menu-item>
               </el-menu>
             </div>
             <div class="nav_search">
@@ -76,10 +88,7 @@
             </div>
           </div>
         </div>
-      </el-header>
 
-      <!-- 内容 组件 -->
-      <el-main style="height:100%">
         <router-view></router-view>
       </el-main>
 
@@ -118,12 +127,10 @@
 export default {
   data() {
     return {
-      
-    }
+      activeIndex: "/index"
+    };
   },
-  methods: {
-    
-  },
+  methods: {}
 };
 </script>
 
@@ -186,6 +193,12 @@ export default {
 /* 顶部结束 */
 
 /* 导航 */
+.nav {
+  margin-bottom: 12px;
+  border-bottom: 2px solid #ececec;
+  height: 60px;
+}
+
 .nav_classification {
   display: inline-block;
 }
