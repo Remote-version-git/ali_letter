@@ -39,6 +39,10 @@ let router = new Router({
         {
           path: "/lightnovel",
           component: () => import("@/components/Lightnovel.vue")
+        },
+        {
+          path: "/male",
+          component: () => import("@/components/Boyschannel.vue")
         }
       ]
     },
