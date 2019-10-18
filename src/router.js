@@ -43,6 +43,11 @@ let router = new Router({
         {
           path: "/male",
           component: () => import("@/components/Boyschannel.vue")
+        },
+        {
+          path:'/author',
+          component: () => import("@/components/author.vue")
+
         }
       ]
     },
@@ -71,4 +76,4 @@ let router = new Router({
     }
   ]
 });
-export default router
+export default router ; 

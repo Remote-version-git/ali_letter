@@ -67,15 +67,16 @@
               </ul>-->
 
               <el-menu
-                :default-active="activeIndex"
+              :default-active="this.$route.path"
+               
                 class="el-menu-demo"
                 mode="horizontal"
                 @select="handleSelect"
                 :router="true"
               >
                 <el-menu-item index="/index">首页</el-menu-item>
-                <el-menu-item index>男频</el-menu-item>
-                <el-menu-item index>女频</el-menu-item>
+                <el-menu-item index="/male">男频</el-menu-item>
+                <el-menu-item index="">女频</el-menu-item>
                 <el-menu-item index="/lightnovel">轻小说</el-menu-item>
                 <el-menu-item index="/stackroom">书库</el-menu-item>
                 <el-menu-item index="/rankinglist">排行榜</el-menu-item>
@@ -128,10 +129,13 @@
 export default {
   data() {
     return {
+      input:'',
       activeIndex: "/index"
     };
   },
-  methods: {}
+  methods: {
+    handleSelect() {}
+  }
 };
 </script>
 
