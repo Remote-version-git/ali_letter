@@ -9,7 +9,7 @@
     </div>
     <div class="infoarea">
       <div class="view">
-        <img src="../assets/img/changkexinimg/201803141444064795.jpg" class="cover" />
+        <img src="../assets/images/201803141444064795.jpg" class="cover" />
         <p class="bookTitle">
           <span class="bname">我的绝色总裁未婚妻</span>
           <span class="bauthor">
@@ -73,13 +73,12 @@
           <div class="titleline">
             <span class="title">
               书友评论
-              <i data-spm-anchor-id="aliwx.cover.0.i2.69e510ceAqk028">（ 701856条 ）</i>
+              <i >（ 701856条 ）</i>
             </span>
             <span class="btn">
               <a
                 target="_blank"
-                href="/comment?bookid=6725806&amp;authorid=1930553"
-                data-clog="all-all$$bid=6725806"
+                href=""
               >全部评论</a>
             </span>
           </div>
@@ -640,7 +639,7 @@ img.cover {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../assets/img/changkexinimg/title_icon_cate.png) no-repeat 0 0
+  background: url(../assets/images/title_icon_cate.png) no-repeat 0 0
     #fff;
   background-size: auto 22px;
 }
@@ -682,7 +681,7 @@ a:hover {
 .leftarea .comment-view .titleline span.title {
   padding: 0 18px 0 14px;
   float: left;
-  background: url(../assets/img/changkexinimg/title_icon_cate.png) no-repeat 0 0
+  background: url(../assets/images/title_icon_cate.png) no-repeat 0 0
     #fff;
   background-size: auto 22px;
   height: 22px;
@@ -1000,7 +999,7 @@ element.style {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background: url(../assets/img/changkexinimg/item_more_flag.png);
+  background: url(../assets/images/item_more_flag.png);
   margin-left: 4px;
 }
 /* 日期 */
@@ -1030,7 +1029,7 @@ element.style {
   top: 0;
   width: 18px;
   height: 18px;
-  background: url(../assets/img/changkexinimg/item_flags.png) no-repeat 0 0;
+  background: url(../assets/images/item_flags.png) no-repeat 0 0;
 }
 .leftarea .comment-view .comments li .comment .info .good:before {
   background-position: -20px 0;
@@ -1073,7 +1072,7 @@ element.style {
   overflow: hidden;
   margin-bottom: 14px;
   padding-left: 14px;
-  background: url(../assets/img/changkexinimg/title_icon_cate.png) no-repeat 0 0
+  background: url(../assets/images/title_icon_cate.png) no-repeat 0 0
     #fff;
   background-size: auto 22px;
 }
@@ -1260,7 +1259,7 @@ element.style {
 }
 .comp-web-backtop .comp-web-bt-width .backtop-btn {
   cursor: pointer;
-  background: url(../assets/img/changkexinimg/back_top.png) no-repeat center top;
+  background: url(../assets/images/back_top.png) no-repeat center top;
   background-size: 50px 50px;
   padding-top: 50px;
   line-height: 20px;

@@ -8,7 +8,7 @@
             <ul class="ranklist-ul">
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1130867089610.jpg" alt class="img" />
+                  <img src="../assets/images/1130867089610.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>福地甜园：拐个王爷好种田</h3>
@@ -42,7 +42,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1106997010698.jpg" alt class="img" />
+                  <img src="../assets/images/1106997010698.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>冥龙神尊</h3>
@@ -76,7 +76,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1159127520672.jpg" alt class="img" />
+                  <img src="../assets/images/1159127520672.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>零点</h3>
@@ -110,7 +110,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1151507895784.jpg" alt class="img" />
+                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>末日堡垒</h3>
@@ -144,7 +144,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1151507895784.jpg" alt class="img" />
+                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>末日堡垒</h3>
@@ -196,7 +196,7 @@
             <ul class="ranklist-ul">
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1151507895784.jpg" alt class="img" />
+                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>福地甜园：拐个王爷好种田</h3>
@@ -230,7 +230,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1106997010698.jpg" alt class="img" />
+                  <img src="../assets/images/1106997010698.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>冥龙神尊</h3>
@@ -264,7 +264,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1159127520672.jpg" alt class="img" />
+                  <img src="../assets/images/1159127520672.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>零点</h3>
@@ -298,7 +298,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1151507895784.jpg" alt class="img" />
+                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>末日堡垒</h3>
@@ -332,7 +332,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1151507895784.jpg" alt class="img" />
+                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>末日堡垒</h3>
@@ -384,7 +384,7 @@
             <ul class="ranklist-ul">
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/201804101519109645.jpg" alt class="img" />
+                  <img src="../assets/images/201804101519109645.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>福地甜园：拐个王爷好种田</h3>
@@ -418,7 +418,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1106997010698.jpg" alt class="img" />
+                  <img src="../assets/images/1106997010698.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>冥龙神尊</h3>
@@ -452,7 +452,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1159127520672.jpg" alt class="img" />
+                  <img src="../assets/images/1159127520672.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>零点</h3>
@@ -486,7 +486,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1151507895784.jpg" alt class="img" />
+                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>末日堡垒</h3>
@@ -520,7 +520,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1151507895784.jpg" alt class="img" />
+                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>末日堡垒</h3>
@@ -572,7 +572,7 @@
             <ul class="ranklist-ul">
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/navs_head_bg.png" alt class="img" />
+                  <img src="../assets/images/navs_head_bg.png" alt class="img" />
                 </a>
                 <a href>
                   <h3>福地甜园：拐个王爷好种田</h3>
@@ -606,7 +606,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1106997010698.jpg" alt class="img" />
+                  <img src="../assets/images/1106997010698.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>冥龙神尊</h3>
@@ -640,7 +640,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1159127520672.jpg" alt class="img" />
+                  <img src="../assets/images/1159127520672.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>零点</h3>
@@ -674,7 +674,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1151507895784.jpg" alt class="img" />
+                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>末日堡垒</h3>
@@ -708,7 +708,7 @@
               </li>
               <li>
                 <a href>
-                  <img src="../assets/img/changkexinimg/1151507895784.jpg" alt class="img" />
+                  <img src="../assets/images/1151507895784.jpg" alt class="img" />
                 </a>
                 <a href>
                   <h3>末日堡垒</h3>
@@ -784,7 +784,7 @@ export default {
   width: 100%;
 }
 .bdfl {
-  background-image: url(../assets/img/changkexinimg/navs_head_bg.png);
+  background-image: url(../assets/images/navs_head_bg.png);
 }
 
 /* 右边 */
@@ -907,13 +907,13 @@ a:hover {
   z-index: 10;
 }
 .rktop-icon1 {
-  background: url(../assets/img/changkexinimg/rank_top_1.png);
+  background: url(../assets/images/rank_top_1.png);
 }
 .rktop-icon2 {
-  background: url(../assets/img/changkexinimg/rank_top_2.png);
+  background: url(../assets/images/rank_top_2.png);
 }
 .rktop-icon3 {
-  background: url(../assets/img/changkexinimg/rank_top_3.png);
+  background: url(../assets/images/rank_top_3.png);
 }
 
 /* 分页 */
