@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <div class="titleline titles">
-      <span class="tlle">男频推荐</span>
+      <span class="tlle">女频推荐</span>
     </div>
     <div class="container">
       <div class="a">
@@ -10,45 +10,45 @@
       <div class="b">
         <div class="b-head">
           <a href>
-            <h3>都市</h3>
+            <h3>现言</h3>
             <div class="covers">
-              <img src="../../public/img/s-1.jpg" alt class="covers1" />
-              <img src="../../public/img/s-2.jpg" alt class="covers2" />
-              <img src="../../public/img/s-3.jpg" alt class="covers3" />
+              <img src="http://img-tailor.11222.cn/bcv/big/1160267439978.jpg" alt class="covers1" />
+              <img src="http://img-tailor.11222.cn/bcv/big/1106177695571.jpg" alt class="covers2" />
+              <img src="http://img-tailor.11222.cn/bcv/big/1118707956106.jpg" alt class="covers3" />
             </div>
           </a>
         </div>
         <div class="b-cenner">
           <ul>
             <li>
-              <a href>玄幻</a>
+              <a href>古言</a>
             </li>
             <li>
               <i>1</i>
-              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不朽神帝</a>
+              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;兰寻馆探案疑录</a>
             </li>
             <li>
               <i>2</i>
-              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;创世丹帝</a>
+              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名门娇宠</a>
             </li>
             <li>
               <i>3</i>
-              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;太古剑圣</a>
+              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大秦小吏</a>
             </li>
           </ul>
         </div>
         <div class="b-mend">
           <div style="background-color: #f0fbed">
-            <a href>时空穿梭</a>
+            <a href>种田</a>
           </div>
           <div style="background-color: #fbedfe">
-            <a href>仙侠</a>
+            <a href>宅斗</a>
           </div>
           <div style="background-color: #edefff">
-            <a href>科幻</a>
+            <a href>总裁</a>
           </div>
           <div style="background-color: #eaf9f9">
-            <a href>悬疑</a>
+            <a href>纯爱</a>
           </div>
         </div>
         <div class="b-foot">
@@ -56,13 +56,13 @@
             <h4>热门标签</h4>
             <ul>
               <li>
-                <a href>热血</a>
+                <a href>宫斗</a>
               </li>
               <li>
-                <a href>扮猪吃虎</a>
+                <a href>女强</a>
               </li>
               <li>
-                <a href>重生</a>
+                <a href>青春</a>
               </li>
               <li>
                 <a href>神医</a>
@@ -91,7 +91,7 @@
           <ul>
             <li>
               <a href>
-                <img src="../../public/img/1177437861968.jpg" alt />
+                <img src="http://img-tailor.11222.cn/bcv/big/201810221259076308.jpg" alt />
                 <p>绝色丹神</p>
               </a>
               <p class="author">
@@ -101,7 +101,7 @@
             </li>
             <li>
               <a href>
-                <img src="../../public/img/1177437861968.jpg" alt />
+                <img src="http://img-tailor.11222.cn/bcv/big/1146557794712.jpg" alt />
                 <p>星武战甲</p>
               </a>
               <p class="author">
@@ -188,7 +188,7 @@
       </div>
       <div class="d">
         <a href>
-          <img src="../../public/img/2019101516432492.jpg" alt />
+          <img src="http://img-tailor.11222.cn/pm/book/operate/2019061110463298.jpg" alt />
         </a>
       </div>
     </div>
@@ -479,7 +479,7 @@
     </div>
     <div class="d">
       <a href>
-        <img src="../../public/img/heng1.jpg" alt />
+        <img src="http://img-tailor.11222.cn/pm/book/operate/2019061110433522.jpg" alt />
       </a>
     </div>
     <!-- 猜你喜欢———————————————————————————————————————————— -->
@@ -579,7 +579,7 @@
     </div>
     <div class="d">
       <a href>
-        <img src="../../public/img/heng2.jpg" alt />
+        <img src="http://img-tailor.11222.cn/pm/book/operate/2019061110472352.jpg" alt />
       </a>
     </div>
 
@@ -1054,7 +1054,7 @@ a {
   height: 264px;
   margin-right: 40px;
   margin-bottom: 28px;
-  background-color: #e8f3f1;
+  background-color: #fcf0f6;
 }
 .b {
   grid-column: 2/4;
@@ -1075,12 +1075,12 @@ a {
 }
 .b-head {
   height: 116px;
-  background-color: #e8f3f1;
+  background-color: #fcf0f6;
   margin-bottom: 3px;
 }
 .b-cenner {
   height: 194px;
-  background-color: #e8f3f1;
+  background-color: #fcf0f6;
   margin-bottom: 3px;
 }
 .b-cenner ul li {
@@ -1335,7 +1335,7 @@ a:hover {
 li:nth-child(1) i.no,
 li:nth-child(2) i.no,
 li:nth-child(3) i.no {
-  background-color: #6bd6df;
+  background-color: #ff5e79;
 }
 p.title {
   position: relative;
@@ -1383,7 +1383,7 @@ p.title {
   height: 34px;
   line-height: 34px;
   display: flex;
-  border-bottom: 4px solid #6bd6df;
+  border-bottom: 4px solid #ff5e79;
   text-align: center;
   color: #1d1e20;
 }
@@ -1418,15 +1418,14 @@ p.title {
   width: 335px;
   height: 488px;
   float: left;
-  background-color: #f8f6f8;
-  background: urlurl("/img/side33.png") no-repeat center bottom;
+  background-color: #fcf0f6;
 }
 .newbook-left-top {
   width: 100%;
   height: 161px;
   box-sizing: border-box;
   padding: 28px 24px 0;
-  background: url("/img/side22.png") repeat-x;
+  background: url("/img/nv_left_bg_1.png") repeat-x;
   color: #1d1e20;
   position: relative;
 }
@@ -1494,7 +1493,7 @@ p.title {
   display: block;
   width: 100%;
   height: 5px;
-  background-color: #e8f3f1;
+  background-color: #fcf0f6;
   margin-top: 9px;
 }
 .tlle {
@@ -1503,7 +1502,7 @@ p.title {
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  background: url("/img/title_icon_boy.png") no-repeat 18px 0 #fff;
+  background: url("/img/nv_icon_girl.png") no-repeat 18px 0 #fff;
   background-size: 22px 22px;
 }
 .tlle2 {
@@ -1511,7 +1510,7 @@ p.title {
   position: absolute;
   left: 0;
   top: 0;
-  background: url("/img/title_icon_boy1.png") no-repeat 0 0 #fff;
+  background: url("/img/nv1_icon_cate.png") no-repeat 0 0 #fff;
   background-size: auto 22px;
 }
 .tlle3 {
