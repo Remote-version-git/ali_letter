@@ -6,9 +6,16 @@
         <el-input type="text" v-model="registerForm.phone" placeholder="请输入手机号"></el-input>
       </el-form-item>
 
-      <!-- 密码 -->:
+      <!-- 密码 -->
+      <el-form-item prop="pass">
+        <el-input
+          type="password"
+          placeholder="请输入密码"
+          v-model="registerForm.pass"
+          autocomplete="off"
         ></el-input>
       </el-form-item>
+
       <el-form-item prop="password">
         <el-input
           type="password"
@@ -51,35 +58,32 @@ export default {
         return callback(new Error("请输入正确的手机号"));
       }
     };
-
-    // 第一次输入密码
+    // 确认密码
     var validatePass = (rule, value, callback) => {
-        if (value === '') {
-          callback(new Error('请输入密码'));
-        } else {
-          if (this.registerForm.pass !== '') {
-            this.$refs.registerFormRef.validateField('checkPass');
-          }
-          callback();
+      if (value === "") {
+        callback(new Error("请输入密码"));
+      } else {
+        if (this.registerForm.pass !== "") {
+          this.$refs.registerFormRef.validateField("checkPass");
         }
-      };
-      // 确认密码
-      var validatePass2 = (rule, value, callback) => {
-        if (value === '') {
-          callback(new Error('请再次输入密码'));
-        } else if (value !== this.registerForm.pass) {
-          callback(new Error('两次输入密码不一致!'));
-        } else {
-          callback();
-        }
-      };
+        callback();
+      }
+    };
+    var validatePass2 = (rule, value, callback) => {
+      if (value === "") {
+        callback(new Error("请再次输入密码"));
+      } else if (value !== this.registerForm.pass) {
+        callback(new Error("两次输入密码不一致!"));
+      } else {
+        callback();
+      }
+    };
     return {
       // 用户名和密码对象
       registerForm: {
         phone: "",
-        pass:"",
-        password: "",
-        
+        pass: "",
+        password: ""
       },
       check: false,
       // 显示dialog
@@ -123,9 +127,9 @@ element.style {
   color: #1d1e20;
   font-weight: bold;
 }
+
 .el-input__inner {
   border: 0;
-  padding-left: 20px;
   border-bottom: 1px solid #ededed;
   line-height: 36px;
   height: 36px;
@@ -133,8 +137,7 @@ element.style {
   color: #1d1e20;
   display: block;
   width: 100%;
-  margin-bottom: 26px;
-  border-radius: 0;
+  margin-bottom: 20px;
 }
 .select {
   zoom: 150%;
