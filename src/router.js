@@ -45,6 +45,10 @@ let router = new Router({
         {
           path: "/male",
           component: () => import("@/components/Boyschannel.vue")
+        },
+        {
+          path: "/female",
+          component: () => import("@/components/Femalefrequency.vue")
         }
       ]
     },

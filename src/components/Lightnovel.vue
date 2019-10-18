@@ -645,7 +645,14 @@ export default {
     //     item.currentEnce = false;
     //   }
     //   console.log(item);
-    // });
+    },
+  async created() {
+     const { data } = await this.$http.get('/novels?per_page=2&sz=2');
+    // data.data.forEach((item) => {
+    //     item.novel_url = '..' + item.novel_url
+    // })
+    // console.log(data.data);
+    this.localData = data.data;
   }
 };
 </script>
