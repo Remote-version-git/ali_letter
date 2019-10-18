@@ -128,10 +128,13 @@
 export default {
   data() {
     return {
-      activeIndex: "/index"
+      activeIndex: "/index",
+      input:''
     };
   },
-  methods: {}
+  methods: {
+    handleSelect() {}
+  }
 };
 </script>
 

@@ -15,91 +15,26 @@
           <!-- 左下第二个左边模块(图书、作者介绍) -->
           <div class="secrec_box">
             <ul class="secrec">
-              <li v-for="item in localData" key="item.id">
-                <a href="#" class="demo">
+              <li v-for="item in localData" :key="item.id">
+                <a :href="'/book/'+item.id" class="demo">
                   <img :src="item.novel_url" />
                   <p class="bookname">{{ item.novel_title }}</p>
                 </a>
                 <p class="author">
-                  <a href="#" class="demo deem_color">{{ item.novel_author }}</a>
+                  <a :href="'/author/'+item.id"
+                    class="demo deem_color"
+                  >{{ item.novel_author }}</a>
                 </p>
                 <p class="desc">{{ item.novel_desc }}</p>
-              </li>
-
-              <li>
-                <a href="#" class="demo">
-                  <img src="../assets/images/1172837858415.jpg" />
-                  <p class="bookname">月神攻陷作战！开始！</p>
-                </a>
-                <p class="author">
-                  <a href="#" class="demo deem_color">苦味酸</a>
-                </p>
-                <p
-                  class="desc"
-                >都已经2050年了，怎么还有人信神的，要唯物，唯物你知道么，但是如果神明本来就是客观的存在，那就没办法了啊，毕竟我是个唯物主义者——被月神的弓箭射穿胸膛的我如是想。</p>
               </li>
             </ul>
             <!-- 左下第二个右边模块(类型、书名) -->
             <div class="thirdrec">
               <ul class="clear">
-                <li class="clear">
-                  <a href="#" class="demo">
-                    <span>[魔幻]</span>天黑请回家
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="demo">
-                    <span>[架空]</span>黑夜惩戒使
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="demo">
-                    <span>[日常]</span>二律背反
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="demo">
-                    <span>[游戏]</span>兄弟，成仙么？
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="demo">
-                    <span>[古风]</span>我真不是大侠
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="demo">
-                    <span>[搞笑]</span>我绝对不要什么鬼修仙
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="demo">
-                    <span>[冒险]</span>百家天问·阴阳篇
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="demo">
-                    <span>[搞笑]</span>我不当阎王好多年
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="demo">
-                    <span>[日常]</span>异常生物社区的日常生活
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="demo">
-                    <span>[古风]</span>修仙界开学院我是不是搞错了什么
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="demo">
-                    <span>[架空]</span>半神之境
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="demo">
-                    <span>[烧脑]</span>重复同一天的侦探
+                <li class="clear" v-for="item in thirdrec" :key="item.id">
+                  <a :href="'/book/'+item.id" class="demo">
+                    <span>[{{ item.novel_classify }}]</span>
+                    {{ item.novel_title }}
                   </a>
                 </li>
               </ul>
@@ -207,132 +142,15 @@
             <span class="title">精品热推</span>
           </div>
           <div class="booklist">
-            <div class="item">
+            <div class="item" v-for="item in Hotbook" :key="item.id">
               <a href="#" class="demo">
-                <img src="../assets/images/1178187787010.jpg" />
-                <p class="bookname">魔晶追猎者</p>
+                <img :src="item.novel_url" />
+                <p class="bookname">{{item.novel_title}}</p>
               </a>
               <p class="author">
-                <a href="#" class="demo deem_color">刘栋安魂曲</a>
+                <a href="#" class="demo deem_color">{{item.novel_author}}</a>
               </p>
-              <p
-                class="desc"
-              >十六岁的少年成雷是一名普通学生，某天他在学校附近发现了异常现象，有几名学生在充满瘴气的林中失踪。之后那些人再次出现，除了外表与之前一样之外，“灵魂”似乎被替换掉了。随着这些人的归来，学校里开始发生一连串的诡异事件，成雷身边的朋友、学校里的老师也开始接连失踪。成雷发现，这些失踪事件，都与校外那片林子有关……究竟在这林子里发生了什么？成雷能否找到那些失踪的人？只有进入密林，才能找到答案。</p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1132377785773.jpg" />
-                <p class="bookname">男友是只外星傲娇犬</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">黎灼灼</a>
-              </p>
-              <p
-                class="desc"
-              >苏年年听说过天上掉下个林妹妹，可是她——天上掉下一只外星犬是什么鬼？不仅如此，这只外星犬还变成了美少年，还说要改良她，改良就改良吧，还说要收了她做女朋友，苏年年不忍了，但是也只有一个办法，那就是——顺从他，变成一个乖巧良家少女。</p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1132177860674.jpg" />
-                <p class="bookname">逐魂录</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">李寻希</a>
-              </p>
-              <p
-                class="desc"
-              >十年前，他亲手结束了父亲的生命。为了继承父亲生前的使命，他加入了那个父亲曾经引以为傲的组织。然而，他的目的并不在此。父亲的死另有隐情、更大的阴谋正缓缓浮现，他在寻找真相的过程中，却也在逐渐接近死亡……</p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1160817652448.jpg" />
-                <p class="bookname">黑科技肆虐异界</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">列银</a>
-              </p>
-              <p class="desc">
-                枫叶国太子叶枫，遭遇国师陷害，被迫流放。
-                是金子哪里都会发光的，国民挽留、仙人保护，叶枫带着黑科技系统踏足修仙界！
-                自此，整片世界掀起了黑科技狂潮！
-              </p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1109047652547.jpg" />
-                <p class="bookname">我有一具臭皮囊</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">击暗</a>
-              </p>
-              <p class="desc">
-                少年告白失败，将一切归咎于颜值，于是请求上苍赐予他一副盛世臭皮囊。
-                上苍如他所愿，赐予他一副臭皮囊。
-                少年大喜，转身照镜子……
-                “怎么这皮囊给错了性别？喂老天爷！”看着镜子里面的盛世女容颜，少年大惊，而后怒。
-                上苍……嗯，不搭理他。
-              </p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1154767862267.jpg" />
-                <p class="bookname">我家大人是死神</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">摇曳的发发</a>
-              </p>
-              <p class="desc">
-                “你想活下来吗？那么就和我签订契约成为我的仆人吧！”
-                从那天开始，她便成为死神的专属仆人了！
-              </p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1102807843617.jpg" />
-                <p class="bookname">超时空拯救者</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">雪千寻</a>
-              </p>
-              <p
-                class="desc"
-              >洛离拿起剧本的那一刻，忽然发现世界变了，他曾无数次挣扎的黑暗故事变成了现实，然而他发现一切都不仅仅如此，死去的好友居然也重回人世，世界，好像有些不一样了！</p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1151307834462.jpg" />
-                <p class="bookname">本宫腿毛一尺长</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">唐百岁</a>
-              </p>
-              <p
-                class="desc"
-              >前些日子还见那土匪在他那老虎凳上四仰八叉地睡着呢，没想到这些天再见他那满脸地络腮胡都剃的干干净净连根胡茬都看不见，手上涂着丹蔻，脸上抹着胭脂，走路虽然还是那副虎虎生风的样子，但也会低下头来轻声软语地喊一声陛下了。【真的是言情啊，我发誓！】</p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1162927841332.jpg" />
-                <p class="bookname">勇者过去式</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">怀世</a>
-              </p>
-              <p class="desc">
-                公元2077年，异界魔王带着旗下的四大天王君临人间界，在本来全是麻瓜的世界中引入了魔法的概念。
-                四天王之一的罗赛丽亚创造出数千万的魔族，重现了魔族与人类对阵的格局。
-                43年的防御战争，海陆空的全面战争怎一个惨字了得。战火燃遍七大洲四大洋，蚕食着人类的生存空间，也改变了人类的生活方式。
-                2120年，充满神秘勇者小队【皆斩】刺杀魔王成功，轰动一时。镜头前，副队长琉白平静说道：
-                “未生还者……四人。”
-              </p>
+              <p class="desc">{{item.novel_desc}}</p>
             </div>
           </div>
         </div>
@@ -342,16 +160,16 @@
             <li class="active">本周强推</li>
           </ul>
           <ul class="cp-ranks-list js-ranksList">
-            <li @mousemove="changeObj(item)" v-for="item in array" :key="item.id">
+            <li @mousemove="changeObj(item5)" v-for="(item5,index) in array" :key="index">
               <a href="#" class="demo">
                 <p class="title">
-                  <i class="no">{{item.id}}</i>
-                  {{item.title}}
+                  <i class="no">{{item5.id}}</i>
+                  {{item5.title}}
                 </p>
-                <div class="info" v-if="item.currentEnce">
-                  <img :src="item.imgSrc" class="cover" />
-                  <div class="auth">{{item.author}}</div>
-                  <div class="desc">{{item.describe}}</div>
+                <div class="info" ref="info" v-show="item5.currentEnce">
+                  <img :src="item5.imgSrc" class="cover" />
+                  <div class="auth">{{item5.author}}</div>
+                  <div class="desc">{{item5.describe}}</div>
                 </div>
               </a>
             </li>
@@ -783,24 +601,51 @@ export default {
           title: "末日到来的我要拯救世界么"
         }
       ],
-      localData: []
+      localData: [],
+      // 顶部中间12条
+      thirdrec: [],
+      // 精品热推书名9条
+      Hotbook: [],
+      dataHotbook: []
     };
   },
   methods: {
     changeObj(item) {
-      this.array.forEach((item, index) => {
-        item.currentEnce = false;
+      this.array.forEach(item1 => {
+        item1.currentEnce = false;
       });
       item.currentEnce = true;
+      this.$refs.info.display = "block";
     }
   },
-  async created() {
-    const { data } = await this.$http.get('/novels?per_page=2&sz=2');
-    // data.data.forEach((item) => {
-    //     item.novel_url = '..' + item.novel_url
-    // })
-    // console.log(data.data);
-    this.localData = data.data;
+  // 渲染数据
+  async beforeCreate() {
+    const { data: data1 } = await this.$http.get("/designation?id1=8,4");
+    this.localData = data1.data;
+
+    const { data: data2 } = await this.$http.get(
+      "/designation?id1=6,8,9,10,20,30,40,12,32,34,12,,19,34,22"
+    );
+    this.thirdrec = data2.data;
+    // 精品热推9条书
+    const { data: dataHotbook } = await this.$http.get(
+      "/designation?id1=5,7,17,23,55,12,22,44,55"
+    );
+    this.Hotbook = dataHotbook.data;
+
+    // 本周强推10条
+    // const { data: data3 } = await this.$http.get("/novels?type=0&per_page=10");
+    // this.array = data3.data;
+    // console.log(this.array);
+
+    // this.array.forEach((item, i) => {
+    //   if (i == 0) {
+    //     item.currentEnce = true;
+    //   } else {
+    //     item.currentEnce = false;
+    //   }
+    //   console.log(item);
+    // });
   }
 };
 </script>
