@@ -53,7 +53,7 @@ export default {
     };
 
     // 确认密码
-    
+
     var validatePass = (rule, value, callback) => {
         if (value === '') {
           callback(new Error('请输入密码'));
