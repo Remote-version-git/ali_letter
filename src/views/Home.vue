@@ -80,7 +80,7 @@
 
       <!-- 内容 组件 -->
       <el-main style="height:100%">
-        <!-- <router-view></router-view> -->
+        <router-view></router-view>
       </el-main>
 
       <!-- 底部 -->
