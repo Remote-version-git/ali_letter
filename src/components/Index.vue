@@ -3,7 +3,7 @@
     <!-- 欢迎图片 -->
     <div class="welcome">
       <a href>
-        <img src="../assets/img/welcome.jpg" alt />
+        <img src="../assets/images/welcome.jpg" alt />
       </a>
     </div>
 
@@ -21,7 +21,7 @@
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
                 <el-carousel-item v-for="item in 3" :key="item">
-                  <img src="../assets/img/201712261741391310.jpg" alt />
+                  <img src="../assets/images/201712261741391310.jpg" alt />
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -109,19 +109,19 @@
 
             <div class="connect_middle_bottom">
               <div class="connect_middle_bottom_book">
-                <img src="../assets/img/1132437923371.jpg" alt />
+                <img src="../assets/images/1132437923371.jpg" alt />
                 <a href>大神求翻牌</a>
                 <a href>一见如故</a>
               </div>
 
               <div class="connect_middle_bottom_book">
-                <img src="../assets/img/1132437923371.jpg" alt />
+                <img src="../assets/images/1132437923371.jpg" alt />
                 <a href>大神求翻牌</a>
                 <a href>一见如故</a>
               </div>
 
               <div class="connect_middle_bottom_book">
-                <img src="../assets/img/1132437923371.jpg" alt />
+                <img src="../assets/images/1132437923371.jpg" alt />
                 <a href>大神求翻牌</a>
                 <a href>一见如故</a>
               </div>
@@ -139,7 +139,7 @@
                     圣祖
                   </p>
                   <div class="connect_right_book_info">
-                    <img src="../assets/img/201903121846461623.jpg" alt />
+                    <img src="../assets/images/201903121846461623.jpg" alt />
                     <a href>傲天无痕</a>
                     <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                   </div>
@@ -153,7 +153,7 @@
                     圣祖
                   </p>
                   <div class="connect_right_book_info">
-                    <img src="../assets/img/201903121846461623.jpg" alt />
+                    <img src="../assets/images/201903121846461623.jpg" alt />
                     <a href>傲天无痕</a>
                     <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                   </div>
@@ -174,7 +174,7 @@
                 </p>
               </template>
               <el-menu-item-group class="connect_right_book_info">
-                <img src="../assets/img/201903121846461623.jpg" alt />
+                <img src="../assets/images/201903121846461623.jpg" alt />
                 <a href>傲天无痕</a>
                 <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
               </el-menu-item-group>
@@ -186,7 +186,7 @@
 
       <!-- 广告 -->
       <div class="advertising">
-        <img src="../assets/img/2019061110421882.jpg" alt />
+        <img src="../assets/images/2019061110421882.jpg" alt />
       </div>
 
       <!-- 女频 -->
@@ -202,7 +202,7 @@
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
                 <el-carousel-item v-for="item in 3" :key="item">
-                  <img src="../assets/img/201712261741391310.jpg" alt />
+                  <img src="../assets/images/201712261741391310.jpg" alt />
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -236,7 +236,7 @@
             <ul class="female_connect_middle-top">
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -249,7 +249,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -262,7 +262,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -275,7 +275,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -349,7 +349,7 @@
                     圣祖
                   </p>
                   <div class="connect_right_book_info">
-                    <img src="../assets/img/201903121846461623.jpg" alt />
+                    <img src="../assets/images/201903121846461623.jpg" alt />
                     <a href>傲天无痕</a>
                     <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                   </div>
@@ -363,7 +363,7 @@
                     圣祖
                   </p>
                   <div class="connect_right_book_info">
-                    <img src="../assets/img/201903121846461623.jpg" alt />
+                    <img src="../assets/images/201903121846461623.jpg" alt />
                     <a href>傲天无痕</a>
                     <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                   </div>
@@ -387,7 +387,7 @@
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
                 <el-carousel-item v-for="item in 3" :key="item">
-                  <img src="../assets/img/201712261741391310.jpg" alt />
+                  <img src="../assets/images/201712261741391310.jpg" alt />
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -421,7 +421,7 @@
             <ul class="female_connect_middle-top">
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -434,7 +434,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -447,7 +447,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -460,7 +460,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -534,7 +534,7 @@
                     圣祖
                   </p>
                   <div class="connect_right_book_info">
-                    <img src="../assets/img/201903121846461623.jpg" alt />
+                    <img src="../assets/images/201903121846461623.jpg" alt />
                     <a href>傲天无痕</a>
                     <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                   </div>
@@ -548,7 +548,7 @@
                     圣祖
                   </p>
                   <div class="connect_right_book_info">
-                    <img src="../assets/img/201903121846461623.jpg" alt />
+                    <img src="../assets/images/201903121846461623.jpg" alt />
                     <a href>傲天无痕</a>
                     <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                   </div>
@@ -572,7 +572,7 @@
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
                 <el-carousel-item v-for="item in 3" :key="item">
-                  <img src="../assets/img/201712261741391310.jpg" alt />
+                  <img src="../assets/images/201712261741391310.jpg" alt />
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -606,7 +606,7 @@
             <ul class="female_connect_middle-top">
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -619,7 +619,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -632,7 +632,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -645,7 +645,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -719,7 +719,7 @@
                     圣祖
                   </p>
                   <div class="connect_right_book_info">
-                    <img src="../assets/img/201903121846461623.jpg" alt />
+                    <img src="../assets/images/201903121846461623.jpg" alt />
                     <a href>傲天无痕</a>
                     <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                   </div>
@@ -733,7 +733,7 @@
                     圣祖
                   </p>
                   <div class="connect_right_book_info">
-                    <img src="../assets/img/201903121846461623.jpg" alt />
+                    <img src="../assets/images/201903121846461623.jpg" alt />
                     <a href>傲天无痕</a>
                     <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                   </div>
@@ -746,7 +746,7 @@
 
       <!-- 广告 -->
       <div class="advertising">
-        <img src="../assets/img/2019093011005673.jpg" alt />
+        <img src="../assets/images/2019093011005673.jpg" alt />
       </div>
 
       <!-- 新书推荐 -->
@@ -761,7 +761,7 @@
             <ul>
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -774,7 +774,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -787,7 +787,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -811,7 +811,7 @@
             <ul>
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -824,7 +824,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -837,7 +837,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -861,7 +861,7 @@
             <ul>
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -874,7 +874,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -887,7 +887,7 @@
 
               <li>
                 <a href="/" class="top_book">
-                  <img src="../assets/img/1167257860984.jpg" alt />
+                  <img src="../assets/images/1167257860984.jpg" alt />
                   <p>京华一江春</p>
                 </a>
 
@@ -913,7 +913,7 @@
                   圣祖
                 </p>
                 <div class="connect_right_book_info">
-                  <img src="../assets/img/201903121846461623.jpg" alt />
+                  <img src="../assets/images/201903121846461623.jpg" alt />
                   <a href>傲天无痕</a>
                   <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                 </div>
@@ -927,7 +927,7 @@
                   圣祖
                 </p>
                 <div class="connect_right_book_info">
-                  <img src="../assets/img/201903121846461623.jpg" alt />
+                  <img src="../assets/images/201903121846461623.jpg" alt />
                   <a href>傲天无痕</a>
                   <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                 </div>
@@ -939,7 +939,7 @@
 
       <!-- 广告 -->
       <div class="advertising">
-        <img src="../assets/img/2019093011005673.jpg" alt />
+        <img src="../assets/images/2019093011005673.jpg" alt />
       </div>
 
       <!-- 完结好书 -->
@@ -960,7 +960,7 @@
               <ul>
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -968,7 +968,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -976,7 +976,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -984,7 +984,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -992,7 +992,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -1011,7 +1011,7 @@
               <ul>
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -1019,7 +1019,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -1027,7 +1027,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -1035,7 +1035,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -1043,7 +1043,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -1062,7 +1062,7 @@
               <ul>
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -1070,7 +1070,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -1078,7 +1078,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -1086,7 +1086,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -1094,7 +1094,7 @@
 
                 <li>
                   <a href>
-                    <img src="../assets/img/1154277717039.jpg" alt />
+                    <img src="../assets/images/1154277717039.jpg" alt />
                     <p>爱你看象限</p>
                   </a>
                   <p>一世安</p>
@@ -1116,7 +1116,7 @@
                   圣祖
                 </p>
                 <div class="connect_right_book_info">
-                  <img src="../assets/img/201903121846461623.jpg" alt />
+                  <img src="../assets/images/201903121846461623.jpg" alt />
                   <a href>傲天无痕</a>
                   <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                 </div>
@@ -1130,7 +1130,7 @@
                   圣祖
                 </p>
                 <div class="connect_right_book_info">
-                  <img src="../assets/img/201903121846461623.jpg" alt />
+                  <img src="../assets/images/201903121846461623.jpg" alt />
                   <a href>傲天无痕</a>
                   <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
                 </div>
@@ -1142,7 +1142,7 @@
 
       <!-- 广告 -->
       <div class="advertising">
-        <img src="../assets/img/2019093011005673.jpg" alt />
+        <img src="../assets/images/2019093011005673.jpg" alt />
       </div>
 
       <!-- 热门分类 -->
@@ -1157,7 +1157,7 @@
               <i>轻小说-冒险</i>
               <div class="hot_content_details">
                 <a href="/">
-                  <img src="../assets/img/1147257831386.jpg" alt />
+                  <img src="../assets/images/1147257831386.jpg" alt />
                 </a>
                 <p>
                   <a href="/">拯救苗殿下</a>
@@ -1189,7 +1189,7 @@
               <i>轻小说-冒险</i>
               <div class="hot_content_details">
                 <a href="/">
-                  <img src="../assets/img/1147257831386.jpg" alt />
+                  <img src="../assets/images/1147257831386.jpg" alt />
                 </a>
                 <p>
                   <a href="/">拯救苗殿下</a>
@@ -1221,7 +1221,7 @@
               <i>轻小说-冒险</i>
               <div class="hot_content_details">
                 <a href="/">
-                  <img src="../assets/img/1147257831386.jpg" alt />
+                  <img src="../assets/images/1147257831386.jpg" alt />
                 </a>
                 <p>
                   <a href="/">拯救苗殿下</a>
@@ -1253,7 +1253,7 @@
               <i>轻小说-冒险</i>
               <div class="hot_content_details">
                 <a href="/">
-                  <img src="../assets/img/1147257831386.jpg" alt />
+                  <img src="../assets/images/1147257831386.jpg" alt />
                 </a>
                 <p>
                   <a href="/">拯救苗殿下</a>
@@ -1285,7 +1285,7 @@
               <i>轻小说-冒险</i>
               <div class="hot_content_details">
                 <a href="/">
-                  <img src="../assets/img/1147257831386.jpg" alt />
+                  <img src="../assets/images/1147257831386.jpg" alt />
                 </a>
                 <p>
                   <a href="/">拯救苗殿下</a>
@@ -1317,7 +1317,7 @@
               <i>轻小说-冒险</i>
               <div class="hot_content_details">
                 <a href="/">
-                  <img src="../assets/img/1147257831386.jpg" alt />
+                  <img src="../assets/images/1147257831386.jpg" alt />
                 </a>
                 <p>
                   <a href="/">拯救苗殿下</a>
@@ -1349,7 +1349,7 @@
               <i>轻小说-冒险</i>
               <div class="hot_content_details">
                 <a href="/">
-                  <img src="../assets/img/1147257831386.jpg" alt />
+                  <img src="../assets/images/1147257831386.jpg" alt />
                 </a>
                 <p>
                   <a href="/">拯救苗殿下</a>
@@ -1381,7 +1381,7 @@
               <i>轻小说-冒险</i>
               <div class="hot_content_details">
                 <a href="/">
-                  <img src="../assets/img/1147257831386.jpg" alt />
+                  <img src="../assets/images/1147257831386.jpg" alt />
                 </a>
                 <p>
                   <a href="/">拯救苗殿下</a>
@@ -1423,7 +1423,7 @@
             <li>
               <i></i>
               <a href="/">
-                <img src="../assets/img/home_au_1.png" alt />
+                <img src="../assets/images/home_au_1.png" alt />
               </a>
               <div class="great_content_bottom">
                 <p>代表作《爱在天摇地动时》</p>
@@ -1434,7 +1434,7 @@
             <li>
               <i></i>
               <a href="/">
-                <img src="../assets/img/home_au_1.png" alt />
+                <img src="../assets/images/home_au_1.png" alt />
               </a>
               <div class="great_content_bottom">
                 <p>代表作《爱在天摇地动时》</p>
@@ -1445,7 +1445,7 @@
             <li>
               <i></i>
               <a href="/">
-                <img src="../assets/img/home_au_1.png" alt />
+                <img src="../assets/images/home_au_1.png" alt />
               </a>
               <div class="great_content_bottom">
                 <p>代表作《爱在天摇地动时》</p>
@@ -1456,7 +1456,7 @@
             <li>
               <i></i>
               <a href="/">
-                <img src="../assets/img/home_au_1.png" alt />
+                <img src="../assets/images/home_au_1.png" alt />
               </a>
               <div class="great_content_bottom">
                 <p>代表作《爱在天摇地动时》</p>
@@ -1469,7 +1469,7 @@
 
       <!-- 广告 -->
       <div class="advertising">
-        <img src="../assets/img/2019093011005673.jpg" alt />
+        <img src="../assets/images/2019093011005673.jpg" alt />
       </div>
 
       <!-- 最近更新 -->
@@ -1573,7 +1573,7 @@ export default {
   display: inline-block;
   font-size: 20px;
   font-weight: bold;
-  background-image: url(../assets/img/title_icon_1.png);
+  background-image: url(../assets/images/title_icon_1.png);
   background-repeat: no-repeat;
   padding: 0 16px 0 44px;
   background-color: white;
@@ -1599,7 +1599,7 @@ export default {
   width: 268px;
   height: 469px;
   background-color: #f8f3ea;
-  background-image: url(../assets/img/mainrec_left_bg.png);
+  background-image: url(../assets/images/mainrec_left_bg.png);
   background-repeat: no-repeat;
   background-position-y: 284px;
 }
@@ -1809,7 +1809,7 @@ export default {
 }
 
 .editor_recommend .female > span {
-  background-image: url(../assets/img/title_icon_girl.png);
+  background-image: url(../assets/images/title_icon_girl.png);
 }
 
 .editor_recommend_connect .female_left {
@@ -1818,7 +1818,7 @@ export default {
   width: 268px;
   height: 469px;
   background-color: #fff5f5;
-  background-image: url(../assets/img/girlrec_left_bg.png);
+  background-image: url(../assets/images/girlrec_left_bg.png);
   background-repeat: no-repeat;
   background-position-y: 284px;
 }
@@ -1923,12 +1923,12 @@ export default {
 }
 
 .editor_recommend .male > span {
-  background-image: url(../assets/img/title_icon_boy.png);
+  background-image: url(../assets/images/title_icon_boy.png);
 }
 
 .editor_recommend_connect .male_left {
   background-color: #d7e3e3;
-  background-image: url(../assets/img/boyrec_left_bg.png);
+  background-image: url(../assets/images/boyrec_left_bg.png);
 }
 
 .male_connect_right {
@@ -1966,12 +1966,12 @@ export default {
 }
 
 .editor_recommend .light > span {
-  background-image: url(../assets/img/title_icon_cartoon.png);
+  background-image: url(../assets/images/title_icon_cartoon.png);
 }
 
 .editor_recommend_connect .light_left {
   background-color: #e6d4d4;
-  background-image: url(../assets/img/cartoonrec_left_bg.png);
+  background-image: url(../assets/images/cartoonrec_left_bg.png);
 }
 
 .light_connect_right {
@@ -2022,7 +2022,7 @@ export default {
 .book_left_male span {
   display: inline-block;
   font-size: 20px;
-  background-image: url("../assets/img/title_icon_boy.png");
+  background-image: url("../assets/images/title_icon_boy.png");
   background-repeat: no-repeat;
   background-color: #fff;
   font-weight: bold;
@@ -2036,11 +2036,11 @@ export default {
 }
 
 .new_book .new_book_left:nth-child(2) .book_left_male span {
-  background-image: url("../assets/img/title_icon_girl.png");
+  background-image: url("../assets/images/title_icon_girl.png");
 }
 
 .new_book .new_book_left:nth-child(3) .book_left_male span {
-  background-image: url("../assets/img/title_icon_cartoon.png");
+  background-image: url("../assets/images/title_icon_cartoon.png");
 }
 
 .new_book .new_book_left:nth-child(3) > .book_left_male::after {
@@ -2062,7 +2062,7 @@ export default {
 }
 
 .book_end .editor_recommend_name > span {
-  background-image: url("../assets/img/title_icon_end.png");
+  background-image: url("../assets/images/title_icon_end.png");
 }
 
 .book_end_female {
@@ -2075,7 +2075,7 @@ export default {
 .end_female_title {
   position: absolute;
   float: left;
-  background-image: url("../assets/img/end_title_flag.png");
+  background-image: url("../assets/images/end_title_flag.png");
   background-repeat: no-repeat;
   width: 35px;
   height: 122px;
@@ -2154,7 +2154,7 @@ export default {
   display: block;
   font-size: 18px;
   font-weight: bold;
-  background-image: url("../assets/img/title_icon_cate.png");
+  background-image: url("../assets/images/title_icon_cate.png");
   background-repeat: no-repeat;
   padding-left: 10px;
 }
@@ -2180,7 +2180,7 @@ export default {
   color: #fff;
   text-align: center;
   line-height: 32px;
-  background-image: url("../assets/img/cate_title_flag.png");
+  background-image: url("../assets/images/cate_title_flag.png");
 }
 
 .hot_content_details {
@@ -2332,7 +2332,7 @@ export default {
   padding-top: 1px;
   width: 93px;
   height: 20px;
-  background-image: url("../assets/img/title_icon_cate.png");
+  background-image: url("../assets/images/title_icon_cate.png");
   background-repeat: no-repeat;
 }
 

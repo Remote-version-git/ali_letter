@@ -7,37 +7,37 @@
           <ul ref="slideshow">
             <li>
               <a href>
-                <img src="../assets/img/zy_book2.png" alt />
+                <img src="../assets/images/zy_book2.png" alt />
               </a>
             </li>
             <li>
               <a href>
-                <img src="../assets/img/zy_book2.png" alt />
+                <img src="../assets/images/zy_book2.png" alt />
               </a>
             </li>
             <li>
               <a href>
-                <img src="../assets/img/zy_book2.png" alt />
+                <img src="../assets/images/zy_book2.png" alt />
               </a>
             </li>
             <li>
               <a href>
-                <img src="../assets/img/zy_book2.png" alt />
+                <img src="../assets/images/zy_book2.png" alt />
               </a>
             </li>
             <li>
               <a href>
-                <img src="../assets/img/zy_book2.png" alt />
+                <img src="../assets/images/zy_book2.png" alt />
               </a>
             </li>
             <li>
               <a href>
-                <img src="../assets/img/zy_book2.png" alt />
+                <img src="../assets/images/zy_book2.png" alt />
               </a>
             </li>
             <li>
               <a href>
-                <img src="../assets/img/zy_book2.png" alt />
+                <img src="../assets/images/zy_book2.png" alt />
               </a>
             </li>
           </ul>
@@ -174,7 +174,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="../assets/img/books_detail1.png" alt />
+                    <img src="" alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -222,7 +222,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="../assets/img/books_detail1.png" alt />
+                    <img src="" alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -270,7 +270,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="../assets/img/books_detail1.png" alt />
+                    <img src="" alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -318,7 +318,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="../assets/img/books_detail1.png" alt />
+                    <img src="" alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -370,7 +370,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="../assets/img/books_detail2.png" alt />
+                    <img src="" alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -418,7 +418,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="../assets/img/books_detail2.png" alt />
+                    <img src="" alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -466,7 +466,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="../assets/img/books_detail2.png" alt />
+                    <img src="" alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -514,7 +514,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="../assets/img/books_detail2.png" alt />
+                    <img src="" alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -730,7 +730,7 @@ export default {
 .carouselBgc {
   width: 100%;
   height: 490px;
-  background-image: url(../assets/img/carousel.png);
+  background-image: url(../assets/images/carousel.png);
 }
 
 // 轮播图css

@@ -6,7 +6,7 @@
         <!-- 顶部 -->
         <div class="common top">
           <a href="/" class="top-left">
-            <img src="../assets/img/logo.png" alt />
+            <img src="../assets/images/logo.png" alt />
           </a>
 
           <div class="top_right clear">
@@ -80,7 +80,7 @@
 
       <!-- 内容 组件 -->
       <el-main style="height:100%">
-        <router-view></router-view>
+        <!-- <router-view></router-view> -->
       </el-main>
 
       <!-- 底部 -->
@@ -282,7 +282,7 @@ export default {
 }
 
 .bottom > p:nth-child(2) > span:last-child {
-  background-image: url(../assets/img/bottom_icon.png);
+  background-image: url(../assets/images/bottom_icon.png);
   background-size: 34px 34px;
   background-repeat: no-repeat;
   padding-left: 40px;
