@@ -43,6 +43,21 @@ let router = new Router({
       ]
     },
     {
+      path:'/honor',
+      component:()=> import('@/components/honor.vue'),
+      children:[
+        {
+          path:'/user',
+        component:()=>import('@/components/user.vue')
+        },
+        {
+          path:'/novel',
+        component:()=>import('@/components/novel.vue')
+
+        }
+      ]
+    },
+    {
       path: "/Login",
       component: () => import("@/components/login.vue")
     },
