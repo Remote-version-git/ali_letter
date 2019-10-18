@@ -4,10 +4,10 @@
       <div class="roomcentre" id="wrap">
         <!-- 轮播图 -->
         <div class="slide" id="slide">
-          <ul ref="slideshow">
+          <ul ref="slideshow" class="slideshow">
             <li>
               <a href>
-                <img src="../assets/img/zy_book2.png" alt />
+                <img src="../assets/img/zy_book1.png" alt />
               </a>
             </li>
             <li>
@@ -17,7 +17,17 @@
             </li>
             <li>
               <a href>
-                <img src="../assets/img/zy_book2.png" alt />
+                <img src="../assets/img/zy_book3.png" alt />
+              </a>
+            </li>
+            <li>
+              <a href>
+                <img src="../assets/img/zy_book4.png" alt />
+              </a>
+            </li>
+            <li>
+              <a href>
+                <img src="../assets/img/zy_book1.png" alt />
               </a>
             </li>
             <li>
@@ -27,20 +37,37 @@
             </li>
             <li>
               <a href>
-                <img src="../assets/img/zy_book2.png" alt />
-              </a>
-            </li>
-            <li>
-              <a href>
-                <img src="../assets/img/zy_book2.png" alt />
-              </a>
-            </li>
-            <li>
-              <a href>
-                <img src="../assets/img/zy_book2.png" alt />
+                <img src="../assets/img/zy_book3.png" alt />
               </a>
             </li>
           </ul>
+          <div class="arrow" id="arrow">
+            <a href="javascript:;" class="prev" id="arrLeft" @click="prevClick"></a>
+            <a href="javascript:;" class="next" id="arrRight" @click="nextClick"></a>
+          </div>
+        </div>
+        <div class="slide_text">
+          <p class="slide_text_p1">
+            <a href class="box_name">大名长歌</a>
+            <span class="author">今夏 著</span>
+            <i class="continue">连载中</i>
+          </p>
+          <p class="slide_text_p2">李彤、刘颖、张守义、刘继业、常浩然等南京国子监学子，每天赖带南京城内无所事事。</p>
+          <p class="slide_text_p3">
+            <span class="weekName">人气值：</span>
+            <span class="weekValue">
+              <i class="week-number">1</i>
+              <i class="week-number">0</i>
+              <i class="week-number">0</i>
+              <i class="week-number">0</i>
+            </span>
+            <span class="apply">适用于：</span>
+            <span class="labelBox">
+              <i class="apply-label">电视剧</i>
+              <i class="apply-label">网剧</i>
+            </span>
+            <a href class="lookdesc">查看详细</a>
+          </p>
         </div>
       </div>
     </div>
@@ -115,7 +142,7 @@
               </li>
             </ul>
           </div>
-          <div class="satck_direction clearfix">
+          <div class="satck_direction clearfix" style="margin-bottom:0;">
             <h3>作品字数</h3>
             <ul>
               <li>
@@ -132,29 +159,6 @@
               </li>
               <li>
                 <a href>30~50万</a>
-              </li>
-              <li>
-                <a href>30~50万</a>
-              </li>
-            </ul>
-          </div>
-          <div class="satck_direction clearfix" style="margin-bottom:0;">
-            <h3>更新时间</h3>
-            <ul>
-              <li>
-                <a href>不限</a>
-              </li>
-              <li>
-                <a href>3天内</a>
-              </li>
-              <li>
-                <a href>7天内</a>
-              </li>
-              <li>
-                <a href>半个月内</a>
-              </li>
-              <li>
-                <a href>一个月之内</a>
               </li>
               <li>
                 <a href>30~50万</a>
@@ -568,7 +572,8 @@
 </template>
 
 <script>
-import "../main.js";
+var flag = true;
+import { getStyle, animate } from "../assets/js/animate";
 export default {
   data() {
     return {
@@ -578,145 +583,102 @@ export default {
       // 轮播图的图片分布位置
       config: [
         {
-          width: 500,
-          height: 250,
-          top: 160,
-          left: -100,
-          opacity: 0.3,
+          width: 120,
+          height: 150,
+          top: 170,
+          left: 130,
+          opacity: 0.7,
           zIndex: 1
         },
         {
-          width: 500,
-          height: 270,
-          top: 140,
-          left: -50,
-          opacity: 0.5,
+          width: 177,
+          height: 237,
+          top: 94,
+          left: 185,
+          opacity: 0.8,
           zIndex: 2
         }, //0
         {
-          width: 500,
-          height: 290,
-          top: 120,
-          left: 0,
-          opacity: 0.8,
+          width: 197,
+          height: 263,
+          top: 67,
+          left: 295,
+          opacity: 0.9,
           zIndex: 3
         }, //1
         {
-          width: 500,
+          width: 218,
           height: 310,
-          top: 100,
-          left: 200,
+          top: 40,
+          left: 445,
           opacity: 1,
           zIndex: 4
         }, //2
         {
-          width: 500,
-          height: 290,
-          top: 120,
-          left: 420,
-          opacity: 0.8,
+          width: 197,
+          height: 263,
+          top: 68,
+          left: 605,
+          opacity: 0.9,
           zIndex: 3
         }, //3
         {
-          width: 500,
-          height: 270,
-          top: 140,
-          left: 480,
-          opacity: 0.5,
+          width: 177,
+          height: 237,
+          top: 94,
+          left: 735,
+          opacity: 0.8,
           zIndex: 2
         }, //4
         {
-          width: 500,
-          height: 250,
-          top: 160,
-          left: 530,
-          opacity: 0.3,
+          width: 120,
+          height: 150,
+          top: 170,
+          left: 855,
+          opacity: 0.7,
           zIndex: 1
         }
       ]
     };
   },
-  created() {},
   methods: {
     // 遍历每个轮播图的li 把config数组中的样式给每个li
     handleAssign() {
-      var aLi = this.$refs.slideshow.getElementsByTagName("li");
-      var newaLi = Array.prototype.slice.call(aLi);
-      // console.log(newaLi);
-      //  aa()
-      newaLi.forEach(item => {
-        // console.log(item)
-        this.config.forEach(subItem => {
-          this.animate(item, subItem, function() {
-            this.flag = true;
-          });
+      let newaLi = document.querySelectorAll(".slideshow li");
+      newaLi.forEach((item, index) => {
+        this.animate(item, this.config[index], () => {
+          flag = true;
         });
       });
     },
-    getStyle(element, attr) {
-      return;
-      this.mywindow.myfunction
-        ? this.mywindow.myfunction(element, null)[attr]
-        : element.currentStyle[attr] || 0;
+    nextClick() {
+      if (this.flag) {
+        // this.flag = false;
+        this.config.unshift(this.config.pop());
+        //  3.2.1 等数组中的元素变了之后 让页面重新布局
+        this.handleAssign();
+      }
+    },
+    prevClick() {
+      if (this.flag) {
+        this.config.push(this.config.shift());
+        this.handleAssign();
+      }
+    },
+    // 自动轮播
+    autoPlay() {
+      setInterval(this.nextClick, 4000);
     },
     // tabs切换时触发
     handleClick(tab, event) {
       console.log(tab, event);
     },
-    animate(element, json, fn) {
-      clearInterval(element.timeId); //清理定时器
-      //定时器,返回的是定时器的id
-      element.timeId = setInterval(function() {
-        var flag = true; //默认,假设,全部到达目标
-        //遍历json对象中的每个属性还有属性对应的目标值
-        for (var attr in json) {
-          //判断这个属性attr中是不是opacity
-          if (attr == "opacity") {
-            //获取元素的当前的透明度,当前的透明度放大100倍
-            var current = this.getStyle(element, attr) * 100;
-            console.log("aagagag" + current);
-            //目标的透明度放大100倍
-            var target = json[attr] * 100;
-            var step = (target - current) / 10;
-            step = step > 0 ? Math.ceil(step) : Math.floor(step);
-            current += step; //移动后的值
-            element.style[attr] = current / 100;
-          } else if (attr == "zIndex") {
-            //判断这个属性attr中是不是zIndex
-            //层级改变就是直接改变这个属性的值
-            element.style[attr] = json[attr];
-          } else {
-            //普通的属性
-            //获取元素这个属性的当前的值
-            const aa = this.getStyle(element, attr);
-            var current = parseInt(aa);
-            //当前的属性对应的目标值
-            var target = json[attr];
-            //移动的步数
-            var step = (target - current) / 10;
-            step = step > 0 ? Math.ceil(step) : Math.floor(step);
-            current += step; //移动后的值
-            element.style[attr] = current + "px";
-          }
-          //是否到达目标
-          if (current != target) {
-            flag = false;
-          }
-        }
-        if (flag) {
-          //清理定时器
-          clearInterval(element.timeId);
-          //所有的属性到达目标才能使用这个函数,前提是用户传入了这个函数
-          if (fn) {
-            fn();
-          }
-        }
-      }, 20);
-    }
+    getStyle: getStyle,
+    animate: animate
   },
   mounted() {
     this.handleAssign();
-    // this.getStyle();
+    setTimeout(this.autoPlay(), 500);
   }
 };
 </script>
@@ -729,7 +691,7 @@ export default {
 
 .carouselBgc {
   width: 100%;
-  height: 490px;
+  height: 540px;
   background-image: url(../assets/img/carousel.png);
 }
 
@@ -737,6 +699,10 @@ export default {
 .slide {
   position: relative;
   height: 292px;
+}
+
+.slideshow {
+  margin-left: 100px;
 }
 
 .slide li {
@@ -747,6 +713,124 @@ export default {
 
 .slide li img {
   width: 100%;
+}
+
+.prev,
+.next {
+  display: block;
+  width: 44px;
+  height: 44px;
+  // background-color: #000;
+  border-radius: 50%;
+}
+
+.prev {
+  position: absolute;
+  top: 210px;
+  left: 0;
+  background-image: url(../assets/img/next.prev.png);
+  background-position: 0px 0px;
+}
+
+.next {
+  position: absolute;
+  top: 210px;
+  right: 0;
+  background-image: url(../assets/img/next.prev.png);
+  background-position: -60px 0px;
+}
+
+// 轮播图下方文字
+.slide_text {
+  position: relative;
+  margin-top: 100px;
+  padding-left: 130px;
+  font-family: "Microsoft YaHei";
+}
+
+.slide_text_p1 {
+  height: 32px;
+  line-height: 32px;
+}
+
+.box_name {
+  font-size: 24px;
+  color: #ffffff;
+  margin-right: 17px;
+}
+
+.author {
+  font-size: 12px;
+  color: #d3d4d6;
+}
+
+.slide_text_p2 {
+  line-height: 24px;
+  color: #d3d4d6;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.slide_text_p3 {
+  margin-top: 15px;
+}
+
+.weekName {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.week-number {
+  display: inline-block;
+  color: #ff910d;
+  width: 12px;
+  height: 16px;
+  line-height: 15px;
+  background: #5f616e;
+  font-size: 14px;
+  margin-right: 2px;
+  // font-style: normal;
+  text-align: center;
+  // font-family: "dinbold";
+}
+
+.apply {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 12px;
+  color: #d3d4d6;
+}
+
+.apply-label {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 12px;
+  margin-right: 4px;
+  font-style: normal;
+}
+
+.apply-label::after {
+  content: "/";
+}
+
+.apply-label:last-child::after {
+  display: none;
+}
+
+.lookdesc {
+  position: absolute;
+  bottom: 0;
+  right: 130px;
+  display: inline-block;
+  width: 112px;
+  height: 30px;
+  background: #ff910d;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
 }
 
 /////////////////////////////////////////////////////

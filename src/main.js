@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
 import router from "./router";
 import store from "./store";
 
@@ -16,6 +16,8 @@ axios.defaults.baseURL = "http://127.0.0.1:1314/api/v1";
 import "./assets/css/reset.css";
 import "./assets/css/baes.css"
 
+import $ from 'jquery'
+Vue.use($)
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
@@ -34,7 +36,3 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount("#app");
-
-
-
-

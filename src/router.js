@@ -17,7 +17,7 @@ let router = new Router({
       component: Home,
       children: [
         {
-          path: '/',
+          path: "/",
           component: () => import('@/components/Index.vue')
         },
         {
@@ -30,7 +30,7 @@ let router = new Router({
         },
         {
           path: "/stackroom",
-          component: () => import('@/components/stackroom.vue')
+          component: () => import('@/components/stackroom2.vue')
         },
         {
           path: "/lightnovel",
