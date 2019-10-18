@@ -16,8 +16,6 @@ axios.defaults.baseURL = "http://127.0.0.1:1314/api/v1";
 import "./assets/css/reset.css";
 import "./assets/css/baes.css";
 
-// import jq from "jquery";
-// Vue.use(jq);
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
@@ -26,8 +24,7 @@ import 'element-ui/lib/theme-chalk/base.css';
 // collapse 展开折叠
 import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
 
-
-Vue.component(CollapseTransition.name, CollapseTransition) ;
+Vue.component(CollapseTransition.name, CollapseTransition)
 
 new Vue({
   router,

@@ -5,39 +5,9 @@
         <!-- 轮播图 -->
         <div class="slide" id="slide">
           <ul ref="slideshow" class="slideshow">
-            <li>
+            <li v-for="item in autoPlayTxtList" :key="item.id">
               <a href>
-                <img src="../assets/images/zy_book1.png" alt />
-              </a>
-            </li>
-            <li>
-              <a href>
-                <img src="../assets/images/zy_book2.png" alt />
-              </a>
-            </li>
-            <li>
-              <a href>
-                <img src="../assets/images/zy_book3.png" alt />
-              </a>
-            </li>
-            <li>
-              <a href>
-                <img src="../assets/images/zy_book4.png" alt />
-              </a>
-            </li>
-            <li>
-              <a href>
-                <img src="../assets/images/zy_book1.png" alt />
-              </a>
-            </li>
-            <li>
-              <a href>
-                <img src="../assets/images/zy_book2.png" alt />
-              </a>
-            </li>
-            <li>
-              <a href>
-                <img src="../assets/images/zy_book3.png" alt />
+                <img :src="item.novel_url" alt />
               </a>
             </li>
           </ul>
@@ -74,98 +44,84 @@
     <!-- 分类部分 -->
     <div class="books_classify">
       <div class="roomcentre">
-        <!-- card卡片组件 -->
-        <el-card class="box-card">
-          <div class="satck_direction satck_direction1 clearfix">
-            <h3>作品类型</h3>
-            <ul>
-              <li>
-                <a href>全部</a>
-              </li>
-              <li>
-                <a href>男频</a>
-              </li>
-              <li>
-                <a href>女频</a>
-              </li>
-            </ul>
-          </div>
-          <div class="satck_direction clearfix">
-            <h3>作品分类</h3>
-            <ul>
-              <li>
-                <a href>不限</a>
-              </li>
-              <li>
-                <a href>都市</a>
-              </li>
-              <li>
-                <a href>玄幻</a>
-              </li>
-              <li>
-                <a href>仙侠</a>
-              </li>
-              <li>
-                <a href>灵异</a>
-              </li>
-              <li>
-                <a href>历史</a>
-              </li>
-              <li>
-                <a href>游戏</a>
-              </li>
-              <li>
-                <a href>科幻</a>
-              </li>
-              <li>
-                <a href>武侠</a>
-              </li>
-              <li>
-                <a href>奇幻</a>
-              </li>
-              <li>
-                <a href>竞技</a>
-              </li>
-            </ul>
-          </div>
-          <div class="satck_direction clearfix">
-            <h3>作品状态</h3>
-            <ul>
-              <li>
-                <a href>不限</a>
-              </li>
-              <li>
-                <a href>连载</a>
-              </li>
-              <li>
-                <a href>完结</a>
-              </li>
-            </ul>
-          </div>
-          <div class="satck_direction clearfix" style="margin-bottom:0;">
-            <h3>作品字数</h3>
-            <ul>
-              <li>
-                <a href>不限</a>
-              </li>
-              <li>
-                <a href>30万以下</a>
-              </li>
-              <li>
-                <a href>30~50万</a>
-              </li>
-              <li>
-                <a href>30~50万</a>
-              </li>
-              <li>
-                <a href>30~50万</a>
-              </li>
-              <li>
-                <a href>30~50万</a>
-              </li>
-            </ul>
-          </div>
-        </el-card>
+        <div class="classify">
+          <div class="classify_title">作品类型</div>
+          <ul class="classify_option">
+            <li>
+              <a href>全部</a>
+            </li>
+            <li>
+              <a href>男频</a>
+            </li>
+            <li>
+              <a href>男频</a>
+            </li>
+          </ul>
+        </div>
+        <div class="classify">
+          <div class="classify_title">作品类型</div>
+          <ul class="classify_option">
+            <li>
+              <a href>全部</a>
+            </li>
+            <li>
+              <a href>男频</a>
+            </li>
+            <li>
+              <a href>男频</a>
+            </li>
+          </ul>
+        </div>
+        <div class="classify">
+          <div class="classify_title">作品类型</div>
+          <ul class="classify_option">
+            <li>
+              <a href>全部</a>
+            </li>
+            <li>
+              <a href>男频</a>
+            </li>
+            <li>
+              <a href>男频</a>
+            </li>
+          </ul>
+        </div>
+        <div class="classify">
+          <div class="classify_title">作品类型</div>
+          <ul class="classify_option">
+            <li>
+              <a href>全部</a>
+            </li>
+            <li>
+              <a href>男频</a>
+            </li>
+            <li>
+              <a href>男频</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 书本陈列 -->
+    <div class="bexhibit">
+      <div class="roomcentre">
+        <ul class="bexhibit_option clearfix">
+          <li>
+            <a href>
+              <img src alt />
+              <h3>花都超品医生</h3>
+              <p
+                class="store_des"
+              >他是令雇佣兵闻风丧胆的战神！亦是妙手回春、改天写命的超凡圣医！他手握玄铁针，可断人病，亦可要人命！ 为突破修为、寻找身世的秦牧离开天临山，开启了一段纵横都市之旅！ “小牧子，咱天承派人丁稀少，你不带七八个媳妇，十几个大胖小子就别回来了。”秦牧下山，老头子语重心长道。</p>
+              <p class="store_tag">
+                <span class="bkcate_icon">都市异能</span>
+                <a href>
+                  <span class="bkuser_icon">鱼非渔</span>
+                </a>
+              </p>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
     <!-- 书籍展示部分开始 -->
@@ -178,7 +134,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="" alt />
+                    <img src alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -226,7 +182,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="" alt />
+                    <img src alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -274,7 +230,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="" alt />
+                    <img src alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -322,7 +278,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="" alt />
+                    <img src alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -374,7 +330,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="" alt />
+                    <img src alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -422,7 +378,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="" alt />
+                    <img src alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -470,7 +426,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="" alt />
+                    <img src alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -518,7 +474,7 @@
               <li>
                 <a href>
                   <div class="coverBox">
-                    <img src="" alt />
+                    <img src alt />
                   </div>
                   <div class="info">
                     <p class="bname">
@@ -638,7 +594,8 @@ export default {
           opacity: 0.7,
           zIndex: 1
         }
-      ]
+      ],
+      autoPlayTxtList: []
     };
   },
   methods: {
@@ -669,6 +626,11 @@ export default {
     autoPlay() {
       setInterval(this.nextClick, 4000);
     },
+    // 获取轮播图数据
+    async getautoList() {
+      const { data } = await this.$http.get("/novels?type=1&per_page=7");
+      this.autoPlayTxtList = data.data;
+    },
     // tabs切换时触发
     handleClick(tab, event) {
       console.log(tab, event);
@@ -677,8 +639,11 @@ export default {
     animate: animate
   },
   mounted() {
+    // 调用轮播图
     this.handleAssign();
     setTimeout(this.autoPlay(), 500);
+    // 调用轮播图数据
+    this.getautoList();
   }
 };
 </script>
@@ -833,8 +798,6 @@ export default {
   border-radius: 4px;
 }
 
-/////////////////////////////////////////////////////
-
 .el-carousel {
   padding-top: 50px;
 }
@@ -850,56 +813,77 @@ export default {
   height: 100%;
 }
 
-// card卡片组件
 .books_classify {
-  background-color: #f7f8fa;
-  padding: 30px 0 1px 0;
+  margin-top: 20px;
+  // background-color: pink;
+  padding-top: 1px;
+  padding-bottom: 20px;
 }
 
-.el-card {
-  border-top: 1px solid #f89a3b;
-  margin-bottom: 30px;
+.classify {
+  height: 28px;
+  line-height: 28px;
+  box-sizing: border-box;
+  margin-top: 20px;
 }
 
-// 分类部分
-.satck_direction {
-  width: 100%;
+.classify_title,
+.classify_option {
+  display: inline-flex;
+  font-family: "Microsoft YaHei";
+}
+
+.classify_title {
+  margin-right: 20px;
+  font-size: 14px;
+  color: #8e96aa;
+  font-weight: bold;
+}
+
+.classify_option > li {
+  float: left;
+  height: 28px;
+  line-height: 28px;
+}
+
+.classify_option > li > a {
   display: inline-block;
-  margin-bottom: 15px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  padding: 0 15px;
 }
 
-.satck_direction > h3,
-.satck_direction > ul,
-.satck_direction > ul > li {
+.classify_option > li > a:hover {
+  color: #f36f20;
+}
+
+// .classify_option > li:nth-child(1) > a {
+//   background-color: #8e96aa;
+//   color: #ffffff;
+//   border-radius: 3px;
+// }
+
+//////////////////////////////////////////////////////
+.bexhibit {
+  background-color: pink;
+}
+
+.bexhibit_option > li {
   float: left;
 }
 
-.satck_direction > h3 {
-  color: #8e96aa;
+.bexhibit_option > li > a {
+  display: block;
+}
+
+.bexhibit_option > li img {
   width: 90px;
-  height: 24px;
-  line-height: 24px;
-  font-size: 14px;
-  font-family: "Microsoft YaHei";
-  font-weight: normal;
+  height: 120px;
+  background-color: green;
 }
 
-.satck_direction > ul > li {
-  height: 24px;
-  line-height: 24px;
-}
-
-.satck_direction > ul > li:nth-child(1) {
-  color: #ffffff;
-  background-color: #ff910d;
-  border-radius: 20px;
-}
-
-.satck_direction > ul > li a {
-  font-size: 14px;
-  padding: 0 10px;
-  font-family: "Microsoft YaHei";
-}
+/////////////////////
 // 书籍展示部分
 .books_detail {
   // height: 600px;
