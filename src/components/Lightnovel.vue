@@ -7,7 +7,6 @@
         <span class="title">轻小说推荐</span>
       </el-row>
 
-      <!-- 第二大模块布局 -->
       <!-- 左边立即阅读 -->
       <el-container>
         <el-main class="clear" style="padding: 0px;">
@@ -201,7 +200,7 @@
       </div>
 
       <!-- 精品热推模块 -->
-      <div class="goodrec page-width clear">
+      <div class="goodrec page-width clear" style="margin-bottom: -16px;">
         <!-- 左边图书、介绍 -->
         <div class="lefteare">
           <div class="titleline">
@@ -338,7 +337,26 @@
           </div>
         </div>
         <!-- 右边本周强推 -->
-        
+        <div class="comp-ranks gold js-ranks float_right">
+          <ul class="cp-ranks-navs alone js-ranksNavs">
+            <li class="active">本周强推</li>
+          </ul>
+          <ul class="cp-ranks-list js-ranksList">
+            <li @mousemove="changeObj(item)" v-for="item in array" :key="item.id">
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">{{item.id}}</i>
+                  {{item.title}}
+                </p>
+                <div class="info" v-if="item.currentEnce">
+                  <img :src="item.imgSrc" class="cover" />
+                  <div class="auth">{{item.author}}</div>
+                  <div class="desc">{{item.describe}}</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- 死神的新娘图片 -->
@@ -360,10 +378,10 @@
             </a>
             <div class="info">
               <a href="#" class="demo">
-                <img src="http://img-tailor.11222.cn/bcv/big/1120117874697.jpg" />
+                <img src="../assets/images/1120117874697.jpg" />
               </a>
               <p class="author">
-                <a href="#" class="demo">陌白</a>
+                <a href="#" class="demo deem_color">陌白</a>
               </p>
               <p class="desc">人类舍弃去外太空寻找生命，想要打破‘第四面墙’来探索未知的领域和生物，却忽略了在维度夹缝中的生命体，它们给人类带来的不只是惊喜，还有灾难。</p>
             </div>
@@ -375,7 +393,7 @@
                 <p class="title">我家盟主没舅了</p>
               </a>
               <p class="auth">
-                <a href="#" class="demo">方片儿柴郡猫</a>
+                <a href="#" class="demo deem_color">方片儿柴郡猫</a>
               </p>
               <p class="desc">
                 死因成谜，反派魔王。身后事业全凉凉。一朝穿越鸠占鹊，炮灰弟子惊坐床。跑路作恶拆家忙，无奈阴差逢阳错，武林美名身上扛。忙者匆匆欲归去，江湖风雨动弥彰。刀光迸裂寒剑影，四海春秋空苍苍。
@@ -387,7 +405,7 @@
                 <p class="title">怪谈校区</p>
               </a>
               <p class="auth">
-                <a href="#" class="demo">千钧三两</a>
+                <a href="#" class="demo deem_color">千钧三两</a>
               </p>
               <p class="desc">
                 校外，与魔鬼做交易的拍卖行，穿梭阴阳的233路公交，恐怖邮差
@@ -670,12 +688,124 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      array: [
+        {
+          id: 1,
+          imgSrc: require("../assets/images/1145637829226.jpg"),
+          author: "轻舟",
+          currentEnce: true,
+          describe:
+            "来到异世界之后的精灵少女，最犯愁的事情，不是精灵不会魔法，而是精灵手里没有钱。",
+          title: "精灵少女的异世界马戏团生涯"
+        },
+        {
+          id: 2,
+          imgSrc: require("../assets/images/1169137823196.jpg"),
+          author: "菠萝包",
+          currentEnce: false,
+          describe:
+            "崇尚修真的少年，阴差阳错之下来到了仙境。却被告知，我们不修真，我们学魔法吧！",
+          title: "我们不教修仙，教魔法！"
+        },
+        {
+          id: 3,
+          imgSrc: require("../assets/images/1153777825575.jpg"),
+          author: "江左",
+          currentEnce: false,
+          describe: "逗逼、搞笑、一个学霸的成长与守护之路。",
+          title: "修仙界学霸"
+        },
+        {
+          id: 4,
+          imgSrc: require("../assets/images/1137827830393.jpg"),
+          author: "右手染红尘",
+          currentEnce: false,
+          describe:
+            "出身贫民窟的白小白在达到十六岁后成功觉醒了世界上第一个心灵类异能女装，异能的力量",
+          title: "我！是个杀手"
+        },
+        {
+          id: 5,
+          imgSrc: require("../assets/images/1162157829678.jpg"),
+          author: "虫子男爵",
+          currentEnce: false,
+          describe:
+            "公元33世纪，陆青从冰封的洞穴醒来，失去了所有的记忆。洞穴之外的世界沧海桑田，厚",
+          title: "诡诞纪元"
+        },
+        {
+          id: 6,
+          imgSrc: require("../assets/images/1120117874697.jpg"),
+          author: "月有北安",
+          currentEnce: false,
+          describe:
+            "一个人，究竟可以倒霉到什么地步？亲人惨死，家族覆灭，曾经在江湖上赫赫有名的侠二",
+          title: "这个江湖风太大"
+        },
+        {
+          id: 7,
+          imgSrc: require("../assets/images/201809271723143753.jpg"),
+          author: "好玩的饺子",
+          currentEnce: false,
+          describe:
+            "互相羡慕对方生活的男女两人，在开学不久一天早上醒来，发现两人之间互换了身体？在没",
+          title: "如果我是Ta"
+        },
+        {
+          id: 8,
+          imgSrc: require("../assets/images/1137907838187.jpg"),
+          author: "走到天边看海",
+          currentEnce: false,
+          describe:
+            "刘越穿越到这个时代本是胸无大志，只想浪荡的过完这一生，开始为了自己的安危而查案，",
+          title: "痞子黄檀"
+        },
+        {
+          id: 9,
+          imgSrc: require("../assets/images/1169327831495.jpg"),
+          author: "八口",
+          currentEnce: false,
+          describe:
+            "公元2050年，因不明污染，女性不断减少，一款名为拯救少女的游戏风靡全球，玩游戏",
+          title: "前进, 拯救少女"
+        },
+        {
+          id: 10,
+          imgSrc: require("../assets/images/1180837787059.jpg"),
+          author: "小梦大师",
+          currentEnce: false,
+          describe:
+            "末日到来的我要拯救世界么？当然！我不仅要拯救世界，我还要拯救世界里生存的",
+          title: "末日到来的我要拯救世界么"
+        }
+      ]
+    };
+  },
+  methods: {
+    changeObj(item) {
+      this.array.forEach((item, index) => {
+        item.currentEnce = false;
+      });
+      item.currentEnce = true;
+    }
+  }
+};
+</script>
+
 <style lang="less" scoped>
 .lightnovel {
   width: 100%;
   height: 100%;
+  font-family: "Microsoft YaHei";
 }
-
+a.deem_color {
+  color: #a3a3a3;
+}
+a.deem_color:hover,
 a:hover {
   color: #ffa600;
 }
@@ -951,13 +1081,6 @@ a:hover {
 .thirdrec ul li span {
   color: #a0a1a1;
 }
-.thirdrec ul li a {
-  width: 100%;
-  display: inline-block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
 
 // 本宫腿毛一尺长图片条
 .banner-advert {
@@ -972,13 +1095,14 @@ a:hover {
 }
 
 // 精品热推模块
-.goodrec .lefteare {
-  width: 78.4%;
-  float: left;
-}
 .page-width {
   width: 1120px;
   margin: 0 auto;
+  // margin-bottom: -16px;
+}
+.goodrec .lefteare {
+  width: 78.4%;
+  float: left;
 }
 .goodrec .lefteare .titleline {
   height: 22px;
@@ -1030,9 +1154,7 @@ a:hover {
   color: #1d1e20 !important;
   overflow: hidden;
 }
-.goodrec .lefteare .booklist .item:nth-of-type(3),
-.goodrec .lefteare .booklist .item:nth-of-type(6),
-.goodrec .lefteare .booklist .item:nth-of-type(9) {
+.goodrec .lefteare .booklist .item:nth-of-type(3n) {
   margin-right: 0px !important;
 }
 .goodrec .lefteare .booklist .item .author {
@@ -1059,9 +1181,132 @@ a:hover {
 .goodrec .lefteare .booklist .item .bookname {
   margin-top: 9px;
 }
-.goodrec .lefteare .booklist .item .author {
-  color: #a3a3a3;
-  margin: 8px 0 30px;
+
+// 本周强推
+.goodrec .float_right {
+  width: 218px;
+  height: 492px;
+  float: right;
+}
+.comp-ranks .cp-ranks-navs li {
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+}
+.comp-ranks .cp-ranks-navs li.active {
+  position: relative;
+  font-weight: bold;
+  color: #1d1e20;
+  text-align: left;
+  cursor: pointer;
+}
+.comp-ranks .cp-ranks-navs {
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  display: flex;
+  font-size: 14px;
+  border-bottom: 3px solid #ffd800;
+  text-align: center;
+  color: #999;
+}
+.comp-ranks .cp-ranks-list li,
+.comp-ranks.normal .cp-ranks-list li {
+  line-height: 18px;
+  margin-bottom: 15px;
+  color: #1d1e20;
+  font-size: 13px;
+}
+.comp-ranks .cp-ranks-list li .title,
+.comp-ranks.normal .cp-ranks-list li .title {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 24px;
+  height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.comp-ranks .cp-ranks-list li .info,
+.comp-ranks.normal .cp-ranks-list li .info {
+  width: 100%;
+  height: 103px;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 92px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.comp-ranks.gold .cp-ranks-list li:nth-child(1) i.no,
+.comp-ranks.gold .cp-ranks-list li:nth-child(2) i.no,
+.comp-ranks.gold .cp-ranks-list li:nth-child(3) i.no {
+  background-color: #ffd800;
+}
+.comp-ranks .cp-ranks-list {
+  margin-top: 10px;
+}
+.comp-ranks .cp-ranks-list li .title i.no,
+.comp-ranks.normal .cp-ranks-list li .title i.no {
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  background-color: #d2d2d2;
+  font-style: normal;
+}
+.comp-ranks .cp-ranks-list li .info,
+.comp-ranks.normal .cp-ranks-list li .info {
+  width: 100%;
+  height: 103px;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 92px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.comp-ranks .cp-ranks-list li .info .cover,
+.comp-ranks.normal .cp-ranks-list li .info .cover {
+  height: 100%;
+  width: 82px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #eee;
+}
+.comp-ranks .cp-ranks-list li .info .auth,
+.comp-ranks.normal .cp-ranks-list li .info .auth {
+  width: 100%;
+  overflow: hidden;
+  height: 14px;
+  line-height: 14px;
+  color: #999999;
+  margin-top: 10px;
+}
+.comp-ranks .cp-ranks-list li .info .desc,
+.comp-ranks.normal .cp-ranks-list li .info .desc {
+  height: 66px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #999;
+  text-align: justify;
+  margin-top: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.info {
+  display: block;
+}
+.infoer {
+  display: none;
 }
 
 // 死神的新娘图片
@@ -1223,9 +1468,7 @@ a:hover {
   color: #1d1e20;
   overflow: hidden;
 }
-.newrec .righteare .booklist .item:nth-of-type(3),
-.newrec .righteare .booklist .item:nth-of-type(6),
-.newrec .righteare .booklist .item:nth-of-type(9) {
+.newrec .righteare .booklist .item:nth-of-type(3n) {
   margin-right: 0px !important;
 }
 .newrec .righteare .booklist .item:nth-of-type(7),
@@ -1341,13 +1584,5 @@ a:hover {
   display: block;
   height: 90px;
   overflow: hidden;
-}
-
-a.deem_color {
-  color: #a3a3a3;
-}
-
-a.deem_color:hover {
-  color: #ffa600;
 }
 </style>
