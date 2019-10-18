@@ -472,7 +472,7 @@ export default {
 };
 </script>
 
-<style >
+<style scoped>
 .zong {
   width: 1120px;
   margin: 0 auto;
