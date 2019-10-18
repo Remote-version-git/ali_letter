@@ -79,6 +79,7 @@
                 <el-menu-item index="/lightnovel">轻小说</el-menu-item>
                 <el-menu-item index="/stackroom">书库</el-menu-item>
                 <el-menu-item index="/rankinglist">排行榜</el-menu-item>
+                <el-menu-item index="/honor">后台管理系统</el-menu-item>
               </el-menu>
             </div>
             <div class="nav_search">

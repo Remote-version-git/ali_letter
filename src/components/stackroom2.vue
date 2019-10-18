@@ -728,7 +728,7 @@ export default {
   position: absolute;
   top: 210px;
   left: 0;
-  background-image: url();
+  background-image: url(../assets/images/next.prev.png);
   background-position: 0px 0px;
 }
 
@@ -736,7 +736,7 @@ export default {
   position: absolute;
   top: 210px;
   right: 0;
-  background-image: url();
+  background-image: url(../assets/images/next.prev.png);
   background-position: -60px 0px;
 }
 
