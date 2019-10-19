@@ -1,240 +1,188 @@
 <template>
-  <div>
-    <div class="zong">
-      <el-breadcrumb
-        class="breadline"
-        separator-class="el-icon-arrow-right"
-        v-for="item in RenderingList"
-        :key="item.id"
-      >
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>{{item.novel_classify}}</el-breadcrumb-item>
-        <el-breadcrumb-item>{{item.novel_title}}</el-breadcrumb-item>
-      </el-breadcrumb>
-    </div>
-    <div class="infoarea">
-      <div class="view" v-for="item in RenderingList" :key="item.id">
-        <img :src="item.novel_url" class="cover" />
-        <p class="bookTitle">
-          <span class="bname">{{item.novel_title}}</span>
-          <span class="bauthor">
-            <a href>{{item.novel_author}}</a>
-          </span>
-          <span class="bhot">
-            人气值：
-            <i>259126</i>
-          </span>
-        </p>
+  <div class="zong">
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>搜索结果：朋友Friend</el-breadcrumb-item>
+      <div class="matchbook">
+        <div class="view">
+          <a target="_blank" href>
+            <img src="../assets/images/1165857960663.jpg" class="cover" />
+          </a>
+          <p class="bookTitle">
+            <a target="_blank" href>
+              <span class="bname">朋友Friend</span>
+            </a>
+            <span class="bauthor">无声浪 &nbsp;&nbsp;著</span>
+          </p>
+          <ul class="lastchapter clear">
+            <li>3.1万字</li>
+            <li>星际战争</li>
+          </ul>
+          <p
+            class="bookDesc"
+          >出生于中国西南部偏远山区的“小七子”从小渴望了解外面的世界，在成长的过程中小七子眺望星空感知到宇宙的神奇，至此有了人生志向。小七子想去当兵，想保护自己的祖国，想去宇宙星空之中。小七子在大山的森林中结识了一群朋友，他们陪着小七子在山林之间奔跑戏耍，在大山之巅拍打云彩。1997年，7岁的小七子突然感知到万物的声音，仿佛间这个世界都在向他诉说心情，就这样开启了小七子与宇宙诸天星空文明的访问与探索。</p>
+          <div class="operates clear">
+            <div class="left">
+              <span class="tag">争霸</span>
 
-        <p class="bookDesc">{{item.novel_desc}}</p>
+              <span class="tag">穿越</span>
 
-        <ul class="tags clear">
-          <li>
-            <a href></a>
-          </li>
+              <span class="tag">励志</span>
 
-          <li>
-            <a href>都市</a>
-          </li>
-
-          <li>
-            <a href>暧昧</a>
-          </li>
-        </ul>
-
-        <ul class="operates clear">
-          <li class="read">
-            <a target="_blank" :href="item.novel_paths">立即阅读</a>
-          </li>
-          <li>
-            <a class="ml" target="_blank" href>目录</a>
-          </li>
-          <li class="js-addShelf">加入书架</li>
-        </ul>
-        <ul class="lastchapter clear">
-          <li>都市异能</li>
-          <li>732.96万字</li>
-          <li>连载</li>
-          <li>9小时前更新</li>
-        </ul>
-        <div class="fy">
-          <!-- <span class="demonstration">完整功能</span> -->
-          <el-pagination
-            @size-change="handleSizeChangewj"
-            @current-change="handleCurrentChangewj"
-            :current-page="queryInfo.pagenum"
-            :page-sizes="[5, 10, 15, 20]"
-            :page-size="5"
-            layout="total, sizes, prev, pager, next, jumper"
-            :total="total"
-          ></el-pagination>
+              <span class="tag">小说</span>
+            </div>
+            <div class="right">
+              <span class="btn read">
+                <a target="_blank" href>立即阅读</a>
+              </span>
+              <span class="btn js-addShelf">+书架</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <el-pagination background layout="prev, pager, next" :total="1000"></el-pagination>
+    </el-breadcrumb>
   </div>
 </template>
-<script>
-export default {
-  props: ["id"],
-  data() {
-    return {
-      // 详情
-      RenderingList: [],
-      
-    };
-  },
-  mounted: {
-    // 渲染
-    async RenderingClick() {
-      const { data } = await this.$http.get(`/novels/${this.id}`);
-      // console.log(data.data);
 
-      this.RenderingList = data.data;
-    }
-  }
-};
-</script>
 <style lang="less" scoped>
 .zong {
   width: 1120px;
   margin: 0 auto;
 }
-.breadline {
-  height: 64px;
-  line-height: 64px;
-  font-size: 15px;
-  color: #1d1e20;
-}
-.infoarea {
-  /* height: 1519px; */
+.matchbook {
   width: 100%;
-  padding: 38px 0;
+  padding: 30px 0;
   background: #f8f8f8;
+  margin-top: 20px;
 }
-.infoarea .view {
+.matchbook .view {
   width: 982px;
-  min-height: 258px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-left: 212px;
+  padding-left: 160px;
   position: relative;
+  overflow: hidden;
 }
-img.cover {
-  width: 193px;
-  height: 258px;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.matchbook .view .cover {
+  width: 120px;
+  height: 160px;
   border: 1px solid #dfdfdf;
   box-sizing: border-box;
   position: absolute;
   left: 0;
   top: 0;
 }
-/* 简介 */
-.view p.bookTitle {
+.matchbook .view .bookTitle {
   width: 100%;
   height: 20px;
-  padding: 15px 0 19px;
 }
-.view p.bookTitle .bname {
-  float: left;
+.matchbook .view .bookTitle .bname {
   font-size: 20px;
   color: #1c1c1e;
+  cursor: pointer;
 }
-.view p.bookTitle span {
-  height: 20px;
-  line-height: 20px;
-}
-.view p.bookTitle .bauthor {
-  float: left;
-  font-size: 14px;
-  color: #999;
+.matchbook .view .bookTitle .bauthor {
+  font-size: 12px;
+  color: #6f7f93;
   margin-left: 10px;
+  cursor: pointer;
 }
-.view p.bookTitle .bauthor a {
-  color: #999;
-}
-.view p.bookTitle .bhot {
-  float: right;
-  font-size: 14px;
-  color: #999;
-}
-.view p.bookTitle span {
+.matchbook .lastchapter {
   height: 20px;
-  line-height: 20px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-top: 15px;
 }
-.view p.bookTitle .bhot i {
-  font-size: 16px;
-  color: #f36f20;
-  font-style: normal;
+.matchbook .lastchapter li:first-child {
+  border-right: 1px solid #ebebeb;
 }
-/* 简介 */
-.infoarea .view p.bookDesc {
+
+.matchbook .lastchapter li {
+  padding-right: 10px;
+  float: left;
+  height: 100%;
+  text-align: left;
+  color: #6f7f93;
+  margin-right: 15px;
+}
+.matchbook .view .bookDesc {
   width: 100%;
   text-align: justify;
   line-height: 20px;
-  font-size: 14px;
-  color: #3b3b3d;
-  min-height: 60px;
-}
-/* 标签 */
-.infoarea .view ul.tags {
-  margin-top: 15px;
-}
-.infoarea .view ul.tags li {
-  border: 1px solid #aaa69f;
-  border-radius: 4px;
-  float: left;
   font-size: 12px;
-  margin-right: 20px;
+  color: #6f7f93;
+  margin-bottom: 10px;
 }
-.infoarea .view ul.tags li a {
-  padding: 4px 13px;
+.matchbook .operates .left {
+  float: left;
+}
+.matchbook .operates .left .tag {
   display: inline-block;
+  border: 1px solid #d8dae6;
+  padding: 4px 10px;
+  margin-right: 15px;
+  font-size: 12px;
+  color: #1d1f21;
+  cursor: pointer;
 }
-/*  */
-.infoarea .view ul.operates {
-  padding-top: 30px;
+.matchbook .operates .right {
+  float: right;
 }
-.infoarea .view ul.operates li.read {
+.matchbook .operates .read {
+  margin-right: 15px;
   background-color: #f36f20;
   color: #fff;
 }
-
-.infoarea .view ul.operates li.read a {
-  color: #fff;
-}
-.infoarea .view ul.operates li {
+.matchbook .operates .btn {
   height: 28px;
   width: 110px;
   border: 1px solid #f36f20;
   line-height: 28px;
   text-align: center;
-  float: left;
-  margin-right: 15px;
   color: #f36f20;
   cursor: pointer;
-}
-.ml {
-  color: #f36f20;
-}
-.infoarea .view ul.operates li a {
   display: inline-block;
-  width: 100%;
-  height: 100%;
+  font-size: 12px;
+  cursor: pointer;
 }
-/* 
- */
-.infoarea .view ul.lastchapter {
-  height: 20px;
-  font-size: 14px;
-  padding-top: 15px;
+.matchbook .operates .btn {
+  height: 28px;
+  width: 110px;
+  border: 1px solid #f36f20;
+  line-height: 28px;
+  text-align: center;
+  color: #f36f20;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
 }
-.infoarea .view ul.lastchapter li {
-  padding-right: 10px;
-  float: left;
-  height: 100%;
-  text-align: left;
-  border-right: 1px solid #ebebeb;
-  color: #999;
+.clear:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0;
+  overflow: hidden;
+  clear: both;
+}
+.matchbook .operates .read a {
   margin-right: 15px;
+  background-color: #f36f20;
+  color: #fff;
+}
+.el-pagination {
+  white-space: nowrap;
+  padding: 2px 5px;
+  color: #303133;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-top: 54px;
 }
 </style>
