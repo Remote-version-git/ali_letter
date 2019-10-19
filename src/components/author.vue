@@ -1,44 +1,49 @@
 <template>
-    <div class="author">
-        <div class="am-top-bg">
-		<div class="page-width">
-			<div class="subnav">
-		      	<p>
-		      		<i><a href="/">首页</a></i>
-		      		<span>简落离</span>
-		      	</p>
-		    </div>
-		    <div class="am-hborder">
-	    		<img class="am-himg" src="../assets/images/defaut.png">
-		    </div>
-		    <div class="am-center">
-		    	<p class="am-name">简落离</p>
-		    	<p class="am-name-bottom"></p>
-		    </div>
-		</div>
-	</div>
-    <div class="page-width clear">
-		<div class="am-con-title am-center">
-			<div class="am-title-pen">
-				<span>简落离</span><span>的作品</span>
-			</div>
-		</div>
-		<div class="am-body">
-			<div class="am-item">
-				<a target="_blank" href="/cover?bid=7473196"><img class="am-item-img" src="http://img-tailor.11222.cn/bcv/big/1172587473196.jpg"></a>
-				<div class="am-item-div">
-					<a target="_blank" href="/cover?bid=7473196"><p class="am-right-title">我的狐王男友</p></a>
-					<div class="am-right-num"><span class="am-right-num-span">79万字</span><span>幻想言情</span></div>
-					<p class="am-right-desc">一个是妖族狐王，一个是只能隐藏身份的女巫，两人本不该有任何的牵扯，但是，缘分这种东西，谁知道呢？还不是在六千年前就相遇相爱？还不是在沉睡了六千年后依旧的相爱？都是愿意为了心爱之人而放弃一切之人，怎么会没有一个好的结局？即便是困难重重，但是在爱的面前什么都不算了，我的狐王，我，永远都是你的狐后！</p>
-					<div class="am-right-bot">
-						<a target="_blank" class="am-right-read" href="/reader?bid=7473196">立即阅读</a>
-						<div class="am-right-shelf js-addShelf" data-bid="7098680">+书架</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="author">
+    <div class="am-top-bg">
+        <div class="page-width">
+            <div class="subnav">
+                <p>
+                    <i><a href="/">首页</a></i>
+                    <span>{{authorName}}</span>
+                </p>
+            </div>
+            <div class="am-hborder">
+                <img class="am-himg" src="../assets/images/defaut.png">
+            </div>
+            <div class="am-center">
+                <p class="am-name">{{authorName}}</p>
+                <p class="am-name-bottom"></p>
+            </div>
+        </div>
     </div>
+    <div class="page-width clear">
+        <div class="am-con-title am-center">
+            <div class="am-title-pen">
+                <span>{{authorName}}</span><span>的作品</span>
+            </div>
+        </div>
+        <div class="am-body" v-for="item in novelData" ::key="item.id">
+            <div class="am-item">
+                <a target="_blank" :href="/book/ + item.id"><img class="am-item-img"
+                        :src="item.novel_url"></a>
+                <div class="am-item-div">
+                    <a target="_blank" :href="/book/ + item.id">
+                        <p class="am-right-title">{{item.novel_title}}</p>
+                    </a>
+                    <div class="am-right-num"><span class="am-right-num-span">{{item.word_nums}}万字</span><span>{{item.novel_classify}}</span></div>
+                    <p class="am-right-desc">
+                       {{item.novel_desc}}
+                    </p>
+                    <div class="am-right-bot">
+                        <a target="_blank" class="am-right-read" :href="item.novel_paths">立即阅读</a>
+                        <div class="am-right-shelf js-addShelf" data-bid="7098680">+书架</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </template>
 
 <script>
@@ -46,7 +51,8 @@ export default {
     props: ["id"],
     data() {
         return {
-            novelData:[]
+            novelData:[],
+            authorName:""
         }
     },
     created() {
@@ -55,7 +61,12 @@ export default {
     methods: {
        async getNovelData() {
             const { data } = await this.$http.get(`/novels/${this.id}`)
-            this.novelData = data.data
+            this.authorName = data.data[0].novel_author
+             const { data : data1 } = await this.$http.get(`/novels?keyword=${data.data[0].novel_author}`)
+            this.novelData = data1.data
+            
+             
+            
         }
     }
 }
@@ -213,9 +224,8 @@ export default {
     margin-top: 20px;
     color: #6f7f93;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow:ellipsis;
     white-space: nowrap;
-    -webkit-box-orient: vertical;
     height: 34px;
     overflow: hidden;
 }
