@@ -479,7 +479,7 @@
     </div>
     <div class="d">
       <a href>
-        <img src="http://img-tailor.11222.cn/pm/book/operate/2019061110433522.jpg" alt />
+        <img src="http://img-tailor.11222.cn/pm/book/operate/2019101516434409.jpg" alt />
       </a>
     </div>
     <!-- 猜你喜欢———————————————————————————————————————————— -->
@@ -579,7 +579,7 @@
     </div>
     <div class="d">
       <a href>
-        <img src="http://img-tailor.11222.cn/pm/book/operate/2019061110472352.jpg" alt />
+        <img src="http://img-tailor.11222.cn/pm/book/operate/2019101516435586.jpg" alt />
       </a>
     </div>
 
@@ -1053,7 +1053,7 @@ a {
     float: left;
     width: 77.85%;
     height: 212px;
-    background-color: #fbeff5;
+    background-color:#e8f3f1;
     margin-bottom:20px; 
 }
 .b{
@@ -1409,14 +1409,14 @@ p.title {
   margin-top: 20px;
   width: 268px;
   float: left;
-  background-color: #fcf0f6;
+  background-color: #f8f6f8;
 }
 .newbook-left-top {
   width: 100%;
   height: 161px;
   box-sizing: border-box;
   padding: 28px 24px 0;
-  background: url("/img/nv_left_bg_1.png") repeat-x;
+  background: url("/img/side22.png") repeat-x;
   color: #1d1e20;
   position: relative;
 }
@@ -1484,7 +1484,7 @@ p.title {
   display: block;
   width: 100%;
   height: 5px;
-  background-color: #fcf0f6;
+  background-color: #e8f3f1;
   margin-top: 9px;
 }
 .tlle {
@@ -1493,7 +1493,7 @@ p.title {
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  background: url("/img/nv_icon_girl.png") no-repeat 18px 0 #fff;
+  background: url("/img/title_icon_boy.png") no-repeat 18px 0 #fff;
   background-size: 22px 22px;
 }
 .tlle2 {
@@ -1501,7 +1501,7 @@ p.title {
   position: absolute;
   left: 0;
   top: 0;
-  background: url("/img/nv1_icon_cate.png") no-repeat 0 0 #fff;
+  background: url("/img/title_icon_boy1.png") no-repeat 0 0 #fff;
   background-size: auto 22px;
 }
 .tlle3 {
