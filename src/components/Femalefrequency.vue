@@ -1,197 +1,6 @@
 <template>
   <div class="box">
-    <div class="titleline titles">
-      <span class="tlle">女频推荐</span>
-    </div>
-    <div class="container">
-      <div class="a">
-        <h1>111</h1>
-      </div>
-      <div class="b">
-        <div class="b-head">
-          <a href>
-            <h3>现言</h3>
-            <div class="covers">
-              <img src="http://img-tailor.11222.cn/bcv/big/1160267439978.jpg" alt class="covers1" />
-              <img src="http://img-tailor.11222.cn/bcv/big/1106177695571.jpg" alt class="covers2" />
-              <img src="http://img-tailor.11222.cn/bcv/big/1118707956106.jpg" alt class="covers3" />
-            </div>
-          </a>
-        </div>
-        <div class="b-cenner">
-          <ul>
-            <li>
-              <a href>古言</a>
-            </li>
-            <li>
-              <i>1</i>
-              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;兰寻馆探案疑录</a>
-            </li>
-            <li>
-              <i>2</i>
-              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名门娇宠</a>
-            </li>
-            <li>
-              <i>3</i>
-              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大秦小吏</a>
-            </li>
-          </ul>
-        </div>
-        <div class="b-mend">
-          <div style="background-color: #f0fbed">
-            <a href>种田</a>
-          </div>
-          <div style="background-color: #fbedfe">
-            <a href>宅斗</a>
-          </div>
-          <div style="background-color: #edefff">
-            <a href>总裁</a>
-          </div>
-          <div style="background-color: #eaf9f9">
-            <a href>纯爱</a>
-          </div>
-        </div>
-        <div class="b-foot">
-          <div>
-            <h4>热门标签</h4>
-            <ul>
-              <li>
-                <a href>宫斗</a>
-              </li>
-              <li>
-                <a href>女强</a>
-              </li>
-              <li>
-                <a href>青春</a>
-              </li>
-              <li>
-                <a href>神医</a>
-              </li>
-              <li>
-                <a href>历史</a>
-              </li>
-              <li>
-                <a href>强者回归</a>
-              </li>
-              <li>
-                <a href>校花</a>
-              </li>
-              <li>
-                <a href>异能</a>
-              </li>
-              <li>
-                <a href>恐怖灵异</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="c">
-        <div class="c-left-page">
-          <ul>
-            <li>
-              <a href>
-                <img src="http://img-tailor.11222.cn/bcv/big/201810221259076308.jpg" alt />
-                <p>绝色丹神</p>
-              </a>
-              <p class="author">
-                <a href>一颗葡萄树</a>
-              </p>
-              <p class="desc">丹帝降生，借体而存，重拾武道，傲视寰宇。</p>
-            </li>
-            <li>
-              <a href>
-                <img src="http://img-tailor.11222.cn/bcv/big/1146557794712.jpg" alt />
-                <p>星武战甲</p>
-              </a>
-              <p class="author">
-                <a href>十九周年</a>
-              </p>
-              <p class="desc">机甲横空，惊姿卓绝。星魂觉醒，冠绝群英。星际时代，一个身负神秘魂体的少年，演绎这片星空下的传奇。</p>
-            </li>
-          </ul>
-        </div>
-        <ul class="mend-right">
-          <li>
-            <a href>
-              <span>[都市生活]</span>
-              火星情报局
-            </a>
-          </li>
-          <li>
-            <a href>
-              <span>[都市生活]</span>
-              都市之妖尊归来
-            </a>
-          </li>
-          <li>
-            <a href>
-              <span>[都市异能]</span>
-              超级赘婿系统
-            </a>
-          </li>
-          <li>
-            <a href>
-              <span>[都市异能]</span>
-              都市之大罗天帝
-            </a>
-          </li>
-          <li>
-            <a href>
-              <span>[都市生活]</span>
-              都市最强医仙
-            </a>
-          </li>
-          <li>
-            <a href>
-              <span>[都市异能]</span>
-              桃运狂医
-            </a>
-          </li>
-          <li>
-            <a href>
-              <span>[东方玄幻]</span>
-              巫皇
-            </a>
-          </li>
-          <li>
-            <a href>
-              <span>[都市异能]</span>
-              修仙归来在都市
-            </a>
-          </li>
-          <li>
-            <a href>
-              <span>[都市生活]</span>
-              咸鱼躺赢攻略
-            </a>
-          </li>
-          <li>
-            <a href>
-              <span>[都市生活]</span>
-              天庭朋友圈
-            </a>
-          </li>
-          <li>
-            <a href>
-              <span>[东方玄幻]</span>
-              武破九荒
-            </a>
-          </li>
-          <li>
-            <a href>
-              <span>[恐怖惊悚]</span>
-              恐怖屋之食中忌
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="d">
-        <a href>
-          <img src="http://img-tailor.11222.cn/pm/book/operate/2019061110463298.jpg" alt />
-        </a>
-      </div>
-    </div>
+    
 
     <div class="lefteare">
       <div class="titleline">
@@ -1040,194 +849,12 @@ a {
   text-decoration: none;
 }
 .box {
-  width: 84%;
+  width: 1120px;
   height: 100%;
   margin: 0 auto;
   margin-top: 20px;
 }
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.a {
-  width: 1090px;
-  height: 264px;
-  margin-right: 40px;
-  margin-bottom: 28px;
-  background-color: #fcf0f6;
-}
-.b {
-  grid-column: 2/4;
-  grid-row: 1/4;
-}
-.c {
-  width: 1090px;
-  height: 327px;
-}
-.d {
-  margin-top: 30px;
-  height: 110px;
-  grid-column: 1/4;
-}
-.d img {
-  width: 100%;
-  height: 110px;
-}
-.b-head {
-  height: 116px;
-  background-color: #fcf0f6;
-  margin-bottom: 3px;
-}
-.b-cenner {
-  height: 194px;
-  background-color: #fcf0f6;
-  margin-bottom: 3px;
-}
-.b-cenner ul li {
-  position: relative;
-  line-height: 45px;
-  margin-left: 30px;
-}
-a {
-  color: black;
-}
-a:hover {
-  color: #ff8e15;
-}
-.b-cenner ul li:first-child {
-  color: black;
-  font-size: 16px;
-  font-weight: bolder;
-}
-.b-cenner ul li i {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #f36f20;
-  text-align: center;
-  color: #fff;
-  position: absolute;
-  left: 0;
-  top: 12px;
-  font-style: normal;
-  line-height: 21px;
-}
-.b-mend {
-  height: 134px;
-  margin-bottom: 3px;
-}
-.b-mend {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 66px 66px;
-  grid-gap: 3px;
-  height: 22%;
-  margin-bottom: 3px;
-  text-align: center;
-  line-height: 66px;
-}
-.b-foot {
-  height: 120px;
-  background-color: #fef1f0;
-  padding-top: 30px;
-}
-.b-foot h4 {
-  font-size: 16px;
-  line-height: 16px;
-  height: 32px;
-  color: #f47a33;
-  top: 20px;
-}
-.b-foot div {
-  width: 70%;
-  height: 80%;
-  margin-left: 30px;
-}
-.b-foot ul li {
-  font-size: 12px;
-  line-height: 12px;
-  padding: 3px 8px;
-  border-left: 1px solid #fcd6c6;
-  float: left;
-  margin-bottom: 12px;
-}
-.b-foot ul li a {
-  color: #f47a33;
-}
-.c-left-page {
-  float: left;
-  width: 300px;
-}
-.c-left-page ul li {
-  position: relative;
-  font-size: 13px;
-  line-height: 13px;
-  height: 120px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  padding-left: 106px;
-  color: #1d1e20;
-  overflow: hidden;
-}
-.c-left-page ul li img {
-  width: 91px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.c-left-page ul li a {
-  text-decoration: none;
-  color: inherit;
-}
-.c-left-page ul li a p {
-  margin-top: 9px;
-}
-.c-left-page ul li p.author {
-  color: rgb(163, 163, 163);
-  margin: 12px 0px 30px;
-}
-.c-left-page ul li p.desc {
-  color: rgb(163, 163, 163);
-  line-height: 20px;
-  height: 40px;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.mend-right {
-  float: right;
-  width: 600px;
-}
-.mend-right li {
-  float: left;
-  width: 240px;
-  height: 40px;
-  font-size: 15px;
-  line-height: 7px;
-  margin-top: 8px;
-  font-size: 18px;
-}
-.mend-right span {
-  color: #a0a1a1;
-}
-.b-head {
-  padding: 21px 18px 0;
-  color: #1d1e20;
-}
-.b-head a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-.b-head a h3 {
-  font-size: 14px;
-  margin-top: 16px;
-  line-height: 14px;
-  float: left;
-}
+
 .covers {
   height: 68px;
   float: right;
@@ -1258,7 +885,7 @@ a:hover {
 }
 
 .lefteare {
-  width: 78.4%;
+  width: 74%;
   float: left;
   height: 100%;
   margin-top: 30px;
@@ -1269,25 +896,24 @@ a:hover {
   margin-top: 21px;
 }
 .booklist div {
-  position: relative;
-  line-height: 13px;
-  height: 120px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  padding-left: 106px;
-  color: #1d1e20;
-  overflow: hidden;
-  float: left;
-  width: 313px;
-  margin-top: 30px;
-  margin-right: 20px;
+  width: 265px;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 13px;
+    height: 120px;
+    margin-bottom: 20px;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 106px;
+    color: #1d1e20;
+    overflow: hidden;
 }
 .booklist div img {
-  width: 91px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+      width: 91px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .cover {
@@ -1415,8 +1041,7 @@ p.title {
 }
 .newbook-left {
   margin-top: 20px;
-  width: 335px;
-  height: 488px;
+  width: 268px;
   float: left;
   background-color: #fcf0f6;
 }
@@ -1438,13 +1063,13 @@ p.title {
 }
 .side {
   height: 94px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  box-sizing: border-box;
-  padding: 0 57px;
-  font-size: 14px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 24px;
+    font-size: 14px;
 }
 .side img {
   float: left;

@@ -76,7 +76,7 @@
               >
                 <el-menu-item index="/index">首页</el-menu-item>
                 <el-menu-item index="/male">男频</el-menu-item>
-                <el-menu-item index="">女频</el-menu-item>
+                <el-menu-item index="/female">女频</el-menu-item>
                 <el-menu-item index="/lightnovel">轻小说</el-menu-item>
                 <el-menu-item index="/stackroom">书库</el-menu-item>
                 <el-menu-item index="/rankinglist">排行榜</el-menu-item>
