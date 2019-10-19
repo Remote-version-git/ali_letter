@@ -14,8 +14,10 @@
     "element-ui": "^2.12.0",
     "jQuery": "^1.7.4",
     "jquery": "^3.4.1",
+    "slider-verification-code": "^1.0.1",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.1",
+    "vue-monoplasty-slide-verify": "^1.0.5",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1",
     "webpack": "^4.41.2"

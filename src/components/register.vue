@@ -1,5 +1,5 @@
 <template>
-  <el-dialog title="账号登录" :visible.sync="centerDialogVisible" width="30%" center top="0">
+  <el-dialog title="注册账号" :visible.sync="centerDialogVisible" width="30%" center top="0">
     <el-form :model="registerForm" :rules="registerFormRules" ref="registerFormRef">
       <!-- 账号/用户名 -->
       <el-form-item prop="phone">
@@ -23,7 +23,9 @@
           v-model="registerForm.password"
           autocomplete="off"
         ></el-input>
+        <SliderVerificationCode v-model="verify" @change="handleChange" />
       </el-form-item>
+      
 
       <!-- 协议 -->
       <p class="inner">
@@ -36,7 +38,7 @@
         class="submit"
         @click="register()"
         :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
-      >登录</div>
+      >注册</div>
       <p class="operates">
         <span class="js-toReg">注册账号</span>
         <span class="js-forget">忘记密码</span>
@@ -85,6 +87,7 @@ export default {
         pass: "",
         password: ""
       },
+      verify: "",
       check: false,
       // 显示dialog
       centerDialogVisible: true,
@@ -96,30 +99,35 @@ export default {
       }
     };
   },
+
+  // 方法区
   methods: {
-    // 登录功能
+    // 手机验证功能
+
     register() {
       if (this.check) {
         let form = qs.stringify(this.registerForm);
         this.$refs.registerFormRef.validate(async volid => {
           if (!volid) return;
           const { data: res } = await this.$http.post("/users", form);
-          console.log(res);
           if (res.state !== 200) {
             return this.$message.error(res.error);
           }
           return this.$message.success("注册成功！");
         });
       }
+    },
+    async handleChange(verify) {
+      if (verify) {
+        let form = qs.stringify(this.registerForm);
+        const { data: res } = await this.$http.post("/getPhoneVerifyCode");
+      }
     }
   }
 };
 </script>
 
-<style scoped>
-element.style {
-  margin-top: 0px !important;
-}
+<style >
 .el-dialog__title {
   margin: 20px 0 38px;
   font-size: 20px;

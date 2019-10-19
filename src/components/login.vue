@@ -61,15 +61,15 @@ export default {
     };
   },
   methods: {
-    getBtn() {},
     // 登录功能
     login() {
       let form = qs.stringify(this.loginForm);
+        console.log(form);
       if (this.check) {
         this.$refs.loginFormRef.validate(async volid => {
           if (!volid) return;
           const { data: res } = await this.$http.post("/login", form);
-          console.log(res);
+        
           if (res.state !== 200) {
             return this.$message.error(res.error);
           }
@@ -81,10 +81,7 @@ export default {
 };
 </script>
 
-<style scoped>
-element.style {
-  margin-top: 0px !important;
-}
+<style >
 .el-dialog__title {
   margin: 20px 0 38px;
   font-size: 20px;
@@ -92,9 +89,9 @@ element.style {
   color: #1d1e20;
   font-weight: bold;
 }
+
 .el-input__inner {
   border: 0;
-  padding-left: 20px;
   border-bottom: 1px solid #ededed;
   line-height: 36px;
   height: 36px;
@@ -102,9 +99,9 @@ element.style {
   color: #1d1e20;
   display: block;
   width: 100%;
-  margin-bottom: 26px;
-  border-radius: 0;
+  margin-bottom: 20px;
 }
+
 .select {
   zoom: 150%;
   font-size: 12px;

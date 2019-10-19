@@ -13,6 +13,13 @@ Vue.prototype.$http = axios;
 // 设置默认路径
 axios.defaults.baseURL = "http://127.0.0.1:1314/api/v1";
 
+
+// 滑块
+import SliderVerificationCode from 'slider-verification-code';
+import 'slider-verification-code/lib/slider-verification-code.css';
+
+Vue.use(SliderVerificationCode);
+
 import "./assets/css/reset.css";
 import "./assets/css/baes.css";
 
