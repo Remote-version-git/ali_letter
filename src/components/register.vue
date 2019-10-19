@@ -1,5 +1,5 @@
 <template>
-  <el-dialog title="注册账号" :visible.sync="centerDialogVisible" width="30%" center top="0">
+  <el-dialog title="注册账号" :visible.sync="centeDialogVisible" width="30%" center top="0">
     <el-form :model="registerForm" :rules="registerFormRules" ref="registerFormRef">
       <!-- 账号/用户名 -->
       <el-form-item prop="phone">
@@ -25,7 +25,15 @@
         ></el-input>
         <SliderVerificationCode v-model="verify" @change="handleChange" />
       </el-form-item>
-      
+
+      <el-form-item prop="codes">
+        <el-input
+          type="text"
+          placeholder="请输入验证码"
+          v-model="registerForm.verifyCode"
+          autocomplete="off"
+        ></el-input>
+      </el-form-item>
 
       <!-- 协议 -->
       <p class="inner">
@@ -85,12 +93,13 @@ export default {
       registerForm: {
         phone: "",
         pass: "",
-        password: ""
+        password: "",
+        verifyCode: ""
       },
       verify: "",
       check: false,
       // 显示dialog
-      centerDialogVisible: true,
+      centeDialogVisible: true,
       // 表单验证规则
       registerFormRules: {
         phone: [{ validator: checkPhone, trigger: "blur" }],
@@ -102,9 +111,41 @@ export default {
 
   // 方法区
   methods: {
-    // 手机验证功能
+    // 手机验证功能\
+      async handleChange(verify) {
+      if (verify) {
+        let form = qs.stringify(this.registerForm);
+        const { data: res } = await this.$http.post(
+          "/getPhoneVerifyCode",
+          form
+        );
+        console.log(res);
+        if (res.state != 200) {
+          this.$message.error(res.error);
+          return;
+        } else {
+          this.$message.success("验证码发送成功");
+        }
+      }
+    },
+    // 登录功能
+    register() {
+      if (this.check) {
+        let form = qs.stringify(this.registerForm);
+        this.$refs.registerFormRef.validate(async volid => {
+          if (!volid) return;
+          const { data: res } = await this.$http.post("/users", form);
+          if (res.state !== 200) {
+            return this.$message.error(res.error);
+          }
+          this.$message.success("注册成功！");
+          this.centeDialogVisible = false;
+          this.centerDialogVisible=true
 
-
+        });
+      }
+    },
+  
   }
 };
 </script>

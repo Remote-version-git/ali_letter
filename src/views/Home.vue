@@ -100,7 +100,15 @@
       </el-footer>
     </el-container>
 
-    <el-dialog title="账号登录" :visible.sync="centerDialogVisible" width="30%" center top="0">
+    <el-dialog
+      title="账号登录"
+      id="el-dialog__title "
+      :visible.sync="centerDialogVisible"
+      width="30%"
+      center
+      top="22vh"
+      @change="change"
+    >
       <el-form class="login-form" :model="loginForm" :rules="loginFormRules" ref="loginFormRef">
         <!-- 账号/用户名 -->
         <el-form-item prop="phone">
@@ -108,7 +116,12 @@
         </el-form-item>
         <!-- 密码 -->
         <el-form-item prop="password">
-          <el-input type="password" v-model="loginForm.password" placeholder="请输入密码"></el-input>
+          <el-input
+            type="password"
+            id="el-input__inner"
+            v-model="loginForm.password"
+            placeholder="请输入密码"
+          ></el-input>
         </el-form-item>
         <p class="inner">
           <input type="checkbox" v-model="check" class="select" />
@@ -128,54 +141,61 @@
       </el-form>
     </el-dialog>
 
-<!-- 注册 -->
- <el-dialog title="注册账号" :visible.sync="centeDialogVisible" width="30%" center top="0">
-    <el-form :model="registerForm" :rules="registerFormRules" ref="registerFormRef">
-      <!-- 账号/用户名 -->
-      <el-form-item prop="phone">
-        <el-input type="text" v-model="registerForm.phone" placeholder="请输入手机号"></el-input>
-      </el-form-item>
+    <!-- 注册 -->
+    <el-dialog title="注册账号" :visible.sync="centeDialogVisible" width="30%" center top="22vh">
+      <el-form :model="registerForm" :rules="registerFormRules" ref="registerFormRef">
+        <!-- 账号/用户名 -->
+        <el-form-item prop="phone">
+          <el-input type="text" v-model="registerForm.phone" placeholder="请输入手机号"></el-input>
+        </el-form-item>
 
-      <!-- 密码 -->
-      <el-form-item prop="pass">
-        <el-input
-          type="password"
-          placeholder="请输入密码"
-          v-model="registerForm.pass"
-          autocomplete="off"
-        ></el-input>
-      </el-form-item>
+        <!-- 密码 -->
+        <el-form-item prop="pass">
+          <el-input
+            type="password"
+            placeholder="请输入密码"
+            v-model="registerForm.pass"
+            autocomplete="off"
+          ></el-input>
+        </el-form-item>
 
-      <el-form-item prop="password">
-        <el-input
-          type="password"
-          placeholder="请再次输入密码"
-          v-model="registerForm.password"
-          autocomplete="off"
-        ></el-input>
-        <SliderVerificationCode v-model="verify" @change="handleChange" />
-      </el-form-item>
-      
+        <el-form-item prop="password">
+          <el-input
+            type="password"
+            placeholder="请再次输入密码"
+            v-model="registerForm.password"
+            autocomplete="off"
+          ></el-input>
+          <SliderVerificationCode v-model="verify" @change="handleChange" />
+        </el-form-item>
 
-      <!-- 协议 -->
-      <p class="inner">
-        <input type="checkbox" v-model="check" class="select" />
-        登录账号即代表您已阅读过、了解并接受
-        <a href>《阿里文学用户服务协议》</a>
-        <a href>《隐私保护政策》</a>
-      </p>
-      <div
-        class="submit"
-        @click="register()"
-        :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
-      >注册</div>
-      <p class="operates">
-        <span class="js-toReg">注册账号</span>
-        <span class="js-forget">忘记密码</span>
-      </p>
-    </el-form>
-  </el-dialog>
+        <el-form-item prop="codes">
+          <el-input
+            type="text"
+            placeholder="请输入验证码"
+            v-model="registerForm.verifyCode"
+            autocomplete="off"
+          ></el-input>
+        </el-form-item>
 
+        <!-- 协议 -->
+        <p class="inner">
+          <input type="checkbox" v-model="check" class="select" />
+          登录账号即代表您已阅读过、了解并接受
+          <a href>《阿里文学用户服务协议》</a>
+          <a href>《隐私保护政策》</a>
+        </p>
+        <div
+          class="submit"
+          @click="register()"
+          :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
+        >注册</div>
+        <p class="operates">
+          <span class="js-toReg">注册账号</span>
+          <span class="js-forget">忘记密码</span>
+        </p>
+      </el-form>
+    </el-dialog>
   </div>
 </template>
 
@@ -192,7 +212,7 @@ export default {
         return callback(new Error("请输入正确的手机号"));
       }
     };
- 
+
     // 确认密码
     var validatePass = (rule, value, callback) => {
       if (value === "") {
@@ -237,9 +257,10 @@ export default {
       registerForm: {
         phone: "",
         pass: "",
-        password: ""
+        password: "",
+        verifyCode: ""
       },
-      verify:'',
+      verify: "",
       check: false,
       // 显示dialog
       centeDialogVisible: false,
@@ -273,12 +294,34 @@ export default {
             return this.$message.error(res.error);
           }
           this.$message.success("登陆成功！");
+          this.loginForm.phone = this.loginForm.password = "";
+          this.check = false;
           this.centerDialogVisible = false;
         });
       }
     },
+ 
+
     // 注册
-     register() {
+    // 手机验证功能\
+    async handleChange(verify) {
+      if (verify) {
+        let form = qs.stringify(this.registerForm);
+        const { data: res } = await this.$http.post(
+          "/getPhoneVerifyCode",
+          form
+        );
+        console.log(res);
+        if (res.state != 200) {
+          this.$message.error(res.error);
+          return;
+        } else {
+          this.$message.success("验证码发送成功");
+        }
+      }
+    },
+    // 登录功能
+    register() {
       if (this.check) {
         let form = qs.stringify(this.registerForm);
         this.$refs.registerFormRef.validate(async volid => {
@@ -287,34 +330,28 @@ export default {
           if (res.state !== 200) {
             return this.$message.error(res.error);
           }
-           this.$message.success("注册成功！");
-           this.centeDialogVisible=false;
+          this.$message.success("注册成功！");
+          this.registerForm.phone = this.registerForm.password = this.registerForm.pass = this.registerForm.verifyCode =
+            "";
+          this.check = false;
+          this.centeDialogVisible = false;
+          this.centerDialogVisible = true;
         });
-      }
-    },
-    async handleChange(verify) {
-      if (verify) {
-        let form = qs.stringify(this.registerForm);
-        const { data: res } = await this.$http.post("/getPhoneVerifyCode",form);
-        console.log(res)
       }
     }
   }
 };
 </script>
 
-<style >
-element.style {
-  margin-top: 0px !important;
-}
-.el-dialog__title {
+<style scoped>
+#el-dialog__title {
   margin: 20px 0 38px;
   font-size: 20px;
   line-height: 20px;
   color: #1d1e20;
   font-weight: bold;
 }
-.el-input__inner {
+#el-input__inner {
   border: 0;
   padding-left: 20px;
   border-bottom: 1px solid #ededed;
