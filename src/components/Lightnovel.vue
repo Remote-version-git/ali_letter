@@ -10,8 +10,7 @@
       <!-- 左边立即阅读 -->
       <el-container>
         <el-main class="clear" style="padding: 0px;">
-          <div class="main">Main</div>
-
+          
           <!-- 左下第二个左边模块(图书、作者介绍) -->
           <div class="secrec_box">
             <ul class="secrec">
@@ -407,12 +406,12 @@ export default {
   },
   // 渲染数据
   async beforeCreate() {
-    const { data: data1 } = await this.$http.get("/designation?id1=1,6");
+    const { data: data1 } = await this.$http.get("/designation?id1=1,6,3");
     this.localData = data1.data;
 
 // 类型、书名
     const { data: data2 } = await this.$http.get(
-      "/designation?id1=5,7,2,11,20,3,8,12,,19,14,22,56"
+      "/designation?id1=5,7,2,11,20,3,8,12,,19,14,22,56,34,35,36,37,45,46,47,23"
     );
     // console.log(data2.data);
     
@@ -431,7 +430,7 @@ export default {
 
     // 猜你喜欢
     const { data: datalikeBook } = await this.$http.get(
-      "/designation?id1=,39,74,75,32"
+      "/designation?id1=39,74,75,32,34,11,23,45"
     );
     this.likeBook = datalikeBook.data;
   }
@@ -660,7 +659,7 @@ a:hover {
   line-height: 13px;
   height: 120px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   position: relative;
   box-sizing: border-box;
   padding-left: 106px;
