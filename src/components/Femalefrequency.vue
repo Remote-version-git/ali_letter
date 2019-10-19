@@ -1,7 +1,198 @@
 <template>
   <div class="box">
-    
+    <div class="titleline titles">
+      <span class="tlle">男频推荐</span>
+    </div>
+  <div class="container">
+   <div class="a"><h1>111</h1></div>
+   <div class="b">
+     <div class="b-head">
+          <a href>
+            <h3>都市</h3>
+            <div class="covers">
+              <img src="../../public/img/s-1.jpg" alt class="covers1" />
+              <img src="../../public/img/s-2.jpg" alt class="covers2" />
+              <img src="../../public/img/s-3.jpg" alt class="covers3" />
+            </div>
+          </a>
+        </div>
+        <div class="b-cenner">
+          <ul>
+            <li>
+              <a href>玄幻</a>
+            </li>
+            <li>
+              <i>1</i>
+              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不朽神帝</a>
+            </li>
+            <li>
+              <i>2</i>
+              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;创世丹帝</a>
+            </li>
+            <li>
+              <i>3</i>
+              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;太古剑圣</a>
+            </li>
+          </ul>
+        </div>
+        <div class="b-mend">
+          <div style="background-color: #f0fbed">
+            <a href>时空穿梭</a>
+          </div>
+          <div style="background-color: #fbedfe">
+            <a href>仙侠</a>
+          </div>
+          <div style="background-color: #edefff">
+            <a href>科幻</a>
+          </div>
+          <div style="background-color: #eaf9f9">
+            <a href>悬疑</a>
+          </div>
+        </div>
+        <div class="b-foot">
+          <div>
+            <h4>热门标签</h4>
+            <ul>
+              <li>
+                <a href>热血</a>
+              </li>
+              <li>
+                <a href>扮猪吃虎</a>
+              </li>
+              <li>
+                <a href>重生</a>
+              </li>
+              <li>
+                <a href>神医</a>
+              </li>
+              <li>
+                <a href>历史</a>
+              </li>
+              <li>
+                <a href>强者回归</a>
+              </li>
+              <li>
+                <a href>校花</a>
+              </li>
+              <li>
+                <a href>异能</a>
+              </li>
+              <li>
+                <a href>恐怖灵异</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+   </div>
+   <div class="c">
+<div class="c-left-page">
+          <ul>
+            <li>
+              <a href>
+                <img src="../../public/img/1177437861968.jpg" alt />
+                <p>绝色丹神</p>
+              </a>
+              <p class="author">
+                <a href>一颗葡萄树</a>
+              </p>
+              <p class="desc">丹帝降生，借体而存，重拾武道，傲视寰宇。</p>
+            </li>
+            <li>
+              <a href>
+                <img src="../../public/img/1177437861968.jpg" alt />
+                <p>星武战甲</p>
+              </a>
+              <p class="author">
+                <a href>十九周年</a>
+              </p>
+              <p class="desc">机甲横空，惊姿卓绝。星魂觉醒，冠绝群英。星际时代，一个身负神秘魂体的少年，演绎这片星空下的传奇。</p>
+            </li>
+          </ul>
+        </div>
+        <ul class="mend-right">
+          <li>
+            <a href>
+              <span>[都市生活]</span>
+              火星情报局
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市生活]</span>
+              都市之妖尊归来
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市异能]</span>
+              超级赘婿系统
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市异能]</span>
+              都市之大罗天帝
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市生活]</span>
+              都市最强医仙
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市异能]</span>
+              桃运狂医
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[东方玄幻]</span>
+              巫皇
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市异能]</span>
+              修仙归来在都市
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市生活]</span>
+              咸鱼躺赢攻略
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市生活]</span>
+              天庭朋友圈
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[东方玄幻]</span>
+              武破九荒
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[恐怖惊悚]</span>
+              恐怖屋之食中忌
+            </a>
+          </li>
+        </ul>
 
+   </div>
+  </div>
+
+
+<div class="d">
+        <a href>
+          <img src="../../public/img/2019101516432492.jpg" alt />
+        </a>
+      </div>
     <div class="lefteare">
       <div class="titleline">
         <span class="tlle2">精品热推</span>
@@ -854,12 +1045,187 @@ a {
   margin: 0 auto;
   margin-top: 20px;
 }
+.container{
+  width: 100%;
+  height: 100%;
+}
+.a{
+    float: left;
+    width: 77.85%;
+    height: 212px;
+    background-color: #fbeff5;
+    margin-bottom:20px; 
+}
+.b{
+    float: right;
+    width: 19.46%;
+    height: 100%;
+    overflow: hidden;
+}
+.d img {
+  width: 100%;
+  height: 110px;
+}
+.b-head {
+  height: 93px;
+  background-color: #e8f3f1;
+  margin-bottom: 3px;
+}
+.b-head h3{
+      font-size: 14px;
+    padding-top: 16px;
+    margin-left: 15px;
+    line-height: 14px;
+}
+.b-cenner {
+  height: 155px;
+  background-color: #e8f3f1;
+  margin-bottom: 3px;
+}
+.b-cenner ul li {
+  width: 100%;
+    box-sizing: border-box;
+    padding-left: 26px;
+    height: 35px;
+    line-height: 43px;
+    position: relative;
+    overflow: hidden;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: #ff8e15;
+}
+.b-cenner ul li:first-child {
+  color: black;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.b-cenner ul li i {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f36f20;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  left: 25;
+  top: 13px;
+  font-style: normal;
+  line-height: 21px;
+}
+.b-mend {
+  height: 108px;
+  margin-bottom: 3px;
+}
+.b-mend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 52px 52px;
+  grid-gap: 3px;
+  height: 22%;
+  margin-bottom: 3px;
+  text-align: center;
+  line-height: 66px;
+}
+.b-foot {
+  height: 130px;
+  background-color: #fef1f0;
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+.b-foot h4 {
+  font-size: 14px;
+  line-height: 16px;
+  height: 32px;
+  color: #f47a33;
+  top: 20px;
+}
+.b-foot div {
+  width: 70%;
+  height: 80%;
+  margin-left: 30px;
+}
+.b-foot ul li {
+  font-size: 12px;
+  line-height: 6px;
+  padding: 3px 8px;
+  border-left: 1px solid #fcd6c6;
+  float: left;
+  margin-bottom: 12px;
+}
+.b-foot ul li a {
+  color: #f47a33;
+}
+.c{
+  float: left;
+    width: 77.85%;
+}
+.c-left-page {
+  float: left;
+  width: 300px;
+}
+.c-left-page ul li {
+  position: relative;
+  font-size: 13px;
+  line-height: 13px;
+  height: 120px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding-left: 106px;
+  color: #1d1e20;
+  overflow: hidden;
+}
+.c-left-page ul li img {
+  width: 91px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.c-left-page ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+.c-left-page ul li a p {
+  margin-top: 9px;
+}
+.c-left-page ul li p.author {
+  color: rgb(163, 163, 163);
+  margin: 12px 0px 30px;
+}
+.c-left-page ul li p.desc {
+  color: rgb(163, 163, 163);
+  line-height: 20px;
+  height: 40px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.mend-right {
+  float: right;
+  width: 480px;
+}
+.mend-right li {
+  float: left;
+  width: 240px;
+  height: 40px;
+  font-size: 15px;
+  line-height: 7px;
+  margin-top: 8px;
+  font-size: 18px;
+}
+.mend-right span {
+  color: #a0a1a1;
+}
 
 .covers {
   height: 68px;
   float: right;
   position: relative;
-  top: 33px;
 }
 .covers1 {
   width: 52px;
