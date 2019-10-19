@@ -89,7 +89,7 @@
           <ul>
             <li>
               <a href>
-                <img src="../../public/img/1177437861968.jpg" alt />
+                <img src="http://img-tailor.11222.cn/bcv/big/1102437905338.jpg" alt />
                 <p>绝色丹神</p>
               </a>
               <p class="author">
@@ -99,7 +99,7 @@
             </li>
             <li>
               <a href>
-                <img src="../../public/img/1177437861968.jpg" alt />
+                <img src="http://img-tailor.11222.cn/bcv/big/1177437861968.jpg" alt />
                 <p>星武战甲</p>
               </a>
               <p class="author">
@@ -1273,6 +1273,7 @@ a:hover {
     padding-left: 106px;
     color: #1d1e20;
     overflow: hidden;
+    margin-right: 6px;
 }
 .booklist div img {
       width: 91px;

@@ -8,45 +8,45 @@
    <div class="b">
      <div class="b-head">
           <a href>
-            <h3>都市</h3>
+            <h3>现言</h3>
             <div class="covers">
-              <img src="../../public/img/s-1.jpg" alt class="covers1" />
-              <img src="../../public/img/s-2.jpg" alt class="covers2" />
-              <img src="../../public/img/s-3.jpg" alt class="covers3" />
+              <img src="http://img-tailor.11222.cn/bcv/big/1106177695571.jpg" alt class="covers1" />
+              <img src="http://img-tailor.11222.cn/bcv/big/201802061348363967.jpg" alt class="covers2" />
+              <img src="http://img-tailor.11222.cn/bcv/big/201707250249595941.jpg" alt class="covers3" />
             </div>
           </a>
         </div>
         <div class="b-cenner">
           <ul>
             <li>
-              <a href>玄幻</a>
+              <a href>古言</a>
             </li>
             <li>
               <i>1</i>
-              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不朽神帝</a>
+              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大秦小吏</a>
             </li>
             <li>
               <i>2</i>
-              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;创世丹帝</a>
+              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名门娇宠</a>
             </li>
             <li>
               <i>3</i>
-              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;太古剑圣</a>
+              <a href>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;兰寻馆探案疑录</a>
             </li>
           </ul>
         </div>
         <div class="b-mend">
           <div style="background-color: #f0fbed">
-            <a href>时空穿梭</a>
+            <a href>种田</a>
           </div>
           <div style="background-color: #fbedfe">
-            <a href>仙侠</a>
+            <a href>宅斗</a>
           </div>
           <div style="background-color: #edefff">
-            <a href>科幻</a>
+            <a href>总裁</a>
           </div>
           <div style="background-color: #eaf9f9">
-            <a href>悬疑</a>
+            <a href>纯爱</a>
           </div>
         </div>
         <div class="b-foot">
@@ -54,31 +54,31 @@
             <h4>热门标签</h4>
             <ul>
               <li>
-                <a href>热血</a>
+                <a href>宫斗</a>
               </li>
               <li>
-                <a href>扮猪吃虎</a>
+                <a href>女强</a>
               </li>
               <li>
-                <a href>重生</a>
+                <a href>青春</a>
               </li>
               <li>
-                <a href>神医</a>
+                <a href>女主仙侠</a>
               </li>
               <li>
-                <a href>历史</a>
+                <a href>悬疑</a>
               </li>
               <li>
-                <a href>强者回归</a>
+                <a href>婚恋</a>
               </li>
               <li>
-                <a href>校花</a>
+                <a href>甜宠</a>
               </li>
               <li>
-                <a href>异能</a>
+                <a href>民国</a>
               </li>
               <li>
-                <a href>恐怖灵异</a>
+                <a href>架空</a>
               </li>
             </ul>
           </div>
@@ -89,97 +89,97 @@
           <ul>
             <li>
               <a href>
-                <img src="../../public/img/1177437861968.jpg" alt />
-                <p>绝色丹神</p>
+                <img src="http://img-tailor.11222.cn/bcv/big/201810221259076308.jpg" alt />
+                <p>不能爱她的定制人</p>
               </a>
               <p class="author">
-                <a href>一颗葡萄树</a>
+                <a href>淡水不淡</a>
               </p>
-              <p class="desc">丹帝降生，借体而存，重拾武道，傲视寰宇。</p>
+              <p class="desc">2038年，婴猴正在制造定制人应甄臣，他是根据2018年常依梦的喜好专门定制的“男朋友”</p>
             </li>
             <li>
               <a href>
-                <img src="../../public/img/1177437861968.jpg" alt />
-                <p>星武战甲</p>
+                <img src="http://img-tailor.11222.cn/bcv/big/1146557794712.jpg" alt />
+                <p>我不能恋爱的女朋友</p>
               </a>
               <p class="author">
-                <a href>十九周年</a>
+                <a href>喂小饱</a>
               </p>
-              <p class="desc">机甲横空，惊姿卓绝。星魂觉醒，冠绝群英。星际时代，一个身负神秘魂体的少年，演绎这片星空下的传奇。</p>
+              <p class="desc">十年前在商场试衣间，阴差阳错之下，丁小柔被一前来捉奸的孕妇“诅咒”——她一辈子都得不到幸福</p>
             </li>
           </ul>
         </div>
         <ul class="mend-right">
           <li>
             <a href>
-              <span>[都市生活]</span>
-              火星情报局
+              <span>[古典架空]</span>
+              农家小医女：处处田园香
             </a>
           </li>
           <li>
             <a href>
-              <span>[都市生活]</span>
-              都市之妖尊归来
+              <span>[古代言情]</span>
+              靠田吃田：神医农女小地主
             </a>
           </li>
           <li>
             <a href>
-              <span>[都市异能]</span>
-              超级赘婿系统
+              <span>[古代言情]</span>
+              太后娘娘，王爷又来了
             </a>
           </li>
           <li>
             <a href>
-              <span>[都市异能]</span>
-              都市之大罗天帝
+              <span>[幻想言情]</span>
+              长生店
             </a>
           </li>
           <li>
             <a href>
-              <span>[都市生活]</span>
-              都市最强医仙
+              <span>[现代言情]</span>
+              妆模作样
             </a>
           </li>
           <li>
             <a href>
-              <span>[都市异能]</span>
-              桃运狂医
+              <span>[宫斗宅斗]</span>
+              锦门娇
             </a>
           </li>
           <li>
             <a href>
-              <span>[东方玄幻]</span>
-              巫皇
+              <span>[古典架空]</span>
+              邪王枭宠：掌家嫡女来当官
             </a>
           </li>
           <li>
             <a href>
-              <span>[都市异能]</span>
-              修仙归来在都市
+              <span>[仙侣奇缘]</span>
+              是谁！动了我的大斧头
             </a>
           </li>
           <li>
             <a href>
-              <span>[都市生活]</span>
-              咸鱼躺赢攻略
+              <span>[古代言情]</span>
+              大宋刑部侦缉档案2
             </a>
           </li>
           <li>
             <a href>
-              <span>[都市生活]</span>
-              天庭朋友圈
+              <span>[古代言情]</span>
+              大宋刑部侦缉档案2
             </a>
           </li>
           <li>
             <a href>
-              <span>[东方玄幻]</span>
-              武破九荒
+              <span>[宫斗宅斗]</span>
+              庶女穿越手札
             </a>
           </li>
           <li>
             <a href>
-              <span>[恐怖惊悚]</span>
-              恐怖屋之食中忌
+              <span>[都市婚姻]</span>
+              爸爸不是超人
             </a>
           </li>
         </ul>
@@ -190,7 +190,7 @@
 
 <div class="d">
         <a href>
-          <img src="../../public/img/2019101516432492.jpg" alt />
+          <img src="http://img-tailor.11222.cn/pm/book/operate/2019061110463298.jpg" alt />
         </a>
       </div>
     <div class="lefteare">
@@ -200,101 +200,101 @@
       <div class="booklist">
         <div>
           <a href>
-            <img src="../../public/img/1-1.jpg" alt />
-            <p>天降大富豪</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1115977958989.jpg" alt />
+            <p>医门弃女：带个萌宝逆袭</p>
           </a>
           <p class="author">
-            <a href>乐天</a>
+            <a href>苏幺幺</a>
           </p>
-          <p class="desc">被女神拒绝，被富二代侮辱，吴天以为自己这辈子都将抬不起头，但当一个美女御姐说是自己的秘书开始，一切都不一样了……</p>
+          <p class="desc">许夭夭本是现代的医生，一朝穿越变成了古代的少妇，膝下还带着一个拖油瓶……</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/1-2.jpg" alt />
-            <p>极品凡仙</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1128687927958.jpg" alt />
+            <p>肖先生，我想上你家户口本</p>
           </a>
           <p class="author">
             <a href>阿当先生</a>
           </p>
-          <p class="desc">收个快递不小心成了试验体，装个逼不小心送个校花未婚妻</p>
+          <p class="desc">故事的最初，罗洛西觉得肖牧就是个非常不服从管教的下属。下属帮她排忧解难</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/1-3.jpg" alt />
-            <p>异能教官</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1103427943934.jpg" alt />
+            <p>傲娇系统：农家悍女好种田</p>
           </a>
           <p class="author">
-            <a href>桃花老妖</a>
+            <a href>风轻竹</a>
           </p>
-          <p class="desc">世界顶级金牌教官身带神奇异能重归都市，本想只过大隐于市的平民生活</p>
+          <p class="desc">一朝醒来，宋晚晴穿越成了农家里一个好吃懒做、声名狼藉的极品小村姑。偏宠她的奶奶，憨厚老实的爹爹，懒惰成性的娘亲</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/1-4.jpg" alt />
-            <p>女总裁的最强兵王</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1124637910307.jpg" alt />
+            <p>庶色医香</p>
           </a>
           <p class="author">
-            <a href>江湖菜鸟</a>
+            <a href>轻歌</a>
           </p>
-          <p class="desc">【火爆新书、强烈推荐】有朝一日虎归山，我将血染半边天。</p>
+          <p class="desc">当霸道专权少将军，撞上调皮玲珑小医女，将会擦出怎样的火花？伪善嫡姐，恶毒嫡母，心机庶妹，排好队，挨个教训！</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/1-5.jpg" alt />
-            <p>图穷匕见</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1172027957841.jpg" alt />
+            <p>药香空间：农门小医女</p>
           </a>
           <p class="author">
-            <a href>屋顶</a>
+            <a href>何相似</a>
           </p>
-          <p class="desc">一把遗落在圣光大陆的匕首，在这个元素世界的画卷展开到尽头时，看它是否能够改变当年的命运。</p>
+          <p class="desc">医药世家长大的天才少女穿越到了农家，遭遇无良亲戚，被迫嫁给克死三任未婚妻的病秧子</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/1-6.jpg" alt />
-            <p>圣界苍穹</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1190117952948.jpg" alt />
+            <p>农门春色：山妻太撩人</p>
           </a>
           <p class="author">
-            <a href>木目</a>
+            <a href>优婆璎珞</a>
           </p>
-          <p class="desc">何谓道？一阴一阳谓之道。太极，万物之始</p>
+          <p class="desc"> 意外觉醒了前世记忆，林凤仙知道，她不是从前那个任人揉捏的傻姑娘了。爱搞事的婆婆，焉坏的侄儿，还有极品亲戚，统统滚粗，别耽搁</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/1-7.jpg" alt />
-            <p>武道天下</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1137257940891.jpg" alt />
+            <p>顾先生总是假正经</p>
           </a>
           <p class="author">
-            <a href>忆名风尘</a>
+            <a href>笑笑妹</a>
           </p>
-          <p class="desc">双脚踏平十八府，一剑寒光荡九天。武道世界，强者为尊，</p>
+          <p class="desc">顾寒川一直把那个走路都软软的丫头当成可有可无的小猫，他把整颗心都给了自己的白月光，他一直以为，安七夏只是白月光的影子</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/1-8.jpg" alt />
-            <p>烽火山河</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1183067956785.jpg" alt />
+            <p>科举逆袭：最强女首辅</p>
           </a>
           <p class="author">
-            <a href>琅琊苏二</a>
+            <a href>宝妆成</a>
           </p>
-          <p class="desc">黑山恶水杀出来金人以及星星之火的草原铁蹄，如霹雳雷霆碾过了血色山河，风雨飘摇，繁盛的赵国哀嚎在金人的铁蹄之下，到底谁是罪人谁是英雄？</p>
+          <p class="desc">开局死了爹，一个柔弱娘，三个美貌姐姐，而她是程家鼎立门户的独子……程卿低头看自己微微发育的胸，不知是哪里出了问题</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/1-9.jpg" alt />
-            <p>重生之都市仙王</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1145787895169.jpg" alt />
+            <p>权臣是我前男友</p>
           </a>
           <p class="author">
-            <a href>虎眸大大</a>
+            <a href>三两椒</a>
           </p>
-          <p class="desc">【阿里原创精品】 一代仙王重生少年时代！</p>
+          <p class="desc">有好事者提问秦见微：“郡主，您觉得池家三郎如何！</p>
         </div>
       </div>
     </div>
@@ -330,45 +330,43 @@
       <div class="newbook-left">
         <div class="newbook-left-top">
           <a href>
-            <p class="ap1">铠甲少年</p>
+            <p class="ap1">青春期妖怪</p>
           </a>
           <div class="side">
             <a href>
-              <img src="../../public/img/side1.jpg" alt />
+              <img src="http://img-tailor.11222.cn/bcv/big/1169557964189.jpg" alt />
             </a>
             <p class="author">
-              <a href>罗霸道</a>
+              <a href>飘灯</a>
             </p>
-            <p>★精华简介★ 高三少年张卓，在人生最倒霉的时刻获得了一幅宇宙</p>
+            <p>摇滚乐队主唱，阴郁冷酷的十六岁少年，与世界格格不入，他是妖怪。互联网公司的大佬，人工智能专业，海归精</p>
           </div>
         </div>
         <ul class="listrec">
           <li>
             <a href>
-              <p class="_blank">妙手药王</p>
+              <p class="_blank">老宅似花开</p>
             </a>
             <p class="auth">
-              <a href>大肚鱼</a>
+              <a href>蘼芜君</a>
             </p>
             <p class="desc">
-              来历不明的神秘少年叶小天突然出现在大都市，创办倾城集团一炮而红，举世震惊，
-              他那出神入化的医术不仅引得无数重症患者慕名前来求医，还能让各种奇花异草、珍贵药材疯狂生长，百年山参？
-              一月养成，千年灵芝？给我三个月时间，救美女，医富豪，赚大钱，拳打地痞，针剌流氓，在红颜知己的帮助下，
-              一路高歌，上演了属于他叶医生的时代。
+              陈一芳年过天命，一人担当起照顾生病爸爸的重任，某天爸爸却说要将战友馈赠的老宅留给自己。
+              那一刻，她的兄弟姐妹们炸锅了，于是……
             </p>
           </li>
           <li>
             <a href>
-              <p class="_blank">九卷风云录</p>
+              <p class="_blank">势不两立</p>
             </a>
             <p class="auth">
-              <a href>辛辛木</a>
+              <a href>总攻大人</a>
             </p>
             <p class="desc">
-              云洲的皇帝死去的那一年，天下就乱了，四海虎视眈眈，三邦蠢蠢欲动，
-              这时候从西海来了一个传奇，拯救了即将分崩离析的云洲，在人们都以为这个传奇将成为新的云洲之主时，
-              这个人消失了。十几年过去了，许多事情被遗忘，包括那个死去的皇帝，
-              包括那个传奇，就像沽噜河的河水滚滚而去，故事就从这个沽噜河岸边的一个少年讲起。
+              文乔和宫徴羽离婚了，理由是她的调香师丈夫认为她这个妻子身上再也没有他喜欢的那个味道了。
+              三年前文乔嫁给宫徴羽时，人人都道她是上辈子拯救了银河系才得到这般好姻缘，但只有她自己知道，
+              她为爱情放弃事业，放弃自我，以宫徴羽为中心生活了三年，这三年婚姻生活带给她的，除了柴米油盐便是伤痕。
+              离婚是好事，她和他离婚了
             </p>
           </li>
         </ul>
@@ -378,101 +376,108 @@
         <div class="booklist">
           <div>
             <a href>
-              <img src="../../public/img/2-1.jpg" alt />
-              <p>网游之先人一步</p>
+              <img src="http://img-tailor.11222.cn/bcv/big/1129687869633.jpg" alt />
+              <p>穿越九零：福妻好运来</p>
             </a>
             <p class="author">
-              <a href>乾为天</a>
+              <a href>四月时光</a>
             </p>
-            <p class="desc">一本预知未来的电子杂志，让杨飞影在《乱世OL》中如鱼得水。金钱、实力的提升，使得杨飞影拥有更加广阔的视野，</p>
+            <p class="desc">【小甜文】天生自带读心术的简彤穿越了，一穿越就得到老天赐予的穿越大礼包一份。</p>
           </div>
 
           <div>
             <a href>
-              <img src="../../public/img/1-2.jpg" alt />
-              <p>丹武天帝</p>
+              <img src="http://img-tailor.11222.cn/bcv/big/201705101507045038.jpg" alt />
+              <p>阴阳女判官</p>
             </a>
             <p class="author">
-              <a href>御命丹心</a>
+              <a href>旭沐</a>
             </p>
-            <p class="desc">修九阳之力，造不灭之体。上一世牧龙，这一世，我要牧这天下所有！</p>
+            <p class="desc">一只功德笔，一本阴阳簿。五殿阎罗座下第一阴阳女判官，本是冷清寡淡，铁面无私，却在遇到凡间小巡捕后，沾染上人间烟火气。命定的缘分，天赐的良机，判官大人，还不束手就擒。</p>
           </div>
 
           <div>
             <a href>
-              <img src="../../public/img/2-3.jpg" alt />
-              <p>位面药材商</p>
+              <img src="http://img-tailor.11222.cn/bcv/big/201707250249595941.jpg" alt />
+              <p>农家娘子山里汉</p>
             </a>
             <p class="author">
-              <a href>旭日朝阳</a>
+              <a href>诗涵</a>
             </p>
-            <p class="desc">回老家原溪村生活的王柯林，意外获得“位面药材铺”，可以借此出售采集到的药材，获得</p>
+            <p class="desc">郊区登山意外被雷劈到，一睁眼，竟然穿越到古代的农户家，她仰天泪奔!望着家徒四壁的房子，她咬咬牙，撸起袖管儿，采采药、种种田、斗极品、虐桃花，再加上她的一手</p>
           </div>
 
           <div>
             <a href>
-              <img src="../../public/img/2-4.jpg" alt />
-              <p>逆天帝尊</p>
+              <img src="http://img-tailor.11222.cn/bcv/big/1151467842171.jpg" alt />
+              <p>动物不及师哥凶猛</p>
             </a>
             <p class="author">
-              <a href>小相公</a>
+              <a href>贺五窝</a>
             </p>
-            <p class="desc">欧阳言从仙界重生归来，发现自己依附在一个废材身上，凭着前世的经验和记忆重修道法，逆天而上强势</p>
+            <p class="desc">生科院流传着一句话，崔留身边有雌性没异性！体育学院也有个传说，涂二萌立志不当体育生！</p>
           </div>
 
           <div>
             <a href>
-              <img src="../../public/img/2-5.jpg" alt />
-              <p>大唐医圣</p>
+              <img src="http://img-tailor.11222.cn/bcv/big/1160267439978.jpg" alt />
+              <p>婚姻告急</p>
             </a>
             <p class="author">
-              <a href>浮生门</a>
+              <a href>婚姻告急</a>
             </p>
-            <p class="desc">现代医生穿越回古代，妙手回春，华佗在世，不算什么本事？要会断案领兵，要会开矿</p>
+            <p class="desc">白倩一直觉得自己很幸运，可是一个意外让她的人生轨迹发生了惊天动地的变化。
+绝症，就像是悬在她头上的一把利刃。</p>
           </div>
 
           <div>
             <a href>
-              <img src="../../public/img/2-6.jpg" alt />
-              <p>奇门医圣</p>
+              <img src="http://img-tailor.11222.cn/bcv/big/1118707956106.jpg" alt />
+              <p>安知是经年</p>
             </a>
             <p class="author">
-              <a href>青岩</a>
+              <a href>百晓娜</a>
             </p>
-            <p class="desc">山村学徒遇难成祥，凭借手中的一根金针勇闯都市，遇强则强、遇弱则弱</p>
+            <p class="desc">2008年夏，安经雯背着背包，提着行李直奔火车站，在红绿灯路口，差点撞上蒋经年的车。此时此刻的点头摆手之间，一场关于“缘”的时间轴启动了</p>
           </div>
 
           <div>
             <a href>
-              <img src="../../public/img/1-7.jpg" alt />
-              <p>逆天伐尊</p>
+              <img src="http://img-tailor.11222.cn/bcv/big/1106177695571.jpg" alt />
+              <p>你是我最美的防线</p>
             </a>
             <p class="author">
-              <a href>润之泽</a>
+              <a href>欢颜 513</a>
             </p>
-            <p class="desc">（广西作协理事、广西网络文学委员、河池市网络文学副主席兼秘书长——润之泽最新玄幻小说）</p>
+            <p class="desc">曾是国际猎手、顶级佣兵，摆脱黑暗世界的她，成为世界安保之神，却骤然被打下
+              神坛，变为被追杀的“内奸”。逃亡中为他所救，在他危急之时做了他的“贴身保镖”。阴谋、绑架、猎杀……她以生命为注、以鲜血为价，誓死守护。不为他魅惑众生的容颜、不为他光茫万丈的风华，只为她重伤时他曾予她最妥帖的怀抱、只
+              为她垂危时他曾予她最温柔的守护。当她在他的爱中褪去冷酷，当他在她的爱中变得强大，他们携手，成为彼此最美的防线。</p>
           </div>
 
           <div>
             <a href>
-              <img src="../../public/img/2-8.jpg" alt />
-              <p>创世天尊</p>
+              <img src="http://img-tailor.11222.cn/bcv/big/201802061348363967.jpg" alt />
+              <p>隔世追缉</p>
             </a>
             <p class="author">
-              <a href>醉世</a>
+              <a href>海棠</a>
             </p>
-            <p class="desc">黑山恶水杀出来金人以及星星之火的草原铁蹄，如霹雳雷霆碾过了血色山河</p>
+            <p class="desc">连环杀人案的凶手时隔一年在一次出手，却对脚趾有着异样的独钟。
+忽然消失的口味虾店员，和错过的纸条最终指向哪里？
+一个神秘的电话，跨世纪的两个人组成了最佳搭档，九曲的案件，最终慢慢浮出水面。
+这个灵异的电话，究竟来自哪里？</p>
           </div>
 
           <div>
             <a href>
-              <img src="../../public/img/2-9.jpg" alt />
-              <p>绝品神医</p>
+              <img src="http://img-tailor.11222.cn/bcv/big/1166467907186.jpg" alt />
+              <p>重生七零末：逆袭小辣媳</p>
             </a>
             <p class="author">
               <a href>最强咸鱼</a>
             </p>
-            <p class="desc">小神医苏成被师父遣送下山，要他来都市中弘扬医术并找寻多年不见的小师妹</p>
+            <p class="desc">被继母抢夺家产，扫地出门的苏云叶，用了十一年时间，熬尽心血，斗败继母，夺回自家产业，成长为叱咤商场的女总裁。好日子终于到来，她的身体却不堪重负……再度醒来的苏云叶，发觉自己重生到70年末，另一个‘苏云叶‘身上。这个‘苏云叶‘性格懦弱，任人欺凌，遭所谓‘亲人’联手陷害。手段强硬、
+              精明干练的苏总，将所有极品扫成渣，带着老妈和小妹，重拾老本行，再度逆袭，走上人生巅峰……</p>
           </div>
         </div>
       </div>
@@ -490,19 +495,20 @@
       <div class="booklist">
         <div>
           <a href>
-            <img src="../../public/img/3-1.jpg" alt />
-            <p>太古真龙诀</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1162197960041.jpg" alt />
+            <p>老宅似花开</p>
           </a>
           <p class="author">
             <a href>至尊小鱼</a>
           </p>
-          <p class="desc">惨遭上苍抛弃的少年，肉身之中有真龙蛰伏！当真龙苏醒之日，便是少年逆天改命之时</p>
+          <p class="desc">陈一芳年过天命，一人担当起照顾生病爸爸的重任，某天爸爸却说要将战友馈赠的老宅留给自己。
+那一刻，她的兄弟姐妹们炸锅了，于是……</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/3-2.jpg" alt />
-            <p>幽冥大帝</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1182567944362.jpg" alt />
+            <p>高门密爱：二爷独宠小娇妻</p>
           </a>
           <p class="author">
             <a href>帝候</a>
@@ -512,68 +518,69 @@
 
         <div>
           <a href>
-            <img src="../../public/img/3-3.jpg" alt />
-            <p>史上第一赘婿</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1191397937135.jpg" alt />
+            <p>家有饿郎：囤粮种田好悠闲</p>
           </a>
           <p class="author">
             <a href>龚某人</a>
           </p>
-          <p class="desc">纪子行原本在二十一世纪活得“好好”的，家庭困难，早年</p>
+          <p class="desc">郎君金榜题名，糟糠妻被骗下堂。天灾人祸频频，下堂妇死得凄凉。 重生归来，她不仅要踹渣夫夺家产，还要在天灾荒年，广积粮高筑墙，过上悠闲好日子！</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/3-4.jpg" alt />
-            <p>绝命狂兵</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1109257957886.jpg" alt />
+            <p>他又甜又撩</p>
           </a>
           <p class="author">
-            <a href>在难在北</a>
+            <a href>宝宝鱼</a>
           </p>
-          <p class="desc">兵王归来！阔别五年回到故乡，张沉又一次站在了曾经的仇人面前，这一次，他</p>
+          <p class="desc">赵思木整天嚷嚷着要找个小奶狗脱单！结果某日老天听是听到了，但大概也是听岔了……”</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/3-5.jpg" alt />
-            <p>极品万事屋</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1140077956958.jpg" alt />
+            <p>虎妻</p>
           </a>
           <p class="author">
-            <a href>李黑云</a>
+            <a href>藕花</a>
           </p>
-          <p class="desc">极品万事屋，你想要的都有。</p>
+          <p class="desc">大齐第一战神，尉迟圭（念玉池龟）被赐婚京城第一美人，升平郡主许惜颜。被嫌弃长得丑，出身差，吹了。。</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/3-6.jpg" alt />
-            <p>超级神豪科技系统</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1162817944526.jpg" alt />
+            <p>盛唐十二怪</p>
           </a>
           <p class="author">
             <a href>流失大能</a>
           </p>
-          <p class="desc">屌丝李林飞因尾随女神，自行车撞上路边电杆，神豪系统，于是屌丝逆袭</p>
+          <p class="desc">洛玖瑶拿着一纸婚书上门“讨债”，却误打误撞破了疑案，本想拿了银子就跑路，奈何那金吾卫的陆捕头太过诱人！</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/3-7.jpg" alt />
-            <p>诸天战帝</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1158607947908.jpg" alt />
+            <p>陆少，夫人又要拍吻戏了！</p>
           </a>
           <p class="author">
             <a href>花颜</a>
           </p>
-          <p class="desc">一尊肉身，震天撼地，一柄战剑，破碎虚空！重生万年之后</p>
+          <p class="desc">陆亦宸，A市人人趋之若鹜的尊贵男人，外界传言他高冷禁欲，神圣不可侵犯。时夏捂着腰：“......
+</p>
         </div>
 
         <div>
           <a href>
-            <img src="../../public/img/3-8.jpg" alt />
-            <p>最强技能系统</p>
+            <img src="http://img-tailor.11222.cn/bcv/big/1136777954623.jpg" alt />
+            <p>青春不误</p>
           </a>
           <p class="author">
-            <a href>都市大魔头</a>
+            <a href>叶畔蜻蜓</a>
           </p>
-          <p class="desc">意外获得最强技能系统！醒来之后的叶默，注定走上一条不凡之路！看我拥有医术，武功，忍</p>
+          <p class="desc">这是一部和青春纠缠不清的小说，那时我们拥有最纯粹的情感，也敢于跟随自己的内心。安静是一个外表清秀甚为内向的女孩儿，高中第一眼见到他时</p>
         </div>
       </div>
     </div>
@@ -1273,6 +1280,7 @@ a:hover {
     padding-left: 106px;
     color: #1d1e20;
     overflow: hidden;
+    margin-right: 6px;
 }
 .booklist div img {
       width: 91px;
