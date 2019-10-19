@@ -129,51 +129,54 @@
       </el-form>
     </el-dialog>
 
-    <!-- 注册 -->
-    <el-dialog title="账号登录" :visible.sync="centeDialogVisible" width="30%" center top="0">
-      <el-form :model="registerForm" :rules="registerFormRules" ref="registerFormRef">
-        <!-- 账号/用户名 -->
-        <el-form-item prop="phone">
-          <el-input type="text" v-model="registerForm.phone" placeholder="请输入手机号"></el-input>
-        </el-form-item>
+<!-- 注册 -->
+ <el-dialog title="注册账号" :visible.sync="centeDialogVisible" width="30%" center top="0">
+    <el-form :model="registerForm" :rules="registerFormRules" ref="registerFormRef">
+      <!-- 账号/用户名 -->
+      <el-form-item prop="phone">
+        <el-input type="text" v-model="registerForm.phone" placeholder="请输入手机号"></el-input>
+      </el-form-item>
 
-        <!-- 密码 -->
-        <el-form-item prop="pass">
-          <el-input
-            type="password"
-            placeholder="请输入密码"
-            v-model="registerForm.pass"
-            autocomplete="off"
-          ></el-input>
-        </el-form-item>
+      <!-- 密码 -->
+      <el-form-item prop="pass">
+        <el-input
+          type="password"
+          placeholder="请输入密码"
+          v-model="registerForm.pass"
+          autocomplete="off"
+        ></el-input>
+      </el-form-item>
 
-        <el-form-item prop="password">
-          <el-input
-            type="password"
-            placeholder="请再次输入密码"
-            v-model="registerForm.password"
-            autocomplete="off"
-          ></el-input>
-        </el-form-item>
+      <el-form-item prop="password">
+        <el-input
+          type="password"
+          placeholder="请再次输入密码"
+          v-model="registerForm.password"
+          autocomplete="off"
+        ></el-input>
+        <SliderVerificationCode v-model="verify" @change="handleChange" />
+      </el-form-item>
+      
 
-        <!-- 协议 -->
-        <p class="inner">
-          <input type="checkbox" v-model="check" class="select" />
-          登录账号即代表您已阅读过、了解并接受
-          <a href>《阿里文学用户服务协议》</a>
-          <a href>《隐私保护政策》</a>
-        </p>
-        <div
-          class="submit"
-          @click="register()"
-          :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
-        >登录</div>
-        <p class="operates">
-          <span class="js-toReg">注册账号</span>
-          <span class="js-forget">忘记密码</span>
-        </p>
-      </el-form>
-    </el-dialog>
+      <!-- 协议 -->
+      <p class="inner">
+        <input type="checkbox" v-model="check" class="select" />
+        登录账号即代表您已阅读过、了解并接受
+        <a href>《阿里文学用户服务协议》</a>
+        <a href>《隐私保护政策》</a>
+      </p>
+      <div
+        class="submit"
+        @click="register()"
+        :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
+      >注册</div>
+      <p class="operates">
+        <span class="js-toReg">注册账号</span>
+        <span class="js-forget">忘记密码</span>
+      </p>
+    </el-form>
+  </el-dialog>
+
   </div>
 </template>
 
@@ -190,15 +193,7 @@ export default {
         return callback(new Error("请输入正确的手机号"));
       }
     };
-    // 验证手机格式
-    var checkPhone = (rule, value, callback) => {
-      const reg = /^1[3|4|5|7|8][0-9]\d{8}$/;
-      if (reg.test(value)) {
-        callback();
-      } else {
-        return callback(new Error("请输入正确的手机号"));
-      }
-    };
+ 
     // 确认密码
     var validatePass = (rule, value, callback) => {
       if (value === "") {
@@ -245,6 +240,7 @@ export default {
         pass: "",
         password: ""
       },
+      verify:'',
       check: false,
       // 显示dialog
       centeDialogVisible: false,
@@ -265,6 +261,8 @@ export default {
       this.searchList = res.data;
       this.$router.push("/search");
     },
+    // 登录功能
+
     login() {
       let form = qs.stringify(this.loginForm);
       if (this.check) {
@@ -275,32 +273,38 @@ export default {
           if (res.state !== 200) {
             return this.$message.error(res.error);
           }
-          return this.$message.success("登陆成功！");
+          this.$message.success("登陆成功！");
           this.centerDialogVisible = false;
         });
       }
     },
-    // 登录功能
-    register() {
+    // 注册
+     register() {
       if (this.check) {
         let form = qs.stringify(this.registerForm);
         this.$refs.registerFormRef.validate(async volid => {
           if (!volid) return;
           const { data: res } = await this.$http.post("/users", form);
-          console.log(res);
           if (res.state !== 200) {
             return this.$message.error(res.error);
           }
-          return this.$message.success("注册成功！");
-          this.centeDialogVisible = false;
+           this.$message.success("注册成功！");
+           this.centeDialogVisible=false;
         });
+      }
+    },
+    async handleChange(verify) {
+      if (verify) {
+        let form = qs.stringify(this.registerForm);
+        const { data: res } = await this.$http.post("/getPhoneVerifyCode",form);
+        console.log(res)
       }
     }
   }
 };
 </script>
 
-<style scoped>
+<style >
 element.style {
   margin-top: 0px !important;
 }

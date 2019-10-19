@@ -104,25 +104,7 @@ export default {
   methods: {
     // 手机验证功能
 
-    register() {
-      if (this.check) {
-        let form = qs.stringify(this.registerForm);
-        this.$refs.registerFormRef.validate(async volid => {
-          if (!volid) return;
-          const { data: res } = await this.$http.post("/users", form);
-          if (res.state !== 200) {
-            return this.$message.error(res.error);
-          }
-          return this.$message.success("注册成功！");
-        });
-      }
-    },
-    async handleChange(verify) {
-      if (verify) {
-        let form = qs.stringify(this.registerForm);
-        const { data: res } = await this.$http.post("/getPhoneVerifyCode");
-      }
-    }
+
   }
 };
 </script>
