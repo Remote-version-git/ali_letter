@@ -4,7 +4,7 @@
       <span class="tlle">女频推荐</span>
     </div>
   <div class="container">
-   <div class="a"><h1>111</h1></div>
+   <!-- <div class="a"><h1>111</h1></div> -->
    <div class="b">
      <div class="b-head">
           <a href>
@@ -107,6 +107,16 @@
               </p>
               <p class="desc">十年前在商场试衣间，阴差阳错之下，丁小柔被一前来捉奸的孕妇“诅咒”——她一辈子都得不到幸福</p>
             </li>
+            <li>
+              <a href>
+                <img src="http://img-tailor.11222.cn/bcv/big/1191397937135.jpg" alt />
+                <p>家有饿郎：囤粮种田好悠闲</p>
+              </a>
+              <p class="author">
+                <a href>六年年</a>
+              </p>
+              <p class="desc">郎君金榜题名，糟糠妻被骗下堂。天灾人祸频频，下堂妇死得凄凉。重生归来，她不仅要踹渣夫夺家产，还要在天灾荒年，广积粮高筑墙，过上悠闲好日子！</p>
+            </li>
           </ul>
         </div>
         <ul class="mend-right">
@@ -159,6 +169,54 @@
             </a>
           </li>
           <li>
+            <a href>
+              <span>[古代言情]</span>
+              大宋刑部侦缉档案2
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[古代言情]</span>
+              大宋刑部侦缉档案2
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[宫斗宅斗]</span>
+              庶女穿越手札
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市婚姻]</span>
+              爸爸不是超人
+            </a>
+          </li>
+             <li>
+            <a href>
+              <span>[古代言情]</span>
+              大宋刑部侦缉档案2
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[古代言情]</span>
+              大宋刑部侦缉档案2
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[宫斗宅斗]</span>
+              庶女穿越手札
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市婚姻]</span>
+              爸爸不是超人
+            </a>
+          </li>
+             <li>
             <a href>
               <span>[古代言情]</span>
               大宋刑部侦缉档案2
@@ -823,185 +881,185 @@ export default {
       array: [
         {
           id: 1,
-          title: "星际江湖",
+          title: "流星旅人",
           currentEnce: true,
-          auth: "张老师",
+          auth: "西南花",
           desc:
-            "浩瀚的星际大时代，一个贫民区长大、怀着机甲梦想的少年，当他进入梦想之中，迎接他的",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/113971102494.jpg"
+            "蒋思佳只想当一名小记者，追求理想，宣扬正义。然而她怎么也没有料到，“家破人亡”",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1123517656380.jpg"
         },
         {
           id: 2,
-          title: "万古神尊",
+          title: "脸盲嫡女的宅斗日常",
           currentEnce: false,
           desc:
-            "千秋岁月一场梦，万古洪荒一卷空。重生少年王者归来，一拳镇神魔，一剑灭星辰。顺我",
+            "林芝芝两世为人，容貌身份有变。唯一不变的是脸盲症加亲戚恐惧症。苍天啊，谁来告诉她",
           auth: "绯语",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1158587500203.jpg"
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1108697447355.jpg"
         },
         {
           id: 3,
-          title: "刑宋",
+          title: "云想衣裳",
           currentEnce: false,
           desc:
-            "现代法医卓然意外穿越到了宋仁宗年间，运用法医知识和技能侦破案件，",
+            "惊：小裁缝娘本想安静如鸡的做做汉服，却被大胡子男人盯上，三番五次对她……进行惨无，",
           auth: "沐轶",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1107687718892.jpg"
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1115247660875.jpg"
         },
         {
           id: 4,
-          title: "大明长歌",
+          title: "热靴小姐",
           currentEnce: false,
           desc:
-            "李彤、刘颖、张守义、刘继业、常浩然等南京国子监学子，每天赖带南京城内无所事事。本",
-          auth: "酒徒",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1152877445381.jpg"
+            "邹晗：你好像夹心硬糖。表面硌牙，内心柔软。程舒：这么说你想含一颗？",
+          auth: "立风",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1102747794721.jpg"
         },
         {
           id: 5,
-          title: "龙渊",
+          title: "隔壁住着龙",
           currentEnce: false,
           desc:
-            "世界上真的有龙吗？营川坠龙的龙骨最终被收藏何地？龙骨密码意欲何为？茫茫白山之中藏",
-          auth: "骠骑",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1133567141530.jpg"
+            "凌楠意外发现新公司的董事长韩商陆与两年前过世的未婚夫重越长得一模一样，同时韩商陆",
+          auth: "成骨为衣",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/201808091024125261.jpg"
         },
         {
           id: 6,
-          title: "浩荡",
+          title: "皇后她每天都想弑君",
           currentEnce: false,
           desc:
-            "1997年， 香港回归，中国互联网元年，何潮和周安涌从北京南下深圳，以物流和电子",
-          auth: "何常在",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1197987718377.jpg"
+            "一次刺杀醒来之后，君宸发现自己和皇后互换了身体。君宸去和沉柒月理论，却发现两",
+          auth: "然兮",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1130617794377.jpg"
         },
         {
           id: 7,
-          title: "长生密码",
+          title: "美玉良缘",
           currentEnce: false,
           desc:
-            "生尽为死，死尽为生，长生的秘密，注定便藏在黑暗的墓穴中。梧桐鬼洞现世，长生密码",
+            "沈玉今生所做的一切，全为秦良玉画地为牢，以爱囚之。秦良玉爱上了别的男子，沈玉替她",
           auth: "九福",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1157497655811.jpg"
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1156797465987.jpg"
         },
         {
           id: 8,
-          title: "星界守护",
+          title: "许爱国向北看",
           currentEnce: false,
           desc:
             "一次偶然的机会，江州大学软件工程学院的萧逸闲得到了星界辅助系统幺幺零，幺幺零默默",
           auth: "静夜寄思",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1158547709415.jpg"
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1141637440489.jpg"
         },
         {
           id: 9,
-          title: "非凡特工",
+          title: "考官，求pass",
           currentEnce: false,
           desc:
-            "作为一个彻底失忆的男人，李记开仅仅只是想找回最初的自己。皂滑弄人，他却阴差错",
+            "H市又在下大雨。但是在雅思口语考场内，刚结束面试，潇洒关掉录音笔的帅气考官笑得却",
           auth: "了了一生",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/201905270951501509.jpg"
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/201805141642268039.jpg"
         },
         {
           id: 10,
-          title: "老街中的痞子",
+          title: "泡芙先生",
           currentEnce: false,
           desc:
-            "★精华简介★ 夜。 斑驳。 老街。 萧索身影。 两把唐刀。 一个把江湖搅得乌烟瘴",
-          auth: "卸甲老卒",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/201712121333215738.jpg"
+            "一开始他只是单纯的想吃甜品，后来他爱上了生活中的这份甜蜜。没想到，最后，他爱上了",
+          auth: "艾特沃特",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1112127845926.jpg"
         }
       ],
       array1: [
         {
           id: 1,
-          title: "我的绝色总裁未婚妻",
+          title: "诱妻入怀：帝少心尖宠",
           currentEnce: true,
-          auth: "花幽山月",
+          auth: "诺小颖",
           desc:
-            " 【最火爆畅销书】★精华简介★本书又名《神级龙卫》神秘高手龙潜花都，与冰山美女总",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/201803141444064795.jpg"
+            " 那夜，他对她的感情越发浓厚，只想宠她上天。前男友嫌她出身低微，所以就分手另寻富家",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1135227736338.jpg"
         },
         {
           id: 2,
-          title: "重生之都市狂仙",
+          title: "总裁的秘密",
           currentEnce: false,
           desc:
-            "剑斩风雷遮日月，掌握乾坤捣幽冥。世间人有六十亿，唯我一人称骄狂。 仙界青帝重生于",
-          auth: "梦中笔丶",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1173867089483.jpg"
+            "大学毕业、相亲、裸婚，舒苏以为接下来的日子就是攒钱买房，怀孕生子，结果却发现那个",
+          auth: "苏幕丶",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/201804101519109645.jpg"
         },
         {
           id: 3,
-          title: "都市之兵王归来",
+          title: "重生八零：媳妇有点辣",
           currentEnce: false,
           desc:
-            "他是万里挑一的超级兵王，也是身怀绝技的顶尖高手。因为战友的牺牲，他心灰意冷，回归，",
-          auth: "登临",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/201609280952129078.jpg"
+            "PS：新书《科举逆袭：最强女首辅》已发布！//父母早逝，家境贫寒，姿色平平，夏晓，",
+          auth: "宝妆成",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1138907411714.jpg"
         },
         {
           id: 4,
-          title: "撩妹兵王在都市",
+          title: "福地甜园：拐个王爷好种田",
           currentEnce: false,
           desc:
-            "彪悍兵王周天回归都市，却不料魅力过人的他深陷万里花丛中，为保护那些美丽的花朵，他",
-          auth: "左妻右妾",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/201702161413505494.jpg"
+            "一朝穿越成为名满天下的顾氏女，却被预言活不过十六岁，顾云曦满头黑线。我的生活我做",
+          auth: "长白山上的雪",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1130867089610.jpg"
         },
         {
           id: 5,
-          title: "太古狂魔",
+          title: "农女致富记",
           currentEnce: false,
           desc:
-            "一名身缠七彩恶龙、肩扛古老石棺的白发青年，仰望高高在上的诸天至尊、万古道祖，淡淡",
-          auth: "汉隶",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1187006720460.jpg"
+            "这就是一个农女穿越、带娃、种田、买房、买车的致富记。从吃不饱到吃的饱再到地主的创",
+          auth: "秦喜儿",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1116406925386.jpg"
         },
         {
           id: 6,
-          title: "逆天神医",
+          title: "鬼医毒妃：嫁个绝色小相公",
           currentEnce: false,
           desc:
-            "★百万收藏，万人追读★真正的神医是什么？是会杀人的神医！杀一人，救百人，杀不杀？",
-          auth: "月亮不发光",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1152716900908.jpg"
+            "紫千歌，华夏顶尖医学天才，灵魂重生在圣天大陆。医师，毒师，炼丹师，炼器师，阵法师",
+          auth: "拓拔言倾",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/201812261738267031.jpg"
         },
         {
           id: 7,
-          title: "乡村小神农",
+          title: "99亿闪婚：豪门总裁夜夜忙",
           currentEnce: false,
           desc:
-            "小农民强势归来，通医术、修法术、玩转都市，邂逅各路美女，无往不利！且看他如何逆天",
-          auth: "南山侠",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1136887438273.jpg"
+            "她二十年一次脚下失足，撞了他的豪车，留下签名和号码，走的不带一片云彩。不仅如此，",
+          auth: "花木",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1119487363143.jpg"
         },
         {
           id: 8,
-          title: "绝品小神农",
+          title: "少帅：你老婆又要逃婚了",
           currentEnce: false,
           desc:
-            "【火爆追读】乡村少年唐亦凡偶获神奇技能，烹制美食、治病救人、鉴宝识物、催生动植物",
-          auth: "纯良有欲",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1108136952591.jpg"
+            "不就是想要好好的游个泳吗，怎么就穿到了民国，穿就穿呗，还成了京北少帅府的里的少夫",
+          auth: "林萧墨",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1149297865356.jpg"
         },
         {
           id: 9,
-          title: "透视小神农",
+          title: "春闺秘录：厂公太撩人",
           currentEnce: false,
           desc:
-            "★火爆畅销★乡野小子王木生，一朝偶获神秘龙珠，获得逆天的透视，鉴宝，医术，动植物",
-          auth: "布凡",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/201910052228413544.jpg"
+            "      生于簪缨之家，嫁与名望世族。      生前富贵尽享，死后荣显加身。",
+          auth: "平白兄",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1132447004793.jpg"
         },
         {
           id: 10,
-          title: "重生大富翁",
+          title: "农女珍珠的悠闲生活",
           currentEnce: false,
           desc:
-            "一梦初醒，重生到了最好的年代，用96块钱生活费摆地摊积累了第一桶金，他的房地产，",
-          auth: "南三石",
-          imgSrc: "http://img-tailor.11222.cn/bcv/big/1123617460830.jpg"
+            "四体不勤五谷不分，却成了农家女娃。群山延绵水丰山秀，可家贫屋陋。爹憨实娘哑巴弟体，",
+          auth: "千墨",
+          imgSrc: "http://img-tailor.11222.cn/bcv/big/1143247091650.jpg"
         }
       ]
     };
