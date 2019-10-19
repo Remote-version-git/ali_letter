@@ -23,8 +23,8 @@
                 </p>
                 <p class="ranklist-des">{{item.novel_desc}}</p>
                 <p class="ranklist-tag">
-                  <span>
-                    <a :href="'/book/'+item.id">{{item.novel_tags}}</a>
+                  <span  v-for="itembq in item.novel_tag" :key="itembq">
+                    <a>{{itembq}}</a>
                   </span>
                   <span>
                     <a href>全文</a>
@@ -203,6 +203,7 @@
 export default {
   data() {
     return {
+      // val : '1,2,3,4',
       activeName: "second",
       // 男频渲染
       MensClickList: [],
@@ -217,7 +218,8 @@ export default {
         pagenum: 1,
         pagesize: 5
       },
-      total: 0
+      total: 0,
+    
     };
   },
   methods: {
@@ -228,9 +230,6 @@ export default {
       );
       this.MensClickList = data.data;
       this.total = data.total;
-      console.log(data);
-      // console.log(this.total);
-      // console.log(this.MensClickList);
     },
     // 女
     async WomenClick() {
@@ -262,7 +261,7 @@ export default {
       );
       this.PopularityList = data.data;
       this.total = data.total;
-      
+
       // console.log(this.total);
       // console.log(this.WomenClickList);
     },
@@ -276,7 +275,7 @@ export default {
       this.queryInfo.pagenum = page;
       this.MensClick();
     },
-      //   女分页
+    //   女分页
     handleSizeChangenv(per_page) {
       this.queryInfo.pagesize = per_page;
       console.log(per_page);
@@ -294,24 +293,32 @@ export default {
     },
     handleCurrentChangewj(page) {
       this.queryInfo.pagenum = page;
-     this.EndClick();
+      this.EndClick();
     },
     // 人气
-      handleSizeChangerq(per_page) {
+    handleSizeChangerq(per_page) {
       this.queryInfo.pagesize = per_page;
       // console.log(per_page);
       this.PopularityClick();
     },
     handleCurrentChangerq(page) {
       this.queryInfo.pagenum = page;
-     this.PopularityClick();
-    },
+      this.PopularityClick();
+    }
+  },
+  // 标签
+  computed: {
+    ipaddrArray: function() {
+      return this.ipaddr.split(" ");
+      console.log(this.ipaddr);
+    }
   },
   created() {
     this.MensClick();
     this.WomenClick();
     this.EndClick();
     this.PopularityClick();
+    
   }
 };
 </script>
