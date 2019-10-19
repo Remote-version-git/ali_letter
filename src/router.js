@@ -47,9 +47,10 @@ let router = new Router({
           component: () => import("@/components/Boyschannel.vue")
         },
         {
-          path: '/author',
-          component: () => import("@/components/author.vue")
-
+          path: '/author/:id',
+          component: () => import("@/components/author.vue"),
+          // 开启路由传参
+          props: true
         },
         {
 
