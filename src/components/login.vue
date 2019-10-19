@@ -21,7 +21,7 @@
         :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
       >登录</div>
       <p class="operates">
-        <span class="js-toReg">注册账号</span>
+        <span class="js-toReg" >注册账号</span>
         <span class="js-forget">忘记密码</span>
       </p>
     </el-form>

@@ -26,8 +26,6 @@ import "./assets/css/baes.css";
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
-
-
 // fade/zoom 等
 import 'element-ui/lib/theme-chalk/base.css';
 // collapse 展开折叠
@@ -37,6 +35,6 @@ Vue.component(CollapseTransition.name, CollapseTransition)
 
 new Vue({
   router,
-  store,
+  store, 
   render: h => h(App)
 }).$mount("#app");

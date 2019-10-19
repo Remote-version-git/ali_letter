@@ -20,8 +20,10 @@
           <div class="editor_recommend_connect_left">
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
-                <el-carousel-item v-for="item in 3" :key="item">
-                  <img src="../assets/images/201712261741391310.jpg" alt />
+                <el-carousel-item v-for="item3 in topData" :key="item3.id">
+                  <a :href="'/book/'+item3.id">
+                    <img :src="item3.novel_url" alt />
+                  </a>
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -54,76 +56,20 @@
           <div class="editor_recommend_connect_middle">
             <div class="connect_middle_top">
               <ul>
-                <li>
-                  <a href>
-                    <span>[现代言情]</span>十家锅灶九不同
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    <span>[现代言情]</span>夜留余白
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    <span>[现代言情]</span>噬天至尊
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    <span>[现代言情]</span>虚灵人
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    <span>[现代言情]</span>末日堡垒
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    <span>[现代言情]</span>明谋善赖
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    <span>[现代言情]</span>农女巧儿的致富日常
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    <span>[现代言情]</span>最强狂暴兵王
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    <span>[现代言情]</span>我有五个女朋友
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    <span>[现代言情]</span>龙神归来
+                <li v-for="(item1,index) in connect_middle_top" :key="index">
+                  <a :href="'/book/'+item1.id">
+                    <span>[现代言情]</span>
+                    {{item1.novel_title}}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div class="connect_middle_bottom">
-              <div class="connect_middle_bottom_book">
-                <img src="../assets/images/1132437923371.jpg" alt />
-                <a href>大神求翻牌</a>
-                <a href>一见如故</a>
-              </div>
-
-              <div class="connect_middle_bottom_book">
-                <img src="../assets/images/1132437923371.jpg" alt />
-                <a href>大神求翻牌</a>
-                <a href>一见如故</a>
-              </div>
-
-              <div class="connect_middle_bottom_book">
-                <img src="../assets/images/1132437923371.jpg" alt />
-                <a href>大神求翻牌</a>
-                <a href>一见如故</a>
+              <div class="connect_middle_bottom_book" v-for="item in topData" :key="item.id + ''">
+                <img :src="item.novel_url" alt />
+                <a :href="'/book/'+item.id">{{ item.novel_title }}</a>
+                <a :href="'/author/'+item.id">{{ item.novel_author }}</a>
               </div>
             </div>
           </div>
@@ -132,54 +78,20 @@
             <p>主编强推</p>
 
             <ul class="connect_right_book">
-              <li>
-                <a href="/">
+              <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
+                <a :href="'/book/'+item.id">
                   <p>
-                    <i class="connect_right_book_chen">1</i>
-                    圣祖
+                    <i class="connect_right_book_chen">{{item.id}}</i>
+                    {{item.title}}
                   </p>
-                  <div class="connect_right_book_info">
-                    <img src="../assets/images/201903121846461623.jpg" alt />
-                    <a href>傲天无痕</a>
-                    <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="/">
-                  <p>
-                    <i class="connect_right_book_hui">1</i>
-                    圣祖
-                  </p>
-                  <div class="connect_right_book_info">
-                    <img src="../assets/images/201903121846461623.jpg" alt />
-                    <a href>傲天无痕</a>
-                    <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
+                  <div class="connect_right_book_info" ref="info" v-if="item.currentEnce">
+                    <img :src="item.imgSrc" alt />
+                    <a href>{{item.novel_author}}</a>
+                    <a href>{{item.describe}}</a>
                   </div>
                 </a>
               </li>
             </ul>
-
-            <!-- <el-menu
-            default-active="2"
-            class="el-menu-vertical-demo"
-            background-color="transparent"
-            text-color="#333">
-            <el-submenu index="1" class="connect_right_book">
-              <template slot="title">
-                <p>
-                  <i class="connect_right_book_chen">1</i>
-                  圣祖
-                </p>
-              </template>
-              <el-menu-item-group class="connect_right_book_info">
-                <img src="../assets/images/201903121846461623.jpg" alt />
-                <a href>傲天无痕</a>
-                <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
-              </el-menu-item-group>
-            </el-submenu>
-            </el-menu>-->
           </div>
         </div>
       </div>
@@ -201,8 +113,10 @@
           <div class="female_left">
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
-                <el-carousel-item v-for="item in 3" :key="item">
-                  <img src="../assets/images/201712261741391310.jpg" alt />
+                <el-carousel-item v-for="(item,index) in famelaData" :key="index">
+                  <a :href="'/book/'+item.id">
+                    <img :src="item.novel_url" alt />
+                  </a>
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -234,138 +148,48 @@
 
           <div class="female_connect_middle">
             <ul class="female_connect_middle-top">
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
+              <li v-for="item2 in famelaData1" :key="item2.id">
+                <a :href="'/book/'+item2.id" class="top_book">
+                  <img :src="item2.novel_url" alt />
+                  <p>{{item2.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>小染</a>
+                  <a :href="'/author/'+item2.id">{{item2.novel_author}}</a>
                 </p>
 
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
+                <p class="top_Introduction">{{item2.novel_desc}}}</p>
               </li>
             </ul>
 
             <ul class="female_connect_middle-bottom">
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
+              <li v-for="item3 in famelaData1" :key="item3.id">
+                <a :href="'/book/'+item3.id" class="top_book">
+                  <p>{{item3.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>小染</a>
+                  <a href>{{item3.novel_author}}</a>
                 </p>
 
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
+                <p class="top_Introduction">{{item3.novel_desc}}</p>
               </li>
             </ul>
           </div>
 
           <div class="female_connect_right">
             <p>女频人气</p>
-
             <ul class="connect_right_book">
-              <li>
-                <a href="/">
+              <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
+                <a :href="'/book/'+item.id">
                   <p>
-                    <i class="connect_right_book_chen">1</i>
-                    圣祖
+                    <i class="connect_right_book_chen">{{item.id}}</i>
+                    {{item.title}}
                   </p>
-                  <div class="connect_right_book_info">
-                    <img src="../assets/images/201903121846461623.jpg" alt />
-                    <a href>傲天无痕</a>
-                    <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="/">
-                  <p>
-                    <i class="connect_right_book_hui">1</i>
-                    圣祖
-                  </p>
-                  <div class="connect_right_book_info">
-                    <img src="../assets/images/201903121846461623.jpg" alt />
-                    <a href>傲天无痕</a>
-                    <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
+                  <div class="connect_right_book_info" ref="info" v-if="item.currentEnce">
+                    <img :src="item.imgSrc" alt />
+                    <a href>{{item.novel_author}}</a>
+                    <a href>{{item.describe}}</a>
                   </div>
                 </a>
               </li>
@@ -386,8 +210,10 @@
           <div class="editor_recommend_connect_left male_left">
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
-                <el-carousel-item v-for="item in 3" :key="item">
-                  <img src="../assets/images/201712261741391310.jpg" alt />
+                <el-carousel-item v-for="item in melaData" :key="item.id">
+                  <a :href="'/book/'+item.id">
+                    <img :src="item.novel_url" alt />
+                  </a>
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -419,138 +245,48 @@
 
           <div class="female_connect_middle">
             <ul class="female_connect_middle-top">
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
+              <li v-for="item1 in melaData1" :key="item1.id">
+                <a :href="'/book/'+item1.id" class="top_book">
+                  <img :src="item1.novel_url" alt />
+                  <p>{{item1.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>小染</a>
+                  <a :href="'/author/'+item1.id">{{item1.novel_author}}</a>
                 </p>
 
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
+                <p class="top_Introduction">{{item1.novel_desc}}</p>
               </li>
             </ul>
 
             <ul class="female_connect_middle-bottom">
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
+              <li v-for="item2 in melaData1" :key="item2.id">
+                <a :href="'/book/'+item2.id" class="top_book">
+                  <p>{{item2.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>小染</a>
+                  <a :href="'/author/'+item2.id">{{item2.novel_author}}</a>
                 </p>
 
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
+                <p class="top_Introduction">{{item2.novel_desc}}</p>
               </li>
             </ul>
           </div>
 
           <div class="male_connect_right">
             <p>男频人气</p>
-
             <ul class="connect_right_book">
-              <li>
-                <a href="/">
+              <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
+                <a :href="'/book/'+item.id">
                   <p>
-                    <i class="connect_right_book_chen">1</i>
-                    圣祖
+                    <i class="connect_right_book_chen">{{item.id}}</i>
+                    {{item.title}}
                   </p>
-                  <div class="connect_right_book_info">
-                    <img src="../assets/images/201903121846461623.jpg" alt />
-                    <a href>傲天无痕</a>
-                    <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="/">
-                  <p>
-                    <i class="connect_right_book_hui">1</i>
-                    圣祖
-                  </p>
-                  <div class="connect_right_book_info">
-                    <img src="../assets/images/201903121846461623.jpg" alt />
-                    <a href>傲天无痕</a>
-                    <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
+                  <div class="connect_right_book_info" ref="info" v-if="item.currentEnce">
+                    <img :src="item.imgSrc" alt />
+                    <a :href="'/author/'+item.id">{{item.novel_author}}</a>
+                    <a href>{{item.describe}}</a>
                   </div>
                 </a>
               </li>
@@ -571,8 +307,10 @@
           <div class="editor_recommend_connect_left light_left">
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
-                <el-carousel-item v-for="item in 3" :key="item">
-                  <img src="../assets/images/201712261741391310.jpg" alt />
+                <el-carousel-item v-for="item in lightData" :key="item.id">
+                  <a :href="'/book/'+item.id">
+                    <img :src="item.novel_url" alt />
+                  </a>
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -604,106 +342,31 @@
 
           <div class="female_connect_middle">
             <ul class="female_connect_middle-top">
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
+              <li v-for="item1 in lightData1" :key="item1.id">
+                <a :href="'/book/'+item1.id" class="top_book">
+                  <img :src="item1.novel_url" alt />
+                  <p>{{item1.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>小染</a>
+                  <a :href="'/author/'+item1.id">{{item1.novel_author}}</a>
                 </p>
 
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
+                <p class="top_Introduction">{{item1.novel_desc}}</p>
               </li>
             </ul>
 
             <ul class="female_connect_middle-bottom">
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
+              <li v-for="item4 in lightData1" :key="item4.id">
+                <a :href="'/book/'+item4.id" class="top_book">
+                  <p>{{item4.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>小染</a>
+                  <a :href="'/author/'+item4.id">{{item4.novel_author}}</a>
                 </p>
 
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">把脑仁烧成渣，把热血烧成糊，把硬汉当到底的长篇悬疑硬派都市！ 卧底卓霖精心策</p>
+                <p class="top_Introduction">{{item4.novel_desc}}</p>
               </li>
             </ul>
           </div>
@@ -712,30 +375,16 @@
             <p>轻小说人气</p>
 
             <ul class="connect_right_book">
-              <li>
-                <a href="/">
+              <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
+                <a :href="'/book/'+item.id">
                   <p>
-                    <i class="connect_right_book_chen">1</i>
-                    圣祖
+                    <i class="connect_right_book_chen">{{item.id}}</i>
+                    {{item.title}}
                   </p>
-                  <div class="connect_right_book_info">
-                    <img src="../assets/images/201903121846461623.jpg" alt />
-                    <a href>傲天无痕</a>
-                    <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="/">
-                  <p>
-                    <i class="connect_right_book_hui">1</i>
-                    圣祖
-                  </p>
-                  <div class="connect_right_book_info">
-                    <img src="../assets/images/201903121846461623.jpg" alt />
-                    <a href>傲天无痕</a>
-                    <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
+                  <div class="connect_right_book_info" ref="info" v-if="item.currentEnce">
+                    <img :src="item.imgSrc" alt />
+                    <a href>{{item.novel_author}}</a>
+                    <a href>{{item.describe}}</a>
                   </div>
                 </a>
               </li>
@@ -759,43 +408,17 @@
 
           <div class="book_bottom">
             <ul>
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
+              <li v-for="item in newBooks" :key="item.id">
+                <a :href="'/book/'+item.id" class="top_book">
+                  <img :src="item.novel_url" alt />
+                  <p>{{item.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>小染</a>
+                  <a :href="'/author/'+item.id">{{item.novel_author}}</a>
                 </p>
 
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
+                <p class="top_Introduction">{{item.novel_desc}}</p>
               </li>
             </ul>
           </div>
@@ -809,43 +432,17 @@
 
           <div class="book_bottom">
             <ul>
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
+              <li v-for="item1 in newBooks1" :key="item1.id">
+                <a :href="'/book/'+item1.id" class="top_book">
+                  <img :src="item1.novel_url" alt />
+                  <p>{{item1.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>小染</a>
+                  <a :href="'/author/'+item1.id">{{item1.novel_author}}</a>
                 </p>
 
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
+                <p class="top_Introduction">{{item1.novel_desc}}</p>
               </li>
             </ul>
           </div>
@@ -859,43 +456,17 @@
 
           <div class="book_bottom">
             <ul>
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
+              <li v-for="item2 in newBooks2" :key="item2.id">
+                <a :href="'/book/'+item2.id" class="top_book">
+                  <img :src="item2.novel_url" alt />
+                  <p>{{item2.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>小染</a>
+                  <a :href="'/author/'+item2.id">{{item2.novel_author}}</a>
                 </p>
 
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
-              </li>
-
-              <li>
-                <a href="/" class="top_book">
-                  <img src="../assets/images/1167257860984.jpg" alt />
-                  <p>京华一江春</p>
-                </a>
-
-                <p class="top_author">
-                  <a href>小染</a>
-                </p>
-
-                <p class="top_Introduction">清末民国初，北京城风起云涌，一江春这个小小二</p>
+                <p class="top_Introduction">{{item2.novel_desc}}</p>
               </li>
             </ul>
           </div>
@@ -903,33 +474,19 @@
 
         <!-- 右边推荐 -->
         <div class="editor_recommend_connect_right">
-          <p>主编强推</p>
+          <p>新书人气</p>
 
           <ul class="connect_right_book">
-            <li>
-              <a href="/">
+            <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
+              <a :href="'/book/'+item.id">
                 <p>
-                  <i class="connect_right_book_chen">1</i>
-                  圣祖
+                  <i class="connect_right_book_chen">{{item.id}}</i>
+                  {{item.title}}
                 </p>
-                <div class="connect_right_book_info">
-                  <img src="../assets/images/201903121846461623.jpg" alt />
-                  <a href>傲天无痕</a>
-                  <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="/">
-                <p>
-                  <i class="connect_right_book_hui">1</i>
-                  圣祖
-                </p>
-                <div class="connect_right_book_info">
-                  <img src="../assets/images/201903121846461623.jpg" alt />
-                  <a href>傲天无痕</a>
-                  <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
+                <div class="connect_right_book_info" ref="info" v-if="item.currentEnce">
+                  <img :src="item.imgSrc" alt />
+                  <a :href="'/author/'+item.id">{{item.novel_author}}</a>
+                  <a href>{{item.describe}}</a>
                 </div>
               </a>
             </li>
@@ -958,44 +515,12 @@
 
             <div class="end_famale_content">
               <ul>
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
+                <li v-for="item in endBooks" :key="item.id">
+                  <a :href="'/book/'+item.id">
+                    <img :src="item.novel_url" alt />
+                    <p>{{item.novel_title}}</p>
                   </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
+                  <p>{{item.novel_author}}</p>
                 </li>
               </ul>
             </div>
@@ -1009,44 +534,12 @@
 
             <div class="end_famale_content">
               <ul>
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
+                <li v-for="(item1,index) in endBooks1" :key="index">
+                  <a :href="'/book/'+item1.id">
+                    <img :src="item1.novel_url" alt />
+                    <p>{{item1.novel_title}}</p>
                   </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
+                  <p>{{item1.novel_author}}</p>
                 </li>
               </ul>
             </div>
@@ -1060,44 +553,12 @@
 
             <div class="end_famale_content">
               <ul>
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
+                <li v-for="item2 in endBooks2" :key="item2.id">
+                  <a :href="'/book/'+item2.id">
+                    <img :src="item2.novel_url" alt />
+                    <p>{{item2.novel_title}}</p>
                   </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
-                </li>
-
-                <li>
-                  <a href>
-                    <img src="../assets/images/1154277717039.jpg" alt />
-                    <p>爱你看象限</p>
-                  </a>
-                  <p>一世安</p>
+                  <p>{{item2.novel_author}}</p>
                 </li>
               </ul>
             </div>
@@ -1107,32 +568,17 @@
         <!-- 右边推荐 -->
         <div class="editor_recommend_connect_right">
           <p>主编强推</p>
-
           <ul class="connect_right_book">
-            <li>
-              <a href="/">
+            <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
+              <a :href="'/book/'+item.id">
                 <p>
-                  <i class="connect_right_book_chen">1</i>
-                  圣祖
+                  <i class="connect_right_book_chen">{{item.id}}</i>
+                  {{item.title}}
                 </p>
-                <div class="connect_right_book_info">
-                  <img src="../assets/images/201903121846461623.jpg" alt />
-                  <a href>傲天无痕</a>
-                  <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="/">
-                <p>
-                  <i class="connect_right_book_hui">1</i>
-                  圣祖
-                </p>
-                <div class="connect_right_book_info">
-                  <img src="../assets/images/201903121846461623.jpg" alt />
-                  <a href>傲天无痕</a>
-                  <a href>我们无数次仰望星空，却从没想过，外星人可能就在你我身边？外星人正如你我一样，也会</a>
+                <div class="connect_right_book_info" ref="info" v-if="item.currentEnce">
+                  <img :src="item.imgSrc" alt />
+                  <a :href="'/author/'+item.id">{{item.novel_author}}</a>
+                  <a href>{{item.describe}}</a>
                 </div>
               </a>
             </li>
@@ -1148,319 +594,25 @@
       <!-- 热门分类 -->
       <div class="hot">
         <div class="hot_title">
-          <span>热门分类</span>
+          <span>热门小说</span>
         </div>
 
         <div class="hot_content">
           <ul class="hot_content_ul">
-            <li>
-              <i>轻小说-冒险</i>
+            <li v-for="item in hotBook" :key="item.id">
               <div class="hot_content_details">
-                <a href="/">
-                  <img src="../assets/images/1147257831386.jpg" alt />
+                <a :href="'/book/'+item.id">
+                  <img :src="item.novel_url" alt />
                 </a>
                 <p>
-                  <a href="/">拯救苗殿下</a>
+                  <a :href="'/book/'+item.id">{{item.novel_title}}</a>
                 </p>
                 <p>
-                  <a href>花小睡</a>
+                  <a :href="'/author/'+item.id">{{item.novel_author}}</a>
                 </p>
-                <a href="/">
+                <a :href="'/book/'+item.id">
                   <span>立即阅读</span>
                 </a>
-              </div>
-              <div class="hot_content_p">
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <i>轻小说-冒险</i>
-              <div class="hot_content_details">
-                <a href="/">
-                  <img src="../assets/images/1147257831386.jpg" alt />
-                </a>
-                <p>
-                  <a href="/">拯救苗殿下</a>
-                </p>
-                <p>
-                  <a href>花小睡</a>
-                </p>
-                <a href="/">
-                  <span>立即阅读</span>
-                </a>
-              </div>
-              <div class="hot_content_p">
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <i>轻小说-冒险</i>
-              <div class="hot_content_details">
-                <a href="/">
-                  <img src="../assets/images/1147257831386.jpg" alt />
-                </a>
-                <p>
-                  <a href="/">拯救苗殿下</a>
-                </p>
-                <p>
-                  <a href>花小睡</a>
-                </p>
-                <a href="/">
-                  <span>立即阅读</span>
-                </a>
-              </div>
-              <div class="hot_content_p">
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <i>轻小说-冒险</i>
-              <div class="hot_content_details">
-                <a href="/">
-                  <img src="../assets/images/1147257831386.jpg" alt />
-                </a>
-                <p>
-                  <a href="/">拯救苗殿下</a>
-                </p>
-                <p>
-                  <a href>花小睡</a>
-                </p>
-                <a href="/">
-                  <span>立即阅读</span>
-                </a>
-              </div>
-              <div class="hot_content_p">
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <i>轻小说-冒险</i>
-              <div class="hot_content_details">
-                <a href="/">
-                  <img src="../assets/images/1147257831386.jpg" alt />
-                </a>
-                <p>
-                  <a href="/">拯救苗殿下</a>
-                </p>
-                <p>
-                  <a href>花小睡</a>
-                </p>
-                <a href="/">
-                  <span>立即阅读</span>
-                </a>
-              </div>
-              <div class="hot_content_p">
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <i>轻小说-冒险</i>
-              <div class="hot_content_details">
-                <a href="/">
-                  <img src="../assets/images/1147257831386.jpg" alt />
-                </a>
-                <p>
-                  <a href="/">拯救苗殿下</a>
-                </p>
-                <p>
-                  <a href>花小睡</a>
-                </p>
-                <a href="/">
-                  <span>立即阅读</span>
-                </a>
-              </div>
-              <div class="hot_content_p">
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <i>轻小说-冒险</i>
-              <div class="hot_content_details">
-                <a href="/">
-                  <img src="../assets/images/1147257831386.jpg" alt />
-                </a>
-                <p>
-                  <a href="/">拯救苗殿下</a>
-                </p>
-                <p>
-                  <a href>花小睡</a>
-                </p>
-                <a href="/">
-                  <span>立即阅读</span>
-                </a>
-              </div>
-              <div class="hot_content_p">
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <i>轻小说-冒险</i>
-              <div class="hot_content_details">
-                <a href="/">
-                  <img src="../assets/images/1147257831386.jpg" alt />
-                </a>
-                <p>
-                  <a href="/">拯救苗殿下</a>
-                </p>
-                <p>
-                  <a href>花小睡</a>
-                </p>
-                <a href="/">
-                  <span>立即阅读</span>
-                </a>
-              </div>
-              <div class="hot_content_p">
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-                <p>
-                  <span>[搞笑]</span>
-                  <a href="/">男神，暗恋了解一下</a>
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 大神介绍 -->
-      <div class="great">
-        <div class="hot_title">
-          <span>热门分类</span>
-        </div>
-
-        <div class="great_content">
-          <ul>
-            <li>
-              <i></i>
-              <a href="/">
-                <img src="../assets/images/home_au_1.png" alt />
-              </a>
-              <div class="great_content_bottom">
-                <p>代表作《爱在天摇地动时》</p>
-                <p>阿里签约作者，擅长都市情感剧，对于各行各业不同圈子的男女角色把握精准。新文《我和他的小秘密》正在阿里文学连载中。</p>
-              </div>
-            </li>
-
-            <li>
-              <i></i>
-              <a href="/">
-                <img src="../assets/images/home_au_1.png" alt />
-              </a>
-              <div class="great_content_bottom">
-                <p>代表作《爱在天摇地动时》</p>
-                <p>阿里签约作者，擅长都市情感剧，对于各行各业不同圈子的男女角色把握精准。新文《我和他的小秘密》正在阿里文学连载中。</p>
-              </div>
-            </li>
-
-            <li>
-              <i></i>
-              <a href="/">
-                <img src="../assets/images/home_au_1.png" alt />
-              </a>
-              <div class="great_content_bottom">
-                <p>代表作《爱在天摇地动时》</p>
-                <p>阿里签约作者，擅长都市情感剧，对于各行各业不同圈子的男女角色把握精准。新文《我和他的小秘密》正在阿里文学连载中。</p>
-              </div>
-            </li>
-
-            <li>
-              <i></i>
-              <a href="/">
-                <img src="../assets/images/home_au_1.png" alt />
-              </a>
-              <div class="great_content_bottom">
-                <p>代表作《爱在天摇地动时》</p>
-                <p>阿里签约作者，擅长都市情感剧，对于各行各业不同圈子的男女角色把握精准。新文《我和他的小秘密》正在阿里文学连载中。</p>
               </div>
             </li>
           </ul>
@@ -1471,32 +623,6 @@
       <div class="advertising">
         <img src="../assets/images/2019093011005673.jpg" alt />
       </div>
-
-      <!-- 最近更新 -->
-      <div class="recent_updates">
-        <div class="recent_updates_left">
-          <div class="recent_updates_title">
-            <span>最近更新</span>
-            <a href="/">查看全部</a>
-          </div>
-
-          <div class="recent_updates_content">
-            <el-table :data="tableData" style="width: 100%">
-              <el-table-column prop="date" label="类型" width="80"></el-table-column>
-              <el-table-column prop="name" label="书本名称"></el-table-column>
-              <el-table-column prop="address" label="最新章节"></el-table-column>
-              <el-table-column prop="address" label="作者" width="130"></el-table-column>
-              <el-table-column prop="address" label="更新时间" width="100"></el-table-column>
-            </el-table>
-          </div>
-        </div>
-
-        <el-tabs v-model="activeName" @tab-click="handleClick">
-          <el-tab-pane class="el-tab-top" label="男频更新" name="first">用户管理</el-tab-pane>
-          <el-tab-pane class="el-tab-top" label="女频更新" name="second">配置管理</el-tab-pane>
-          <el-tab-pane class="el-tab-top" label="轻小说更新" name="third">角色管理</el-tab-pane>
-        </el-tabs>
-      </div>
     </div>
   </div>
 </template>
@@ -1505,13 +631,264 @@
 export default {
   data() {
     return {
-      activeName:"first"
+      activeName: "first",
+      connect_middle_top: [],
+      topData: [],
+      array: [
+        {
+          id: 1,
+          imgSrc: require("../assets/images/1145637829226.jpg"),
+          author: "轻舟",
+          currentEnce: true,
+          describe:
+            "来到异世界之后的精灵少女，最犯愁的事情，不是精灵不会魔法，而是精灵手里没有钱。",
+          title: "精灵少女的异世界马戏团生涯"
+        },
+        {
+          id: 2,
+          imgSrc: require("../assets/images/1169137823196.jpg"),
+          author: "菠萝包",
+          currentEnce: false,
+          describe:
+            "崇尚修真的少年，阴差阳错之下来到了仙境。却被告知，我们不修真，我们学魔法吧！",
+          title: "我们不教修仙，教魔法！"
+        },
+        {
+          id: 3,
+          imgSrc: require("../assets/images/1153777825575.jpg"),
+          author: "江左",
+          currentEnce: false,
+          describe: "逗逼、搞笑、一个学霸的成长与守护之路。",
+          title: "修仙界学霸"
+        },
+        {
+          id: 4,
+          imgSrc: require("../assets/images/1137827830393.jpg"),
+          author: "右手染红尘",
+          currentEnce: false,
+          describe:
+            "出身贫民窟的白小白在达到十六岁后成功觉醒了世界上第一个心灵类异能女装，异能的力量",
+          title: "我！是个杀手"
+        },
+        {
+          id: 5,
+          imgSrc: require("../assets/images/1162157829678.jpg"),
+          author: "虫子男爵",
+          currentEnce: false,
+          describe:
+            "公元33世纪，陆青从冰封的洞穴醒来，失去了所有的记忆。洞穴之外的世界沧海桑田，厚",
+          title: "诡诞纪元"
+        },
+        {
+          id: 6,
+          imgSrc: require("../assets/images/1120117874697.jpg"),
+          author: "月有北安",
+          currentEnce: false,
+          describe:
+            "一个人，究竟可以倒霉到什么地步？亲人惨死，家族覆灭，曾经在江湖上赫赫有名的侠二",
+          title: "这个江湖风太大"
+        },
+        {
+          id: 7,
+          imgSrc: require("../assets/images/201809271723143753.jpg"),
+          author: "好玩的饺子",
+          currentEnce: false,
+          describe:
+            "互相羡慕对方生活的男女两人，在开学不久一天早上醒来，发现两人之间互换了身体？在没",
+          title: "如果我是Ta"
+        },
+        {
+          id: 8,
+          imgSrc: require("../assets/images/1137907838187.jpg"),
+          author: "走到天边看海",
+          currentEnce: false,
+          describe:
+            "刘越穿越到这个时代本是胸无大志，只想浪荡的过完这一生，开始为了自己的安危而查案，",
+          title: "痞子黄檀"
+        },
+        {
+          id: 9,
+          imgSrc: require("../assets/images/1169327831495.jpg"),
+          author: "八口",
+          currentEnce: false,
+          describe:
+            "公元2050年，因不明污染，女性不断减少，一款名为拯救少女的游戏风靡全球，玩游戏",
+          title: "前进, 拯救少女"
+        },
+        {
+          id: 10,
+          imgSrc: require("../assets/images/1180837787059.jpg"),
+          author: "小梦大师",
+          currentEnce: false,
+          describe:
+            "末日到来的我要拯救世界么？当然！我不仅要拯救世界，我还要拯救世界里生存的",
+          title: "末日到来的我要拯救世界么"
+        }
+      ],
+      tableData: [],
+      famelaData: [],
+      famelaData1: [],
+      famelaData2: [],
+      famelaData3: [],
+      melaData: [],
+      melaData1: [],
+      melaData2: [],
+      lightData: [],
+      lightData1: [],
+      lightData2: [],
+      newBooks: [],
+      newBooks1: [],
+      newBooks2: [],
+      newBooks3: [],
+      endBooks: [],
+      endBooks1: [],
+      endBooks2: [],
+      endBooks3: [],
+      hotBook: []
     };
+  },
+  methods: {
+    changeObj(item) {
+      this.array.forEach(item1 => {
+        item1.currentEnce = false;
+      });
+      item.currentEnce = true;
+      this.$refs.info.display = "block";
+    },
+    handleClick() {}
+  },
+  updated() {},
+  async created() {
+    // 主编推荐
+    const { data: data1 } = await this.$http("/designation?id1=1,2,3");
+    this.topData = data1.data;
+
+    const { data: data2 } = await this.$http(
+      "/designation?id1=4,5,6,7,8,9,10,11,12,13"
+    );
+    this.connect_middle_top = data2.data;
+    // 女频
+    const { data: data4 } = await this.$http("novels?sz=1&per_page=3");
+    this.famelaData = data4.data;
+
+    const { data: data5 } = await this.$http("novels?sz=1&per_page=4");
+    this.famelaData1 = data5.data;
+
+    const { data: data6 } = await this.$http("novels?sz=1&per_page=10&type=1");
+    this.famelaData2 = data6.data;
+    this.famelaData2.forEach((item, i) => {
+      if (i == 0) {
+        item.currentEnce = true;
+      } else {
+        item.currentEnce = false;
+      }
+    });
+
+    // 男频
+    const { data: data7 } = await this.$http("novels?sz=0&per_page=3");
+    this.melaData = data7.data;
+
+    const { data: data8 } = await this.$http("novels?sz=0&per_page=4");
+    this.melaData1 = data8.data;
+
+    const { data: data9 } = await this.$http("novels?sz=0&per_page=10&type=1");
+    this.melaData2 = data9.data;
+    this.melaData2.forEach((item, i) => {
+      if (i == 0) {
+        item.currentEnce = true;
+      } else {
+        item.currentEnce = false;
+      }
+    });
+
+    // 轻小说
+    const { data: data10 } = await this.$http("novels?sz=2&per_page=3");
+    this.lightData = data10.data;
+
+    const { data: data11 } = await this.$http("novels?sz=2&per_page=4");
+    this.lightData1 = data11.data;
+
+    const { data: data12 } = await this.$http("novels?sz=2&per_page=10&type=1");
+    this.lightData2 = data12.data;
+    this.lightData2.forEach((item, i) => {
+      if (i == 0) {
+        item.currentEnce = true;
+      } else {
+        item.currentEnce = false;
+      }
+    });
+
+    // 新书推荐
+    const { data: data13 } = await this.$http(
+      "novels?sz=1&per_page=3&status=0"
+    );
+    this.newBooks = data13.data;
+
+    const { data: data14 } = await this.$http(
+      "novels?sz=0&per_page=3&status=0"
+    );
+    this.newBooks1 = data14.data;
+
+    const { data: data15 } = await this.$http(
+      "novels?sz=2&per_page=3&status=0"
+    );
+    this.newBooks2 = data15.data;
+
+    const { data: data16 } = await this.$http(
+      "novels?per_page=10&status=0&type=1"
+    );
+    this.newBooks3 = data16.data;
+    this.newBooks3.forEach((item, i) => {
+      if (i == 0) {
+        item.currentEnce = true;
+      } else {
+        item.currentEnce = false;
+      }
+    });
+
+    // 完结
+    const { data: data17 } = await this.$http(
+      "novels?sz=1&per_page=5&status=1"
+    );
+    this.endBooks = data17.data;
+
+    const { data: data18 } = await this.$http(
+      "novels?sz=0&per_page=5&status=1"
+    );
+    this.endBooks1 = data18.data;
+
+    const { data: data19 } = await this.$http(
+      "novels?sz=2&per_page=5&status=1"
+    );
+    this.endBooks2 = data19.data;
+
+    const { data: data20 } = await this.$http(
+      "novels?sz=2&per_page=5&status=1&type=1"
+    );
+    this.endBooks3 = data20.data;
+    this.endBooks3.forEach((item, i) => {
+      if (i == 0) {
+        item.currentEnce = true;
+      } else {
+        item.currentEnce = false;
+      }
+
+      if (i > 2) {
+      }
+    });
+    // console.log()
+
+    // 热门小说
+    const { data: data21 } = await this.$http("novels?type=1&per_page=12");
+    this.hotBook = data21.data;
   }
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
+.eeee {
+  display: none;
+}
 .el-carousel__item h3 {
   color: #475669;
   font-size: 14px;
@@ -1625,7 +1002,7 @@ export default {
 }
 
 .connect_left_text > p:nth-child(3) {
-  height: 66px;
+  height: 75px;
   line-height: 24px;
 }
 
@@ -1710,6 +1087,16 @@ export default {
   color: #b4adb2;
 }
 
+.el-carousel__item a > img {
+  width: 116px;
+  height: 165px;
+}
+
+.el-carousel__item > img {
+  width: 116px;
+  height: 165px;
+}
+
 .connect_middle_bottom_book img {
   width: 140px;
   height: 187px;
@@ -1749,6 +1136,34 @@ export default {
   margin-right: 5px;
 }
 
+.connect_right_book li:nth-child(4) i {
+  background-color: #a6a6b6;
+}
+
+.connect_right_book li:nth-child(5) i {
+  background-color: #a6a6b6;
+}
+
+.connect_right_book li:nth-child(6) i {
+  background-color: #a6a6b6;
+}
+
+.connect_right_book li:nth-child(7) i {
+  background-color: #a6a6b6;
+}
+
+.connect_right_book li:nth-child(8) i {
+  background-color: #a6a6b6;
+}
+
+.connect_right_book li:nth-child(9) i {
+  background-color: #a6a6b6;
+}
+
+.connect_right_book li:nth-child(10) i {
+  background-color: #a6a6b6;
+}
+
 .connect_right_book_info {
   margin-top: 10px;
   height: 103px;
@@ -1775,18 +1190,6 @@ export default {
   font-size: 13px;
   line-height: 20px;
   color: #99a9bf;
-}
-
-.connect_right_book .connect_right_book_hui {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #a6a6b6;
-  text-align: center;
-  line-height: 20px;
-  border-radius: 50%;
-  color: white;
-  margin-right: 5px;
 }
 // 主编推荐结束
 
@@ -1892,6 +1295,10 @@ export default {
   font-size: 12px;
   margin-top: 35px;
   line-height: 20px;
+  height: 40px;
+  width: 146px;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .female_connect_middle-bottom li {
@@ -2101,7 +1508,7 @@ export default {
 
 .end_famale_content ul li {
   float: left;
-  margin-right: 60px;
+  margin-right: 70px;
 }
 
 .end_famale_content img {
@@ -2111,10 +1518,12 @@ export default {
 
 .end_famale_content p {
   display: block;
-  width: 100%;
+  width: 75px;
   text-align: center;
-  height: 20px;
+  height: 14px;
   font-size: 13px;
+  overflow: hidden;
+  margin-bottom: 5px;
 }
 
 .end_famale_content > ul > li > p {
@@ -2163,7 +1572,7 @@ export default {
   position: relative;
   float: left;
   width: 260px;
-  height: 251px;
+  height: 155px;
   border: 1px solid #dedede;
   margin-right: 18px;
   margin-bottom: 15px;
@@ -2184,7 +1593,7 @@ export default {
 }
 
 .hot_content_details {
-  margin: 50px 0px 0px 22px;
+  margin: 25px 0px 0px 30px;
 }
 
 .hot_content_details > a {
@@ -2205,6 +1614,12 @@ export default {
 .hot_content_details > p:nth-child(3) a {
   font-size: 14px;
   color: #99a9bf;
+}
+
+.hot_content_details > p {
+  width: 100px;
+  overflow: hidden;
+  height: 24px;
 }
 
 .hot_content_details img {
@@ -2245,129 +1660,4 @@ export default {
   color: #333;
 }
 // 热门分类结束
-
-// 大神介绍
-.great .hot_title::after {
-  top: 16px;
-}
-
-.great .hot_title > span {
-  background-position-y: 7px;
-}
-
-.great_content {
-  margin-top: 50px;
-}
-
-.great_content ul li {
-  display: inline-block;
-  width: 260px;
-  margin-right: 20px;
-}
-
-.great_content ul li i {
-  display: inline-block;
-  position: absolute;
-  top: 0px;
-  left: 1px;
-  width: 260px;
-  height: 32px;
-  background-color: #f1f1f4;
-}
-
-.great_content_bottom {
-  position: relative;
-  width: 260px;
-  height: 120px;
-  border: 1px solid #d7d7da;
-}
-
-.great_content_bottom p:first-child {
-  line-height: 32px;
-  text-align: center;
-  position: absolute;
-  left: 90px;
-}
-
-.great_content_bottom p:last-child {
-  position: absolute;
-  bottom: 20px;
-  font-size: 12px;
-  line-height: 20px;
-  padding: 4px 10px 0px 12px;
-}
-
-.great_content ul li {
-  position: relative;
-}
-
-.great_content ul li a:nth-child(2) {
-  position: absolute;
-  top: -33px;
-  z-index: 100;
-}
-
-.great_content ul li a:nth-child(2) img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
-}
-// 大神介绍结束
-
-// 最近更新
-.recent_updates_left {
-  float: left;
-  width: 800px;
-  margin-right: 35px;
-}
-
-.recent_updates_title {
-}
-.recent_updates_title span {
-  float: left;
-  font-size: 18px;
-  display: inline-block;
-  font-weight: bold;
-  padding-left: 10px;
-  padding-top: 1px;
-  width: 93px;
-  height: 20px;
-  background-image: url("../assets/images/title_icon_cate.png");
-  background-repeat: no-repeat;
-}
-
-.recent_updates_title a {
-  float: right;
-  display: inline-block;
-  width: 80px;
-  height: 20px;
-  border: #f37315 1px solid;
-  text-align: center;
-  line-height: 20px;
-  border-radius: 5px;
-}
-
-.el-table__header-wrapper {
-  border-bottom: 3px solid #909399;
-}
-
-.el-tabs {
-  float: left;
-  width: 264px;
-}
-
-.el-tabs__item:hover{
-  color:#f37315;
-}
-
-.el-tabs__active-bar{
-  background-color:#f37315;
-}
-
-.el-tabs__item.is-active{
-  color:#f37315;
-}
-// .el-tab-top{
-//   width: 45px;
-// }
 </style>

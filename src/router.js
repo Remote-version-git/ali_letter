@@ -17,8 +17,8 @@ let router = new Router({
       component: Home,
       children: [
         {
-          path:'/',
-          redirect:'/index'
+          path: '/',
+          redirect: '/index'
         },
         {
           path: "/index",
@@ -29,8 +29,10 @@ let router = new Router({
           component: () => import("@/components/Rankinglist.vue")
         },
         {
-          path: "/book",
-          component: () => import("@/components/Book.vue")
+          path: "/book/:id",
+          component: () => import("@/components/Book.vue"),
+          // 开启路由传参
+          props: true
         },
         {
           path: "/stackroom",
@@ -43,22 +45,44 @@ let router = new Router({
         {
           path: "/male",
           component: () => import("@/components/Boyschannel.vue")
+        },
+        {
+          path: '/author/:id',
+          component: () => import("@/components/author.vue"),
+          // 开启路由传参
+          props: true
+        },
+        {
+
+          path: "/female",
+          component: () => import("@/components/Femalefrequency.vue")
+        },
+        {
+
+          path: "/search",
+          component: () => import("@/components/Search.vue")
+        },
+        {
+          path: '/login',
+          component: () => import("@/components/login.vue")
+
         }
       ]
     },
     {
-      path:'/honor',
-      component:()=> import('@/components/honor.vue'),
-      children:[
+      path: '/honor',
+      component: () => import('@/components/honor.vue'),
+      children: [
         {
-          path:'/user',
-        component:()=>import('@/components/user.vue')
+          path: '/user',
+          component: () => import('@/components/user.vue')
         },
         {
-          path:'/novel',
-        component:()=>import('@/components/novel.vue')
+          path: '/novel',
+          component: () => import('@/components/novel.vue')
 
         }
+
       ]
     },
     {
@@ -71,4 +95,4 @@ let router = new Router({
     }
   ]
 });
-export default router
+export default router; 

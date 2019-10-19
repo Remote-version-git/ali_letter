@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <div class="titleline titles">
-      <span class="tlle">男频推荐</span>
+      <span class="tlle">女频推荐</span>
     </div>
   <div class="container">
    <div class="a"><h1>111</h1></div>
@@ -479,7 +479,7 @@
     </div>
     <div class="d">
       <a href>
-        <img src="http://img-tailor.11222.cn/pm/book/operate/2019101516434409.jpg" alt />
+        <img src="http://img-tailor.11222.cn/pm/book/operate/2019061110463298.jpg" alt />
       </a>
     </div>
     <!-- 猜你喜欢———————————————————————————————————————————— -->
@@ -579,7 +579,7 @@
     </div>
     <div class="d">
       <a href>
-        <img src="http://img-tailor.11222.cn/pm/book/operate/2019101516435586.jpg" alt />
+        <img src="http://img-tailor.11222.cn/pm/book/operate/2019061110472352.jpg" alt />
       </a>
     </div>
 
@@ -1053,7 +1053,7 @@ a {
     float: left;
     width: 77.85%;
     height: 212px;
-    background-color:#e8f3f1;
+    background-color: #fbeff5;
     margin-bottom:20px; 
 }
 .b{
@@ -1068,7 +1068,7 @@ a {
 }
 .b-head {
   height: 93px;
-  background-color: #e8f3f1;
+  background-color: #fcf0f6;
   margin-bottom: 3px;
 }
 .b-head h3{
@@ -1079,7 +1079,7 @@ a {
 }
 .b-cenner {
   height: 155px;
-  background-color: #e8f3f1;
+  background-color: #fcf0f6;
   margin-bottom: 3px;
 }
 .b-cenner ul li {
@@ -1409,14 +1409,14 @@ p.title {
   margin-top: 20px;
   width: 268px;
   float: left;
-  background-color: #f8f6f8;
+  background-color: #fcf0f6;
 }
 .newbook-left-top {
   width: 100%;
   height: 161px;
   box-sizing: border-box;
   padding: 28px 24px 0;
-  background: url("/img/side22.png") repeat-x;
+  background: url("/img/nv_left_bg_1.png") repeat-x;
   color: #1d1e20;
   position: relative;
 }
@@ -1484,7 +1484,7 @@ p.title {
   display: block;
   width: 100%;
   height: 5px;
-  background-color: #e8f3f1;
+  background-color: #fcf0f6;
   margin-top: 9px;
 }
 .tlle {
@@ -1493,7 +1493,7 @@ p.title {
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  background: url("/img/title_icon_boy.png") no-repeat 18px 0 #fff;
+  background: url("/img/nv_icon_girl.png") no-repeat 18px 0 #fff;
   background-size: 22px 22px;
 }
 .tlle2 {
@@ -1501,7 +1501,7 @@ p.title {
   position: absolute;
   left: 0;
   top: 0;
-  background: url("/img/title_icon_boy1.png") no-repeat 0 0 #fff;
+  background: url("/img/nv1_icon_cate.png") no-repeat 0 0 #fff;
   background-size: auto 22px;
 }
 .tlle3 {
