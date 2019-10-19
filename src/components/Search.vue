@@ -30,7 +30,7 @@
 
         <ul class="tags clear">
           <li>
-            <a href>异能</a>
+            <a href></a>
           </li>
 
           <li>
@@ -57,18 +57,18 @@
           <li>连载</li>
           <li>9小时前更新</li>
         </ul>
-         <div class="fy">
-              <!-- <span class="demonstration">完整功能</span> -->
-              <el-pagination
-                @size-change="handleSizeChangewj"
-                @current-change="handleCurrentChangewj"
-                :current-page="queryInfo.pagenum"
-                :page-sizes="[5, 10, 15, 20]"
-                :page-size="5"
-                layout="total, sizes, prev, pager, next, jumper"
-                :total="total"
-              ></el-pagination>
-            </div>
+        <div class="fy">
+          <!-- <span class="demonstration">完整功能</span> -->
+          <el-pagination
+            @size-change="handleSizeChangewj"
+            @current-change="handleCurrentChangewj"
+            :current-page="queryInfo.pagenum"
+            :page-sizes="[5, 10, 15, 20]"
+            :page-size="5"
+            layout="total, sizes, prev, pager, next, jumper"
+            :total="total"
+          ></el-pagination>
+        </div>
       </div>
     </div>
   </div>
@@ -79,7 +79,8 @@ export default {
   data() {
     return {
       // 详情
-      RenderingList: []
+      RenderingList: [],
+      
     };
   },
   mounted: {

@@ -45,27 +45,6 @@
           <!-- 导航栏 -->
           <div class="nav clear">
             <div class="nav_classification">
-              <!-- <ul>
-                <li class="class_active">
-                  <a href>首页</a>
-                </li>
-                <li>
-                  <a href>男频</a>
-                </li>
-                <li>
-                  <a href>女频</a>
-                </li>
-                <li>
-                  <a href>轻小说</a>
-                </li>
-                <li>
-                  <a href>书库</a>
-                </li>
-                <li>
-                  <a href>排行榜</a>
-                </li>
-              </ul>-->
-
               <el-menu
               :default-active="this.$route.path"
                
@@ -84,8 +63,8 @@
               </el-menu>
             </div>
             <div class="nav_search">
-              <el-input v-model="input" placeholder="请根据书名或者作者" width="20px">
-                <el-button icon="el-icon-search" circle slot="append"></el-button>
+              <el-input v-model="keyword" placeholder="请根据书名或者作者" width="20px" >
+                <el-button icon="el-icon-search" circle slot="append" @click="getNovel" :list="seachList"></el-button>
               </el-input>
             </div>
           </div>
@@ -130,11 +109,19 @@ export default {
   data() {
     return {
       input:'',
-      activeIndex: "/index"
+      activeIndex: "/index",
+      keyword:"",
+      seachList:[]
     };
   },
   methods: {
-    handleSelect() {}
+    handleSelect() {},
+    async getNovel(){
+      const {data:res} = await this.$http.get(`novels?keyword=${this.keyword}`);
+      console.log(res);
+      // this.seachList = res.data;
+      this.$router.push('/search');
+    },
   }
 };
 </script>
