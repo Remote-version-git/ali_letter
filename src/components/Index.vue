@@ -211,7 +211,9 @@
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
                 <el-carousel-item v-for="item in melaData" :key="item.id">
-                  <img :src="item.novel_url" alt />
+                  <a :href="'/book/'+item.id">
+                    <img :src="item.novel_url" alt />
+                  </a>
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -244,13 +246,13 @@
           <div class="female_connect_middle">
             <ul class="female_connect_middle-top">
               <li v-for="item1 in melaData1" :key="item1.id">
-                <a href="/" class="top_book">
+                <a :href="'/book/'+item1.id" class="top_book">
                   <img :src="item1.novel_url" alt />
                   <p>{{item1.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>{{item1.novel_author}}</a>
+                  <a :href="'/author/'+item1.id">{{item1.novel_author}}</a>
                 </p>
 
                 <p class="top_Introduction">{{item1.novel_desc}}</p>
@@ -259,12 +261,12 @@
 
             <ul class="female_connect_middle-bottom">
               <li v-for="item2 in melaData1" :key="item2.id">
-                <a href="/" class="top_book">
+                <a :href="'/book/'+item2.id" class="top_book">
                   <p>{{item2.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>{{item2.novel_author}}</a>
+                  <a :href="'/author/'+item2.id">{{item2.novel_author}}</a>
                 </p>
 
                 <p class="top_Introduction">{{item2.novel_desc}}</p>
@@ -276,14 +278,14 @@
             <p>男频人气</p>
             <ul class="connect_right_book">
               <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
-                <a href="/">
+                <a :href="'/book/'+item.id">
                   <p>
                     <i class="connect_right_book_chen">{{item.id}}</i>
                     {{item.title}}
                   </p>
                   <div class="connect_right_book_info" ref="info" v-if="item.currentEnce">
                     <img :src="item.imgSrc" alt />
-                    <a href>{{item.novel_author}}</a>
+                    <a :href="'/author/'+item.id">{{item.novel_author}}</a>
                     <a href>{{item.describe}}</a>
                   </div>
                 </a>
@@ -306,7 +308,9 @@
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
                 <el-carousel-item v-for="item in lightData" :key="item.id">
-                  <img :src="item.novel_url" alt />
+                  <a :href="'/book/'+item.id">
+                    <img :src="item.novel_url" alt />
+                  </a>
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -339,13 +343,13 @@
           <div class="female_connect_middle">
             <ul class="female_connect_middle-top">
               <li v-for="item1 in lightData1" :key="item1.id">
-                <a href="/" class="top_book">
+                <a :href="'/book/'+item1.id" class="top_book">
                   <img :src="item1.novel_url" alt />
                   <p>{{item1.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>{{item1.novel_author}}</a>
+                  <a :href="'/author/'+item1.id">{{item1.novel_author}}</a>
                 </p>
 
                 <p class="top_Introduction">{{item1.novel_desc}}</p>
@@ -354,12 +358,12 @@
 
             <ul class="female_connect_middle-bottom">
               <li v-for="item4 in lightData1" :key="item4.id">
-                <a href="/" class="top_book">
+                <a :href="'/book/'+item4.id" class="top_book">
                   <p>{{item4.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>{{item4.novel_author}}</a>
+                  <a :href="'/author/'+item4.id">{{item4.novel_author}}</a>
                 </p>
 
                 <p class="top_Introduction">{{item4.novel_desc}}</p>
@@ -372,7 +376,7 @@
 
             <ul class="connect_right_book">
               <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
-                <a href="/">
+                <a :href="'/book/'+item.id">
                   <p>
                     <i class="connect_right_book_chen">{{item.id}}</i>
                     {{item.title}}
@@ -405,13 +409,13 @@
           <div class="book_bottom">
             <ul>
               <li v-for="item in newBooks" :key="item.id">
-                <a href="/" class="top_book">
+                <a :href="'/book/'+item.id" class="top_book">
                   <img :src="item.novel_url" alt />
                   <p>{{item.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>{{item.novel_author}}</a>
+                  <a :href="'/author/'+item.id">{{item.novel_author}}</a>
                 </p>
 
                 <p class="top_Introduction">{{item.novel_desc}}</p>
@@ -429,13 +433,13 @@
           <div class="book_bottom">
             <ul>
               <li v-for="item1 in newBooks1" :key="item1.id">
-                <a href="/" class="top_book">
+                <a :href="'/book/'+item1.id" class="top_book">
                   <img :src="item1.novel_url" alt />
                   <p>{{item1.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>{{item1.novel_author}}</a>
+                  <a :href="'/author/'+item1.id">{{item1.novel_author}}</a>
                 </p>
 
                 <p class="top_Introduction">{{item1.novel_desc}}</p>
@@ -453,13 +457,13 @@
           <div class="book_bottom">
             <ul>
               <li v-for="item2 in newBooks2" :key="item2.id">
-                <a href="/" class="top_book">
+                <a :href="'/book/'+item2.id" class="top_book">
                   <img :src="item2.novel_url" alt />
                   <p>{{item2.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>{{item2.novel_author}}</a>
+                  <a :href="'/author/'+item2.id">{{item2.novel_author}}</a>
                 </p>
 
                 <p class="top_Introduction">{{item2.novel_desc}}</p>
@@ -474,14 +478,14 @@
 
           <ul class="connect_right_book">
             <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
-              <a href="/">
+              <a :href="'/book/'+item.id">
                 <p>
                   <i class="connect_right_book_chen">{{item.id}}</i>
                   {{item.title}}
                 </p>
                 <div class="connect_right_book_info" ref="info" v-if="item.currentEnce">
                   <img :src="item.imgSrc" alt />
-                  <a href>{{item.novel_author}}</a>
+                  <a :href="'/author/'+item.id">{{item.novel_author}}</a>
                   <a href>{{item.describe}}</a>
                 </div>
               </a>
@@ -512,7 +516,7 @@
             <div class="end_famale_content">
               <ul>
                 <li v-for="item in endBooks" :key="item.id">
-                  <a href>
+                  <a :href="'/book/'+item.id">
                     <img :src="item.novel_url" alt />
                     <p>{{item.novel_title}}</p>
                   </a>
@@ -531,7 +535,7 @@
             <div class="end_famale_content">
               <ul>
                 <li v-for="(item1,index) in endBooks1" :key="index">
-                  <a href>
+                  <a :href="'/book/'+item1.id">
                     <img :src="item1.novel_url" alt />
                     <p>{{item1.novel_title}}</p>
                   </a>
@@ -550,7 +554,7 @@
             <div class="end_famale_content">
               <ul>
                 <li v-for="item2 in endBooks2" :key="item2.id">
-                  <a href>
+                  <a :href="'/book/'+item2.id">
                     <img :src="item2.novel_url" alt />
                     <p>{{item2.novel_title}}</p>
                   </a>
@@ -566,14 +570,14 @@
           <p>主编强推</p>
           <ul class="connect_right_book">
             <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
-              <a href="/">
+              <a :href="'/book/'+item.id">
                 <p>
                   <i class="connect_right_book_chen">{{item.id}}</i>
                   {{item.title}}
                 </p>
                 <div class="connect_right_book_info" ref="info" v-if="item.currentEnce">
                   <img :src="item.imgSrc" alt />
-                  <a href>{{item.novel_author}}</a>
+                  <a :href="'/author/'+item.id">{{item.novel_author}}</a>
                   <a href>{{item.describe}}</a>
                 </div>
               </a>
@@ -597,16 +601,16 @@
           <ul class="hot_content_ul">
             <li v-for="item in hotBook" :key="item.id">
               <div class="hot_content_details">
-                <a href="/">
+                <a :href="'/book/'+item.id">
                   <img :src="item.novel_url" alt />
                 </a>
                 <p>
-                  <a href="/">{{item.novel_title}}</a>
+                  <a :href="'/book/'+item.id">{{item.novel_title}}</a>
                 </p>
                 <p>
-                  <a href>{{item.novel_author}}</a>
+                  <a :href="'/author/'+item.id">{{item.novel_author}}</a>
                 </p>
-                <a href="/">
+                <a :href="'/book/'+item.id">
                   <span>立即阅读</span>
                 </a>
               </div>
@@ -1092,7 +1096,6 @@ export default {
   width: 116px;
   height: 165px;
 }
-
 
 .connect_middle_bottom_book img {
   width: 140px;
