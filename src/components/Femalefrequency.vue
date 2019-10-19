@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <div class="titleline titles">
-      <span class="tlle">男频推荐</span>
+      <span class="tlle">女频推荐</span>
     </div>
   <div class="container">
    <div class="a"><h1>111</h1></div>
