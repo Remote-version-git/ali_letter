@@ -42,9 +42,14 @@
       </div>
       <el-pagination background layout="prev, pager, next" :total="1000"></el-pagination>
     </el-breadcrumb>
+    <p>{{infos}}</p>
   </div>
 </template>
+<script>
+export default {
 
+};
+</script>
 <style lang="less" scoped>
 .zong {
   width: 1120px;

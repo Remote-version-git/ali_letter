@@ -48,13 +48,13 @@
           <div class="classify_title">作品类型</div>
           <ul class="classify_option">
             <li>
-              <a href>全部</a>
+              <a href="javascript:;" :class="classNames[0]" @click="getnovelTypeList">全部</a>
             </li>
             <li>
-              <a href>男频</a>
+              <a href="javascript:;" :class="classNames[1]" @click="getManList">男频</a>
             </li>
             <li>
-              <a href>女频</a>
+              <a href="javascript:;" :class="classNames[2]" @click="getWomanList">女频</a>
             </li>
           </ul>
         </div>
@@ -62,83 +62,46 @@
           <div class="classify_title">作品分类</div>
           <ul class="classify_option">
             <li>
-              <a href>不限</a>
+              <a href="javascript:;" :class="classifyArr[0]" @click="getFenleiList">不限</a>
             </li>
             <li>
-              <a href>都市</a>
+              <a href="javascript:;" :class="classifyArr[1]" @click="getDushiList">都市</a>
             </li>
             <li>
-              <a href>玄幻</a>
+              <a href="javascript:;" :class="classifyArr[2]" @click="getXuanhuanList">玄幻</a>
             </li>
             <li>
-              <a href>仙侠</a>
+              <a href="javascript:;" :class="classifyArr[3]" @click="getXianxiaList">仙侠</a>
             </li>
             <li>
-              <a href>灵异</a>
+              <a href="javascript:;" :class="classifyArr[4]" @click="getLingyiList">灵异</a>
             </li>
             <li>
-              <a href>历史</a>
+              <a href="javascript:;" :class="classifyArr[5]" @click="getLishiList">历史</a>
             </li>
             <li>
-              <a href>游戏</a>
+              <a href="javascript:;" :class="classifyArr[6]" @click="getYouxiList">游戏</a>
             </li>
             <li>
-              <a href>科幻</a>
+              <a href="javascript:;" :class="classifyArr[7]" @click="getKehuanList">科幻</a>
             </li>
             <li>
-              <a href>武侠奇幻</a>
+              <a href="javascript:;" :class="classifyArr[8]" @click="getWuxiaList">武侠奇幻</a>
             </li>
             <li>
-              <a href>竞技</a>
+              <a href="javascript:;" :class="classifyArr[9]" @click="getJingjiList">竞技</a>
             </li>
             <li>
-              <a href>其他</a>
+              <a href="javascript:;" :class="classifyArr[10]" @click="getQitaList">其他</a>
             </li>
             <li>
-              <a href>现言</a>
+              <a href="javascript:;" :class="classifyArr[11]" @click="getXianyanList">现言</a>
             </li>
             <li>
-              <a href>古言</a>
+              <a href="javascript:;" :class="classifyArr[12]" @click="getGuyanList">古言</a>
             </li>
             <li>
-              <a href>幻言</a>
-            </li>
-          </ul>
-        </div>
-        <div class="classify">
-          <div class="classify_title">作品状态</div>
-          <ul class="classify_option">
-            <li>
-              <a href>不限</a>
-            </li>
-            <li>
-              <a href>连载</a>
-            </li>
-            <li>
-              <a href>完结</a>
-            </li>
-          </ul>
-        </div>
-        <div class="classify">
-          <div class="classify_title">作品字数</div>
-          <ul class="classify_option">
-            <li>
-              <a href>全部</a>
-            </li>
-            <li>
-              <a href>30万以下</a>
-            </li>
-            <li>
-              <a href>30万~50万</a>
-            </li>
-            <li>
-              <a href>50万~100万</a>
-            </li>
-            <li>
-              <a href>100万~200万</a>
-            </li>
-            <li>
-              <a href>200万以上</a>
+              <a href="javascript:;" :class="classifyArr[13]" @click="getHuanyanList">幻言</a>
             </li>
           </ul>
         </div>
@@ -170,6 +133,21 @@
                 </a>
               </li>
             </ul>
+          </div>
+        </div>
+      </el-col>
+      <el-col>
+        <div class="roomcentre">
+          <div class="block_22">
+            <el-pagination
+              @size-change="handleSizeChange2"
+              @current-change="handleCurrentChange2"
+              :current-page="queryInfo2.pagenum"
+              :page-sizes="[16, 32]"
+              :page-size="queryInfo2.pagesize"
+              layout="total, sizes, prev, pager, next, jumper"
+              :total="pageTotal2"
+            ></el-pagination>
           </div>
         </div>
       </el-col>
@@ -328,7 +306,14 @@ export default {
         pagenum: 1,
         pagesize: 6
       },
-      pageTotal: 0
+      queryInfo2: {
+        pagenum: 1,
+        pagesize: 16
+      },
+      pageTotal: 0,
+      pageTotal2: 0,
+      classNames: ["first_active", "", ""],
+      classifyArr:["first_active", "", "","","","","","","","","","","",""]
     };
   },
   methods: {
@@ -367,10 +352,109 @@ export default {
     },
     // 获取作品分类数据
     async getnovelTypeList() {
-      const { data } = await this.$http.get("/novels");
+      this.classNames = ["first_active", "", ""];
+      const { data } = await this.$http.get(
+        `/novels?&page=${this.queryInfo2.pagenum}&per_page=${this.queryInfo2.pagesize}`
+      );
       this.novelTypeList = data.data;
-      console.log(this.novelTypeList);
-      // console.log(data.data.novel_type);
+      // console.log(this.novelTypeList);
+      this.pageTotal2 = data.total;
+    },
+    // 获取男频数据
+    async getManList() {
+      this.classNames = ["", "first_active", ""];
+      const { data } = await this.$http.get("/novels?sz=1");
+      this.novelTypeList = data.data;
+    },
+    // 获取女频数据
+    async getWomanList() {
+      this.classNames = ["", "", "first_active"];
+      const { data } = await this.$http.get("/novels?sz=0");
+      this.novelTypeList = data.data;
+    },
+    // 分类不限
+    async getFenleiList() {
+      this.classifyArr = ["first_active", "", "","","","","","","","","","","",""];
+      const { data } = await this.$http.get("/novels?fc");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 都市
+    async getDushiList() {
+      this.classifyArr = ["", "first_active", "","","","","","","","","","","",""];
+      const { data } = await this.$http.get("/novels?fc=都市");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 玄幻
+    async getXuanhuanList() {
+      this.classifyArr = ["","", "first_active", "","","","","","","","","","",""];
+      const { data } = await this.$http.get("/novels?fc=玄幻");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 仙侠
+    async getXianxiaList() {
+      this.classifyArr = [ "", "","","first_active","","","","","","","","","",""];
+      const { data } = await this.$http.get("/novels?fc=仙侠");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 灵异
+    async getLingyiList() {
+      this.classifyArr = [ "", "","","","first_active","","","","","","","","",""];
+      const { data } = await this.$http.get("/novels?fc=灵异");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 历史
+    async getLishiList() {
+      this.classifyArr = [ "", "","","","","first_active","","","","","","","",""];
+      const { data } = await this.$http.get("/novels?fc=历史");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 游戏
+    async getYouxiList() {
+      this.classifyArr = [ "", "","","","","","first_active","","","","","","",""];
+      const { data } = await this.$http.get("/novels?fc=游戏");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 科幻
+    async getKehuanList() {
+      this.classifyArr = [ "", "","","","","","","first_active","","","","",""];
+      const { data } = await this.$http.get("/novels?fc=科幻");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 武侠奇幻
+    async getWuxiaList() {
+      this.classifyArr = [ "", "","","","","","","","first_active","","",""];
+      const { data } = await this.$http.get("/novels?fc=武侠奇幻");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 竞技
+    async getJingjiList() {
+      this.classifyArr = [ "", "","","","","","","","","first_active","","",""];
+      const { data } = await this.$http.get("/novels?fc=竞技");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 其他
+    async getQitaList() {
+      this.classifyArr = [ "", "","","","","","","","","","first_active","","",""];
+      const { data } = await this.$http.get("/novels?fc=其他");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 现言
+    async getXianyanList() {
+      this.classifyArr = [ "", "","","","","","","","","","","first_active","",""];
+      const { data } = await this.$http.get("/novels?fc=现言");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 古言
+    async getGuyanList() {
+      this.classifyArr = [ "", "","","","","","","","","","","","first_active",""];
+      const { data } = await this.$http.get("/novels?fc=古言");
+      this.novelTypeList = data.data;
+    },
+    // 分类 -- 幻言
+    async getHuanyanList() {
+      this.classifyArr = [ "", "","","","","","","","","","","","","first_active"];
+      const { data } = await this.$http.get("/novels?fc=幻言");
+      this.novelTypeList = data.data;
     },
     // 获取版权推荐数据
     async getCopyrightList() {
@@ -387,6 +471,14 @@ export default {
     handleCurrentChange(num) {
       this.queryInfo.pagenum = num;
       this.getCopyrightList();
+    },
+    handleSizeChange2(size) {
+      this.queryInfo2.pagesize = size;
+      this.getnovelTypeList();
+    },
+    handleCurrentChange2(num) {
+      this.queryInfo2.pagenum = num;
+      this.getnovelTypeList();
     },
     getStyle: getStyle,
     animate: animate
@@ -619,7 +711,7 @@ export default {
   color: #f36f20;
 }
 
-.classify_option > li:nth-child(1) > a {
+.first_active {
   background-color: #8e96aa;
   color: #ffffff;
   border-radius: 3px;
@@ -679,6 +771,7 @@ export default {
   position: relative;
   margin-left: 16px;
 }
+
 .bkuser_icon {
   float: right;
   display: inline-block;
@@ -741,6 +834,11 @@ export default {
 .datas > li > a {
   position: relative;
   display: block;
+}
+
+.block_22 {
+  margin-top: 50px;
+  padding-left: 240px;
 }
 
 // 图片

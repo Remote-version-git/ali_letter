@@ -62,6 +62,11 @@ let router = new Router({
           path: "/search",
           component: () => import("@/components/Search.vue")
         },
+        {
+          path: '/login',
+          component: () => import("@/components/login.vue")
+
+        }
       ]
     },
     {
@@ -77,6 +82,7 @@ let router = new Router({
           component: () => import('@/components/novel.vue')
 
         }
+
       ]
     },
     {

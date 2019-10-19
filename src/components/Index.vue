@@ -21,7 +21,9 @@
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
                 <el-carousel-item v-for="item3 in topData" :key="item3.id">
-                  <img :src="item3.novel_url" alt />
+                  <a :href="'/book/'+item3.id">
+                    <img :src="item3.novel_url" alt />
+                  </a>
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -55,7 +57,7 @@
             <div class="connect_middle_top">
               <ul>
                 <li v-for="(item1,index) in connect_middle_top" :key="index">
-                  <a href>
+                  <a :href="'/book/'+item1.id">
                     <span>[现代言情]</span>
                     {{item1.novel_title}}
                   </a>
@@ -67,7 +69,7 @@
               <div class="connect_middle_bottom_book" v-for="item in topData" :key="item.id + ''">
                 <img :src="item.novel_url" alt />
                 <a :href="'/book/'+item.id">{{ item.novel_title }}</a>
-                <a href>{{ item.novel_author }}</a>
+                <a :href="'/author/'+item.id">{{ item.novel_author }}</a>
               </div>
             </div>
           </div>
@@ -77,7 +79,7 @@
 
             <ul class="connect_right_book">
               <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
-                <a >
+                <a :href="'/book/'+item.id">
                   <p>
                     <i class="connect_right_book_chen">{{item.id}}</i>
                     {{item.title}}
@@ -112,7 +114,9 @@
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
                 <el-carousel-item v-for="(item,index) in famelaData" :key="index">
-                  <img :src="item.novel_url" alt />
+                  <a :href="'/book/'+item.id">
+                    <img :src="item.novel_url" alt />
+                  </a>
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -145,13 +149,13 @@
           <div class="female_connect_middle">
             <ul class="female_connect_middle-top">
               <li v-for="item2 in famelaData1" :key="item2.id">
-                <a href="/" class="top_book">
+                <a :href="'/book/'+item2.id" class="top_book">
                   <img :src="item2.novel_url" alt />
                   <p>{{item2.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>{{item2.novel_author}}</a>
+                  <a :href="'/author/'+item2.id">{{item2.novel_author}}</a>
                 </p>
 
                 <p class="top_Introduction">{{item2.novel_desc}}}</p>
@@ -160,7 +164,7 @@
 
             <ul class="female_connect_middle-bottom">
               <li v-for="item3 in famelaData1" :key="item3.id">
-                <a href="/" class="top_book">
+                <a :href="'/book/'+item3.id" class="top_book">
                   <p>{{item3.novel_title}}</p>
                 </a>
 
@@ -177,7 +181,7 @@
             <p>女频人气</p>
             <ul class="connect_right_book">
               <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
-                <a href="/">
+                <a :href="'/book/'+item.id">
                   <p>
                     <i class="connect_right_book_chen">{{item.id}}</i>
                     {{item.title}}
@@ -1079,10 +1083,16 @@ export default {
   color: #b4adb2;
 }
 
+.el-carousel__item a > img {
+  width: 116px;
+  height: 165px;
+}
+
 .el-carousel__item > img {
   width: 116px;
   height: 165px;
 }
+
 
 .connect_middle_bottom_book img {
   width: 140px;
@@ -1647,129 +1657,4 @@ export default {
   color: #333;
 }
 // 热门分类结束
-
-// 大神介绍
-.great .hot_title::after {
-  top: 16px;
-}
-
-.great .hot_title > span {
-  background-position-y: 7px;
-}
-
-.great_content {
-  margin-top: 50px;
-}
-
-.great_content ul li {
-  display: inline-block;
-  width: 260px;
-  margin-right: 20px;
-}
-
-.great_content ul li i {
-  display: inline-block;
-  position: absolute;
-  top: 0px;
-  left: 1px;
-  width: 260px;
-  height: 32px;
-  background-color: #f1f1f4;
-}
-
-.great_content_bottom {
-  position: relative;
-  width: 260px;
-  height: 120px;
-  border: 1px solid #d7d7da;
-}
-
-.great_content_bottom p:first-child {
-  line-height: 32px;
-  text-align: center;
-  position: absolute;
-  left: 90px;
-}
-
-.great_content_bottom p:last-child {
-  position: absolute;
-  bottom: 20px;
-  font-size: 12px;
-  line-height: 20px;
-  padding: 4px 10px 0px 12px;
-}
-
-.great_content ul li {
-  position: relative;
-}
-
-.great_content ul li a:nth-child(2) {
-  position: absolute;
-  top: -33px;
-  z-index: 100;
-}
-
-.great_content ul li a:nth-child(2) img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
-}
-// 大神介绍结束
-
-// 最近更新
-.recent_updates_left {
-  float: left;
-  width: 800px;
-  margin-right: 35px;
-}
-
-.recent_updates_title {
-}
-.recent_updates_title span {
-  float: left;
-  font-size: 18px;
-  display: inline-block;
-  font-weight: bold;
-  padding-left: 10px;
-  padding-top: 1px;
-  width: 93px;
-  height: 20px;
-  background-image: url("../assets/images/title_icon_cate.png");
-  background-repeat: no-repeat;
-}
-
-.recent_updates_title a {
-  float: right;
-  display: inline-block;
-  width: 80px;
-  height: 20px;
-  border: #f37315 1px solid;
-  text-align: center;
-  line-height: 20px;
-  border-radius: 5px;
-}
-
-.el-table__header-wrapper {
-  border-bottom: 3px solid #909399;
-}
-
-.el-tabs {
-  float: left;
-  width: 264px;
-}
-
-.el-tabs__item:hover {
-  color: #f37315;
-}
-
-.el-tabs__active-bar {
-  background-color: #f37315;
-}
-
-.el-tabs__item.is-active {
-  color: #f37315;
-}
-// .el-tab-top{
-//   width: 45px;
-// }
 </style>
