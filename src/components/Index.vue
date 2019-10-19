@@ -21,7 +21,9 @@
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
                 <el-carousel-item v-for="item3 in topData" :key="item3.id">
-                  <img :src="item3.novel_url" alt />
+                  <a :href="'/book/'+item3.id">
+                    <img :src="item3.novel_url" alt />
+                  </a>
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -55,7 +57,7 @@
             <div class="connect_middle_top">
               <ul>
                 <li v-for="(item1,index) in connect_middle_top" :key="index">
-                  <a href>
+                  <a :href="'/book/'+item1.id">
                     <span>[现代言情]</span>
                     {{item1.novel_title}}
                   </a>
@@ -67,7 +69,7 @@
               <div class="connect_middle_bottom_book" v-for="item in topData" :key="item.id + ''">
                 <img :src="item.novel_url" alt />
                 <a :href="'/book/'+item.id">{{ item.novel_title }}</a>
-                <a href>{{ item.novel_author }}</a>
+                <a :href="'/author/'+item.id">{{ item.novel_author }}</a>
               </div>
             </div>
           </div>
@@ -112,7 +114,9 @@
             <div class="connect_left_el-carousel">
               <el-carousel :interval="4000" type="card">
                 <el-carousel-item v-for="(item,index) in famelaData" :key="index">
-                  <img :src="item.novel_url" alt />
+                  <a :href="'/book/'+item.id">
+                    <img :src="item.novel_url" alt />
+                  </a>
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -145,13 +149,13 @@
           <div class="female_connect_middle">
             <ul class="female_connect_middle-top">
               <li v-for="item2 in famelaData1" :key="item2.id">
-                <a href="/" class="top_book">
+                <a :href="'/book/'+item2.id" class="top_book">
                   <img :src="item2.novel_url" alt />
                   <p>{{item2.novel_title}}</p>
                 </a>
 
                 <p class="top_author">
-                  <a href>{{item2.novel_author}}</a>
+                  <a :href="'/author/'+item2.id">{{item2.novel_author}}</a>
                 </p>
 
                 <p class="top_Introduction">{{item2.novel_desc}}}</p>
@@ -160,7 +164,7 @@
 
             <ul class="female_connect_middle-bottom">
               <li v-for="item3 in famelaData1" :key="item3.id">
-                <a href="/" class="top_book">
+                <a :href="'/book/'+item3.id" class="top_book">
                   <p>{{item3.novel_title}}</p>
                 </a>
 
@@ -177,7 +181,7 @@
             <p>女频人气</p>
             <ul class="connect_right_book">
               <li @mousemove="changeObj(item)" v-for="(item,index) in array" :key="index">
-                <a href="/">
+                <a :href="'/book/'+item.id">
                   <p>
                     <i class="connect_right_book_chen">{{item.id}}</i>
                     {{item.title}}
@@ -1079,10 +1083,16 @@ export default {
   color: #b4adb2;
 }
 
+.el-carousel__item a > img {
+  width: 116px;
+  height: 165px;
+}
+
 .el-carousel__item > img {
   width: 116px;
   height: 165px;
 }
+
 
 .connect_middle_bottom_book img {
   width: 140px;
