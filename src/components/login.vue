@@ -21,7 +21,7 @@
         :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
       >登录</div>
       <p class="operates">
-        <span class="js-toReg">注册账号</span>
+        <span class="js-toReg" @click="">注册账号</span>
         <span class="js-forget">忘记密码</span>
       </p>
     </el-form>
@@ -81,7 +81,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 element.style {
   margin-top: 0px !important;
 }
