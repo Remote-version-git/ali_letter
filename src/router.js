@@ -55,7 +55,12 @@ let router = new Router({
 
           path: "/female",
           component: () => import("@/components/Femalefrequency.vue")
-        }
+        },
+        {
+
+          path: "/search",
+          component: () => import("@/components/Search.vue")
+        },
       ]
     },
     {
