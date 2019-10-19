@@ -7,16 +7,16 @@
           <div class="rigth">
             <ul class="ranklist-ul">
               <li v-for="item in MensClickList" :key="item.id">
-                <a href>
+                <a :href="'/book/'+item.id">
                   <img :src="item.novel_url" alt class="img" />
                 </a>
-                <a href>
+                <a :href="'/book/'+item.id">
                   <h3>{{item.novel_title}}</h3>
                 </a>
                 <p class="ranklist-autor">
                   <span class="bkuser-icon">
                     <i class="el-icon-user-solid"></i>
-                    <a class="zzm" href>{{item.novel_author}}</a>
+                    <a class="zzm" :href="'/book/'+item.id">{{item.novel_author}}</a>
                   </span>
                   <i class="el-icon-menu"></i>
                   <span class="bkcate-icon">{{item.novel_classify}}</span>
@@ -24,14 +24,14 @@
                 <p class="ranklist-des">{{item.novel_desc}}</p>
                 <p class="ranklist-tag">
                   <span>
-                    <a href>{{item.novel_tags}}</a>
+                    <a :href="'/book/'+item.id">{{item.novel_tags}}</a>
                   </span>
                   <span>
                     <a href>全文</a>
                   </span>
                 </p>
                 <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
+                  <a class="immediately" :href="item.novel_paths">立即阅读</a>
                   <span class="addshelf js-addShelf">+书架</span>
                 </div>
                 <!-- <div class="ranklist-top rktop-icon1"></div> -->
@@ -55,10 +55,10 @@
           <div class="rigth">
             <ul class="ranklist-ul">
               <li v-for="item2 in WomenClickList" :key="item2.id">
-                <a href>
+                <a :href="'/book/'+item2.id">
                   <img :src="item2.novel_url" alt class="img" />
                 </a>
-                <a href>
+                <a :href="'/book/'+item2.id">
                   <h3>{{item2.novel_title}}</h3>
                 </a>
                 <p class="ranklist-autor">
@@ -72,14 +72,14 @@
                 <p class="ranklist-des">{{item2.novel_desc}}</p>
                 <p class="ranklist-tag">
                   <span>
-                    <a href>{{item2.novel_tags}}</a>
+                    <a :href="'/book/'+item2.id">{{item2.novel_tags}}</a>
                   </span>
                   <span>
                     <a href>全文</a>
                   </span>
                 </p>
                 <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
+                  <a class="immediately" :href="item2.novel_paths">立即阅读</a>
                   <span class="addshelf js-addShelf">+书架</span>
                 </div>
                 <!-- <div class="ranklist-top rktop-icon1"></div> -->
@@ -103,10 +103,10 @@
           <div class="rigth">
             <ul class="ranklist-ul">
               <li v-for="item3 in EndList" :key="item3.id">
-                <a href>
+                <a :href="'/book/'+item3.id">
                   <img :src="item3.novel_url" alt class="img" />
                 </a>
-                <a href>
+                <a :href="'/book/'+item3.id">
                   <h3>{{item3.novel_title}}</h3>
                 </a>
                 <p class="ranklist-autor">
@@ -127,7 +127,7 @@
                   </span>
                 </p>
                 <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
+                  <a class="immediately" :href="item3.novel_paths">立即阅读</a>
                   <span class="addshelf js-addShelf">+书架</span>
                 </div>
                 <!-- <div class="ranklist-top rktop-icon1"></div> -->
@@ -151,10 +151,10 @@
           <div class="rigth">
             <ul class="ranklist-ul">
               <li v-for="item4 in PopularityList" :key="item4.id">
-                <a href>
+                <a :href="'/book/'+item4.id">
                   <img :src="item4.novel_url" alt class="img" />
                 </a>
-                <a href>
+                <a :href="'/book/'+item4.id">
                   <h3>{{item4.novel_title}}</h3>
                 </a>
                 <p class="ranklist-autor">
@@ -175,7 +175,7 @@
                   </span>
                 </p>
                 <div class="ranklist-handle">
-                  <a class="immediately" href>立即阅读</a>
+                  <a class="immediately" :href="item4.novel_paths">立即阅读</a>
                   <span class="addshelf js-addShelf">+书架</span>
                 </div>
                 <!-- <div class="ranklist-top rktop-icon1"></div> -->
@@ -254,7 +254,7 @@ export default {
       // console.log(this.total);
       // console.log(this.WomenClickList);
     },
-    // 字数
+    // 人气
     async PopularityClick() {
       // console.log('11')
       const { data } = await this.$http.get(
@@ -299,7 +299,7 @@ export default {
     // 人气
       handleSizeChangerq(per_page) {
       this.queryInfo.pagesize = per_page;
-      console.log(per_page);
+      // console.log(per_page);
       this.PopularityClick();
     },
     handleCurrentChangerq(page) {
