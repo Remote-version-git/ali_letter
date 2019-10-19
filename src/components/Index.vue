@@ -19,38 +19,35 @@
         <div class="editor_recommend_connect">
           <div class="editor_recommend_connect_left">
             <div class="connect_left_el-carousel">
-              <el-carousel :interval="4000" type="card">
+              <!-- 轮播 start -->
+              <el-carousel :interval="4000" v-on:change="changeFun1" type="card">
                 <el-carousel-item v-for="item3 in topData" :key="item3.id">
                   <a :href="'/book/'+item3.id">
                     <img :src="item3.novel_url" alt />
                   </a>
                 </el-carousel-item>
               </el-carousel>
+              <!-- 轮播 end -->
             </div>
-
+          <!-- 轮播文本 start -->
             <div class="connect_left_text">
               <p>
-                <a href="/">逐魂录</a>
+                <a :href="topLunBo1.novel_paths">{{ topLunBo1.novel_title }}</a>
               </p>
               <p>
-                <a href="/">李寻希</a>
+                <a :href="topLunBo1.novel_paths">{{ topLunBo1.novel_author }}</a>
               </p>
-              <p>十年前，他亲手结束了父亲的生命。为了继承父亲生前的使命，他加入了那个父亲曾经引以为傲的组织。然而，他的目的并</p>
+              <p>{{ topLunBo1.novel_desc }}</p>
               <ul>
-                <li>
-                  <a href>热血</a>
-                </li>
-                <li>
-                  <a href>爽文</a>
-                </li>
-                <li>
-                  <a href>虐文</a>
+                <li v-for="item in topLunBo1.novel_tags" :key="item">
+                  <a :href="topLunBo1.novel_paths">{{ item }}</a>
                 </li>
               </ul>
               <div class="connect_left_button">
-                <el-button type="danger">立即阅读</el-button>
+                <el-button type="danger"><a :href="topLunBo1.novel_paths">立即阅读</a></el-button>
               </div>
             </div>
+            <!-- 轮播文本 end -->
           </div>
 
           <div class="editor_recommend_connect_middle">
@@ -744,7 +741,8 @@ export default {
       endBooks1: [],
       endBooks2: [],
       endBooks3: [],
-      hotBook: []
+      hotBook: [],
+      topLunBo1: {}
     };
   },
   methods: {
@@ -755,14 +753,27 @@ export default {
       item.currentEnce = true;
       this.$refs.info.display = "block";
     },
-    handleClick() {}
+    handleClick() {},
+    changeFun1(prev, next) {
+      this.topLunBo1 = this.topData[prev];
+    }
   },
   updated() {},
   async created() {
     // 主编推荐
+    //  轮播实现 start
     const { data: data1 } = await this.$http("/designation?id1=1,2,3");
     this.topData = data1.data;
-
+    this.topData.forEach((item) => {
+      // 分割数组
+      item.novel_tags = item.novel_tags.split(' ')
+      // 判断是否超过3个，如果大于则删除一个
+      if (item.novel_tags.length >= 3) {
+        item.novel_tags.pop();
+      }
+    })
+    this.topLunBo1 = this.topData[0];
+    // 轮播实现 end
     const { data: data2 } = await this.$http(
       "/designation?id1=4,5,6,7,8,9,10,11,12,13"
     );
