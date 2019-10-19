@@ -3,12 +3,10 @@
     <div class="titleline titles">
       <span class="tlle">男频推荐</span>
     </div>
-    <div class="container">
-      <div class="a">
-        <h1>111</h1>
-      </div>
-      <div class="b">
-        <div class="b-head">
+  <div class="container">
+   <div class="a"><h1>111</h1></div>
+   <div class="b">
+     <div class="b-head">
           <a href>
             <h3>都市</h3>
             <div class="covers">
@@ -85,9 +83,9 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div class="c">
-        <div class="c-left-page">
+   </div>
+   <div class="c">
+<div class="c-left-page">
           <ul>
             <li>
               <a href>
@@ -185,14 +183,16 @@
             </a>
           </li>
         </ul>
-      </div>
-      <div class="d">
+
+   </div>
+  </div>
+
+
+<div class="d">
         <a href>
           <img src="../../public/img/2019101516432492.jpg" alt />
         </a>
       </div>
-    </div>
-
     <div class="lefteare">
       <div class="titleline">
         <span class="tlle2">精品热推</span>
@@ -479,7 +479,7 @@
     </div>
     <div class="d">
       <a href>
-        <img src="../../public/img/heng1.jpg" alt />
+        <img src="http://img-tailor.11222.cn/pm/book/operate/2019101516434409.jpg" alt />
       </a>
     </div>
     <!-- 猜你喜欢———————————————————————————————————————————— -->
@@ -579,7 +579,7 @@
     </div>
     <div class="d">
       <a href>
-        <img src="../../public/img/heng2.jpg" alt />
+        <img src="http://img-tailor.11222.cn/pm/book/operate/2019101516435586.jpg" alt />
       </a>
     </div>
 
@@ -1040,53 +1040,56 @@ a {
   text-decoration: none;
 }
 .box {
-  width: 84%;
+  width: 1120px;
   height: 100%;
   margin: 0 auto;
   margin-top: 20px;
 }
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.container{
+  width: 100%;
+  height: 100%;
 }
-.a {
-  width: 1090px;
-  height: 264px;
-  margin-right: 40px;
-  margin-bottom: 28px;
-  background-color: #e8f3f1;
+.a{
+    float: left;
+    width: 77.85%;
+    height: 212px;
+    background-color:#e8f3f1;
+    margin-bottom:20px; 
 }
-.b {
-  grid-column: 2/4;
-  grid-row: 1/4;
-}
-.c {
-  width: 1090px;
-  height: 327px;
-}
-.d {
-  margin-top: 30px;
-  height: 110px;
-  grid-column: 1/4;
+.b{
+    float: right;
+    width: 19.46%;
+    height: 100%;
+    overflow: hidden;
 }
 .d img {
   width: 100%;
   height: 110px;
 }
 .b-head {
-  height: 116px;
+  height: 93px;
   background-color: #e8f3f1;
   margin-bottom: 3px;
 }
+.b-head h3{
+      font-size: 14px;
+    padding-top: 16px;
+    margin-left: 15px;
+    line-height: 14px;
+}
 .b-cenner {
-  height: 194px;
+  height: 155px;
   background-color: #e8f3f1;
   margin-bottom: 3px;
 }
 .b-cenner ul li {
-  position: relative;
-  line-height: 45px;
-  margin-left: 30px;
+  width: 100%;
+    box-sizing: border-box;
+    padding-left: 26px;
+    height: 35px;
+    line-height: 43px;
+    position: relative;
+    overflow: hidden;
 }
 a {
   color: black;
@@ -1107,19 +1110,19 @@ a:hover {
   text-align: center;
   color: #fff;
   position: absolute;
-  left: 0;
-  top: 12px;
+  left: 25;
+  top: 13px;
   font-style: normal;
   line-height: 21px;
 }
 .b-mend {
-  height: 134px;
+  height: 108px;
   margin-bottom: 3px;
 }
 .b-mend {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 66px 66px;
+  grid-template-rows: 52px 52px;
   grid-gap: 3px;
   height: 22%;
   margin-bottom: 3px;
@@ -1127,12 +1130,13 @@ a:hover {
   line-height: 66px;
 }
 .b-foot {
-  height: 120px;
+  height: 130px;
   background-color: #fef1f0;
-  padding-top: 30px;
+  padding-top: 15px;
+  margin-bottom: 20px;
 }
 .b-foot h4 {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px;
   height: 32px;
   color: #f47a33;
@@ -1145,7 +1149,7 @@ a:hover {
 }
 .b-foot ul li {
   font-size: 12px;
-  line-height: 12px;
+  line-height: 6px;
   padding: 3px 8px;
   border-left: 1px solid #fcd6c6;
   float: left;
@@ -1153,6 +1157,10 @@ a:hover {
 }
 .b-foot ul li a {
   color: #f47a33;
+}
+.c{
+  float: left;
+    width: 77.85%;
 }
 .c-left-page {
   float: left;
@@ -1199,7 +1207,7 @@ a:hover {
 }
 .mend-right {
   float: right;
-  width: 600px;
+  width: 480px;
 }
 .mend-right li {
   float: left;
@@ -1213,26 +1221,11 @@ a:hover {
 .mend-right span {
   color: #a0a1a1;
 }
-.b-head {
-  padding: 21px 18px 0;
-  color: #1d1e20;
-}
-.b-head a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-.b-head a h3 {
-  font-size: 14px;
-  margin-top: 16px;
-  line-height: 14px;
-  float: left;
-}
+
 .covers {
   height: 68px;
   float: right;
   position: relative;
-  top: 33px;
 }
 .covers1 {
   width: 52px;
@@ -1258,7 +1251,7 @@ a:hover {
 }
 
 .lefteare {
-  width: 78.4%;
+  width: 74%;
   float: left;
   height: 100%;
   margin-top: 30px;
@@ -1269,25 +1262,24 @@ a:hover {
   margin-top: 21px;
 }
 .booklist div {
-  position: relative;
-  line-height: 13px;
-  height: 120px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  padding-left: 106px;
-  color: #1d1e20;
-  overflow: hidden;
-  float: left;
-  width: 313px;
-  margin-top: 30px;
-  margin-right: 20px;
+  width: 265px;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 13px;
+    height: 120px;
+    margin-bottom: 20px;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 106px;
+    color: #1d1e20;
+    overflow: hidden;
 }
 .booklist div img {
-  width: 91px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+      width: 91px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .cover {
@@ -1335,7 +1327,7 @@ a:hover {
 li:nth-child(1) i.no,
 li:nth-child(2) i.no,
 li:nth-child(3) i.no {
-  background-color: #6bd6df;
+  background-color: #ff5e79;
 }
 p.title {
   position: relative;
@@ -1383,7 +1375,7 @@ p.title {
   height: 34px;
   line-height: 34px;
   display: flex;
-  border-bottom: 4px solid #6bd6df;
+  border-bottom: 4px solid #ff5e79;
   text-align: center;
   color: #1d1e20;
 }
@@ -1415,11 +1407,9 @@ p.title {
 }
 .newbook-left {
   margin-top: 20px;
-  width: 335px;
-  height: 488px;
+  width: 268px;
   float: left;
   background-color: #f8f6f8;
-  background: urlurl("/img/side33.png") no-repeat center bottom;
 }
 .newbook-left-top {
   width: 100%;
@@ -1439,13 +1429,13 @@ p.title {
 }
 .side {
   height: 94px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  box-sizing: border-box;
-  padding: 0 57px;
-  font-size: 14px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 24px;
+    font-size: 14px;
 }
 .side img {
   float: left;

@@ -1,19 +1,24 @@
 <template>
   <div>
     <div class="zong">
-      <el-breadcrumb class="breadline" separator-class="el-icon-arrow-right">
+      <el-breadcrumb
+        class="breadline"
+        separator-class="el-icon-arrow-right"
+        v-for="item in RenderingList"
+        :key="item.id"
+      >
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>都市异能</el-breadcrumb-item>
-        <el-breadcrumb-item>我的绝色总裁未婚妻</el-breadcrumb-item>
+        <el-breadcrumb-item>{{item.novel_classify}}</el-breadcrumb-item>
+        <el-breadcrumb-item>{{item.novel_title}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="infoarea">
-      <div class="view">
-        <img src="../assets/images/201803141444064795.jpg" class="cover" />
+      <div class="view" v-for="item in RenderingList" :key="item.id">
+        <img :src="item.novel_url" class="cover" />
         <p class="bookTitle">
-          <span class="bname">我的绝色总裁未婚妻</span>
+          <span class="bname">{{item.novel_title}}</span>
           <span class="bauthor">
-            <a href>花幽山月</a>
+            <a href>{{item.novel_author}}</a>
           </span>
           <span class="bhot">
             人气值：
@@ -21,9 +26,7 @@
           </span>
         </p>
 
-        <p
-          class="bookDesc"
-        >【最火爆畅销书】★精华简介★本书又名《神级龙卫》神秘高手龙潜花都，与冰山美女总裁签订婚约，但无奈被嫌弃。可怜的沈浪，只得外出觅食。不料一个个美女接踵而至，沈浪陷入各种桃运漩涡。当然，最主要的还是征服冰山女总裁。不乖？调教一下就好。</p>
+        <p class="bookDesc">{{item.novel_desc}}</p>
 
         <ul class="tags clear">
           <li>
@@ -41,7 +44,7 @@
 
         <ul class="operates clear">
           <li class="read">
-            <a target="_blank" href>立即阅读</a>
+            <a target="_blank" :href="item.novel_paths">立即阅读</a>
           </li>
           <li>
             <a class="ml" target="_blank" href>目录</a>
@@ -73,13 +76,10 @@
           <div class="titleline">
             <span class="title">
               书友评论
-              <i >（ 701856条 ）</i>
+              <i>（ 701856条 ）</i>
             </span>
             <span class="btn">
-              <a
-                target="_blank"
-                href=""
-              >全部评论</a>
+              <a target="_blank" href>全部评论</a>
             </span>
           </div>
           <!-- <p class="pub-warning hide js-pubWarning">内容正在审核中，请耐心等待...</p> -->
@@ -95,7 +95,6 @@
             title="账号登录"
             :visible.sync="dialogVisible"
             width="30%"
-          
             style="margin-top: 0px;"
           >
             <input type="text" placeholder="请输入手机号" class="iphone js-phone" />
@@ -114,7 +113,12 @@
           </el-dialog>
 
           <!-- 登录后发表评论 -->
-          <div @click="commentgd"  ref="aa" :style="conheight"  class="writearea hide js-commentTextarea">
+          <div
+            @click="commentgd"
+            ref="aa"
+            :style="conheight"
+            class="writearea hide js-commentTextarea"
+          >
             <el-input
               type="textarea"
               placeholder="发表评论"
@@ -135,7 +139,7 @@
                   <el-button type="warning" @click="centerDialogVisible = false">确认</el-button>
                 </span>
               </el-dialog>
-              <span class="abort js-commentAbort"  @click="commentqx" >取消</span>
+              <span class="abort js-commentAbort" @click="commentqx">取消</span>
             </div>
           </div>
 
@@ -334,94 +338,25 @@ PS：微信书群可以让群友拉进去。"
             </li>
           </ul>
         </div>
-        <div class="rank-list">
-          <div class="comp-ranks normal js-ranks">
-            <ul class="cp-ranks-navs alone js-ranksNavs">
-              <li class="active">重磅推荐</li>
-            </ul>
-            <ul class="cp-ranks-list js-ranksList">
-              <li>
-                <a target="_blank" href="#">
-                  <p class="title">
-                    <i class="no">1</i>先爱你为敬
-                  </p>
-                  <div class="info">
-                    <img src="http://img-tailor.11222.cn/bcv/big/1124607899686.jpg" class="cover" />
-                    <div class="auth">画早</div>
-                    <div class="desc">
-                      现实的重压，将极度骄傲的周冕，连拖带拽地推进内衣行业里摩擦摩擦。
-                      即便他作为内衣
-                    </div>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a target="_blank" href="#">
-                  <p class="title">
-                    <i class="no">2</i>私奔后的种田生活
-                  </p>
-                </a>
-              </li>
-
-              <li>
-                <a target="_blank" href="#">
-                  <p class="title">
-                    <i class="no">3</i>神医毒妃：病娇王爷请自重
-                  </p>
-                </a>
-              </li>
-
-              <li>
-                <a target="_blank" href="#">
-                  <p class="title">
-                    <i class="no">4</i>宠婢
-                  </p>
-                </a>
-              </li>
-
-              <li>
-                <a target="_blank" href="#">
-                  <p class="title">
-                    <i class="no">5</i>神探死亡倒计时
-                  </p>
-                </a>
-              </li>
-
-              <li>
-                <a target="_blank" href="#">
-                  <p class="title">
-                    <i class="no">6</i>重生之都市修真者
-                  </p>
-                </a>
-              </li>
-
-              <li>
-                <a target="_blank" href="#">
-                  <p class="title">
-                    <i class="no">7</i>绝世至尊
-                  </p>
-                </a>
-              </li>
-
-              <li>
-                <a target="_blank" href="#" data-clog="a8$$bid=7933656">
-                  <p class="title">
-                    <i class="no">8</i>乡村小邪医
-                  </p>
-                </a>
-              </li>
-
-              <li>
-                <a target="_blank" href="#" data-clog="a9$$bid=7067742">
-                  <p class="title">
-                    <i class="no">9</i>剑逆诸天
-                  </p>
-                </a>
-              </li>
-            </ul>
-            <div class="page-data js-ranks-data"></div>
-          </div>
+        <div class="comp-ranks gold js-ranks float_right">
+          <ul class="cp-ranks-navs alone js-ranksNavs">
+            <li class="active">重磅推荐</li>
+          </ul>
+          <ul class="cp-ranks-list js-ranksList">
+            <li @mousemove="changeObj(item5)" v-for="(item5,index) in array" :key="index">
+              <a href="#" class="demo">
+                <p class="title">
+                  <i class="no">{{item5.id}}</i>
+                  {{item5.title}}
+                </p>
+                <div class="info" ref="info" v-show="item5.currentEnce">
+                  <img :src="item5.imgSrc" class="cover" />
+                  <div class="auth">{{item5.author}}</div>
+                  <div class="desc">{{item5.describe}}</div>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <!-- 回到顶部 -->
@@ -437,10 +372,102 @@ PS：微信书群可以让群友拉进去。"
 
 <script>
 import { METHODS } from "http";
-import { log } from 'util';
+import { log } from "util";
 export default {
+  props: ["id"],
   data() {
     return {
+       array: [
+        {
+          id: 1,
+          imgSrc: require("../assets/images/1145637829226.jpg"),
+          author: "轻舟",
+          currentEnce: true,
+          describe:
+            "来到异世界之后的精灵少女，最犯愁的事情，不是精灵不会魔法，而是精灵手里没有钱。",
+          title: "精灵少女的异世界马戏团生涯"
+        },
+        {
+          id: 2,
+          imgSrc: require("../assets/images/1169137823196.jpg"),
+          author: "菠萝包",
+          currentEnce: false,
+          describe:
+            "崇尚修真的少年，阴差阳错之下来到了仙境。却被告知，我们不修真，我们学魔法吧！",
+          title: "我们不教修仙，教魔法！"
+        },
+        {
+          id: 3,
+          imgSrc: require("../assets/images/1153777825575.jpg"),
+          author: "江左",
+          currentEnce: false,
+          describe: "逗逼、搞笑、一个学霸的成长与守护之路。",
+          title: "修仙界学霸"
+        },
+        {
+          id: 4,
+          imgSrc: require("../assets/images/1137827830393.jpg"),
+          author: "右手染红尘",
+          currentEnce: false,
+          describe:
+            "出身贫民窟的白小白在达到十六岁后成功觉醒了世界上第一个心灵类异能女装，异能的力量",
+          title: "我！是个杀手"
+        },
+        {
+          id: 5,
+          imgSrc: require("../assets/images/1162157829678.jpg"),
+          author: "虫子男爵",
+          currentEnce: false,
+          describe:
+            "公元33世纪，陆青从冰封的洞穴醒来，失去了所有的记忆。洞穴之外的世界沧海桑田，厚",
+          title: "诡诞纪元"
+        },
+        {
+          id: 6,
+          imgSrc: require("../assets/images/1120117874697.jpg"),
+          author: "月有北安",
+          currentEnce: false,
+          describe:
+            "一个人，究竟可以倒霉到什么地步？亲人惨死，家族覆灭，曾经在江湖上赫赫有名的侠二",
+          title: "这个江湖风太大"
+        },
+        {
+          id: 7,
+          imgSrc: require("../assets/images/201809271723143753.jpg"),
+          author: "好玩的饺子",
+          currentEnce: false,
+          describe:
+            "互相羡慕对方生活的男女两人，在开学不久一天早上醒来，发现两人之间互换了身体？在没",
+          title: "如果我是Ta"
+        },
+        {
+          id: 8,
+          imgSrc: require("../assets/images/1137907838187.jpg"),
+          author: "走到天边看海",
+          currentEnce: false,
+          describe:
+            "刘越穿越到这个时代本是胸无大志，只想浪荡的过完这一生，开始为了自己的安危而查案，",
+          title: "痞子黄檀"
+        },
+        {
+          id: 9,
+          imgSrc: require("../assets/images/1169327831495.jpg"),
+          author: "八口",
+          currentEnce: false,
+          describe:
+            "公元2050年，因不明污染，女性不断减少，一款名为拯救少女的游戏风靡全球，玩游戏",
+          title: "前进, 拯救少女"
+        },
+        {
+          id: 10,
+          imgSrc: require("../assets/images/1180837787059.jpg"),
+          author: "小梦大师",
+          currentEnce: false,
+          describe:
+            "末日到来的我要拯救世界么？当然！我不仅要拯救世界，我还要拯救世界里生存的",
+          title: "末日到来的我要拯救世界么"
+        }
+      ],
       // 登录
       dialogVisible: false,
       // 评论
@@ -449,25 +476,45 @@ export default {
       centerDialogVisible: false,
       conheight: {
         height: ""
-        
-      }
+      },
+      // 详情
+      RenderingList: [],
+      //  推荐
+      RecommendList: []
     };
   },
+  created() {
+    this.RenderingClick();
+  },
   methods: {
+    changeObj(item) {
+      this.array.forEach(item1 => {
+        item1.currentEnce = false;
+      });
+      item.currentEnce = true;
+      this.$refs.info.display = "block";
+    },
+    // 评论
     commentgd() {
-      // 
-       this.conheight.height = 250+"px";
-      // this.$refs.aa.style.height = 250 + "px";
-      //  this.conheight.height = 250+"px";
+      this.conheight.height = 250 + "px";
     },
     commentqx() {
-      // console.log(this.$el);
       this.$refs.aa.style.height = 40 + "px";
-      // this.conheight.height = 40+"px";
-      // console.log('3ww');
-      
     },
-    
+    // 渲染
+    async RenderingClick() {
+      const { data } = await this.$http.get(`/novels/${this.id}`);
+      // console.log(data.data);
+
+      this.RenderingList = data.data;
+    },
+    // 推荐
+    async RecommendClick() {
+      const { data } = await this.$http.get("/novels?type=1");
+
+      this.RenderingList = data.data;
+      console.log(data);
+    }
   }
 };
 </script>
@@ -639,8 +686,7 @@ img.cover {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../assets/images/title_icon_cate.png) no-repeat 0 0
-    #fff;
+  background: url(../assets/images/title_icon_cate.png) no-repeat 0 0 #fff;
   background-size: auto 22px;
 }
 .leftarea .lastchapter .chapname {
@@ -681,8 +727,7 @@ a:hover {
 .leftarea .comment-view .titleline span.title {
   padding: 0 18px 0 14px;
   float: left;
-  background: url(../assets/images/title_icon_cate.png) no-repeat 0 0
-    #fff;
+  background: url(../assets/images/title_icon_cate.png) no-repeat 0 0 #fff;
   background-size: auto 22px;
   height: 22px;
   overflow: hidden;
@@ -897,7 +942,7 @@ element.style {
   width: 30px;
   bottom: 5px;
   left: -6px;
-     top: 197px;
+  top: 197px;
 }
 .leftarea .comment-view div.writearea {
   width: 100%;
@@ -1072,8 +1117,7 @@ element.style {
   overflow: hidden;
   margin-bottom: 14px;
   padding-left: 14px;
-  background: url(../assets/images/title_icon_cate.png) no-repeat 0 0
-    #fff;
+  background: url(../assets/images/title_icon_cate.png) no-repeat 0 0 #fff;
   background-size: auto 22px;
 }
 .rightarea .user-orther li {

@@ -15,29 +15,29 @@
             <a href="javascript:;" class="prev" id="arrLeft" @click="prevClick"></a>
             <a href="javascript:;" class="next" id="arrRight" @click="nextClick"></a>
           </div>
-          <div class="slide_text">
-            <p class="slide_text_p1">
-              <a href class="box_name">大名长歌</a>
-              <span class="author">今夏 著</span>
-              <i class="continue">连载中</i>
-            </p>
-            <p class="slide_text_p2">李彤、刘颖、张守义、刘继业、常浩然等南京国子监学子，每天赖带南京城内无所事事。</p>
-            <p class="slide_text_p3">
-              <span class="weekName">人气值：</span>
-              <span class="weekValue">
-                <i class="week-number">1</i>
-                <i class="week-number">0</i>
-                <i class="week-number">0</i>
-                <i class="week-number">0</i>
-              </span>
-              <span class="apply">适用于：</span>
-              <span class="labelBox">
-                <i class="apply-label">电视剧</i>
-                <i class="apply-label">网剧</i>
-              </span>
-              <a href class="lookdesc">查看详细</a>
-            </p>
-          </div>
+        </div>
+        <div class="slide_text">
+          <p class="slide_text_p1">
+            <a href class="box_name">大名长歌</a>
+            <span class="author">今夏 著</span>
+            <i class="continue">连载中</i>
+          </p>
+          <p class="slide_text_p2">李彤、刘颖、张守义、刘继业、常浩然等南京国子监学子，每天赖带南京城内无所事事。</p>
+          <p class="slide_text_p3">
+            <span class="weekName">人气值：</span>
+            <span class="weekValue">
+              <i class="week-number">1</i>
+              <i class="week-number">0</i>
+              <i class="week-number">0</i>
+              <i class="week-number">0</i>
+            </span>
+            <span class="apply">适用于：</span>
+            <span class="labelBox">
+              <i class="apply-label">电视剧</i>
+              <i class="apply-label">网剧</i>
+            </span>
+            <a href class="lookdesc">查看详细</a>
+          </p>
         </div>
       </div>
     </div>
@@ -126,10 +126,19 @@
               <a href>全部</a>
             </li>
             <li>
-              <a href>男频</a>
+              <a href>30万以下</a>
             </li>
             <li>
-              <a href>男频</a>
+              <a href>30万~50万</a>
+            </li>
+            <li>
+              <a href>50万~100万</a>
+            </li>
+            <li>
+              <a href>100万~200万</a>
+            </li>
+            <li>
+              <a href>200万以上</a>
             </li>
           </ul>
         </div>
@@ -141,69 +150,20 @@
         <div class="bexhibit">
           <div class="roomcentre">
             <ul class="bexhibit_option clearfix">
-              <li class="bexhibit_option_list">
-                <a href class="clearfix">
-                  <img src="../assets/images/1117477801943.jpg" alt />
+              <li
+                class="bexhibit_option_list"
+                v-for="novelTxtItem in novelTypeList"
+                :key="novelTxtItem.id"
+              >
+                <a :href="/book/+novelTxtItem.id" class="clearfix">
+                  <img :src="novelTxtItem.novel_url" alt />
                   <div class="exhibit_clearfix">
-                    <h3>花都超品医生</h3>
-                    <p
-                      class="store_des"
-                    >他是令雇佣兵闻风丧胆的战神！亦是妙手回春、改天写命的超凡圣医！他手握玄铁针，可断人病，亦可要人命！ 为突破修为、寻找身世的秦牧离开天临山，开启了一段纵横都市之旅！ “小牧子，咱天承派人丁稀少，你不带七八个媳妇，十几个大胖小子就别回来了。”秦牧下山，老头子语重心长道。</p>
+                    <h3>{{novelTxtItem.novel_title}}</h3>
+                    <p class="store_des">{{novelTxtItem.novel_desc}}</p>
                     <p class="store_tag">
-                      <span class="bkcate_icon">都市异能</span>
-                      <a href>
-                        <span class="bkuser_icon">鱼非渔</span>
-                      </a>
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="bexhibit_option_list">
-                <a href class="clearfix">
-                  <img src="../assets/images/1117477801943.jpg" alt />
-                  <div class="exhibit_clearfix">
-                    <h3>花都超品医生</h3>
-                    <p
-                      class="store_des"
-                    >他是令雇佣兵闻风丧胆的战神！亦是妙手回春、改天写命的超凡圣医！他手握玄铁针，可断人病，亦可要人命！ 为突破修为、寻找身世的秦牧离开天临山，开启了一段纵横都市之旅！ “小牧子，咱天承派人丁稀少，你不带七八个媳妇，十几个大胖小子就别回来了。”秦牧下山，老头子语重心长道。</p>
-                    <p class="store_tag">
-                      <span class="bkcate_icon">都市异能</span>
-                      <a href>
-                        <span class="bkuser_icon">鱼非渔</span>
-                      </a>
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="bexhibit_option_list">
-                <a href class="clearfix">
-                  <img src="../assets/images/1117477801943.jpg" alt />
-                  <div class="exhibit_clearfix">
-                    <h3>花都超品医生</h3>
-                    <p
-                      class="store_des"
-                    >他是令雇佣兵闻风丧胆的战神！亦是妙手回春、改天写命的超凡圣医！他手握玄铁针，可断人病，亦可要人命！ 为突破修为、寻找身世的秦牧离开天临山，开启了一段纵横都市之旅！ “小牧子，咱天承派人丁稀少，你不带七八个媳妇，十几个大胖小子就别回来了。”秦牧下山，老头子语重心长道。</p>
-                    <p class="store_tag">
-                      <span class="bkcate_icon">都市异能</span>
-                      <a href>
-                        <span class="bkuser_icon">鱼非渔</span>
-                      </a>
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="bexhibit_option_list">
-                <a href class="clearfix">
-                  <img src="../assets/images/1117477801943.jpg" alt />
-                  <div class="exhibit_clearfix">
-                    <h3>花都超品医生</h3>
-                    <p
-                      class="store_des"
-                    >他是令雇佣兵闻风丧胆的战神！亦是妙手回春、改天写命的超凡圣医！他手握玄铁针，可断人病，亦可要人命！ 为突破修为、寻找身世的秦牧离开天临山，开启了一段纵横都市之旅！ “小牧子，咱天承派人丁稀少，你不带七八个媳妇，十几个大胖小子就别回来了。”秦牧下山，老头子语重心长道。</p>
-                    <p class="store_tag">
-                      <span class="bkcate_icon">都市异能</span>
-                      <a href>
-                        <span class="bkuser_icon">鱼非渔</span>
+                      <span class="bkcate_icon">{{novelTxtItem.novel_classify}}</span>
+                      <a :href="/author/+novelTxtItem.id">
+                        <span class="bkuser_icon">{{novelTxtItem.novel_author}}</span>
                       </a>
                     </p>
                   </div>
@@ -218,7 +178,7 @@
     <div class="books_detail">
       <div class="roomcentre">
         <!-- tabs标签页组件 -->
-        <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tabs v-model="activeName">
           <el-tab-pane label="版权推荐" name="first">
             <ul class="datas clearfix">
               <li v-for="copyrightItem in copyrightList" :key="copyrightItem.id">
@@ -407,19 +367,18 @@ export default {
     },
     // 获取作品分类数据
     async getnovelTypeList() {
-      const { data } = await this.$http.get("/novels?fc=");
-      console.log(data.data);
-      console.log(data.data.novel_type);
+      const { data } = await this.$http.get("/novels");
+      this.novelTypeList = data.data;
+      console.log(this.novelTypeList);
+      // console.log(data.data.novel_type);
     },
     // 获取版权推荐数据
     async getCopyrightList() {
       const { data } = await this.$http.get(
         `/novels?type=1&page=${this.queryInfo.pagenum}&per_page=${this.queryInfo.pagesize}`
       );
-      // console.log(data);
       this.copyrightList = data.data;
       this.pageTotal = data.total;
-      // console.log(this.copyrightList);
     },
     handleSizeChange(size) {
       this.queryInfo.pagesize = size;
@@ -428,10 +387,6 @@ export default {
     handleCurrentChange(num) {
       this.queryInfo.pagenum = num;
       this.getCopyrightList();
-    },
-    // tabs切换时触发
-    handleClick(tab, event) {
-      console.log(tab, event);
     },
     getStyle: getStyle,
     animate: animate
@@ -483,6 +438,10 @@ export default {
   width: 100%;
 }
 
+.arrow {
+  z-index: 100;
+}
+
 .prev,
 .next {
   display: block;
@@ -511,7 +470,7 @@ export default {
 // 轮播图下方文字
 .slide_text {
   position: relative;
-  padding-top: 385px;
+  padding-top: 70px;
   padding-left: 130px;
   font-family: "Microsoft YaHei";
 }
@@ -620,7 +579,6 @@ export default {
   margin-top: 20px;
   // background-color: pink;
   padding-top: 1px;
-  padding-bottom: 20px;
 }
 
 .classify {
@@ -670,7 +628,7 @@ export default {
 //////////////////////////////////////////////////////
 
 .bexhibit_option {
-  height: 500px;
+  // height: 500px;
   background-color: pink;
   margin-bottom: 20px;
 }
@@ -678,8 +636,8 @@ export default {
 .bexhibit_option_list {
   float: left;
   height: 120px;
-  width: 252px;
-  margin: 0 6px;
+  width: 260px;
+  margin: 10px 10px;
 }
 
 .bexhibit_option_list > a {
@@ -693,11 +651,11 @@ export default {
   width: 90px;
   height: 120px;
   // background-color: green;
-  margin-right: 15px;
+  margin-right: 8px;
 }
 
 .exhibit_clearfix > h3 {
-  font-size: 14px;
+  font-size: 13px;
   height: 28px;
   line-height: 28px;
   margin-top: 15px;
@@ -751,7 +709,7 @@ export default {
 .books_detail {
   // height: 600px;
   background-color: #ffffff;
-  margin: 18px 0 40px 0;
+  margin: 50px 0 40px 0;
 }
 
 .el-tabs__item {
