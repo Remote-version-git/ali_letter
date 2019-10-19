@@ -21,9 +21,7 @@
                   <p class="bookname">{{ item.novel_title }}</p>
                 </a>
                 <p class="author">
-                  <a :href="'/author/'+item.id"
-                    class="demo deem_color"
-                  >{{ item.novel_author }}</a>
+                  <a :href="'/author/'+item.id" class="demo deem_color">{{ item.novel_author }}</a>
                 </p>
                 <p class="desc">{{ item.novel_desc }}</p>
               </li>
@@ -129,7 +127,7 @@
 
       <!-- 本宫腿毛一尺长图片条 -->
       <div class="banner-advert page-width">
-        <a href="#" class="demo">
+        <a href="/book/72" class="demo">
           <img src="../assets/images/2019070217055008.jpg" />
         </a>
       </div>
@@ -143,12 +141,12 @@
           </div>
           <div class="booklist">
             <div class="item" v-for="item in Hotbook" :key="item.id">
-              <a href="#" class="demo">
+              <a :href="'/book/'+item.id" class="demo">
                 <img :src="item.novel_url" />
                 <p class="bookname">{{item.novel_title}}</p>
               </a>
               <p class="author">
-                <a href="#" class="demo deem_color">{{item.novel_author}}</a>
+                <a :href="'/author/'+item.id" class="demo deem_color">{{item.novel_author}}</a>
               </p>
               <p class="desc">{{item.novel_desc}}</p>
             </div>
@@ -161,7 +159,7 @@
           </ul>
           <ul class="cp-ranks-list js-ranksList">
             <li @mousemove="changeObj(item5)" v-for="(item5,index) in array" :key="index">
-              <a href="#" class="demo">
+              <a :href="'/book/'+item5.id" class="demo">
                 <p class="title">
                   <i class="no">{{item5.id}}</i>
                   {{item5.title}}
@@ -179,7 +177,7 @@
 
       <!-- 死神的新娘图片 -->
       <div class="banner-advert page-width">
-        <a href="#" class="demo">
+        <a href="/book/73" class="demo">
           <img src="../assets/images/2019070217071804.jpg" />
         </a>
       </div>
@@ -239,128 +237,15 @@
         <!-- 图书、作者、简介 -->
         <div class="righteare">
           <div class="booklist">
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1140007801299.jpg" />
-                <p class="bookname">贫穷大王要翻身</p>
+            <div class="item" v-for="item in newBook" :key="item.id">
+              <a :href="'/book/'+item.id" class="demo">
+                <img :src="item.novel_url" />
+                <p class="bookname">{{item.novel_title}}</p>
               </a>
               <p class="author">
-                <a href="#" class="demo deem_color">大尾巴鱼</a>
+                <a :href="'/author/'+item.id" class="demo deem_color">{{item.novel_author}}</a>
               </p>
               <p class="desc">陈小轩下定决心要建设自己的领土，凭借着从现代带来的知识，开发出石英矿，远销海内外。获得巨额资产……</p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1164387823153.jpg" />
-                <p class="bookname">终末勇者的网游无双</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">不笑喵</a>
-              </p>
-              <p class="desc">
-                异世界冒险者竟硬核穿越到网游世界？
-                爱人失忆，队友变成NPC，他要只身一人面对氪金玩家、强肝玩家，甚至是封测者。
-                虽然是异世界土著，却熟知副本攻略、装备出处。
-                公会大战，世界boss，揭穿游戏制作者的阴谋。
-                他化身终末勇者，开启网游无双！
-              </p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1196557853712.jpg" />
-                <p class="bookname">有人正在谋杀全球</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">千秋清流</a>
-              </p>
-              <p
-                class="desc"
-              >当肉体已经不在成为精神的束缚，网络可以承载人的灵魂的时候，我们应该生活在宛若天堂般的虚拟世界中享受着生活，还是在地狱般的现实中面对残酷的未来。真相是残酷的，美好的是谎言，那么，你愿意接受的，是真相，还是谎言？</p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1152147818620.jpg" />
-                <p class="bookname">单身是病</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">空桑从女</a>
-              </p>
-              <p class="desc">
-                21世纪的大学生艾小爱在年满二十岁的时候忽然穿越到了一个认为单身是病的主题世界。在这个世界中，男生女生到了二十岁都必须要找到互相爱慕的伴侣，否则将会被送去专业的主题医院进行治疗。在主题世界中，单身是一种病，极罕见又难治疗的病征。直到找到愿意跟他一起生活的伴侣这才算是根治了病征。
-                由于“单身”这种病传染性很强（思维传播），所以必须尽快跟正常人隔离开。
-              </p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1135087817543.jpg" />
-                <p class="bookname">我的女儿来自未来</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">白衣乱武</a>
-              </p>
-              <p class="desc">
-                陨石落入地球，陨石上携带者大量不知名辐射，导致地球所有生物发生异变进化。
-                嘤嘤嘤必杀技！
-                你叫嘤嘤嘤！
-              </p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1163367813451.jpg" />
-                <p class="bookname">穿越者救助指南</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">知之</a>
-              </p>
-              <p class="desc">
-                刚刚参加完高考的官歌被5000万奖学金吸引，稀里糊涂成为了穿越者救助大学地球分校的新生，目的就是要救助从地球穿越到其他世界，或从其他世界穿越到地球的悲催穿越者们。
-                不小心附身到了太监身上？放心，我帮你；穿越后抄袭古诗词差点被砍头？赶紧拨打我们的热线；在异世界练习魔法走火入魔了，别怕，我们可以重新再穿一次……
-                哦对了，我们的救助是收费的，这是您的账单！
-              </p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1102487809351.jpg" />
-                <p class="bookname">我的妹妹是阎王</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">柠檬不酸</a>
-              </p>
-              <p
-                class="desc"
-              >马超是一名先天性地中海贫血患者，医生断言他只能活到十八岁，为了根植他的疾病，父母生了二胎配型，出门打工积攒治疗费用，妹妹的出生也是为了救治马超。对此马超并不知情，直到有一天马超考上了高中……</p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1122657801839.jpg" />
-                <p class="bookname">幽灵船</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">火焰</a>
-              </p>
-              <p
-                class="desc"
-              >在潜能开发下，人类基因突变，随着退化基因的越来越强大，人类才发现，这是噩梦的开始，第一批潜能开发的人类，已经成了人类社会的噩梦。主角必须找到人类基因的退化密码，才能杜绝局势的进一步恶化。</p>
-            </div>
-
-            <div class="item">
-              <a href="#" class="demo">
-                <img src="../assets/images/1145427873722.jpg" />
-                <p class="bookname">傲视江湖</p>
-              </a>
-              <p class="author">
-                <a href="#" class="demo deem_color">懒猫打挺</a>
-              </p>
-              <p
-                class="desc"
-              >二十年前，六道门门主，身兼大随镇南王的赫连战，为大随镇守边界功高盖主，被随皇串通众势力联手消灭。二十年后，当年赫连战的余党组建暗组织罗刹门，开始在江湖中兴风作浪，妄图为赫连战报仇。六道门仅剩一支的人道宗宗主眼见罗刹门作乱，于是派遣四名弟子下山，想要阻止这场动乱，可是却没想到所有的事情都开始慢慢随着这四名弟子转动起来，江湖、天下都一起陷入其中。</p>
             </div>
           </div>
         </div>
@@ -368,7 +253,7 @@
 
       <!-- 恋爱过敏症图片 -->
       <div class="banner-advert page-width">
-        <a href="#" class="demo">
+        <a href="/book/74" class="demo">
           <img src="../assets/images/2019070217083857.jpg" />
         </a>
       </div>
@@ -379,126 +264,22 @@
         </div>
         <!-- 图书、作者介绍 -->
         <div class="booklist">
-          <div class="item">
-            <a href="#" class="demo">
-              <img src="../assets/images/1194617789686.jpg" />
-              <p class="bookname">救命！我变成主角了！</p>
+          <div class="item" v-for="item in likeBook" :key="item.id">
+            <a :href="'/book/'+item.id" class="demo">
+              <img :src="item.novel_url" />
+              <p class="bookname">{{item.novel_title}}</p>
             </a>
             <p class="author">
-              <a href="#" class="demo deem_color">莫凡凡</a>
+              <a :href="'/author/'+item.id" class="demo deem_color">{{item.novel_author}}}</a>
             </p>
-            <p
-              class="desc"
-            >顶着超长头衔的程晓声，一直想要丢掉所有光环融进城市与校园的生活中，每天都在努力扮演着普通市民A的角色，但终于有一天命运还是没有放过他，突然之间在他眼中的整个世界都变了……为什么？为什么有些人的头顶上会出现一个金灿灿的问号？</p>
-          </div>
-
-          <div class="item">
-            <a href="#" class="demo">
-              <img src="../assets/images/201811271314283236.jpg" />
-              <p class="bookname">我家妖男又饿了</p>
-            </a>
-            <p class="author">
-              <a href="#" class="demo deem_color">奶凶妖姬</a>
-            </p>
-            <p
-              class="desc"
-            >穿越之后发现自己的处境居然好比西游记里唐三藏，是某个牛逼仙女转世之躯体，世间传闻吃了她的肉便可以长生不老得道成仙！于是呼，各路妖男都将她锁定为觅食目标，却一个个反被她捉弄得七零八落。</p>
-          </div>
-
-          <div class="item">
-            <a href="#" class="demo">
-              <img src="../assets/images/1104767699668.jpg" />
-              <p class="bookname">妹妹们是问题偶像！</p>
-            </a>
-            <p class="author">
-              <a href="#" class="demo deem_color">zakuro石榴</a>
-            </p>
-            <p class="desc">
-              “今后，请多多指教。”
-              与从未见面的朋友的双胞胎妹妹如是说道，展开的却是需要经历考验的同居生活。背负着罪恶而许下的诺言，陆尘发誓去照顾自己死去挚友的两个妹妹。
-              “想要成为偶像？”
-              而得知了妹妹们的梦想后，同居开始的偶像养成日记，以不规则的叙写方式混合着悲伤和喜悦、以及和其他女孩的交织展开了。
-              “尘，该吃饭了哦。”
-              “喂！蠢货！本小姐的晚餐呢？！”
-              而性格迥异的姐妹，也很难对付。
-            </p>
-          </div>
-
-          <div class="item">
-            <a href="#" class="demo">
-              <img src="../assets/images/1149667787708.jpg" />
-              <p class="bookname">我在美少女虫娘学院当老师</p>
-            </a>
-            <p class="author">
-              <a href="#" class="demo deem_color">少点辣椒</a>
-            </p>
-            <p class="desc">
-              这是虫娘从古至今就存在的平行世界，姜炎意外穿越成为一名老师。
-              一招降服黑寡妇，两下戳破独角仙。
-              住得了虫娘宿舍，下得了美女澡堂。
-              总之，这是一个男主带领他的虫娘美少女一起快乐地奋斗顺便拯救世界的故事。
-            </p>
-          </div>
-
-          <div class="item">
-            <a href="#" class="demo">
-              <img src="../assets/images/1105377787147.jpg" />
-              <p class="bookname">间谍少爷</p>
-            </a>
-            <p class="author">
-              <a href="#" class="demo deem_color">狮鹫骑士</a>
-            </p>
-            <p
-              class="desc"
-            >赴日留学、过着悠哉生活的少爷在回乡之后惊觉东北成了“满洲国”，天下早已大乱。作为富庶人家的少爷，他开始了表面上是纨绔子弟、暗地里支持反抗组织的生活。</p>
-          </div>
-
-          <div class="item">
-            <a href="#" class="demo">
-              <img src="../assets/images/1137097795044.jpg" />
-              <p class="bookname">恋爱过敏症</p>
-            </a>
-            <p class="author">
-              <a href="#" class="demo deem_color">八月未央</a>
-            </p>
-            <p
-              class="desc"
-            >18岁元气美少女沈慕念有着一个不为人知的秘密，就是自己曾经在高中拼命想要给自己喜欢的人告白时过敏了，并且险些死掉，而后沈慕念发现只要自己一动感情，就会立马呼吸急促，浑身长满红疹子，越想便越严重，所以自那以后只能关闭心扉，做一名清心寡欲的姑娘。并且沈慕念脱敏的治疗方式只有一个，那就是看恋爱向的漫画，越是肉麻，越是玛丽苏，过敏症状就消失的越快。所以男朋友是什么？能吃吗？！</p>
-          </div>
-
-          <div class="item">
-            <a href="#" class="demo">
-              <img src="../assets/images/1130237787143.jpg" />
-              <p class="bookname">人类终结之日</p>
-            </a>
-            <p class="author">
-              <a href="#" class="demo deem_color">会飞的猪人</a>
-            </p>
-            <p
-              class="desc"
-            >科技的发展促使人类毁灭，最后的人类把希望寄托在过去，将唯一的机器人投入时间穿梭机器。而在另一条时间线上，对此毫不知情的洛伦站在雪白的北道，丝毫没意识到自己从一开始就是一个悲剧。好像也只能这样了吧。</p>
-          </div>
-
-          <div class="item">
-            <a href="#" class="demo">
-              <img src="../assets/images/1117477801943.jpg" />
-              <p class="bookname">我家乌龟成精了</p>
-            </a>
-            <p class="author">
-              <a href="#" class="demo deem_color">蚂蚁蛋</a>
-            </p>
-            <p class="desc">
-              方吟水（男）醒来发现自己坑爹的变成了一只龟……在现代还是普遍又廉价的那种！
-              正在他艰难地背着沉重的壳，一步一步地往前爬的时候，他被人翻了个壳儿，四脚朝天地蹬着腿儿。男人淡若琉璃的清冷眸子微含，微微弯起的眼角带着一丝笑意，带有质感的性感嗓音低声问他，“龟儿，你要去哪？”
-              缱绻的声调，茗儿、嫣儿、翠儿、放在别的名字上都是无比动听的称呼，带上了那个字，方吟水只想吐血三升，‘龟儿，你全家都是龟儿。’
-            </p>
+            <p class="desc">{{item.novel_desc}}</p>
           </div>
         </div>
       </div>
 
       <!-- 底部发狂图片导航图 -->
       <div class="banner-advert page-width">
-        <a href="#" class="demo">
+        <a href="/book/75" class="demo">
           <img src="../assets/images/2019070217100551.jpg" />
         </a>
       </div>
@@ -606,7 +387,13 @@ export default {
       thirdrec: [],
       // 精品热推书名9条
       Hotbook: [],
-      dataHotbook: []
+      dataHotbook: [],
+      // 新书热推
+      newBook: [],
+      datanewBook: [],
+      // 猜你喜欢
+      likeBook: [],
+      datalikeBook: []
     };
   },
   methods: {
@@ -620,39 +407,33 @@ export default {
   },
   // 渲染数据
   async beforeCreate() {
-    const { data: data1 } = await this.$http.get("/designation?id1=8,4");
+    const { data: data1 } = await this.$http.get("/designation?id1=1,6");
     this.localData = data1.data;
 
+// 类型、书名
     const { data: data2 } = await this.$http.get(
-      "/designation?id1=6,8,9,10,20,30,40,12,32,34,12,,19,34,22"
+      "/designation?id1=5,7,2,11,20,3,8,12,,19,14,22,56"
     );
+    // console.log(data2.data);
+    
     this.thirdrec = data2.data;
-    // 精品热推9条书
+    // 精品热推
     const { data: dataHotbook } = await this.$http.get(
-      "/designation?id1=5,7,17,23,55,12,22,44,55"
+      "/designation?id1=2,8,9,3,14,19,20,26,72"
     );
     this.Hotbook = dataHotbook.data;
 
-    // 本周强推10条
-    // const { data: data3 } = await this.$http.get("/novels?type=0&per_page=10");
-    // this.array = data3.data;
-    // console.log(this.array);
+    // 新书热推
+    const { data: datanewBook } = await this.$http.get(
+      "/designation?id1=28,30,31,33,34,36,37,38,73"
+    );
+    this.newBook = datanewBook.data;
 
-    // this.array.forEach((item, i) => {
-    //   if (i == 0) {
-    //     item.currentEnce = true;
-    //   } else {
-    //     item.currentEnce = false;
-    //   }
-    //   console.log(item);
-    },
-  async created() {
-     const { data } = await this.$http.get('/novels?per_page=2&sz=2');
-    // data.data.forEach((item) => {
-    //     item.novel_url = '..' + item.novel_url
-    // })
-    // console.log(data.data);
-    this.localData = data.data;
+    // 猜你喜欢
+    const { data: datalikeBook } = await this.$http.get(
+      "/designation?id1=,39,74,75,32"
+    );
+    this.likeBook = datalikeBook.data;
   }
 };
 </script>
@@ -1407,6 +1188,7 @@ a:hover {
   font-size: 13px;
   line-height: 13px;
   height: 120px;
+  margin-right: 15px;
   margin-bottom: 20px;
   position: relative;
   box-sizing: border-box;
