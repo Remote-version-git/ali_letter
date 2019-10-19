@@ -213,7 +213,7 @@ export default {
       }
     };
 
-    // 确认密码
+    // 第一次密码
     var validatePass = (rule, value, callback) => {
       if (value === "") {
         callback(new Error("请输入密码"));
@@ -224,6 +224,7 @@ export default {
         callback();
       }
     };
+    // 第二次密码
     var validatePass2 = (rule, value, callback) => {
       if (value === "") {
         callback(new Error("请再次输入密码"));
@@ -243,6 +244,7 @@ export default {
         phone: "",
         password: ""
       },
+      // 协议是否选中
       check: false,
       // 显示dialog
       centerDialogVisible: false,
@@ -253,14 +255,16 @@ export default {
           { min: 6, max: 16, message: "长度在 6 到 16 个字符", trigger: "blur" }
         ]
       },
-      // 用户名和密码对象
+      // 用户名，密码 ，验证码对象
       registerForm: {
         phone: "",
         pass: "",
         password: "",
         verifyCode: ""
       },
+      // 滑块验证
       verify: "",
+      // 协议是否选中
       check: false,
       // 显示dialog
       centeDialogVisible: false,
@@ -284,7 +288,9 @@ export default {
     // 登录功能
 
     login() {
+      // 重新排数数据对象
       let form = qs.stringify(this.loginForm);
+      // 判断是否勾选协议
       if (this.check) {
         this.$refs.loginFormRef.validate(async volid => {
           if (!volid) return;
@@ -331,6 +337,7 @@ export default {
             return this.$message.error(res.error);
           }
           this.$message.success("注册成功！");
+          // 重置表单
           this.registerForm.phone = this.registerForm.password = this.registerForm.pass = this.registerForm.verifyCode =
             "";
           this.check = false;
