@@ -303,7 +303,7 @@ export default {
 };
 </script>
 
-<style >
+<style>
 element.style {
   margin-top: 0px !important;
 }
