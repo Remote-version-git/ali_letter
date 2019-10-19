@@ -479,7 +479,7 @@
     </div>
     <div class="d">
       <a href>
-        <img src="http://img-tailor.11222.cn/pm/book/operate/2019061110433522.jpg" alt />
+        <img src="http://img-tailor.11222.cn/pm/book/operate/2019061110463298.jpg" alt />
       </a>
     </div>
     <!-- 猜你喜欢———————————————————————————————————————————— -->
@@ -1068,7 +1068,7 @@ a {
 }
 .b-head {
   height: 93px;
-  background-color: #e8f3f1;
+  background-color: #fcf0f6;
   margin-bottom: 3px;
 }
 .b-head h3{
@@ -1079,7 +1079,7 @@ a {
 }
 .b-cenner {
   height: 155px;
-  background-color: #e8f3f1;
+  background-color: #fcf0f6;
   margin-bottom: 3px;
 }
 .b-cenner ul li {
