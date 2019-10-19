@@ -92,10 +92,6 @@ let router = new Router({
     {
       path: "/register",
       component: () => import("@/components/register.vue")
-    },
-    {
-      path: '/demo',
-      component: () => import('./views/demo.vue')
     }
   ]
 });
