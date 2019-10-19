@@ -15,29 +15,29 @@
             <a href="javascript:;" class="prev" id="arrLeft" @click="prevClick"></a>
             <a href="javascript:;" class="next" id="arrRight" @click="nextClick"></a>
           </div>
-        </div>
-        <div class="slide_text">
-          <p class="slide_text_p1">
-            <a href class="box_name">大名长歌</a>
-            <span class="author">今夏 著</span>
-            <i class="continue">连载中</i>
-          </p>
-          <p class="slide_text_p2">李彤、刘颖、张守义、刘继业、常浩然等南京国子监学子，每天赖带南京城内无所事事。</p>
-          <p class="slide_text_p3">
-            <span class="weekName">人气值：</span>
-            <span class="weekValue">
-              <i class="week-number">1</i>
-              <i class="week-number">0</i>
-              <i class="week-number">0</i>
-              <i class="week-number">0</i>
-            </span>
-            <span class="apply">适用于：</span>
-            <span class="labelBox">
-              <i class="apply-label">电视剧</i>
-              <i class="apply-label">网剧</i>
-            </span>
-            <a href class="lookdesc">查看详细</a>
-          </p>
+          <div class="slide_text">
+            <p class="slide_text_p1">
+              <a href class="box_name">大名长歌</a>
+              <span class="author">今夏 著</span>
+              <i class="continue">连载中</i>
+            </p>
+            <p class="slide_text_p2">李彤、刘颖、张守义、刘继业、常浩然等南京国子监学子，每天赖带南京城内无所事事。</p>
+            <p class="slide_text_p3">
+              <span class="weekName">人气值：</span>
+              <span class="weekValue">
+                <i class="week-number">1</i>
+                <i class="week-number">0</i>
+                <i class="week-number">0</i>
+                <i class="week-number">0</i>
+              </span>
+              <span class="apply">适用于：</span>
+              <span class="labelBox">
+                <i class="apply-label">电视剧</i>
+                <i class="apply-label">网剧</i>
+              </span>
+              <a href class="lookdesc">查看详细</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -54,40 +54,73 @@
               <a href>男频</a>
             </li>
             <li>
-              <a href>男频</a>
+              <a href>女频</a>
             </li>
           </ul>
         </div>
         <div class="classify">
-          <div class="classify_title">作品类型</div>
+          <div class="classify_title">作品分类</div>
           <ul class="classify_option">
             <li>
-              <a href>全部</a>
+              <a href>不限</a>
             </li>
             <li>
-              <a href>男频</a>
+              <a href>都市</a>
             </li>
             <li>
-              <a href>男频</a>
+              <a href>玄幻</a>
+            </li>
+            <li>
+              <a href>仙侠</a>
+            </li>
+            <li>
+              <a href>灵异</a>
+            </li>
+            <li>
+              <a href>历史</a>
+            </li>
+            <li>
+              <a href>游戏</a>
+            </li>
+            <li>
+              <a href>科幻</a>
+            </li>
+            <li>
+              <a href>武侠奇幻</a>
+            </li>
+            <li>
+              <a href>竞技</a>
+            </li>
+            <li>
+              <a href>其他</a>
+            </li>
+            <li>
+              <a href>现言</a>
+            </li>
+            <li>
+              <a href>古言</a>
+            </li>
+            <li>
+              <a href>幻言</a>
             </li>
           </ul>
         </div>
         <div class="classify">
-          <div class="classify_title">作品类型</div>
+          <div class="classify_title">作品状态</div>
           <ul class="classify_option">
             <li>
-              <a href>全部</a>
+              <a href>不限</a>
             </li>
             <li>
-              <a href>男频</a>
+              <a href>连载</a>
             </li>
             <li>
-              <a href>男频</a>
+              <a href>完结</a>
             </li>
           </ul>
         </div>
         <div class="classify">
-          <div class="classify_title">作品类型</div>
+          <div class="classify_title">作品字数</div>
           <ul class="classify_option">
             <li>
               <a href>全部</a>
@@ -103,49 +136,106 @@
       </div>
     </div>
     <!-- 书本陈列 -->
-    <div class="bexhibit">
-      <div class="roomcentre">
-        <ul class="bexhibit_option clearfix">
-          <li>
-            <a href>
-              <img src alt />
-              <h3>花都超品医生</h3>
-              <p
-                class="store_des"
-              >他是令雇佣兵闻风丧胆的战神！亦是妙手回春、改天写命的超凡圣医！他手握玄铁针，可断人病，亦可要人命！ 为突破修为、寻找身世的秦牧离开天临山，开启了一段纵横都市之旅！ “小牧子，咱天承派人丁稀少，你不带七八个媳妇，十几个大胖小子就别回来了。”秦牧下山，老头子语重心长道。</p>
-              <p class="store_tag">
-                <span class="bkcate_icon">都市异能</span>
-                <a href>
-                  <span class="bkuser_icon">鱼非渔</span>
+    <el-row>
+      <el-col>
+        <div class="bexhibit">
+          <div class="roomcentre">
+            <ul class="bexhibit_option clearfix">
+              <li class="bexhibit_option_list">
+                <a href class="clearfix">
+                  <img src="../assets/images/1117477801943.jpg" alt />
+                  <div class="exhibit_clearfix">
+                    <h3>花都超品医生</h3>
+                    <p
+                      class="store_des"
+                    >他是令雇佣兵闻风丧胆的战神！亦是妙手回春、改天写命的超凡圣医！他手握玄铁针，可断人病，亦可要人命！ 为突破修为、寻找身世的秦牧离开天临山，开启了一段纵横都市之旅！ “小牧子，咱天承派人丁稀少，你不带七八个媳妇，十几个大胖小子就别回来了。”秦牧下山，老头子语重心长道。</p>
+                    <p class="store_tag">
+                      <span class="bkcate_icon">都市异能</span>
+                      <a href>
+                        <span class="bkuser_icon">鱼非渔</span>
+                      </a>
+                    </p>
+                  </div>
                 </a>
-              </p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+              </li>
+              <li class="bexhibit_option_list">
+                <a href class="clearfix">
+                  <img src="../assets/images/1117477801943.jpg" alt />
+                  <div class="exhibit_clearfix">
+                    <h3>花都超品医生</h3>
+                    <p
+                      class="store_des"
+                    >他是令雇佣兵闻风丧胆的战神！亦是妙手回春、改天写命的超凡圣医！他手握玄铁针，可断人病，亦可要人命！ 为突破修为、寻找身世的秦牧离开天临山，开启了一段纵横都市之旅！ “小牧子，咱天承派人丁稀少，你不带七八个媳妇，十几个大胖小子就别回来了。”秦牧下山，老头子语重心长道。</p>
+                    <p class="store_tag">
+                      <span class="bkcate_icon">都市异能</span>
+                      <a href>
+                        <span class="bkuser_icon">鱼非渔</span>
+                      </a>
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="bexhibit_option_list">
+                <a href class="clearfix">
+                  <img src="../assets/images/1117477801943.jpg" alt />
+                  <div class="exhibit_clearfix">
+                    <h3>花都超品医生</h3>
+                    <p
+                      class="store_des"
+                    >他是令雇佣兵闻风丧胆的战神！亦是妙手回春、改天写命的超凡圣医！他手握玄铁针，可断人病，亦可要人命！ 为突破修为、寻找身世的秦牧离开天临山，开启了一段纵横都市之旅！ “小牧子，咱天承派人丁稀少，你不带七八个媳妇，十几个大胖小子就别回来了。”秦牧下山，老头子语重心长道。</p>
+                    <p class="store_tag">
+                      <span class="bkcate_icon">都市异能</span>
+                      <a href>
+                        <span class="bkuser_icon">鱼非渔</span>
+                      </a>
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="bexhibit_option_list">
+                <a href class="clearfix">
+                  <img src="../assets/images/1117477801943.jpg" alt />
+                  <div class="exhibit_clearfix">
+                    <h3>花都超品医生</h3>
+                    <p
+                      class="store_des"
+                    >他是令雇佣兵闻风丧胆的战神！亦是妙手回春、改天写命的超凡圣医！他手握玄铁针，可断人病，亦可要人命！ 为突破修为、寻找身世的秦牧离开天临山，开启了一段纵横都市之旅！ “小牧子，咱天承派人丁稀少，你不带七八个媳妇，十几个大胖小子就别回来了。”秦牧下山，老头子语重心长道。</p>
+                    <p class="store_tag">
+                      <span class="bkcate_icon">都市异能</span>
+                      <a href>
+                        <span class="bkuser_icon">鱼非渔</span>
+                      </a>
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
     <!-- 书籍展示部分开始 -->
     <div class="books_detail">
       <div class="roomcentre">
         <!-- tabs标签页组件 -->
         <el-tabs v-model="activeName" @tab-click="handleClick">
-          <el-tab-pane label="按时间排序" name="first">
+          <el-tab-pane label="版权推荐" name="first">
             <ul class="datas clearfix">
-              <li>
+              <li v-for="copyrightItem in copyrightList" :key="copyrightItem.id">
                 <a href>
                   <div class="coverBox">
-                    <img src alt />
+                    <img :src="copyrightItem.novel_url" alt />
                   </div>
                   <div class="info">
                     <p class="bname">
-                      重卡雄风
+                      {{copyrightItem.novel_title}}
                       <i class="continue">连载中</i>
                     </p>
                     <p class="bookMini">
                       <span>作者：</span>
-                      <span class="bauthor">陈飒</span>
+                      <span class="bauthor">{{copyrightItem.novel_author}}</span>
                       <span class="size">字数：</span>
-                      <span>176.3万</span>
+                      <span>{{copyrightItem.word_nums}}</span>
                     </p>
                     <p class="types">
                       类型：
@@ -161,153 +251,7 @@
                       </span>
                     </p>
                   </div>
-                  <div
-                    class="desc"
-                  >工艺精良、动力十足、载重非凡，牵引着战争之神，碾过历史的尘埃，轰隆隆行走在大地上的伟岸巨物——且看被誉为重卡超人的林超涵如何绝地求生，革新技术引领潮流，将t临倒闭的重型卡车厂塑造成中国重工业的明珠、世界重卡行业的巨头企业。</div>
-                  <div class="bookext">
-                    <p class="spread">
-                      可售版权：
-                      <i>电视剧</i>
-                      <i>网剧</i>
-                      <i>院线电影</i>
-                      <i>游戏</i>
-                    </p>
-                    <p class="copyright spread">
-                      已售版权：
-                      <i>无</i>
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href>
-                  <div class="coverBox">
-                    <img src alt />
-                  </div>
-                  <div class="info">
-                    <p class="bname">
-                      重卡雄风
-                      <i class="continue">连载中</i>
-                    </p>
-                    <p class="bookMini">
-                      <span>作者：</span>
-                      <span class="bauthor">陈飒</span>
-                      <span class="size">字数：</span>
-                      <span>176.3万</span>
-                    </p>
-                    <p class="types">
-                      类型：
-                      <span class="types_other">都市</span>
-                      <span class="types_other">青春</span>
-                      <span class="types_other">其他</span>
-                      <span class="weekvalue">
-                        人气值：
-                        <i>2</i>
-                        <i>0</i>
-                        <i>4</i>
-                        <i>5</i>
-                      </span>
-                    </p>
-                  </div>
-                  <div
-                    class="desc"
-                  >工艺精良、动力十足、载重非凡，牵引着战争之神，碾过历史的尘埃，轰隆隆行走在大地上的伟岸巨物——且看被誉为重卡超人的林超涵如何绝地求生，革新技术引领潮流，将t临倒闭的重型卡车厂塑造成中国重工业的明珠、世界重卡行业的巨头企业。</div>
-                  <div class="bookext">
-                    <p class="spread">
-                      可售版权：
-                      <i>电视剧</i>
-                      <i>网剧</i>
-                      <i>院线电影</i>
-                      <i>游戏</i>
-                    </p>
-                    <p class="copyright spread">
-                      已售版权：
-                      <i>无</i>
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href>
-                  <div class="coverBox">
-                    <img src alt />
-                  </div>
-                  <div class="info">
-                    <p class="bname">
-                      重卡雄风
-                      <i class="continue">连载中</i>
-                    </p>
-                    <p class="bookMini">
-                      <span>作者：</span>
-                      <span class="bauthor">陈飒</span>
-                      <span class="size">字数：</span>
-                      <span>176.3万</span>
-                    </p>
-                    <p class="types">
-                      类型：
-                      <span class="types_other">都市</span>
-                      <span class="types_other">青春</span>
-                      <span class="types_other">其他</span>
-                      <span class="weekvalue">
-                        人气值：
-                        <i>2</i>
-                        <i>0</i>
-                        <i>4</i>
-                        <i>5</i>
-                      </span>
-                    </p>
-                  </div>
-                  <div
-                    class="desc"
-                  >工艺精良、动力十足、载重非凡，牵引着战争之神，碾过历史的尘埃，轰隆隆行走在大地上的伟岸巨物——且看被誉为重卡超人的林超涵如何绝地求生，革新技术引领潮流，将t临倒闭的重型卡车厂塑造成中国重工业的明珠、世界重卡行业的巨头企业。</div>
-                  <div class="bookext">
-                    <p class="spread">
-                      可售版权：
-                      <i>电视剧</i>
-                      <i>网剧</i>
-                      <i>院线电影</i>
-                      <i>游戏</i>
-                    </p>
-                    <p class="copyright spread">
-                      已售版权：
-                      <i>无</i>
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href>
-                  <div class="coverBox">
-                    <img src alt />
-                  </div>
-                  <div class="info">
-                    <p class="bname">
-                      重卡雄风
-                      <i class="continue">连载中</i>
-                    </p>
-                    <p class="bookMini">
-                      <span>作者：</span>
-                      <span class="bauthor">陈飒</span>
-                      <span class="size">字数：</span>
-                      <span>176.3万</span>
-                    </p>
-                    <p class="types">
-                      类型：
-                      <span class="types_other">都市</span>
-                      <span class="types_other">青春</span>
-                      <span class="types_other">其他</span>
-                      <span class="weekvalue">
-                        人气值：
-                        <i>2</i>
-                        <i>0</i>
-                        <i>4</i>
-                        <i>5</i>
-                      </span>
-                    </p>
-                  </div>
-                  <div
-                    class="desc"
-                  >工艺精良、动力十足、载重非凡，牵引着战争之神，碾过历史的尘埃，轰隆隆行走在大地上的伟岸巨物——且看被誉为重卡超人的林超涵如何绝地求生，革新技术引领潮流，将t临倒闭的重型卡车厂塑造成中国重工业的明珠、世界重卡行业的巨头企业。</div>
+                  <div class="desc">{{copyrightItem.novel_desc}}</div>
                   <div class="bookext">
                     <p class="spread">
                       可售版权：
@@ -324,202 +268,21 @@
                 </a>
               </li>
             </ul>
-          </el-tab-pane>
-          <el-tab-pane label="按热度排序" name="second">
-            <ul class="datas clearfix">
-              <li>
-                <a href>
-                  <div class="coverBox">
-                    <img src alt />
-                  </div>
-                  <div class="info">
-                    <p class="bname">
-                      重卡雄风
-                      <i class="continue">连载中</i>
-                    </p>
-                    <p class="bookMini">
-                      <span>作者：</span>
-                      <span class="bauthor">陈飒</span>
-                      <span class="size">字数：</span>
-                      <span>176.3万</span>
-                    </p>
-                    <p class="types">
-                      类型：
-                      <span class="types_other">都市</span>
-                      <span class="types_other">青春</span>
-                      <span class="types_other">其他</span>
-                      <span class="weekvalue">
-                        人气值：
-                        <i>2</i>
-                        <i>0</i>
-                        <i>4</i>
-                        <i>5</i>
-                      </span>
-                    </p>
-                  </div>
-                  <div
-                    class="desc"
-                  >工艺精良、动力十足、载重非凡，牵引着战争之神，碾过历史的尘埃，轰隆隆行走在大地上的伟岸巨物——且看被誉为重卡超人的林超涵如何绝地求生，革新技术引领潮流，将t临倒闭的重型卡车厂塑造成中国重工业的明珠、世界重卡行业的巨头企业。</div>
-                  <div class="bookext">
-                    <p class="spread">
-                      可售版权：
-                      <i>电视剧</i>
-                      <i>网剧</i>
-                      <i>院线电影</i>
-                      <i>游戏</i>
-                    </p>
-                    <p class="copyright spread">
-                      已售版权：
-                      <i>无</i>
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href>
-                  <div class="coverBox">
-                    <img src alt />
-                  </div>
-                  <div class="info">
-                    <p class="bname">
-                      重卡雄风
-                      <i class="continue">连载中</i>
-                    </p>
-                    <p class="bookMini">
-                      <span>作者：</span>
-                      <span class="bauthor">陈飒</span>
-                      <span class="size">字数：</span>
-                      <span>176.3万</span>
-                    </p>
-                    <p class="types">
-                      类型：
-                      <span class="types_other">都市</span>
-                      <span class="types_other">青春</span>
-                      <span class="types_other">其他</span>
-                      <span class="weekvalue">
-                        人气值：
-                        <i>2</i>
-                        <i>0</i>
-                        <i>4</i>
-                        <i>5</i>
-                      </span>
-                    </p>
-                  </div>
-                  <div
-                    class="desc"
-                  >工艺精良、动力十足、载重非凡，牵引着战争之神，碾过历史的尘埃，轰隆隆行走在大地上的伟岸巨物——且看被誉为重卡超人的林超涵如何绝地求生，革新技术引领潮流，将t临倒闭的重型卡车厂塑造成中国重工业的明珠、世界重卡行业的巨头企业。</div>
-                  <div class="bookext">
-                    <p class="spread">
-                      可售版权：
-                      <i>电视剧</i>
-                      <i>网剧</i>
-                      <i>院线电影</i>
-                      <i>游戏</i>
-                    </p>
-                    <p class="copyright spread">
-                      已售版权：
-                      <i>无</i>
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href>
-                  <div class="coverBox">
-                    <img src alt />
-                  </div>
-                  <div class="info">
-                    <p class="bname">
-                      重卡雄风
-                      <i class="continue">连载中</i>
-                    </p>
-                    <p class="bookMini">
-                      <span>作者：</span>
-                      <span class="bauthor">陈飒</span>
-                      <span class="size">字数：</span>
-                      <span>176.3万</span>
-                    </p>
-                    <p class="types">
-                      类型：
-                      <span class="types_other">都市</span>
-                      <span class="types_other">青春</span>
-                      <span class="types_other">其他</span>
-                      <span class="weekvalue">
-                        人气值：
-                        <i>2</i>
-                        <i>0</i>
-                        <i>4</i>
-                        <i>5</i>
-                      </span>
-                    </p>
-                  </div>
-                  <div
-                    class="desc"
-                  >工艺精良、动力十足、载重非凡，牵引着战争之神，碾过历史的尘埃，轰隆隆行走在大地上的伟岸巨物——且看被誉为重卡超人的林超涵如何绝地求生，革新技术引领潮流，将t临倒闭的重型卡车厂塑造成中国重工业的明珠、世界重卡行业的巨头企业。</div>
-                  <div class="bookext">
-                    <p class="spread">
-                      可售版权：
-                      <i>电视剧</i>
-                      <i>网剧</i>
-                      <i>院线电影</i>
-                      <i>游戏</i>
-                    </p>
-                    <p class="copyright spread">
-                      已售版权：
-                      <i>无</i>
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href>
-                  <div class="coverBox">
-                    <img src alt />
-                  </div>
-                  <div class="info">
-                    <p class="bname">
-                      重卡雄风
-                      <i class="continue">连载中</i>
-                    </p>
-                    <p class="bookMini">
-                      <span>作者：</span>
-                      <span class="bauthor">陈飒</span>
-                      <span class="size">字数：</span>
-                      <span>176.3万</span>
-                    </p>
-                    <p class="types">
-                      类型：
-                      <span class="types_other">都市</span>
-                      <span class="types_other">青春</span>
-                      <span class="types_other">其他</span>
-                      <span class="weekvalue">
-                        人气值：
-                        <i>2</i>
-                        <i>0</i>
-                        <i>4</i>
-                        <i>5</i>
-                      </span>
-                    </p>
-                  </div>
-                  <div
-                    class="desc"
-                  >工艺精良、动力十足、载重非凡，牵引着战争之神，碾过历史的尘埃，轰隆隆行走在大地上的伟岸巨物——且看被誉为重卡超人的林超涵如何绝地求生，革新技术引领潮流，将t临倒闭的重型卡车厂塑造成中国重工业的明珠、世界重卡行业的巨头企业。</div>
-                  <div class="bookext">
-                    <p class="spread">
-                      可售版权：
-                      <i>电视剧</i>
-                      <i>网剧</i>
-                      <i>院线电影</i>
-                      <i>游戏</i>
-                    </p>
-                    <p class="copyright spread">
-                      已售版权：
-                      <i>无</i>
-                    </p>
-                  </div>
-                </a>
-              </li>
-            </ul>
+            <el-row>
+              <el-col class="paging">
+                <div class="block">
+                  <el-pagination
+                    @size-change="handleSizeChange"
+                    @current-change="handleCurrentChange"
+                    :current-page="queryInfo.pagenum"
+                    :page-sizes="[6, 12, 24, 48]"
+                    :page-size="queryInfo.pagesize"
+                    layout="total, sizes, prev, pager, next, jumper"
+                    :total="pageTotal"
+                  ></el-pagination>
+                </div>
+              </el-col>
+            </el-row>
           </el-tab-pane>
         </el-tabs>
       </div>
@@ -533,7 +296,7 @@ import { getStyle, animate } from "../assets/js/animate";
 export default {
   data() {
     return {
-      activeName: "second",
+      activeName: "first",
       // 定义一把锁
       flag: true,
       // 轮播图的图片分布位置
@@ -595,7 +358,17 @@ export default {
           zIndex: 1
         }
       ],
-      autoPlayTxtList: []
+      // 轮播图数据
+      autoPlayTxtList: [],
+      // 作品类型数据
+      novelTypeList: [],
+      // 版权推荐数据
+      copyrightList: [],
+      queryInfo: {
+        pagenum: 1,
+        pagesize: 6
+      },
+      pageTotal: 0
     };
   },
   methods: {
@@ -630,6 +403,31 @@ export default {
     async getautoList() {
       const { data } = await this.$http.get("/novels?type=1&per_page=7");
       this.autoPlayTxtList = data.data;
+      // console.log(this.autoPlayTxtList)
+    },
+    // 获取作品分类数据
+    async getnovelTypeList() {
+      const { data } = await this.$http.get("/novels?fc=");
+      console.log(data.data);
+      console.log(data.data.novel_type);
+    },
+    // 获取版权推荐数据
+    async getCopyrightList() {
+      const { data } = await this.$http.get(
+        `/novels?type=1&page=${this.queryInfo.pagenum}&per_page=${this.queryInfo.pagesize}`
+      );
+      // console.log(data);
+      this.copyrightList = data.data;
+      this.pageTotal = data.total;
+      // console.log(this.copyrightList);
+    },
+    handleSizeChange(size) {
+      this.queryInfo.pagesize = size;
+      this.getCopyrightList;
+    },
+    handleCurrentChange(num) {
+      this.queryInfo.pagenum = num;
+      this.getCopyrightList();
     },
     // tabs切换时触发
     handleClick(tab, event) {
@@ -644,6 +442,11 @@ export default {
     setTimeout(this.autoPlay(), 500);
     // 调用轮播图数据
     this.getautoList();
+  },
+  created() {
+    this.getnovelTypeList();
+    // 调用版权推荐数据
+    this.getCopyrightList();
   }
 };
 </script>
@@ -708,7 +511,7 @@ export default {
 // 轮播图下方文字
 .slide_text {
   position: relative;
-  margin-top: 100px;
+  padding-top: 385px;
   padding-left: 130px;
   font-family: "Microsoft YaHei";
 }
@@ -737,7 +540,7 @@ export default {
 }
 
 .slide_text_p3 {
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 .weekName {
@@ -858,29 +661,89 @@ export default {
   color: #f36f20;
 }
 
-// .classify_option > li:nth-child(1) > a {
-//   background-color: #8e96aa;
-//   color: #ffffff;
-//   border-radius: 3px;
-// }
+.classify_option > li:nth-child(1) > a {
+  background-color: #8e96aa;
+  color: #ffffff;
+  border-radius: 3px;
+}
 
 //////////////////////////////////////////////////////
-.bexhibit {
+
+.bexhibit_option {
+  height: 500px;
   background-color: pink;
+  margin-bottom: 20px;
 }
 
-.bexhibit_option > li {
+.bexhibit_option_list {
   float: left;
+  height: 120px;
+  width: 252px;
+  margin: 0 6px;
 }
 
-.bexhibit_option > li > a {
+.bexhibit_option_list > a {
   display: block;
+  height: 120px;
 }
 
-.bexhibit_option > li img {
+.bexhibit_option_list img {
+  float: left;
+  display: block;
   width: 90px;
   height: 120px;
-  background-color: green;
+  // background-color: green;
+  margin-right: 15px;
+}
+
+.exhibit_clearfix > h3 {
+  font-size: 14px;
+  height: 28px;
+  line-height: 28px;
+  margin-top: 15px;
+}
+
+.store_des {
+  height: 38px;
+  line-height: 19px;
+  color: #a3a3a3;
+  font-size: 13px;
+  overflow: hidden;
+}
+
+.store_tag {
+  margin-top: 25px;
+}
+
+.bkcate_icon,
+.bkuser_icon {
+  color: #a3a3a3;
+  position: relative;
+  margin-left: 16px;
+}
+.bkuser_icon {
+  float: right;
+  display: inline-block;
+  text-align: right;
+}
+
+.bkcate_icon::before {
+  position: absolute;
+  left: -14px;
+  top: 1px;
+  content: "";
+  width: 11px;
+  height: 11px;
+  background-image: url("../assets/images/bkcate_icon.png");
+}
+.bkuser_icon:before {
+  position: absolute;
+  left: -14px;
+  top: 1px;
+  content: "";
+  width: 11px;
+  height: 11px;
+  background-image: url("../assets/images/bkuser_icon.png");
 }
 
 /////////////////////
@@ -962,7 +825,7 @@ export default {
   color: #ffffff;
   text-align: center;
   border-radius: 3px;
-  margin-left: 17px;
+  margin-left: 5px;
 }
 
 .bookMini {
@@ -1021,6 +884,7 @@ export default {
   text-align: justify;
   color: #8292a4;
   font-family: "Microsoft YaHei";
+  overflow: hidden;
 }
 
 .bookext {
@@ -1057,5 +921,9 @@ export default {
 
 .copyright > i {
   color: #cbcbcb;
+}
+
+.paging {
+  padding-left: 210px;
 }
 </style>
