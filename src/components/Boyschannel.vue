@@ -4,7 +4,6 @@
       <span class="tlle">男频推荐</span>
     </div>
   <div class="container">
-   <div class="a"><h1>111</h1></div>
    <div class="b">
      <div class="b-head">
           <a href>
@@ -107,6 +106,16 @@
               </p>
               <p class="desc">机甲横空，惊姿卓绝。星魂觉醒，冠绝群英。星际时代，一个身负神秘魂体的少年，演绎这片星空下的传奇。</p>
             </li>
+            <li>
+              <a href>
+                <img src="http://img-tailor.11222.cn/bcv/big/1184397959478.jpg" alt />
+                <p>创世天尊</p>
+              </a>
+              <p class="author">
+                <a href>醉世</a>
+              </p>
+              <p class="desc">他为仇念所控，逆天地而行。后终放下仇恨，净化心念。为救苍生，牺牲自我。因祸得福，透彻天地之法，踏足天地之尊。</p>
+            </li>
           </ul>
         </div>
         <ul class="mend-right">
@@ -156,6 +165,54 @@
             <a href>
               <span>[都市异能]</span>
               修仙归来在都市
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市生活]</span>
+              咸鱼躺赢攻略
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市生活]</span>
+              天庭朋友圈
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[东方玄幻]</span>
+              武破九荒
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[恐怖惊悚]</span>
+              恐怖屋之食中忌
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市生活]</span>
+              咸鱼躺赢攻略
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[都市生活]</span>
+              天庭朋友圈
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[东方玄幻]</span>
+              武破九荒
+            </a>
+          </li>
+          <li>
+            <a href>
+              <span>[恐怖惊悚]</span>
+              恐怖屋之食中忌
             </a>
           </li>
           <li>
