@@ -6,7 +6,7 @@
         <div class="slide" id="slide">
           <ul ref="slideshow" class="slideshow">
             <li v-for="item in autoPlayTxtList" :key="item.id">
-              <a href>
+              <a :href="item.novel_paths">
                 <img :src="item.novel_url" alt />
               </a>
             </li>
@@ -18,25 +18,24 @@
         </div>
         <div class="slide_text">
           <p class="slide_text_p1">
-            <a href class="box_name">大名长歌</a>
-            <span class="author">今夏 著</span>
-            <i class="continue">连载中</i>
+            <a href class="box_name">{{ bannerData.novel_title }}</a>
+            <span class="author">{{ bannerData.novel_author }} 著</span>
+            <i class="continue continue-blue" v-if="bannerData.novel_status">已完结</i>
+            <i class="continue" v-else>连载中</i>
           </p>
-          <p class="slide_text_p2">李彤、刘颖、张守义、刘继业、常浩然等南京国子监学子，每天赖带南京城内无所事事。</p>
+          <p class="slide_text_p2">{{ bannerData.novel_desc }}</p>
           <p class="slide_text_p3">
             <span class="weekName">人气值：</span>
             <span class="weekValue">
-              <i class="week-number">1</i>
-              <i class="week-number">0</i>
-              <i class="week-number">0</i>
-              <i class="week-number">0</i>
+              <template v-if="bannerData.hot_vals">
+                <i class="week-number" v-for="item in bannerData.hot_vals" :key="item">{{ item }}</i>
+              </template>
             </span>
-            <span class="apply">适用于：</span>
+            <span class="apply">分类：</span>
             <span class="labelBox">
-              <i class="apply-label">电视剧</i>
-              <i class="apply-label">网剧</i>
+              <i class="apply-label">{{ bannerData.novel_classify }}</i>
             </span>
-            <a href class="lookdesc">查看详细</a>
+            <a :href="bannerData.novel_paths" class="lookdesc">查看详细</a>
           </p>
         </div>
       </div>
@@ -313,7 +312,24 @@ export default {
       pageTotal: 0,
       pageTotal2: 0,
       classNames: ["first_active", "", ""],
-      classifyArr:["first_active", "", "","","","","","","","","","","",""]
+      classifyArr: [
+        "first_active",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      bannerData: {},
+      bannerId: null
     };
   },
   methods: {
@@ -322,32 +338,50 @@ export default {
       let newaLi = document.querySelectorAll(".slideshow li");
       newaLi.forEach((item, index) => {
         this.animate(item, this.config[index], () => {
-          flag = true;
+          this.flag = true;
         });
       });
     },
     nextClick() {
       if (this.flag) {
-        // this.flag = false;
+        clearInterval(this.bannerId);
+        this.flag = false;
         this.config.unshift(this.config.pop());
         //  3.2.1 等数组中的元素变了之后 让页面重新布局
         this.handleAssign();
+        this.config.forEach((item, i) => {
+          if (item.zIndex === 4) {
+            this.bannerData = this.autoPlayTxtList[i];
+          }
+        });
+        this.autoPlay();
       }
     },
     prevClick() {
       if (this.flag) {
+        clearInterval(this.bannerId);
+        this.flag = false;
         this.config.push(this.config.shift());
         this.handleAssign();
+        this.config.forEach((item, i) => {
+          if (item.zIndex === 4) {
+            this.bannerData = this.autoPlayTxtList[i];
+          } 
+        });
+        this.autoPlay();
       }
     },
     // 自动轮播
     autoPlay() {
-      setInterval(this.nextClick, 4000);
+      this.bannerId = setInterval(this.nextClick, 3000);
     },
     // 获取轮播图数据
     async getautoList() {
       const { data } = await this.$http.get("/novels?type=1&per_page=7");
       this.autoPlayTxtList = data.data;
+      this.autoPlayTxtList.forEach(item => {
+        item.hot_vals = item.hot_vals.toString().split("");
+      });
       // console.log(this.autoPlayTxtList)
     },
     // 获取作品分类数据
@@ -374,85 +408,291 @@ export default {
     },
     // 分类不限
     async getFenleiList() {
-      this.classifyArr = ["first_active", "", "","","","","","","","","","","",""];
+      this.classifyArr = [
+        "first_active",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc");
       this.novelTypeList = data.data;
     },
     // 分类 -- 都市
     async getDushiList() {
-      this.classifyArr = ["", "first_active", "","","","","","","","","","","",""];
+      this.classifyArr = [
+        "",
+        "first_active",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=都市");
       this.novelTypeList = data.data;
     },
     // 分类 -- 玄幻
     async getXuanhuanList() {
-      this.classifyArr = ["","", "first_active", "","","","","","","","","","",""];
+      this.classifyArr = [
+        "",
+        "",
+        "first_active",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=玄幻");
       this.novelTypeList = data.data;
     },
     // 分类 -- 仙侠
     async getXianxiaList() {
-      this.classifyArr = [ "", "","","first_active","","","","","","","","","",""];
+      this.classifyArr = [
+        "",
+        "",
+        "",
+        "first_active",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=仙侠");
       this.novelTypeList = data.data;
     },
     // 分类 -- 灵异
     async getLingyiList() {
-      this.classifyArr = [ "", "","","","first_active","","","","","","","","",""];
+      this.classifyArr = [
+        "",
+        "",
+        "",
+        "",
+        "first_active",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=灵异");
       this.novelTypeList = data.data;
     },
     // 分类 -- 历史
     async getLishiList() {
-      this.classifyArr = [ "", "","","","","first_active","","","","","","","",""];
+      this.classifyArr = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "first_active",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=历史");
       this.novelTypeList = data.data;
     },
     // 分类 -- 游戏
     async getYouxiList() {
-      this.classifyArr = [ "", "","","","","","first_active","","","","","","",""];
+      this.classifyArr = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "first_active",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=游戏");
       this.novelTypeList = data.data;
     },
     // 分类 -- 科幻
     async getKehuanList() {
-      this.classifyArr = [ "", "","","","","","","first_active","","","","",""];
+      this.classifyArr = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "first_active",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=科幻");
       this.novelTypeList = data.data;
     },
     // 分类 -- 武侠奇幻
     async getWuxiaList() {
-      this.classifyArr = [ "", "","","","","","","","first_active","","",""];
+      this.classifyArr = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "first_active",
+        "",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=武侠奇幻");
       this.novelTypeList = data.data;
     },
     // 分类 -- 竞技
     async getJingjiList() {
-      this.classifyArr = [ "", "","","","","","","","","first_active","","",""];
+      this.classifyArr = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "first_active",
+        "",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=竞技");
       this.novelTypeList = data.data;
     },
     // 分类 -- 其他
     async getQitaList() {
-      this.classifyArr = [ "", "","","","","","","","","","first_active","","",""];
+      this.classifyArr = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "first_active",
+        "",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=其他");
       this.novelTypeList = data.data;
     },
     // 分类 -- 现言
     async getXianyanList() {
-      this.classifyArr = [ "", "","","","","","","","","","","first_active","",""];
+      this.classifyArr = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "first_active",
+        "",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=现言");
       this.novelTypeList = data.data;
     },
     // 分类 -- 古言
     async getGuyanList() {
-      this.classifyArr = [ "", "","","","","","","","","","","","first_active",""];
+      this.classifyArr = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "first_active",
+        ""
+      ];
       const { data } = await this.$http.get("/novels?fc=古言");
       this.novelTypeList = data.data;
     },
     // 分类 -- 幻言
     async getHuanyanList() {
-      this.classifyArr = [ "", "","","","","","","","","","","","","first_active"];
+      this.classifyArr = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "first_active"
+      ];
       const { data } = await this.$http.get("/novels?fc=幻言");
       this.novelTypeList = data.data;
     },
@@ -486,7 +726,8 @@ export default {
   mounted() {
     // 调用轮播图
     this.handleAssign();
-    setTimeout(this.autoPlay(), 500);
+    this.autoPlay();
+    // setTimeout(this.autoPlay(), 500);
     // 调用轮播图数据
     this.getautoList();
   },
@@ -981,5 +1222,8 @@ export default {
 
 .paging {
   padding-left: 210px;
+}
+.continue-blue {
+  background-color: #4a90e2;
 }
 </style>
