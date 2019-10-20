@@ -28,7 +28,7 @@
             <span class="weekName">人气值：</span>
             <span class="weekValue">
               <template v-if="bannerData.hot_vals">
-                <i class="week-number" v-for="item in bannerData.hot_vals" :key="item">{{ item }}</i>
+                <i class="week-number" v-for="(item,i) in bannerData.hot_vals" :key="i">{{ item }}</i>
               </template>
             </span>
             <span class="apply">分类：</span>
