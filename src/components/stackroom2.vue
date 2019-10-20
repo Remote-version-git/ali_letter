@@ -7,7 +7,7 @@
         <div class="slide" id="slide">
           <ul ref="slideshow" class="slideshow">
             <li v-for="item in autoPlayTxtList" :key="item.id">
-              <a :href="item.novel_paths">
+              <a :href="'/book/'+item.id">
                 <img :src="item.novel_url" alt />
               </a>
             </li>
