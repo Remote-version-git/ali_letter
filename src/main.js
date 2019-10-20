@@ -4,7 +4,8 @@ import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import router from "./router";
 import store from "./store";
-
+import loading from './components/loading'
+Vue.component('Loading', loading);
 // 引入axios
 import axios from "axios";
 
@@ -12,7 +13,16 @@ import axios from "axios";
 Vue.prototype.$http = axios;
 // 设置默认路径
 axios.defaults.baseURL = "http://127.0.0.1:1314/api/v1";
-
+// 请求时
+axios.interceptors.request.use(function (config) {
+  store.state.isShow = true;
+  return config
+})
+//响应时
+axios.interceptors.response.use(function (config) {
+  store.state.isShow = false;
+  return config
+})
 
 // 滑块
 import SliderVerificationCode from 'slider-verification-code';
@@ -35,6 +45,6 @@ Vue.component(CollapseTransition.name, CollapseTransition)
 
 new Vue({
   router,
-  store, 
+  store,
   render: h => h(App)
 }).$mount("#app");

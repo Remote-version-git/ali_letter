@@ -1,5 +1,7 @@
 <template>
   <div class="index">
+    <!-- 请求数据为返回时的loading动画 -->
+    <Loading v-if="this.$store.state.isShow"></Loading>
     <!-- 布局 -->
     <el-container>
       <el-header style="height:100%">

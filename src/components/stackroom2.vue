@@ -1,5 +1,6 @@
 <template>
   <div class="stackroom">
+    <Loading v-if="bannerShow"></Loading>
     <div class="carouselBgc">
       <div class="roomcentre" id="wrap">
         <!-- 轮播图 -->
@@ -329,7 +330,8 @@ export default {
         ""
       ],
       bannerData: {},
-      bannerId: null
+      bannerId: null,
+      bannerShow: true
     };
   },
   methods: {
@@ -373,7 +375,7 @@ export default {
     },
     // 自动轮播
     autoPlay() {
-      this.bannerId = setInterval(this.nextClick, 3000);
+      this.bannerId = setInterval(this.nextClick, 2000);
     },
     // 获取轮播图数据
     async getautoList() {
@@ -727,7 +729,10 @@ export default {
     // 调用轮播图
     this.handleAssign();
     this.autoPlay();
-    // setTimeout(this.autoPlay(), 500);
+    setTimeout(() => {
+      this.bannerShow = false;
+    }, 2100);
+    
     // 调用轮播图数据
     this.getautoList();
   },
