@@ -1620,7 +1620,7 @@ p.title {
 .update {
   width: 100%;
   margin-top: 20px;
-  height: 500px;
+  height: 950px;
 }
 .titlelines {
   height: 22px;

@@ -75,7 +75,7 @@
       </el-main>
 
       <!-- 底部 -->
-      <el-footer style="height:180px">
+      <el-footer style="height:180px;overflow:hidden">
         <div class="common bottom">
           <p>
             <span class="left">
@@ -109,8 +109,7 @@
       :visible.sync="centerDialogVisible"
       width="30%"
       center
-      top="22vh"
-      @change="change">
+      top="22vh">
       <el-form class="login-form" :model="loginForm" :rules="loginFormRules" ref="loginFormRef">
         <!-- 账号/用户名 -->
         <el-form-item prop="phone">
