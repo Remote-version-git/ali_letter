@@ -42,7 +42,8 @@
       </el-header>
 
       <!-- 内容 组件 -->
-      <el-main style="height:100%">
+ 
+      <el-main style="height:100%;overflow: hidden">
         <div class="common">
           <!-- 导航栏 -->
           <div class="nav clear">
@@ -414,9 +415,13 @@ a {
   line-height: 18px;
   cursor: pointer;
 }
-span:first-child {
+
+
+.js-toReg {
   border-right: 2px solid #f1f1f3;
 }
+
+
 .el-dialog {
   padding: 50px;
   border-radius: 10px;
