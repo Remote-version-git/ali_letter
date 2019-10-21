@@ -597,7 +597,7 @@
                 <p>
                   <a :href="'/author/'+item.id">{{item.novel_author}}</a>
                 </p>
-                <a :href="'/book/'+item.id">
+                <a :href="item.novel_paths">
                   <span>立即阅读</span>
                 </a>
               </div>
