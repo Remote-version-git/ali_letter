@@ -23,7 +23,7 @@
                 <span>{{authorName}}</span><span>的作品</span>
             </div>
         </div>
-        <div class="am-body" v-for="item in novelData" ::key="item.id">
+        <div class="am-body" v-for="item in novelData" :key="item.id">
             <div class="am-item">
                 <a target="_blank" :href="/book/ + item.id"><img class="am-item-img"
                         :src="item.novel_url"></a>
