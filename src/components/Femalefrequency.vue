@@ -1329,7 +1329,7 @@ a:hover {
   width: 240px;
   height: 40px;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 18px;
   margin-top: 8px;
   font-size: 18px;
   display: -webkit-box;
@@ -1680,7 +1680,7 @@ p.title {
 .update {
   width: 100%;
   margin-top: 20px;
-  height: 950px;
+  height: 930px;
 }
 .titlelines {
   height: 22px;
