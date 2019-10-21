@@ -1287,7 +1287,7 @@ a:hover {
   font-size: 12px;
   line-height: 6px;
   padding: 3px 8px;
-  border-left: 1px solid #fcd6c6;
+  border-right: 1px solid #fcd6c6;
   float: left;
   margin-bottom: 12px;
 }
