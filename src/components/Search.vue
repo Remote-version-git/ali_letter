@@ -42,7 +42,7 @@
         :total="total"
       ></el-pagination>-->
     <template  v-if="searchList.length === 0">
-      <h1>暂无数据</h1>
+      <h1 class="nodata">暂无数据</h1>
     </template>
     <!-- <p>{{infos}}</p> -->
   </div>
@@ -93,6 +93,7 @@ export default {
   padding: 30px 0;
   background: #f8f8f8;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 .matchbook .view {
   width: 982px;
@@ -222,5 +223,13 @@ a {
   margin-bottom: 40px;
   text-align: center;
   margin-top: 54px;
+}
+
+.nodata {
+  height: 428px;
+  line-height: 428px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: normal;
 }
 </style>
