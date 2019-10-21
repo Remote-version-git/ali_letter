@@ -42,7 +42,8 @@
       </el-header>
 
       <!-- 内容 组件 -->
-      <el-main style="height:100%">
+ 
+      <el-main style="height:100%;overflow: hidden">
         <div class="common">
           <!-- 导航栏 -->
           <div class="nav clear">
@@ -109,8 +110,7 @@
       width="30%"
       center
       top="22vh"
-      @change="change"
-    >
+      @change="change">
       <el-form class="login-form" :model="loginForm" :rules="loginFormRules" ref="loginFormRef">
         <!-- 账号/用户名 -->
         <el-form-item prop="phone">
@@ -290,7 +290,6 @@ export default {
       this.$router.push("/search");
     },
     // 登录功能
-
     login() {
       // 重新排数数据对象
       let form = qs.stringify(this.loginForm);
@@ -310,8 +309,6 @@ export default {
         });
       }
     },
- 
-
     // 注册
     // 手机验证功能\
     async handleChange(verify) {
@@ -420,9 +417,13 @@ a {
   line-height: 18px;
   cursor: pointer;
 }
-span:first-child {
+
+
+.js-toReg {
   border-right: 2px solid #f1f1f3;
 }
+
+
 .el-dialog {
   padding: 50px;
   border-radius: 10px;
