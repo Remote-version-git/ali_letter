@@ -285,6 +285,8 @@ export default {
         `novels?keyword=${this.keyword}`
       );
       this.searchList = res.data;
+      this.$store.state.searchData = res;
+      this.$store.state.searchText = this.keyword;
       this.$router.push("/search");
     },
     // 登录功能

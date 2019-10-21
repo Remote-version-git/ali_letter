@@ -2,52 +2,85 @@
   <div class="zong">
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>搜索结果：朋友Friend</el-breadcrumb-item>
-      <div class="matchbook">
+      <el-breadcrumb-item>搜索结果：{{ searchText }}</el-breadcrumb-item>
+    </el-breadcrumb>
+      <div class="matchbook" v-for="item in searchList" :key="item.id">
         <div class="view">
           <a target="_blank" href>
-            <img src="../assets/images/1165857960663.jpg" class="cover" />
+            <img :src="item.novel_url" class="cover" />
           </a>
           <p class="bookTitle">
             <a target="_blank" href>
-              <span class="bname">朋友Friend</span>
+              <span class="bname">{{ item.novel_title }}</span>
             </a>
-            <span class="bauthor">无声浪 &nbsp;&nbsp;著</span>
+            <span class="bauthor">{{ item.novel_author }} &nbsp;&nbsp;著</span>
           </p>
           <ul class="lastchapter clear">
-            <li>3.1万字</li>
-            <li>星际战争</li>
+            <li>{{ item.word_nums }}万字</li>
+            <li>{{ item.novel_classify }}</li>
           </ul>
-          <p
-            class="bookDesc"
-          >出生于中国西南部偏远山区的“小七子”从小渴望了解外面的世界，在成长的过程中小七子眺望星空感知到宇宙的神奇，至此有了人生志向。小七子想去当兵，想保护自己的祖国，想去宇宙星空之中。小七子在大山的森林中结识了一群朋友，他们陪着小七子在山林之间奔跑戏耍，在大山之巅拍打云彩。1997年，7岁的小七子突然感知到万物的声音，仿佛间这个世界都在向他诉说心情，就这样开启了小七子与宇宙诸天星空文明的访问与探索。</p>
+          <p class="bookDesc">{{ item.novel_desc }}</p>
           <div class="operates clear">
             <div class="left">
-              <span class="tag">争霸</span>
-
-              <span class="tag">穿越</span>
-
-              <span class="tag">励志</span>
-
-              <span class="tag">小说</span>
+              <span class="tag" v-for="tagItem in item.novel_tags" :key="tagItem.id">{{ tagItem }}</span>
             </div>
             <div class="right">
               <span class="btn read">
-                <a target="_blank" href>立即阅读</a>
+                <a target="_blank" :href="item.novel_paths">立即阅读</a>
               </span>
               <span class="btn js-addShelf">+书架</span>
             </div>
           </div>
         </div>
       </div>
-      <el-pagination background layout="prev, pager, next" :total="1000"></el-pagination>
-    </el-breadcrumb>
-    <p>{{infos}}</p>
+      <!-- <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :page-sizes="[5, 10, 15, 20]"
+        :page-size="5"
+        layout="total, sizes, prev, pager, next, jumper"
+        :total="total"
+      ></el-pagination>-->
+    <template  v-if="searchList.length === 0">
+      <h1>暂无数据</h1>
+    </template>
+    <!-- <p>{{infos}}</p> -->
   </div>
 </template>
 <script>
-export default {
+import { create } from "domain";
 
+export default {
+  data() {
+    return {
+      searchList: this.$store.state.searchData.data,
+      total: this.$store.state.searchData.total,
+      searchText: this.$store.state.searchText
+    };
+  },
+  created() {
+    this.searchList.forEach(item => {
+      item.novel_tags = item.novel_tags.split(" ");
+    });
+    console.log(this.searchList);
+  },
+  methods: {
+    handleSizeChange(val) {
+      console.log(`每页 ${val} 条`);
+    },
+    handleCurrentChange(val) {
+      console.log(`当前页: ${val}`);
+    },
+    async getNovel() {
+      const { data: res } = await this.$http.get(
+        `novels?keyword=${this.keyword}`
+      );
+      this.searchList = res.data;
+      this.$store.state.searchData = res;
+      this.$store.state.searchText = this.keyword;
+      this.$router.push("/search");
+    }
+  }
 };
 </script>
 <style lang="less" scoped>

@@ -5,7 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    isShow: false
+    isShow: false,
+    searchData: [],
+    searchText: ''
   },
   mutations: {},
   actions: {}
