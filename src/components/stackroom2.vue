@@ -1,6 +1,6 @@
 <template>
   <div class="stackroom">
-    <Loading v-if="bannerShow"></Loading>
+    <Loading v-if="bannerShow" style="position: absolute;height: 540px;"></Loading>
     <div class="carouselBgc">
       <div class="roomcentre" id="wrap">
         <!-- 轮播图 -->
@@ -334,6 +334,19 @@ export default {
       bannerShow: true
     };
   },
+  watch: {
+    // 检测轮播图展示变化，并改变对应文本数据
+    config: {
+      deep: true, //深度监听
+      handler: function() {
+        this.config.forEach((item, i) => {
+          if (item.zIndex === 4) {
+            this.bannerData = this.autoPlayTxtList[i];
+          }
+        });
+      }
+    }
+  },
   methods: {
     // 遍历每个轮播图的li 把config数组中的样式给每个li
     handleAssign() {
@@ -351,11 +364,6 @@ export default {
         this.config.unshift(this.config.pop());
         //  3.2.1 等数组中的元素变了之后 让页面重新布局
         this.handleAssign();
-        this.config.forEach((item, i) => {
-          if (item.zIndex === 4) {
-            this.bannerData = this.autoPlayTxtList[i];
-          }
-        });
         this.autoPlay();
       }
     },
@@ -365,11 +373,6 @@ export default {
         this.flag = false;
         this.config.push(this.config.shift());
         this.handleAssign();
-        this.config.forEach((item, i) => {
-          if (item.zIndex === 4) {
-            this.bannerData = this.autoPlayTxtList[i];
-          } 
-        });
         this.autoPlay();
       }
     },
@@ -732,7 +735,7 @@ export default {
     setTimeout(() => {
       this.bannerShow = false;
     }, 2100);
-    
+
     // 调用轮播图数据
     this.getautoList();
   },
