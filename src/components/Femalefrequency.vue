@@ -87,17 +87,17 @@
    <div class="c">
 <div class="c-left-page">
           <ul>
-            <li>
+            <li v-for="item in topLeft" :key="item.id">
               <a href>
-                <img src="http://img-tailor.11222.cn/bcv/big/201810221259076308.jpg" alt />
-                <p>不能爱她的定制人</p>
+                <img :src="item.novel_url" alt />
+                <p>{{ item.novel_title }}</p>
               </a>
               <p class="author">
-                <a href>淡水不淡</a>
+                <a href>{{ item.novel_author }}</a>
               </p>
-              <p class="desc">2038年，婴猴正在制造定制人应甄臣，他是根据2018年常依梦的喜好专门定制的“男朋友”</p>
+              <p class="desc">{{ item.novel_desc }}</p>
             </li>
-            <li>
+            <!-- <li>
               <a href>
                 <img src="http://img-tailor.11222.cn/bcv/big/1146557794712.jpg" alt />
                 <p>我不能恋爱的女朋友</p>
@@ -116,17 +116,17 @@
                 <a href>六年年</a>
               </p>
               <p class="desc">郎君金榜题名，糟糠妻被骗下堂。天灾人祸频频，下堂妇死得凄凉。重生归来，她不仅要踹渣夫夺家产，还要在天灾荒年，广积粮高筑墙，过上悠闲好日子！</p>
-            </li>
+            </li> -->
           </ul>
         </div>
         <ul class="mend-right">
-          <li>
+          <li v-for="item in topMiddleData" :key="item.id">
             <a href>
-              <span>[古典架空]</span>
-              农家小医女：处处田园香
+              <span>{{item.novel_classify}}</span>
+              {{ item.novel_title }}
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href>
               <span>[古代言情]</span>
               靠田吃田：神医农女小地主
@@ -239,7 +239,7 @@
               <span>[都市婚姻]</span>
               爸爸不是超人
             </a>
-          </li>
+          </li> -->
         </ul>
 
    </div>
@@ -256,18 +256,18 @@
         <span class="tlle2">精品热推</span>
       </div>
       <div class="booklist">
-        <div>
+        <div v-for="item in topcenterData" :key="item.id">
           <a href>
-            <img src="http://img-tailor.11222.cn/bcv/big/1115977958989.jpg" alt />
-            <p>医门弃女：带个萌宝逆袭</p>
+            <img :src="item.novel_url" alt />
+            <p>{{ item.novel_title }}</p>
           </a>
           <p class="author">
-            <a href>苏幺幺</a>
+            <a href>{{ item.novel_author }}</a>
           </p>
-          <p class="desc">许夭夭本是现代的医生，一朝穿越变成了古代的少妇，膝下还带着一个拖油瓶……</p>
+          <p class="desc">{{ item.novel_desc }}</p>
         </div>
 
-        <div>
+        <!-- <div>
           <a href>
             <img src="http://img-tailor.11222.cn/bcv/big/1128687927958.jpg" alt />
             <p>肖先生，我想上你家户口本</p>
@@ -353,7 +353,7 @@
             <a href>三两椒</a>
           </p>
           <p class="desc">有好事者提问秦见微：“郡主，您觉得池家三郎如何！</p>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="righteare">
@@ -432,7 +432,7 @@
 
       <div class="newbook-right">
         <div class="booklist">
-          <div>
+          <!-- <div>
             <a href>
               <img src="http://img-tailor.11222.cn/bcv/big/1129687869633.jpg" alt />
               <p>穿越九零：福妻好运来</p>
@@ -441,9 +441,18 @@
               <a href>四月时光</a>
             </p>
             <p class="desc">【小甜文】天生自带读心术的简彤穿越了，一穿越就得到老天赐予的穿越大礼包一份。</p>
-          </div>
-
-          <div>
+          </div> -->
+<div v-for="item in topfootData" :key="item.id">
+          <a href>
+            <img :src="item.novel_url" alt />
+            <p>{{ item.novel_title }}</p>
+          </a>
+          <p class="author">
+            <a href>{{ item.novel_author }}</a>
+          </p>
+          <p class="desc">{{ item.novel_desc }}</p>
+        </div>
+          <!-- <div>
             <a href>
               <img src="http://img-tailor.11222.cn/bcv/big/201705101507045038.jpg" alt />
               <p>阴阳女判官</p>
@@ -484,8 +493,7 @@
             <p class="author">
               <a href>婚姻告急</a>
             </p>
-            <p class="desc">白倩一直觉得自己很幸运，可是一个意外让她的人生轨迹发生了惊天动地的变化。
-绝症，就像是悬在她头上的一把利刃。</p>
+            <p class="desc">白倩一直觉得自己很幸运，可是一个意外让她的人生轨迹发生了惊天动地的变化。绝症，就像是悬在她头上的一把利刃。</p>
           </div>
 
           <div>
@@ -520,10 +528,7 @@
             <p class="author">
               <a href>海棠</a>
             </p>
-            <p class="desc">连环杀人案的凶手时隔一年在一次出手，却对脚趾有着异样的独钟。
-忽然消失的口味虾店员，和错过的纸条最终指向哪里？
-一个神秘的电话，跨世纪的两个人组成了最佳搭档，九曲的案件，最终慢慢浮出水面。
-这个灵异的电话，究竟来自哪里？</p>
+            <p class="desc">连环杀人案的凶手时隔一年在一次出手，却对脚趾有着异样的独钟。</p>
           </div>
 
           <div>
@@ -536,7 +541,7 @@
             </p>
             <p class="desc">被继母抢夺家产，扫地出门的苏云叶，用了十一年时间，熬尽心血，斗败继母，夺回自家产业，成长为叱咤商场的女总裁。好日子终于到来，她的身体却不堪重负……再度醒来的苏云叶，发觉自己重生到70年末，另一个‘苏云叶‘身上。这个‘苏云叶‘性格懦弱，任人欺凌，遭所谓‘亲人’联手陷害。手段强硬、
               精明干练的苏总，将所有极品扫成渣，带着老妈和小妹，重拾老本行，再度逆袭，走上人生巅峰……</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -551,7 +556,17 @@
         <span class="tlle tlle4">猜你喜欢</span>
       </div>
       <div class="booklist">
-        <div>
+        <div v-for="item in topbottomData" :key="item.id">
+          <a href>
+            <img :src="item.novel_url" alt />
+            <p>{{ item.novel_title }}</p>
+          </a>
+          <p class="author">
+            <a href>{{ item.novel_author }}</a>
+          </p>
+          <p class="desc">{{ item.novel_desc }}</p>
+        </div>
+        <!-- <div>
           <a href>
             <img src="http://img-tailor.11222.cn/bcv/big/1162197960041.jpg" alt />
             <p>老宅似花开</p>
@@ -628,9 +643,9 @@
           </p>
           <p class="desc">陆亦宸，A市人人趋之若鹜的尊贵男人，外界传言他高冷禁欲，神圣不可侵犯。时夏捂着腰：“......
 </p>
-        </div>
+        </div> -->
 
-        <div>
+        <!-- <div>
           <a href>
             <img src="http://img-tailor.11222.cn/bcv/big/1136777954623.jpg" alt />
             <p>青春不误</p>
@@ -639,7 +654,7 @@
             <a href>叶畔蜻蜓</a>
           </p>
           <p class="desc">这是一部和青春纠缠不清的小说，那时我们拥有最纯粹的情感，也敢于跟随自己的内心。安静是一个外表清秀甚为内向的女孩儿，高中第一眼见到他时</p>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="d">
@@ -648,7 +663,7 @@
       </a>
     </div>
 
-    <div class="update">
+    <div class="update clearfix">
       <div class="lefteare">
         <div class="titlelines">
           <span class="tlle2">最新更新</span>
@@ -1061,7 +1076,12 @@ export default {
           auth: "千墨",
           imgSrc: "http://img-tailor.11222.cn/bcv/big/1143247091650.jpg"
         }
-      ]
+      ],
+      topLeft: [],
+      topMiddleData: [],
+      topcenterData:[],
+      topfootData:[],
+      topbottomData:[]
     };
   },
   methods: {
@@ -1076,7 +1096,37 @@ export default {
         item.currentEnce = false;
       });
       item.currentEnce = true;
+    },
+    // 请求 顶部左边3条数据
+    async getTopLeftData() {
+      const { data } = await this.$http('/designation?id1=14,18,19');
+      this.topLeft = data.data;
+      console.log(this.topLeft)
+    },
+    async getTopMiddleData() {
+      const { data } = await this.$http('/novels?type=0&sortway=desc&per_page=19&sz=0');
+      this.topMiddleData = data.data;
+    },
+    async getTopcenterData() {
+      const { data } = await this.$http('/novels?type=1&per_page=9&status=0');
+      this.topcenterData = data.data;
+    },
+    async getTopfootData() {
+      const { data } = await this.$http('/novels?type=0&per_page=9&status=0');
+      this.topfootData = data.data;
+    },
+    async getTopbottomData() {
+      const { data } = await this.$http('/novels?type=5&per_page=8&status=0');
+      this.topbottomData = data.data;
     }
+  },
+  created() {
+    // 调用请求方法 获取顶部左边3条数据
+    this.getTopLeftData();
+    this.getTopMiddleData();
+    this.getTopcenterData();
+    this.getTopbottomData();
+    this.getTopfootData();
   }
 };
 </script>
@@ -1279,9 +1329,11 @@ a:hover {
   width: 240px;
   height: 40px;
   font-size: 15px;
-  line-height: 7px;
+  line-height: 15px;
   margin-top: 8px;
   font-size: 18px;
+  display: -webkit-box;
+  overflow: hidden;
 }
 .mend-right span {
   color: #a0a1a1;
@@ -1628,7 +1680,7 @@ p.title {
 .update {
   width: 100%;
   margin-top: 20px;
-  height: 500px;
+  height: 930px;
 }
 .titlelines {
   height: 22px;

@@ -3,9 +3,9 @@
     <div class="titleline titles">
       <span class="tlle">男频推荐</span>
     </div>
-  <div class="container">
-   <div class="b">
-     <div class="b-head">
+    <div class="container">
+      <div class="b">
+        <div class="b-head">
           <a href>
             <h3>都市</h3>
             <div class="covers">
@@ -82,11 +82,11 @@
             </ul>
           </div>
         </div>
-   </div>
-   <div class="c">
-<div class="c-left-page">
+      </div>
+      <div class="c">
+        <div class="c-left-page">
           <ul>
-            <li>
+            <!-- <li>
               <a href>
                 <img src="http://img-tailor.11222.cn/bcv/big/1102437905338.jpg" alt />
                 <p>绝色丹神</p>
@@ -95,8 +95,18 @@
                 <a href>一颗葡萄树</a>
               </p>
               <p class="desc">丹帝降生，借体而存，重拾武道，傲视寰宇。</p>
+            </li>-->
+            <li v-for="item in topLeft" :key="item.id">
+              <a href>
+                <img :src="item.novel_url" alt />
+                <p>{{ item.novel_title }}</p>
+              </a>
+              <p class="author">
+                <a href>{{ item.novel_author }}</a>
+              </p>
+              <p class="desc">{{ item.novel_desc }}</p>
             </li>
-            <li>
+            <!-- <li>
               <a href>
                 <img src="http://img-tailor.11222.cn/bcv/big/1177437861968.jpg" alt />
                 <p>星武战甲</p>
@@ -115,11 +125,17 @@
                 <a href>醉世</a>
               </p>
               <p class="desc">他为仇念所控，逆天地而行。后终放下仇恨，净化心念。为救苍生，牺牲自我。因祸得福，透彻天地之法，踏足天地之尊。</p>
-            </li>
+            </li>-->
           </ul>
         </div>
         <ul class="mend-right">
-          <li>
+          <li v-for="item in topMiddleData" :key="item.id">
+            <a href>
+              <span>{{item.novel_classify}}</span>
+              {{ item.novel_title }}
+            </a>
+          </li>
+          <!-- <li>
             <a href>
               <span>[都市生活]</span>
               火星情报局
@@ -238,24 +254,32 @@
               <span>[恐怖惊悚]</span>
               恐怖屋之食中忌
             </a>
-          </li>
+          </li>-->
         </ul>
-
-   </div>
-  </div>
-
-
-<div class="d">
-        <a href>
-          <img src="../../public/img/2019101516432492.jpg" alt />
-        </a>
       </div>
+    </div>
+
+    <div class="d">
+      <a href>
+        <img src="../../public/img/2019101516432492.jpg" alt />
+      </a>
+    </div>
     <div class="lefteare">
       <div class="titleline">
         <span class="tlle2">精品热推</span>
       </div>
       <div class="booklist">
-        <div>
+        <div v-for="item in topcenterData" :key="item.id">
+          <a href>
+            <img :src="item.novel_url" alt />
+            <p>{{ item.novel_title }}</p>
+          </a>
+          <p class="author">
+            <a href>{{ item.novel_author }}</a>
+          </p>
+          <p class="desc">{{ item.novel_desc }}</p>
+        </div>
+        <!-- <div>
           <a href>
             <img src="../../public/img/1-1.jpg" alt />
             <p>天降大富豪</p>
@@ -352,7 +376,7 @@
             <a href>虎眸大大</a>
           </p>
           <p class="desc">【阿里原创精品】 一代仙王重生少年时代！</p>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="righteare">
@@ -433,7 +457,17 @@
 
       <div class="newbook-right">
         <div class="booklist">
-          <div>
+          <div v-for="item in topfootData" :key="item.id">
+          <a href>
+            <img :src="item.novel_url" alt />
+            <p>{{ item.novel_title }}</p>
+          </a>
+          <p class="author">
+            <a href>{{ item.novel_author }}</a>
+          </p>
+          <p class="desc">{{ item.novel_desc }}</p>
+        </div>
+          <!-- <div>
             <a href>
               <img src="../../public/img/2-1.jpg" alt />
               <p>网游之先人一步</p>
@@ -530,7 +564,7 @@
               <a href>最强咸鱼</a>
             </p>
             <p class="desc">小神医苏成被师父遣送下山，要他来都市中弘扬医术并找寻多年不见的小师妹</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -545,7 +579,17 @@
         <span class="tlle tlle4">猜你喜欢</span>
       </div>
       <div class="booklist">
-        <div>
+        <div v-for="item in topbottomData" :key="item.id">
+          <a href>
+            <img :src="item.novel_url" alt />
+            <p>{{ item.novel_title }}</p>
+          </a>
+          <p class="author">
+            <a href>{{ item.novel_author }}</a>
+          </p>
+          <p class="desc">{{ item.novel_desc }}</p>
+        </div>
+        <!-- <div>
           <a href>
             <img src="../../public/img/3-1.jpg" alt />
             <p>太古真龙诀</p>
@@ -631,7 +675,7 @@
             <a href>都市大魔头</a>
           </p>
           <p class="desc">意外获得最强技能系统！醒来之后的叶默，注定走上一条不凡之路！看我拥有医术，武功，忍</p>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="d">
@@ -1053,7 +1097,12 @@ export default {
           auth: "南三石",
           imgSrc: "http://img-tailor.11222.cn/bcv/big/1123617460830.jpg"
         }
-      ]
+      ],
+      topLeft: [],
+      topMiddleData: [],
+      topcenterData:[],
+      topfootData:[],
+      topbottomData:[]
     };
   },
   methods: {
@@ -1068,7 +1117,37 @@ export default {
         item.currentEnce = false;
       });
       item.currentEnce = true;
+    },
+    // 请求 顶部左边3条数据
+    async getTopLeftData() {
+      const { data } = await this.$http('/designation?id1=13,15,17');
+      this.topLeft = data.data;
+      console.log(this.topLeft)
+    },
+    async getTopMiddleData() {
+      const { data } = await this.$http('/novels?type=1&sortway=asc&per_page=19&sz=0');
+      this.topMiddleData = data.data;
+    },
+    async getTopcenterData() {
+      const { data } = await this.$http('/novels?type=1&per_page=9&status=0');
+      this.topcenterData = data.data;
+    },
+    async getTopfootData() {
+      const { data } = await this.$http('/novels?type=0&per_page=9&status=0');
+      this.topfootData = data.data;
+    },
+    async getTopbottomData() {
+      const { data } = await this.$http('/novels?type=5&per_page=8&status=0');
+      this.topbottomData = data.data;
     }
+  },
+  created() {
+    // 调用请求方法 获取顶部左边3条数据
+    this.getTopLeftData();
+    this.getTopMiddleData();
+    this.getTopcenterData();
+    this.getTopbottomData();
+    this.getTopfootData();
   }
 };
 </script>
@@ -1102,22 +1181,22 @@ a {
   margin: 0 auto;
   margin-top: 20px;
 }
-.container{
+.container {
   width: 100%;
   height: 100%;
 }
-.a{
-    float: left;
-    width: 77.85%;
-    height: 212px;
-    background-color:#e8f3f1;
-    margin-bottom:20px; 
+.a {
+  float: left;
+  width: 77.85%;
+  height: 212px;
+  background-color: #e8f3f1;
+  margin-bottom: 20px;
 }
-.b{
-    float: right;
-    width: 19.46%;
-    height: 100%;
-    overflow: hidden;
+.b {
+  float: right;
+  width: 19.46%;
+  height: 100%;
+  overflow: hidden;
 }
 .d img {
   width: 100%;
@@ -1128,11 +1207,11 @@ a {
   background-color: #e8f3f1;
   margin-bottom: 3px;
 }
-.b-head h3{
-      font-size: 14px;
-    padding-top: 16px;
-    margin-left: 15px;
-    line-height: 14px;
+.b-head h3 {
+  font-size: 14px;
+  padding-top: 16px;
+  margin-left: 15px;
+  line-height: 14px;
 }
 .b-cenner {
   height: 155px;
@@ -1141,12 +1220,12 @@ a {
 }
 .b-cenner ul li {
   width: 100%;
-    box-sizing: border-box;
-    padding-left: 26px;
-    height: 35px;
-    line-height: 43px;
-    position: relative;
-    overflow: hidden;
+  box-sizing: border-box;
+  padding-left: 26px;
+  height: 35px;
+  line-height: 43px;
+  position: relative;
+  overflow: hidden;
 }
 a {
   color: black;
@@ -1215,9 +1294,9 @@ a:hover {
 .b-foot ul li a {
   color: #f47a33;
 }
-.c{
+.c {
   float: left;
-    width: 77.85%;
+  width: 77.85%;
 }
 .c-left-page {
   float: left;
@@ -1320,24 +1399,24 @@ a:hover {
 }
 .booklist div {
   width: 265px;
-    display: inline-block;
-    font-size: 13px;
-    line-height: 13px;
-    height: 120px;
-    margin-bottom: 20px;
-    position: relative;
-    box-sizing: border-box;
-    padding-left: 106px;
-    color: #1d1e20;
-    overflow: hidden;
-    margin-right: 6px;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 13px;
+  height: 120px;
+  margin-bottom: 20px;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 106px;
+  color: #1d1e20;
+  overflow: hidden;
+  margin-right: 6px;
 }
 .booklist div img {
-      width: 91px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 91px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .cover {
@@ -1487,13 +1566,13 @@ p.title {
 }
 .side {
   height: 94px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    box-sizing: border-box;
-    padding: 0 24px;
-    font-size: 14px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 24px;
+  font-size: 14px;
 }
 .side img {
   float: left;
