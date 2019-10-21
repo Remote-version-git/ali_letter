@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 .loading-backgorund {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items:center;
