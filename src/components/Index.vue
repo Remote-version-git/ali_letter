@@ -29,7 +29,7 @@
               </el-carousel>
               <!-- 轮播 end -->
             </div>
-          <!-- 轮播文本 start -->
+            <!-- 轮播文本 start -->
             <div class="connect_left_text">
               <p>
                 <a :href="topLunBo1.novel_paths">{{ topLunBo1.novel_title }}</a>
@@ -44,7 +44,9 @@
                 </li>
               </ul>
               <div class="connect_left_button">
-                <el-button type="danger"><a :href="topLunBo1.novel_paths">立即阅读</a></el-button>
+                <el-button type="danger">
+                  <a :href="topLunBo1.novel_paths">立即阅读</a>
+                </el-button>
               </div>
             </div>
             <!-- 轮播文本 end -->
@@ -109,7 +111,7 @@
         <div class="editor_recommend_connect">
           <div class="female_left">
             <div class="connect_left_el-carousel">
-              <el-carousel :interval="4000" type="card">
+              <el-carousel :interval="4000" v-on:change="changeFun2" type="card">
                 <el-carousel-item v-for="(item,index) in famelaData" :key="index">
                   <a :href="'/book/'+item.id">
                     <img :src="item.novel_url" alt />
@@ -120,25 +122,21 @@
 
             <div class="connect_left_text">
               <p>
-                <a href="/">逐魂录</a>
+                <a :href="topLunBo2.novel_paths">{{ topLunBo2.novel_title }}</a>
               </p>
               <p>
-                <a href="/">李寻希</a>
+                <a :href="topLunBo2.novel_paths">{{ topLunBo2.novel_author }}</a>
               </p>
-              <p>十年前，他亲手结束了父亲的生命。为了继承父亲生前的使命，他加入了那个父亲曾经引以为傲的组织。然而，他的目的并</p>
+              <p>{{ topLunBo2.novel_desc }}</p>
               <ul>
-                <li>
-                  <a href>热血</a>
-                </li>
-                <li>
-                  <a href>爽文</a>
-                </li>
-                <li>
-                  <a href>虐文</a>
+                <li v-for="item in topLunBo2.novel_tags" :key="item">
+                  <a :href="topLunBo2.novel_paths">{{ item }}</a>
                 </li>
               </ul>
               <div class="connect_left_button">
-                <el-button type="danger">立即阅读</el-button>
+                <el-button type="danger">
+                  <a :href="topLunBo2.novel_paths">立即阅读</a>
+                </el-button>
               </div>
             </div>
           </div>
@@ -206,7 +204,7 @@
         <div class="editor_recommend_connect">
           <div class="editor_recommend_connect_left male_left">
             <div class="connect_left_el-carousel">
-              <el-carousel :interval="4000" type="card">
+              <el-carousel :interval="4000" v-on:change="changeFun3" type="card">
                 <el-carousel-item v-for="item in melaData" :key="item.id">
                   <a :href="'/book/'+item.id">
                     <img :src="item.novel_url" alt />
@@ -217,25 +215,21 @@
 
             <div class="connect_left_text">
               <p>
-                <a href="/">逐魂录</a>
+                <a :href="topLunBo3.novel_paths">{{ topLunBo3.novel_title }}</a>
               </p>
               <p>
-                <a href="/">李寻希</a>
+                <a :href="topLunBo3.novel_paths">{{ topLunBo3.novel_author }}</a>
               </p>
-              <p>十年前，他亲手结束了父亲的生命。为了继承父亲生前的使命，他加入了那个父亲曾经引以为傲的组织。然而，他的目的并</p>
+              <p>{{ topLunBo3.novel_desc }}</p>
               <ul>
-                <li>
-                  <a href>热血</a>
-                </li>
-                <li>
-                  <a href>爽文</a>
-                </li>
-                <li>
-                  <a href>虐文</a>
+                <li v-for="item in topLunBo3.novel_tags" :key="item">
+                  <a :href="topLunBo3.novel_paths">{{ item }}</a>
                 </li>
               </ul>
               <div class="connect_left_button">
-                <el-button type="danger">立即阅读</el-button>
+                <el-button type="danger">
+                  <a :href="topLunBo3.novel_paths">立即阅读</a>
+                </el-button>
               </div>
             </div>
           </div>
@@ -303,7 +297,7 @@
         <div class="editor_recommend_connect">
           <div class="editor_recommend_connect_left light_left">
             <div class="connect_left_el-carousel">
-              <el-carousel :interval="4000" type="card">
+              <el-carousel :interval="4000" v-on:change="changeFun4" type="card">
                 <el-carousel-item v-for="item in lightData" :key="item.id">
                   <a :href="'/book/'+item.id">
                     <img :src="item.novel_url" alt />
@@ -314,25 +308,21 @@
 
             <div class="connect_left_text">
               <p>
-                <a href="/">逐魂录</a>
+                <a :href="topLunBo4.novel_paths">{{ topLunBo4.novel_title }}</a>
               </p>
               <p>
-                <a href="/">李寻希</a>
+                <a :href="topLunBo4.novel_paths">{{ topLunBo4.novel_author }}</a>
               </p>
-              <p>十年前，他亲手结束了父亲的生命。为了继承父亲生前的使命，他加入了那个父亲曾经引以为傲的组织。然而，他的目的并</p>
+              <p>{{ topLunBo4.novel_desc }}</p>
               <ul>
-                <li>
-                  <a href>热血</a>
-                </li>
-                <li>
-                  <a href>爽文</a>
-                </li>
-                <li>
-                  <a href>虐文</a>
+                <li v-for="item in topLunBo4.novel_tags" :key="item">
+                  <a :href="topLunBo4.novel_paths">{{ item }}</a>
                 </li>
               </ul>
               <div class="connect_left_button">
-                <el-button type="danger">立即阅读</el-button>
+                <el-button type="danger">
+                  <a :href="topLunBo4.novel_paths">立即阅读</a>
+                </el-button>
               </div>
             </div>
           </div>
@@ -607,7 +597,7 @@
                 <p>
                   <a :href="'/author/'+item.id">{{item.novel_author}}</a>
                 </p>
-                <a :href="'/book/'+item.id">
+                <a :href="item.novel_paths">
                   <span>立即阅读</span>
                 </a>
               </div>
@@ -742,7 +732,10 @@ export default {
       endBooks2: [],
       endBooks3: [],
       hotBook: [],
-      topLunBo1: {}
+      topLunBo1: {},
+      topLunBo2: {},
+      topLunBo3: {},
+      topLunBo4: {}
     };
   },
   methods: {
@@ -756,6 +749,15 @@ export default {
     handleClick() {},
     changeFun1(prev, next) {
       this.topLunBo1 = this.topData[prev];
+    },
+    changeFun2(prev, next) {
+      this.topLunBo2 = this.famelaData[prev];
+    },
+    changeFun3(prev, next) {
+      this.topLunBo3 = this.melaData[prev];
+    },
+    changeFun4(prev, next) {
+      this.topLunBo4 = this.lightData[prev];
     }
   },
   updated() {},
@@ -764,23 +766,33 @@ export default {
     //  轮播实现 start
     const { data: data1 } = await this.$http("/designation?id1=1,2,3");
     this.topData = data1.data;
-    this.topData.forEach((item) => {
+    this.topData.forEach(item => {
       // 分割数组
-      item.novel_tags = item.novel_tags.split(' ')
+      item.novel_tags = item.novel_tags.split(" ");
       // 判断是否超过3个，如果大于则删除一个
       if (item.novel_tags.length >= 3) {
         item.novel_tags.pop();
       }
-    })
+    });
     this.topLunBo1 = this.topData[0];
     // 轮播实现 end
     const { data: data2 } = await this.$http(
       "/designation?id1=4,5,6,7,8,9,10,11,12,13"
     );
     this.connect_middle_top = data2.data;
+
     // 女频
     const { data: data4 } = await this.$http("novels?sz=1&per_page=3");
     this.famelaData = data4.data;
+    this.famelaData.forEach(item => {
+      // 分割数组
+      item.novel_tags = item.novel_tags.split(" ");
+      // 判断是否超过3个，如果大于则删除一个
+      if (item.novel_tags.length >= 3) {
+        item.novel_tags.pop();
+      }
+    });
+    this.topLunBo2 = this.famelaData[0];
 
     const { data: data5 } = await this.$http("novels?sz=1&per_page=4");
     this.famelaData1 = data5.data;
@@ -798,6 +810,15 @@ export default {
     // 男频
     const { data: data7 } = await this.$http("novels?sz=0&per_page=3");
     this.melaData = data7.data;
+    this.melaData.forEach(item => {
+      // 分割数组
+      item.novel_tags = item.novel_tags.split(" ");
+      // 判断是否超过3个，如果大于则删除一个
+      if (item.novel_tags.length >= 3) {
+        item.novel_tags.pop();
+      }
+    });
+    this.topLunBo3 = this.melaData[0];
 
     const { data: data8 } = await this.$http("novels?sz=0&per_page=4");
     this.melaData1 = data8.data;
@@ -815,6 +836,15 @@ export default {
     // 轻小说
     const { data: data10 } = await this.$http("novels?sz=2&per_page=3");
     this.lightData = data10.data;
+    this.lightData.forEach(item => {
+      // 分割数组
+      item.novel_tags = item.novel_tags.split(" ");
+      // 判断是否超过3个，如果大于则删除一个
+      if (item.novel_tags.length >= 3) {
+        item.novel_tags.pop();
+      }
+    });
+    this.topLunBo4 = this.lightData[0];
 
     const { data: data11 } = await this.$http("novels?sz=2&per_page=4");
     this.lightData1 = data11.data;
@@ -1388,6 +1418,8 @@ export default {
 }
 
 .editor_recommend_connect .light_left {
+  height: 500px;
+  margin-bottom: 20px;
   background-color: #e6d4d4;
   background-image: url(../assets/images/cartoonrec_left_bg.png);
 }
