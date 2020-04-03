@@ -1,13 +1,32 @@
 <template>
-  <el-dialog title="账号登录" :visible.sync="centerDialogVisible" width="30%" center top="0">
-    <el-form class="login-form" :model="loginForm" :rules="loginFormRules" ref="loginFormRef">
+  <el-dialog
+    title="账号登录"
+    :visible.sync="centerDialogVisible"
+    width="30%"
+    center
+    top="0"
+  >
+    <el-form
+      class="login-form"
+      :model="loginForm"
+      :rules="loginFormRules"
+      ref="loginFormRef"
+    >
       <!-- 账号/用户名 -->
       <el-form-item prop="phone">
-        <el-input type="text" v-model="loginForm.phone" placeholder="请输入手机号"></el-input>
+        <el-input
+          type="text"
+          v-model="loginForm.phone"
+          placeholder="请输入手机号"
+        ></el-input>
       </el-form-item>
       <!-- 密码 -->
       <el-form-item prop="password">
-        <el-input type="password" v-model="loginForm.password" placeholder="请输入密码"></el-input>
+        <el-input
+          type="password"
+          v-model="loginForm.password"
+          placeholder="请输入密码"
+        ></el-input>
       </el-form-item>
       <p class="inner">
         <input type="checkbox" v-model="check" class="select" />
@@ -18,10 +37,12 @@
       <div
         class="submit"
         @click="login()"
-        :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
-      >登录</div>
+        :style="{ background: check == '' ? '#cccccc' : '#ff6500' }"
+      >
+        登录
+      </div>
       <p class="operates">
-        <span class="js-toReg" >注册账号</span>
+        <span class="js-toReg">注册账号</span>
         <span class="js-forget">忘记密码</span>
       </p>
     </el-form>
@@ -64,12 +85,12 @@ export default {
     // 登录功能
     login() {
       let form = qs.stringify(this.loginForm);
-        console.log(form);
+      console.log(form);
       if (this.check) {
         this.$refs.loginFormRef.validate(async volid => {
           if (!volid) return;
           const { data: res } = await this.$http.post("/login", form);
-        
+
           if (res.state !== 200) {
             return this.$message.error(res.error);
           }
@@ -81,7 +102,7 @@ export default {
 };
 </script>
 
-<style >
+<style>
 .el-dialog__title {
   margin: 20px 0 38px;
   font-size: 20px;

@@ -8,11 +8,18 @@
 
     <el-row>
       <el-col :span="2" style="margin-right:10px">
-        <el-button type="primary" round @click="addDialogVisible = true">添加用户</el-button>
+        <el-button type="primary" round @click="addDialogVisible = true"
+          >添加用户</el-button
+        >
       </el-col>
       <el-col :span="4">
         <el-input v-model="query.keyword" placeholder="请输入内容">
-          <el-button icon="el-icon-search" circle slot="append" @click="getUsersList"></el-button>
+          <el-button
+            icon="el-icon-search"
+            circle
+            slot="append"
+            @click="getUsersList"
+          ></el-button>
         </el-input>
       </el-col>
     </el-row>
@@ -38,11 +45,7 @@
       </el-table>
     </el-card>
 
-    <el-dialog
-      title="添加用户"
-      :visible.sync="addDialogVisible"
-      width="50%"
-    >
+    <el-dialog title="添加用户" :visible.sync="addDialogVisible" width="50%">
       <span slot="footer" class="dialog-footer">
         <el-button @click="addDialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="addUser">确 定</el-button>
@@ -71,9 +74,7 @@ export default {
       });
       this.usersList = res.data;
     },
-    addUser() {
-
-    },
+    addUser() {},
     deleteUsersList(id) {
       console.log(id);
     }

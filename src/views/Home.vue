@@ -32,7 +32,7 @@
                 <span>|</span>
               </li>
               <li>
-                <a @click="centeDialogVisible=true">注册</a>
+                <a @click="centeDialogVisible = true">注册</a>
               </li>
             </ul>
           </div>
@@ -42,7 +42,7 @@
       </el-header>
 
       <!-- 内容 组件 -->
- 
+
       <el-main style="height:100%;overflow: hidden">
         <div class="common">
           <!-- 导航栏 -->
@@ -64,8 +64,17 @@
               </el-menu>
             </div>
             <div class="nav_search">
-              <el-input v-model="keyword" placeholder="请根据书名或者作者" width="20px">
-                <el-button icon="el-icon-search" circle slot="append" @click="getNovel"></el-button>
+              <el-input
+                v-model="keyword"
+                placeholder="请根据书名或者作者"
+                width="20px"
+              >
+                <el-button
+                  icon="el-icon-search"
+                  circle
+                  slot="append"
+                  @click="getNovel"
+                ></el-button>
               </el-input>
             </div>
           </div>
@@ -89,15 +98,27 @@
           </p>
           <p>
             <span class="left">阿里文学 书旗网</span>
-            <span class="right">粤ICP备13078413号-6 增值电信业务许可证 粤B2-20130742 网络文化经营许可证 粤网文[2017]3018-499号</span>
+            <span class="right">
+              粤ICP备13078413号-6 增值电信业务许可证 粤B2-20130742
+              网络文化经营许可证 粤网文[2017]3018-499号
+            </span>
           </p>
           <p>
-            <span class="left">请使用者仔细阅读阿里文学《阿里文学用户服务协议》、《隐私保护政策》说明</span>
-            <span class="right">地址：广州市天河区黄埔大道西平云路163号广电平云广场B塔13层自编03单元 电话：0571-26883636</span>
+            <span class="left"
+              >请使用者仔细阅读阿里文学《阿里文学用户服务协议》、《隐私保护政策》说明</span
+            >
+            <span class="right">
+              地址：广州市天河区黄埔大道西平云路163号广电平云广场B塔13层自编03单元
+              电话：0571-26883636
+            </span>
           </p>
           <p>
-            <span class="left">为保证更好的浏览效果，请使用Chrome或其他主流浏览器访问</span>
-            <span class="right">本站部分作品的封面设计图系由作者自行上传，本站未进行任何人工编辑整理。若有侵犯您的知识产权，请及时通知</span>
+            <span class="left"
+              >为保证更好的浏览效果，请使用Chrome或其他主流浏览器访问</span
+            >
+            <span class="right"
+              >本站部分作品的封面设计图系由作者自行上传，本站未进行任何人工编辑整理。若有侵犯您的知识产权，请及时通知</span
+            >
           </p>
         </div>
       </el-footer>
@@ -109,11 +130,21 @@
       :visible.sync="centerDialogVisible"
       width="30%"
       center
-      top="22vh">
-      <el-form class="login-form" :model="loginForm" :rules="loginFormRules" ref="loginFormRef">
+      top="22vh"
+    >
+      <el-form
+        class="login-form"
+        :model="loginForm"
+        :rules="loginFormRules"
+        ref="loginFormRef"
+      >
         <!-- 账号/用户名 -->
         <el-form-item prop="phone">
-          <el-input type="text" v-model="loginForm.phone" placeholder="请输入手机号"></el-input>
+          <el-input
+            type="text"
+            v-model="loginForm.phone"
+            placeholder="请输入手机号"
+          ></el-input>
         </el-form-item>
         <!-- 密码 -->
         <el-form-item prop="password">
@@ -133,8 +164,10 @@
         <div
           class="submit"
           @click="login()"
-          :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
-        >登录</div>
+          :style="{ background: check == '' ? '#cccccc' : '#ff6500' }"
+        >
+          登录
+        </div>
         <p class="operates">
           <span class="js-toReg">注册账号</span>
           <span class="js-forget">忘记密码</span>
@@ -143,11 +176,25 @@
     </el-dialog>
 
     <!-- 注册 -->
-    <el-dialog title="注册账号" :visible.sync="centeDialogVisible" width="30%" center top="22vh">
-      <el-form :model="registerForm" :rules="registerFormRules" ref="registerFormRef">
+    <el-dialog
+      title="注册账号"
+      :visible.sync="centeDialogVisible"
+      width="30%"
+      center
+      top="22vh"
+    >
+      <el-form
+        :model="registerForm"
+        :rules="registerFormRules"
+        ref="registerFormRef"
+      >
         <!-- 账号/用户名 -->
         <el-form-item prop="phone">
-          <el-input type="text" v-model="registerForm.phone" placeholder="请输入手机号"></el-input>
+          <el-input
+            type="text"
+            v-model="registerForm.phone"
+            placeholder="请输入手机号"
+          ></el-input>
         </el-form-item>
 
         <!-- 密码 -->
@@ -189,8 +236,10 @@
         <div
           class="submit"
           @click="register()"
-          :style="{background: check == '' ? '#cccccc' : '#ff6500'}"
-        >注册</div>
+          :style="{ background: check == '' ? '#cccccc' : '#ff6500' }"
+        >
+          注册
+        </div>
         <p class="operates">
           <span class="js-toReg">注册账号</span>
           <span class="js-forget">忘记密码</span>
@@ -417,11 +466,9 @@ a {
   cursor: pointer;
 }
 
-
 .js-toReg {
   border-right: 2px solid #f1f1f3;
 }
-
 
 .el-dialog {
   padding: 50px;

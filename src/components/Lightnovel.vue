@@ -10,17 +10,18 @@
       <!-- 左边立即阅读 -->
       <el-container>
         <el-main class="clear" style="padding: 0px;">
-          
           <!-- 左下第二个左边模块(图书、作者介绍) -->
           <div class="secrec_box">
             <ul class="secrec">
               <li v-for="item in localData" :key="item.id">
-                <a :href="'/book/'+item.id" class="demo">
+                <a :href="'/book/' + item.id" class="demo">
                   <img :src="item.novel_url" />
                   <p class="bookname">{{ item.novel_title }}</p>
                 </a>
                 <p class="author">
-                  <a :href="'/author/'+item.id" class="demo deem_color">{{ item.novel_author }}</a>
+                  <a :href="'/author/' + item.id" class="demo deem_color">
+                    {{ item.novel_author }}
+                  </a>
                 </p>
                 <p class="desc">{{ item.novel_desc }}</p>
               </li>
@@ -29,7 +30,7 @@
             <div class="thirdrec">
               <ul class="clear">
                 <li class="clear" v-for="item in thirdrec" :key="item.id">
-                  <a :href="'/book/'+item.id" class="demo">
+                  <a :href="'/book/' + item.id" class="demo">
                     <span>[{{ item.novel_classify }}]</span>
                     {{ item.novel_title }}
                   </a>
@@ -46,7 +47,10 @@
               <a href="#javaScript:;">
                 <h3>冒险</h3>
                 <div class="covers">
-                  <img src="../assets/images/1137097795044.jpg" class="center" />
+                  <img
+                    src="../assets/images/1137097795044.jpg"
+                    class="center"
+                  />
                   <img src="../assets/images/1105377787147.jpg" class="left" />
                   <img src="../assets/images/1149667787708.jpg" class="right" />
                 </div>
@@ -140,14 +144,16 @@
           </div>
           <div class="booklist">
             <div class="item" v-for="item in Hotbook" :key="item.id">
-              <a :href="'/book/'+item.id" class="demo">
+              <a :href="'/book/' + item.id" class="demo">
                 <img :src="item.novel_url" />
-                <p class="bookname">{{item.novel_title}}</p>
+                <p class="bookname">{{ item.novel_title }}</p>
               </a>
               <p class="author">
-                <a :href="'/author/'+item.id" class="demo deem_color">{{item.novel_author}}</a>
+                <a :href="'/author/' + item.id" class="demo deem_color">
+                  {{ item.novel_author }}
+                </a>
               </p>
-              <p class="desc">{{item.novel_desc}}</p>
+              <p class="desc">{{ item.novel_desc }}</p>
             </div>
           </div>
         </div>
@@ -157,16 +163,20 @@
             <li class="active">本周强推</li>
           </ul>
           <ul class="cp-ranks-list js-ranksList">
-            <li @mousemove="changeObj(item5)" v-for="(item5,index) in array" :key="index">
-              <a :href="'/book/'+item5.id" class="demo">
+            <li
+              @mousemove="changeObj(item5)"
+              v-for="(item5, index) in array"
+              :key="index"
+            >
+              <a :href="'/book/' + item5.id" class="demo">
                 <p class="title">
-                  <i class="no">{{item5.id}}</i>
-                  {{item5.title}}
+                  <i class="no">{{ item5.id }}</i>
+                  {{ item5.title }}
                 </p>
                 <div class="info" ref="info" v-show="item5.currentEnce">
                   <img :src="item5.imgSrc" class="cover" />
-                  <div class="auth">{{item5.author}}</div>
-                  <div class="desc">{{item5.describe}}</div>
+                  <div class="auth">{{ item5.author }}</div>
+                  <div class="desc">{{ item5.describe }}</div>
                 </div>
               </a>
             </li>
@@ -198,7 +208,9 @@
               <p class="author">
                 <a href="#" class="demo deem_color">陌白</a>
               </p>
-              <p class="desc">人类舍弃去外太空寻找生命，想要打破‘第四面墙’来探索未知的领域和生物，却忽略了在维度夹缝中的生命体，它们给人类带来的不只是惊喜，还有灾难。</p>
+              <p class="desc">
+                人类舍弃去外太空寻找生命，想要打破‘第四面墙’来探索未知的领域和生物，却忽略了在维度夹缝中的生命体，它们给人类带来的不只是惊喜，还有灾难。
+              </p>
             </div>
           </div>
           <!-- 我家盟主没舅了、怪谈校区 -->
@@ -226,8 +238,7 @@
                 校外，与魔鬼做交易的拍卖行，穿梭阴阳的233路公交，恐怖邮差
                 校内，恶灵许愿树，三万层台阶怪谈，阶梯教室百鬼大讲座
                 这片校区镇压这往生门，封印岌岌可危，阴气外泄，校内外诡异之事层出不穷，怪谈不断。
-                这么危险的地方，要不……转学吧？
-                转学？
+                这么危险的地方，要不……转学吧？ 转学？
                 我，陆小白！当代玄学大师，能抓鬼，看风水，安坟，卜卦，怕个锤子！
               </p>
             </li>
@@ -237,14 +248,18 @@
         <div class="righteare">
           <div class="booklist">
             <div class="item" v-for="item in newBook" :key="item.id">
-              <a :href="'/book/'+item.id" class="demo">
+              <a :href="'/book/' + item.id" class="demo">
                 <img :src="item.novel_url" />
-                <p class="bookname">{{item.novel_title}}</p>
+                <p class="bookname">{{ item.novel_title }}</p>
               </a>
               <p class="author">
-                <a :href="'/author/'+item.id" class="demo deem_color">{{item.novel_author}}</a>
+                <a :href="'/author/' + item.id" class="demo deem_color">
+                  {{ item.novel_author }}
+                </a>
               </p>
-              <p class="desc">陈小轩下定决心要建设自己的领土，凭借着从现代带来的知识，开发出石英矿，远销海内外。获得巨额资产……</p>
+              <p class="desc">
+                陈小轩下定决心要建设自己的领土，凭借着从现代带来的知识，开发出石英矿，远销海内外。获得巨额资产……
+              </p>
             </div>
           </div>
         </div>
@@ -264,14 +279,16 @@
         <!-- 图书、作者介绍 -->
         <div class="booklist">
           <div class="item" v-for="item in likeBook" :key="item.id">
-            <a :href="'/book/'+item.id" class="demo">
+            <a :href="'/book/' + item.id" class="demo">
               <img :src="item.novel_url" />
-              <p class="bookname">{{item.novel_title}}</p>
+              <p class="bookname">{{ item.novel_title }}</p>
             </a>
             <p class="author">
-              <a :href="'/author/'+item.id" class="demo deem_color">{{item.novel_author}}}</a>
+              <a :href="'/author/' + item.id" class="demo deem_color"
+                >{{ item.novel_author }}}</a
+              >
             </p>
-            <p class="desc">{{item.novel_desc}}</p>
+            <p class="desc">{{ item.novel_desc }}</p>
           </div>
         </div>
       </div>
@@ -409,12 +426,12 @@ export default {
     const { data: data1 } = await this.$http.get("/designation?id1=1,6,3");
     this.localData = data1.data;
 
-// 类型、书名
+    // 类型、书名
     const { data: data2 } = await this.$http.get(
       "/designation?id1=5,7,2,11,20,3,8,12,,19,14,22,56,34,35,36,37,45,46,47,23"
     );
     // console.log(data2.data);
-    
+
     this.thirdrec = data2.data;
     // 精品热推
     const { data: dataHotbook } = await this.$http.get(
