@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@alicloud/sms-sdk": "^1.1.6",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "core-js": "^2.6.5",
     "element-ui": "^2.12.0",
     "jQuery": "^1.7.4",
